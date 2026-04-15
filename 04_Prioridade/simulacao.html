@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="prioridade.simulation.opening.pageTitle">Playbook Global - Simulação de Prioridade</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/prioridade.css">
+</head>
+<body class="module-page" data-prioridade-page="simulacao" data-disable-wayfinder="true">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1 data-i18n="prioridade.simulation.opening.title">Simulação de Prioridade</h1>
+                    <p data-i18n="prioridade.simulation.opening.headerSubtitle">Treinamento rápido para classificação operacional de tickets</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                        <li><a href="../index.html#epic-global-service" class="btn btn-secondary" data-i18n="common.buttons.viewGlobalServiceEpic">Ver épico Global Service</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="epic-context-strip is-global-service">
+        <div class="container">
+            <span class="module-badge-home" data-i18n="common.labels.epicGlobalService">Épico Global Service</span>
+            <p data-i18n="common.contexts.globalServiceModule">Este módulo pertence ao épico Global Service.</p>
+        </div>
+    </section>
+
+    <section class="module-hero prioridade-page-opening">
+        <div class="container">
+            <div class="prioridade-opening-shell">
+                <div class="prioridade-opening-head">
+                    <p class="page-breadcrumb prioridade-breadcrumb" data-i18n="prioridade.simulation.opening.breadcrumb">Início > Global Service > Matriz de Prioridade > Simulação de Prioridade</p>
+                    <div class="prioridade-opening-context">
+                        <span class="inline-context-label" data-i18n="common.labels.epicGlobalService">Épico Global Service</span>
+                        <p class="prioridade-opening-module" data-i18n="prioridade.simulation.opening.moduleLabel">Módulo: Matriz de Prioridade</p>
+                        <p class="prioridade-opening-objective" data-i18n="prioridade.simulation.opening.operationalContext">Contexto operacional: treinamento para transformar dados do ticket em prioridade P1-P5 e orientar a fila com menor subjetividade.</p>
+                    </div>
+                </div>
+                <div class="prioridade-opening-hero">
+                    <h2 data-i18n="prioridade.simulation.opening.title">Simulação de Prioridade</h2>
+                    <p data-i18n="prioridade.simulation.opening.description">Submódulo curto para praticar o cálculo oficial da prioridade com score real, MTFC esperado e leitura operacional do resultado.</p>
+                </div>
+                <nav class="prioridade-main-nav" data-i18n-aria-label="prioridade.main.nav.label">
+                    <p class="prioridade-main-nav-label" data-i18n="prioridade.main.nav.label">Navegação interna do módulo</p>
+                    <div class="prioridade-main-nav-links">
+                        <a href="index.html" class="prioridade-main-nav-link" data-i18n="prioridade.main.nav.matrix">Matriz de Prioridade</a>
+                        <a href="simulacao.html" class="prioridade-main-nav-link is-active" aria-current="page" data-i18n="prioridade.main.nav.simulation">Simulação de Prioridade</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="prioridade-simulation-stage">
+            <div class="container">
+                <article class="prioridade-simulation-shell">
+                    <div class="prioridade-simulation-panel">
+                        <section class="prioridade-simulation-form-panel">
+                            <header class="prioridade-simulation-header">
+                                <p class="prioridade-map-kicker" data-i18n="prioridade.simulation.form.kicker">Painel de Simulação</p>
+                                <h3 data-i18n="prioridade.simulation.form.title">Preencha os critérios oficiais</h3>
+                                <p data-i18n="prioridade.simulation.form.description">O score é calculado pela multiplicação dos pesos de Solicitante, Tipo de atendimento, Categoria e Produto.</p>
+                                <p class="prioridade-formula" data-i18n="prioridade.simulation.form.formula">Score = Solicitante x Tipo de atendimento x Categoria x Produto</p>
+                            </header>
+
+                            <form id="simulacao-form" class="simulacao-form" novalidate>
+                                <div class="field-group">
+                                    <label for="solicitante" data-i18n="prioridade.simulation.form.fields.solicitante">Solicitante</label>
+                                    <select id="solicitante" name="solicitante" required>
+                                        <option value="" data-i18n="prioridade.simulation.form.selectPlaceholder">Selecione...</option>
+                                    </select>
+                                </div>
+
+                                <div class="field-group">
+                                    <label for="tipo_atendimento" data-i18n="prioridade.simulation.form.fields.tipoAtendimento">Tipo de atendimento</label>
+                                    <select id="tipo_atendimento" name="tipo_atendimento" required>
+                                        <option value="" data-i18n="prioridade.simulation.form.selectPlaceholder">Selecione...</option>
+                                    </select>
+                                </div>
+
+                                <div class="field-group">
+                                    <label for="categoria" data-i18n="prioridade.simulation.form.fields.categoria">Categoria</label>
+                                    <select id="categoria" name="categoria" required>
+                                        <option value="" data-i18n="prioridade.simulation.form.selectPlaceholder">Selecione...</option>
+                                    </select>
+                                </div>
+
+                                <div class="field-group">
+                                    <label for="produto" data-i18n="prioridade.simulation.form.fields.produto">Produto</label>
+                                    <select id="produto" name="produto" required>
+                                        <option value="" data-i18n="prioridade.simulation.form.selectPlaceholder">Selecione...</option>
+                                    </select>
+                                </div>
+
+                                <div class="field-group">
+                                    <label for="out_of_box_zero_hora" data-i18n="prioridade.simulation.form.fields.outOfBoxZeroHour">Out of the box / Zero hora</label>
+                                    <select id="out_of_box_zero_hora" name="out_of_box_zero_hora" required>
+                                        <option value="no" data-i18n="prioridade.simulation.options.no">Não</option>
+                                        <option value="yes" data-i18n="prioridade.simulation.options.yes">Sim</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-action">
+                                    <button type="submit" class="btn btn-primary" data-i18n="prioridade.simulation.form.submitButton">Calcular prioridade</button>
+                                </div>
+                                <p id="simulacao-message" class="form-message" aria-live="polite"></p>
+                            </form>
+                        </section>
+
+                        <aside class="prioridade-simulation-result-panel">
+                            <h3 data-i18n="prioridade.simulation.result.title">Resultado</h3>
+                            <article id="simResultCard" class="sim-result-card is-neutral">
+                                <p id="simResultStatus" class="sim-result-status" data-i18n="prioridade.simulation.result.pendingState">Preencha os campos e calcule para visualizar a prioridade final.</p>
+
+                                <div class="sim-result-priority">
+                                    <span id="simResultPriorityCode" class="sim-result-priority-code">P-</span>
+                                    <div>
+                                        <p class="sim-result-label" data-i18n="prioridade.simulation.result.finalPriority">Prioridade final</p>
+                                        <p id="simResultPriorityName" class="sim-result-priority-name">-</p>
+                                    </div>
+                                </div>
+
+                                <div class="sim-result-metrics" role="list">
+                                    <p role="listitem">
+                                        <span data-i18n="prioridade.simulation.result.scoreCalculated">Score calculado</span>
+                                        <strong id="simResultScore">0</strong>
+                                    </p>
+                                    <p role="listitem">
+                                        <span data-i18n="prioridade.simulation.result.mtfc">MTFC</span>
+                                        <strong id="simResultMtfc">-</strong>
+                                    </p>
+                                    <p role="listitem">
+                                        <span data-i18n="prioridade.simulation.result.scoreFormula">Composição do score</span>
+                                        <strong id="simResultFormula">-</strong>
+                                    </p>
+                                </div>
+
+                                <div class="sim-result-interpretation">
+                                    <p class="sim-result-label" data-i18n="prioridade.simulation.result.operationalInterpretation">Interpretação operacional</p>
+                                    <p id="simResultInterpretation" class="sim-result-interpretation-text" data-i18n="prioridade.simulation.result.pendingInterpretation">Ao calcular, você verá a leitura operacional do nível de prioridade.</p>
+                                </div>
+
+                                <p id="simResultException" class="sim-result-exception" hidden></p>
+                            </article>
+                        </aside>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="prioridade-simulation-support">
+            <div class="container">
+                <article class="prioridade-simulation-support-card">
+                    <h3 data-i18n="prioridade.simulation.interpretation.title">Como interpretar a simulação</h3>
+                    <ul>
+                        <li data-i18n="prioridade.simulation.interpretation.point1">A simulação é um apoio de treinamento para padronizar a leitura da prioridade.</li>
+                        <li data-i18n="prioridade.simulation.interpretation.point2">O resultado depende da qualidade dos campos preenchidos no ticket.</li>
+                        <li data-i18n="prioridade.simulation.interpretation.point3">A prioridade orienta a fila, mas não substitui o acompanhamento do coordenador.</li>
+                        <li data-i18n="prioridade.simulation.interpretation.point4">Zero hora / Out of the box sempre força urgência (P1 e MTFC 1h).</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="prioridade.index.footer">Playbook Global - Matriz de Prioridade</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/locales/stage7-ui.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/prioridade.js"></script>
+</body>
+</html>

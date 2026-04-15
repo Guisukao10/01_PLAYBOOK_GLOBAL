@@ -1,0 +1,182 @@
+/* Estilos locais do modulo 07_Canais_de_Entrada */
+
+.ce-hero {
+    background:
+        linear-gradient(140deg, rgba(17, 50, 93, 0.94), rgba(31, 83, 148, 0.88)),
+        radial-gradient(circle at 82% 16%, rgba(183, 214, 248, 0.34), transparent 38%);
+}
+
+.module-page .ce-hero > .container {
+    border: 1px solid rgba(185, 209, 235, 0.42);
+    background: rgba(233, 244, 255, 0.08);
+}
+
+.module-page .ce-hero .hero-content h1,
+.module-page .ce-hero .hero-content h2,
+.module-page .ce-hero .hero-content p {
+    color: #f7fbff;
+}
+
+.module-page .ce-hero .hero-content h2 {
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+.ce-channel-grid,
+.ce-nav-grid,
+.ce-links-grid,
+.ce-detail-grid {
+    margin-top: 1.2rem;
+}
+
+.ce-channel-card {
+    position: relative;
+}
+
+.ce-channel-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #edf4fe;
+    color: var(--color-brand-900);
+    border: 1px solid #c9daef;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.ce-principle-box,
+.ce-detail-card,
+.ce-compare-card {
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.ce-principle-box {
+    padding: 1.3rem;
+    text-align: center;
+}
+
+.ce-principle-box h2 {
+    margin-bottom: 0.7rem;
+}
+
+.ce-principle-box p {
+    margin-bottom: 0;
+    color: var(--color-text-soft);
+}
+
+.ce-stack-flow {
+    max-width: 640px;
+    margin: 1.4rem auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.ce-stack-item {
+    width: 100%;
+    text-align: center;
+    padding: 0.82rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border-strong);
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+    color: var(--color-brand-900);
+    font-weight: 700;
+    box-shadow: var(--shadow-xs);
+}
+
+.ce-stack-arrow {
+    color: var(--color-brand-700);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.ce-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.ce-detail-card {
+    padding: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.ce-detail-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.55rem;
+}
+
+.ce-detail-card h4 {
+    margin-top: 0.7rem;
+    margin-bottom: 0.32rem;
+    color: var(--color-text-strong);
+    font-size: 0.94rem;
+}
+
+.ce-detail-card p,
+.ce-detail-card ul,
+.ce-compare-card p {
+    color: var(--color-text-soft);
+}
+
+.ce-detail-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.ce-detail-card li {
+    margin-bottom: 0.2rem;
+}
+
+.ce-compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.ce-compare-card {
+    padding: 1rem;
+}
+
+.ce-compare-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.35rem;
+}
+
+.ce-compare-highlight {
+    border-color: rgba(34, 97, 173, 0.5);
+    background: linear-gradient(165deg, #ffffff 0%, #edf5ff 100%);
+}
+
+.ce-internal-nav-section .module-card {
+    padding: 1rem;
+    height: 100%;
+}
+
+.ce-internal-nav-section .module-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 760px) {
+    .ce-principle-box {
+        text-align: left;
+    }
+
+    .ce-channel-icon {
+        width: 38px;
+        height: 38px;
+    }
+}

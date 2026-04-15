@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="tutorialZoho.title">Playbook Global - Operacao diaria no Zoho Desk</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/operacao-zoho.css">
+</head>
+<body class="module-page">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1 data-i18n="tutorialZoho.index.header.title">Operacao diaria no Zoho Desk</h1>
+                    <p data-i18n="tutorialZoho.index.header.subtitle">Arquitetura modular para rotina de tickets, gestao cadastral e padronizacao operacional</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                        <li><a href="../index.html#epic-zoho-desk" class="btn btn-secondary" data-i18n="common.buttons.viewZohoDeskEpic">Ver épico Zoho Desk</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="epic-context-strip is-zoho-desk">
+        <div class="container">
+            <span class="module-badge-home" data-i18n="common.labels.epicZohoDesk">Épico Zoho Desk</span>
+            <p data-i18n="common.contexts.zohoDeskModule">Este módulo pertence ao épico Zoho Desk.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="zd-hero module-hero">
+            <div class="container">
+                <span class="zd-eyebrow" data-i18n="tutorialZoho.landing.hero.eyebrow">Arquitetura em 3 frentes</span>
+                <h2 data-i18n="tutorialZoho.landing.hero.title">Operacao Zoho Desk reorganizada por contexto de uso</h2>
+                <p data-i18n="tutorialZoho.landing.hero.description">
+                    Esta estrutura separa a rotina de tickets, a gestao de contatos/clientes e as boas praticas
+                    operacionais para reduzir densidade, eliminar sobreposicao de trilhas e facilitar manutencao futura.
+                </p>
+                <div class="zd-hero-audience">
+                    <span class="zd-pill" data-i18n="tutorialZoho.landing.hero.pillars.tickets">Frente 1: Operacao de Tickets</span>
+                    <span class="zd-pill" data-i18n="tutorialZoho.landing.hero.pillars.contacts">Frente 2: Gestao de Contatos e Clientes</span>
+                    <span class="zd-pill" data-i18n="tutorialZoho.landing.hero.pillars.bestPractices">Frente 3: Boas Praticas Operacionais</span>
+                </div>
+                <div class="zd-hero-actions module-cta-row">
+                    <a href="operacao-de-tickets.html" class="btn-primary" data-i18n="tutorialZoho.landing.hero.openTickets">Abrir Operacao de Tickets</a>
+                    <a href="gestao-contatos-clientes.html" class="btn-secondary" data-i18n="tutorialZoho.landing.hero.openContacts">Abrir Gestao de Contatos e Clientes</a>
+                    <a href="boas-praticas-operacionais-hub.html" class="btn-secondary" data-i18n="tutorialZoho.landing.hero.openBestPractices">Abrir Boas Praticas Operacionais</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="jornada" class="modules">
+            <div class="container">
+                <div class="zd-section-intro">
+                    <h2 data-i18n="tutorialZoho.landing.entries.title">Entradas oficiais do módulo</h2>
+                    <p data-i18n="tutorialZoho.landing.entries.description">Escolha a trilha pelo tipo de necessidade operacional.</p>
+                </div>
+                <div class="zd-grid cols-3">
+                    <article class="zd-card">
+                        <span class="zd-pill" data-i18n="tutorialZoho.landing.entries.cards.tickets.label">Frente 1</span>
+                        <h3 data-i18n="tutorialZoho.landing.entries.cards.tickets.title">Operacao de Tickets</h3>
+                        <p data-i18n="tutorialZoho.landing.entries.cards.tickets.description">Trilha principal de uso diario para leitura de fila, tratamento, atualizacao e resposta em tickets.</p>
+                        <a href="operacao-de-tickets.html" class="btn-module" data-i18n="tutorialZoho.landing.entries.cards.tickets.cta">Acessar trilha</a>
+                    </article>
+                    <article class="zd-card">
+                        <span class="zd-pill" data-i18n="tutorialZoho.landing.entries.cards.contacts.label">Frente 2</span>
+                        <h3 data-i18n="tutorialZoho.landing.entries.cards.contacts.title">Gestao de Contatos e Clientes</h3>
+                        <p data-i18n="tutorialZoho.landing.entries.cards.contacts.description">Trilha de cadastro, consulta, visualizacao de contato e relacao entre cliente e atendimento.</p>
+                        <a href="gestao-contatos-clientes.html" class="btn-module" data-i18n="tutorialZoho.landing.entries.cards.contacts.cta">Acessar trilha</a>
+                    </article>
+                    <article class="zd-card">
+                        <span class="zd-pill" data-i18n="tutorialZoho.landing.entries.cards.bestPractices.label">Frente 3</span>
+                        <h3 data-i18n="tutorialZoho.landing.entries.cards.bestPractices.title">Boas Praticas Operacionais</h3>
+                        <p data-i18n="tutorialZoho.landing.entries.cards.bestPractices.description">Trilha transversal com padroes de uso, orientacoes de consistencia e disciplina operacional.</p>
+                        <a href="boas-praticas-operacionais-hub.html" class="btn-module" data-i18n="tutorialZoho.landing.entries.cards.bestPractices.cta">Acessar trilha</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <div class="zd-start-box">
+                    <p data-i18n-html="tutorialZoho.landing.directAccess.description"><strong>Acesso direto:</strong> se preferir continuar pela trilha sequencial anterior, inicie em Visao Geral da Interface.</p>
+                    <a href="visao-geral-interface.html" class="btn-module" data-i18n="tutorialZoho.landing.directAccess.cta">Iniciar pela Etapa 1</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="tutorialZoho.index.footer">Playbook Global - Operacao diaria no Zoho Desk</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/locales/stage7-ui.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/operacao-zoho.js"></script>
+</body>
+</html>
+
+

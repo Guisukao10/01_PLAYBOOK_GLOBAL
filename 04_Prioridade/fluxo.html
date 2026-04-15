@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Matriz de Prioridade: Fluxo</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/prioridade.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Matriz de Prioridade</h1>
+                    <p>Fluxo completo da prioridade no processo de atendimento</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para modulo Matriz</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <div class="intro-card">
+                    <h2>Como a prioridade percorre todo o atendimento</h2>
+                    <p>
+                        A prioridade nao e um elemento isolado da matriz. Ela faz parte de um fluxo que comeca
+                        no preenchimento dos dados do ticket e segue ate a leitura operacional, a gestao da fila
+                        e a visao de indicadores.
+                    </p>
+                    <p>
+                        Esse encadeamento conecta a regra tecnica da matriz com o ciclo real do service,
+                        trazendo consistencia para decisao, SLA e governanca.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Fluxo principal da prioridade</h2>
+                <div class="flow-board">
+                    <div class="flow-step"><div class="flow-card-large">Abertura do ticket</div></div>
+                    <div class="flow-step"><span class="flow-arrow">v</span></div>
+                    <div class="flow-step"><div class="flow-card-large">Preenchimento dos campos</div></div>
+                    <div class="flow-step"><span class="flow-arrow">v</span></div>
+                    <div class="flow-step"><div class="flow-card-large">Leitura dos 4 eixos da matriz</div></div>
+                    <div class="flow-step"><span class="flow-arrow">v</span></div>
+                    <div class="flow-step"><div class="flow-card-large">Calculo da pontuacao</div></div>
+                    <div class="flow-step"><span class="flow-arrow">v</span></div>
+                    <div class="flow-step"><div class="flow-card-large">Definicao da prioridade (P1-P5)</div></div>
+                    <div class="flow-step"><span class="flow-arrow">v</span></div>
+                    <div class="flow-step"><div class="flow-card-large">Aplicacao no ticket</div></div>
+                    <div class="flow-step"><span class="flow-arrow">v</span></div>
+                    <div class="flow-step"><div class="flow-card-large">Leitura operacional, fila, SLA e acompanhamento</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Entradas do fluxo</h2>
+                <div class="section-card">
+                    <p>
+                        O fluxo comeca com o preenchimento correto dos campos que alimentam a matriz.
+                        Esses dados sao a base para gerar uma prioridade confiavel e comparavel entre tickets.
+                    </p>
+                    <div class="variables-grid">
+                        <div class="variable-card">
+                            <h3>Solicitante</h3>
+                            <p>Define o contexto de quem aciona o atendimento.</p>
+                        </div>
+                        <div class="variable-card">
+                            <h3>Tipo de Atendimento</h3>
+                            <p>Indica a natureza do suporte esperado no chamado.</p>
+                        </div>
+                        <div class="variable-card">
+                            <h3>Categoria</h3>
+                            <p>Classifica o assunto principal para direcionamento adequado.</p>
+                        </div>
+                        <div class="variable-card">
+                            <h3>Produto</h3>
+                            <p>Incorpora o contexto do item atendido na criticidade final.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="logic-section">
+            <div class="container">
+                <h2>Processamento da matriz</h2>
+                <div class="section-card">
+                    <p>
+                        No processamento, a matriz aplica os pesos dos 4 eixos e calcula o resultado por multiplicacao:
+                        <strong>Solicitante x Tipo de Atendimento x Categoria x Produto</strong>.
+                    </p>
+                    <p>
+                        A pontuacao gerada posiciona o ticket em uma classificacao objetiva de prioridade:
+                        <span class="badge badge-p1">P1</span>
+                        <span class="badge badge-p2">P2</span>
+                        <span class="badge badge-p3">P3</span>
+                        <span class="badge badge-p4">P4</span>
+                        ou <span class="badge badge-p5">P5</span>.
+                    </p>
+                </div>
+                <div class="matrix-flow">
+                    <div class="matrix-flow-item">Entrada dos 4 eixos</div>
+                    <div class="matrix-flow-arrow">-></div>
+                    <div class="matrix-flow-item">Multiplicacao de pesos</div>
+                    <div class="matrix-flow-arrow">-></div>
+                    <div class="matrix-flow-item">Pontuacao final</div>
+                    <div class="matrix-flow-arrow">-></div>
+                    <div class="matrix-flow-item">Classificacao P1-P5</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Saida da matriz</h2>
+                <div class="modules-grid">
+                    <div class="section-card">
+                        <h3>Leitura do ticket</h3>
+                        <p>A prioridade passa a ser uma referencia clara de criticidade no registro.</p>
+                    </div>
+                    <div class="section-card">
+                        <h3>Organizacao operacional</h3>
+                        <p>Ajuda a ordenar fila, alocar capacidade e orientar escalonamentos.</p>
+                    </div>
+                    <div class="section-card">
+                        <h3>Acompanhamento gerencial</h3>
+                        <p>Suporta monitoramento de risco, carga e resposta por nivel de prioridade.</p>
+                    </div>
+                    <div class="section-card">
+                        <h3>Visao de governanca</h3>
+                        <p>Cria padrao para decisao, auditoria operacional e consistencia do processo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Conexao com o processo maior</h2>
+                <div class="variables-grid">
+                    <div class="variable-card">
+                        <h3>Atendimento e ticket</h3>
+                        <p>Define como o caso e lido e tratado no fluxo diario.</p>
+                    </div>
+                    <div class="variable-card">
+                        <h3>SLA</h3>
+                        <p>Contribui para organizacao de tempos de resposta e resolucao esperados.</p>
+                    </div>
+                    <div class="variable-card">
+                        <h3>Backlog e aging</h3>
+                        <p>Ajuda a identificar concentracao de criticidade e envelhecimento da fila.</p>
+                    </div>
+                    <div class="variable-card">
+                        <h3>KPIs globais</h3>
+                        <p>Qualifica leitura executiva de performance e maturidade operacional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <div class="intro-card">
+                    <h2>Fechamento ponta a ponta</h2>
+                    <p>
+                        A Matriz de Prioridade integra uma cadeia completa de decisao: entrada, processamento,
+                        classificacao e acao operacional. Assim, ela deixa de ser uma regra isolada e passa a ser
+                        parte da governanca global do service.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Matriz de Prioridade</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/prioridade.js"></script>
+</body>
+</html>
+
+

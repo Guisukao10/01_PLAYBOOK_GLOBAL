@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação diária no Zoho Desk - Atualização de campos no ticket</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/operacao-zoho.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Operação diária no Zoho Desk</h1>
+                    <p>Etapa 5 - Atualização de campos no ticket</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Home do Módulo</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary">Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <article class="zd-step-hero">
+                    <div class="zd-step-header">
+                        <div>
+                            <p class="zd-breadcrumb"><a href="index.html">Operação diária no Zoho Desk</a> / Atualização de campos no ticket</p>
+                            <h2>Como preencher campos com disciplina operacional</h2>
+                        </div>
+                        <span class="zd-step-meta" data-step-indicator></span>
+                    </div>
+                    <p>Campo atualizado é dado confiável. Nesta etapa, você aplica na prática o padrão global: obrigatório, desejável e automático.</p>
+                    <div class="zd-summary-box">
+                        <p><strong>Pergunta central:</strong> "Quais campos eu devo garantir na abertura e durante o atendimento?"</p>
+                    </div>
+                    <div class="zd-step-mini" data-step-mini></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container zd-section-stack">
+                <div class="zd-grid cols-3">
+                    <article class="zd-card is-required">
+                        <span class="zd-pill">Obrigatório</span>
+                        <p>Necessário para o processo funcionar com controle. Se faltar, o ticket perde qualidade operacional.</p>
+                    </article>
+                    <article class="zd-card is-desirable">
+                        <span class="zd-pill">Desejável</span>
+                        <p>Melhora gestão, leitura de causa e rastreabilidade. Não deve ser ignorado no dia a dia.</p>
+                    </article>
+                    <article class="zd-card is-automatic">
+                        <span class="zd-pill">Automático</span>
+                        <p>Calculado/preenchido pelo sistema. O agente deve interpretar, não editar manualmente.</p>
+                    </article>
+                </div>
+
+                <div class="zd-note zd-note-info">
+                    <strong>Resumo rápido para decisão</strong>
+                    Obrigatório = não pode faltar. Desejável = aumenta qualidade de gestão. Automático = você valida interpretação, não preenchimento manual.
+                </div>
+
+                <div class="zd-grid cols-2">
+                    <article class="zd-card">
+                        <span class="zd-pill">O que preencher na abertura</span>
+                        <ul>
+                            <li>Classificação inicial (tipo/categoria/prioridade).</li>
+                            <li>Dados de contato e contexto do chamado.</li>
+                            <li>Campos obrigatórios globais definidos no playbook.</li>
+                            <li>Departamento e owner inicial quando aplicável.</li>
+                        </ul>
+                    </article>
+                    <article class="zd-card">
+                        <span class="zd-pill">O que atualizar durante atendimento</span>
+                        <ul>
+                            <li>Status conforme evolução real.</li>
+                            <li>Diagnóstico, ação executada e próximo passo.</li>
+                            <li>Pendência atual e data de retorno.</li>
+                            <li>Campos desejáveis que apoiam leitura gerencial.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="zd-grid cols-2">
+                    <article class="zd-card">
+                        <span class="zd-pill">O que revisar antes de avançar</span>
+                        <ol>
+                            <li>Campo obrigatório crítico não pode ficar vazio.</li>
+                            <li>Status precisa refletir o momento real do ticket.</li>
+                            <li>Owner e próxima ação devem estar claros.</li>
+                            <li>Campos automáticos devem ser coerentes com o histórico.</li>
+                        </ol>
+                    </article>
+                    <article class="zd-card">
+                        <span class="zd-pill">Erros comuns</span>
+                        <ul>
+                            <li>Deixar campo obrigatório para preencher depois.</li>
+                            <li>Usar texto livre e esquecer campos estruturados.</li>
+                            <li>Manter classificação antiga após mudança de contexto.</li>
+                            <li>Ignorar campos desejáveis em tickets complexos.</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <article class="zd-situation">
+                    <h3>Situação real</h3>
+                    <p>Ticket foi resolvido, mas sem preenchimento de resolução e motivo de fechamento.</p>
+                    <div class="zd-situation-grid">
+                        <div class="zd-situation-item">
+                            <h4>O que fazer</h4>
+                            <p>Completar campos de fechamento, validar status final e revisar consistência do histórico.</p>
+                        </div>
+                        <div class="zd-situation-item">
+                            <h4>O que evitar</h4>
+                            <p>Fechar ticket só pelo status, sem contexto útil para futuras análises.</p>
+                        </div>
+                        <div class="zd-situation-item">
+                            <h4>Impacto na governança</h4>
+                            <p>Dados de SLA, backlog e causa ficam confiáveis para gestão e auditoria.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="zd-grid cols-2">
+                    <figure class="zd-figure">
+                        <img src="Imagens_de_treinamento/Layout%20de%20cria%C3%A7%C3%A3o%20de%20ticket.png" alt="Formulário de criação/edição de ticket com campos operacionais">
+                        <figcaption>Layout de criação/edição: visão dos campos usados na abertura e ao longo da evolução do ticket.</figcaption>
+                    </figure>
+                    <div class="zd-image-block">
+                        <article class="zd-card">
+                            <span class="zd-pill">O que você está vendo</span>
+                            <p>Campos estruturados para classificação, contexto do cliente e direcionamento do fluxo de atendimento.</p>
+                        </article>
+                        <article class="zd-card">
+                            <span class="zd-pill">O que você pode fazer aqui</span>
+                            <p>Garantir preenchimento obrigatório na abertura e complementar dados desejáveis durante evolução.</p>
+                        </article>
+                        <div class="zd-note zd-note-attention">
+                            <strong>Atenção</strong>
+                            Campo obrigatório vazio gera ruído em status, backlog, aging e SLA.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="zd-grid cols-2">
+                    <figure class="zd-figure">
+                        <img src="Imagens_de_treinamento/Dentro%20do%20ticket.png" alt="Detalhe interno do ticket com histórico e áreas de atualização">
+                        <figcaption>Dentro do ticket: ponto de atualização contínua de status, notas e campos críticos.</figcaption>
+                    </figure>
+                    <div class="zd-image-block">
+                        <article class="zd-card">
+                            <span class="zd-pill">O que revisar antes de avançar</span>
+                            <p>Status coerente, owner definido, próximos passos registrados e consistência entre histórico e campos.</p>
+                        </article>
+                        <div class="zd-note zd-note-good">
+                            <strong>Boa prática</strong>
+                            Atualize campos no momento da ação, não apenas no fechamento.
+                        </div>
+                        <div class="zd-note zd-note-error">
+                            <strong>Erro comum</strong>
+                            Deixar campos críticos para “depois” e perder rastreabilidade operacional.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="zd-callout">
+                    <h3>Impacto operacional e de governança</h3>
+                    <p>Campos bem preenchidos fortalecem qualidade de dados, rastreabilidade e comparabilidade entre regiões, além de melhorar leitura de SLA e aging.</p>
+                </div>
+
+                <div class="zd-page-close">
+                    <p><strong>Fechamento da etapa:</strong> preencher bem não é burocracia, é controle operacional. Na próxima etapa, você aprende a interagir com cliente sem perder consistência no ticket.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <div class="zd-step-nav" data-step-nav></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Operação diária no Zoho Desk</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/operacao-zoho.js"></script>
+</body>
+</html>
+

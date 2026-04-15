@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="camposObrigatorios.matrix.opening.pageTitle">Playbook Global - Campos Obrigatorios: Matriz Consolidada de Campos</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./campos.css">
+</head>
+<body class="module-page" data-campos-page="matrix" data-disable-wayfinder="true">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1 data-i18n="camposObrigatorios.matrix.opening.headerTitle">Campos Obrigatorios</h1>
+                    <p data-i18n="camposObrigatorios.matrix.opening.headerSubtitle">Referencia oficial de estrutura, regra e leitura operacional dos campos.</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary" data-i18n="common.buttons.backToModuleHome">Voltar para a home do modulo</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="epic-context-strip is-global-service">
+        <div class="container">
+            <span class="module-badge-home" data-i18n="common.labels.epicGlobalService">Epico Global Service</span>
+            <p data-i18n="common.contexts.globalServiceModule">Este modulo pertence ao epico Global Service.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="module-hero co-matrix-opening">
+            <div class="container">
+                <div class="co-opening-shell">
+                    <div class="co-opening-head">
+                        <p class="page-breadcrumb co-opening-breadcrumb" data-i18n="camposObrigatorios.matrix.opening.breadcrumb">Inicio &gt; Global Service &gt; Campos Obrigatorios &gt; Matriz Consolidada</p>
+                        <div class="co-opening-context">
+                            <span class="inline-context-label" data-i18n="common.labels.epicGlobalService">Epico Global Service</span>
+                            <p class="co-opening-module" data-i18n="camposObrigatorios.matrix.opening.moduleLabel">Modulo: Campos Obrigatorios</p>
+                            <p class="co-opening-operational" data-i18n="camposObrigatorios.matrix.opening.operationalContext">Contexto operacional: referencia unica para preenchimento, auditoria e leitura de qualidade dos dados do atendimento.</p>
+                        </div>
+                    </div>
+
+                    <div class="co-opening-main">
+                        <h2 data-i18n="camposObrigatorios.matrix.opening.title">Matriz Consolidada de Campos</h2>
+                        <p data-i18n="camposObrigatorios.matrix.opening.description">Esta pagina consolida a fonte oficial de campos de Ticket e Contato/Cliente, com regras atualizadas para operacao, prioridade, SLA e governanca.</p>
+                    </div>
+
+                    <nav class="co-module-nav" data-i18n-aria-label="camposObrigatorios.home.nav.label">
+                        <p class="co-module-nav-label" data-i18n="camposObrigatorios.home.nav.label">Navegacao interna do modulo</p>
+                        <div class="co-module-nav-links">
+                            <a href="index.html" class="co-module-nav-link" data-i18n="camposObrigatorios.home.nav.fields">Campos Obrigatorios</a>
+                            <a href="matriz-consolidada.html" class="co-module-nav-link is-active" aria-current="page" data-i18n="camposObrigatorios.home.nav.matrix">Matriz Consolidada</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules co-matrix-dominant">
+            <div class="container">
+                <article class="card co-matrix-dominant-card">
+                    <header class="co-matrix-dominant-header">
+                        <h3 data-i18n="camposObrigatorios.matrix.dominant.title">Matriz Consolidada Oficial</h3>
+                        <p data-i18n="camposObrigatorios.matrix.dominant.description">Filtre por entidade, classificacao, etapa ou owner para consultar rapidamente a regra de cada campo.</p>
+                    </header>
+
+                    <div class="co-filter-grid">
+                        <label class="co-filter-item">
+                            <span data-i18n="camposObrigatorios.matrix.filters.entity">Entidade</span>
+                            <select id="matrixFilterEntity" class="co-filter-select" data-i18n-title="camposObrigatorios.matrix.filters.entity"></select>
+                        </label>
+                        <label class="co-filter-item">
+                            <span data-i18n="camposObrigatorios.matrix.filters.classification">Classificacao</span>
+                            <select id="matrixFilterClassification" class="co-filter-select" data-i18n-title="camposObrigatorios.matrix.filters.classification"></select>
+                        </label>
+                        <label class="co-filter-item">
+                            <span data-i18n="camposObrigatorios.matrix.filters.stage">Etapa</span>
+                            <select id="matrixFilterStage" class="co-filter-select" data-i18n-title="camposObrigatorios.matrix.filters.stage"></select>
+                        </label>
+                        <label class="co-filter-item">
+                            <span data-i18n="camposObrigatorios.matrix.filters.owner">Owner</span>
+                            <select id="matrixFilterOwner" class="co-filter-select" data-i18n-title="camposObrigatorios.matrix.filters.owner"></select>
+                        </label>
+                    </div>
+
+                    <p class="co-matrix-results-count" id="matrixResultsCount"></p>
+
+                    <div class="co-table-wrap co-table-wrap-sticky">
+                        <table class="co-table co-table-xwide">
+                            <thead>
+                                <tr class="co-table-head-row">
+                                    <th class="co-head" data-i18n="camposObrigatorios.matrix.columns.entity">Entidade</th>
+                                    <th class="co-head" data-i18n="camposObrigatorios.matrix.columns.field">Campo</th>
+                                    <th class="co-head" data-i18n="camposObrigatorios.matrix.columns.classification">Classificacao</th>
+                                    <th class="co-head" data-i18n="camposObrigatorios.matrix.columns.condition">Condicao</th>
+                                    <th class="co-head" data-i18n="camposObrigatorios.matrix.columns.stage">Etapa</th>
+                                    <th class="co-head" data-i18n="camposObrigatorios.matrix.columns.owner">Owner</th>
+                                    <th class="co-head" data-i18n="camposObrigatorios.matrix.columns.impact">Impacto</th>
+                                    <th class="co-head" data-i18n="camposObrigatorios.matrix.columns.rule">Regra</th>
+                                </tr>
+                            </thead>
+                            <tbody id="consolidated-matrix-body"></tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <article class="card co-support-card">
+                    <h3 data-i18n="camposObrigatorios.matrix.support.interpretation.title">Como interpretar a matriz</h3>
+                    <ul class="co-support-list">
+                        <li data-i18n="camposObrigatorios.matrix.support.interpretation.mandatory">Obrigatorio = precisa estar preenchido conforme regra.</li>
+                        <li data-i18n="camposObrigatorios.matrix.support.interpretation.recommended">Desejavel = melhora a qualidade da operacao, mas nao bloqueia a abertura.</li>
+                        <li data-i18n="camposObrigatorios.matrix.support.interpretation.automatic">Automatico = preenchido pelo sistema.</li>
+                        <li data-i18n="camposObrigatorios.matrix.support.interpretation.conditional">Condicional = obrigatorio apenas quando a condicao se aplica.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <article class="card co-support-card co-critical-rules">
+                    <h3 data-i18n="camposObrigatorios.matrix.support.criticalRules.title">Regras condicionais criticas</h3>
+                    <ul class="co-support-list">
+                        <li data-i18n="camposObrigatorios.matrix.support.criticalRules.stateBrazil">Estado obrigatorio apenas para Brasil.</li>
+                        <li data-i18n="camposObrigatorios.matrix.support.criticalRules.provinceArgentina">Provincia obrigatoria apenas para Argentina.</li>
+                        <li data-i18n="camposObrigatorios.matrix.support.criticalRules.assistanceDistributor">Nome da assistencia/distribuidor obrigatorio apenas para Assistencia / Distribuidor.</li>
+                        <li data-i18n="camposObrigatorios.matrix.support.criticalRules.serialException">Numero de serie obrigatorio com excecao contextual justificada.</li>
+                        <li data-i18n="camposObrigatorios.matrix.support.criticalRules.priorityCalculated">Prioridade obrigatoria e calculada pela matriz, sem escolha subjetiva.</li>
+                        <li data-i18n="camposObrigatorios.matrix.support.criticalRules.zeroHourImpact">Zero hora / Out of the box e desejavel, mas impacta leitura de prioridade.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="camposObrigatorios.index.footer">Playbook Global - Campos Obrigatorios</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/locales/stage7-ui.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="./campos-data.js"></script>
+    <script src="./campos-home.js"></script>
+    <script src="../js/global.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Matriz de Prioridade: Estrutura</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/prioridade.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Matriz de Prioridade</h1>
+                    <p>Estrutura tecnica oficial da matriz</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para modulo Matriz</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro-panel">
+            <div class="section-card">
+                <h2>Estrutura Geral da Matriz</h2>
+                <p>
+                    Esta pagina consolida a regra oficial da Matriz de Prioridade com 4 eixos,
+                    pesos por opcao, formula por multiplicacao e classificacao final por faixas P1-P5.
+                </p>
+                <p>
+                    Fluxo oficial: variaveis de entrada -> peso por opcao -> multiplicacao total ->
+                    faixa de prioridade -> resultado final.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2>Fluxo da Regra Oficial</h2>
+            <div class="matrix-flow">
+                <div class="matrix-flow-item">Variaveis de entrada</div>
+                <div class="matrix-flow-arrow">-></div>
+                <div class="matrix-flow-item">Peso por opcao</div>
+                <div class="matrix-flow-arrow">-></div>
+                <div class="matrix-flow-item">Multiplicacao total</div>
+                <div class="matrix-flow-arrow">-></div>
+                <div class="matrix-flow-item">Faixa de prioridade</div>
+                <div class="matrix-flow-arrow">-></div>
+                <div class="matrix-flow-item">Resultado final</div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2>Variaveis Oficiais da Matriz</h2>
+            <div class="variables-grid">
+                <div class="variable-box">
+                    <h3>Solicitante</h3>
+                    <ul>
+                        <li>Assistencia / Distribuidor = 1</li>
+                        <li>Cliente = 2</li>
+                        <li>Cliente de Locacao = 3</li>
+                    </ul>
+                </div>
+                <div class="variable-box">
+                    <h3>Tipo de Atendimento</h3>
+                    <ul>
+                        <li>Dentista especialista de produto = 1</li>
+                        <li>SAC = 2</li>
+                        <li>Tecnico especializado = 3</li>
+                        <li>Cliente de locacao com suporte tecnico = 4</li>
+                    </ul>
+                </div>
+                <div class="variable-box">
+                    <h3>Categoria</h3>
+                    <ul>
+                        <li>Duvidas gerais (SAC) = 1</li>
+                        <li>Instalacao linha de imagem = 2</li>
+                        <li>Duvidas sobre equipamento = 3</li>
+                        <li>Assuntos Financeiros = 4</li>
+                        <li>Problemas tecnicos com o equipamento = 5</li>
+                    </ul>
+                </div>
+                <div class="variable-box">
+                    <h3>Produto</h3>
+                    <ul>
+                        <li>P1 a P5 = peso 1</li>
+                        <li>P6 a P10 = peso 2</li>
+                        <li>P11 a P15 = peso 3</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2>Detalhamento dos Pesos Oficiais</h2>
+            <div class="table-card">
+                <table class="table-visual">
+                    <thead>
+                        <tr>
+                            <th>Eixo</th>
+                            <th>Opcao</th>
+                            <th>Peso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Solicitante</td>
+                            <td>Assistencia / Distribuidor</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Solicitante</td>
+                            <td>Cliente</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Solicitante</td>
+                            <td>Cliente de Locacao</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de Atendimento</td>
+                            <td>Dentista especialista de produto</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de Atendimento</td>
+                            <td>SAC</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de Atendimento</td>
+                            <td>Tecnico especializado</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de Atendimento</td>
+                            <td>Cliente de locacao com suporte tecnico</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Categoria</td>
+                            <td>Duvidas gerais (SAC)</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Categoria</td>
+                            <td>Instalacao linha de imagem</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Categoria</td>
+                            <td>Duvidas sobre equipamento</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td>Categoria</td>
+                            <td>Assuntos Financeiros</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>Categoria</td>
+                            <td>Problemas tecnicos com o equipamento</td>
+                            <td>5</td>
+                        </tr>
+                        <tr>
+                            <td>Produto</td>
+                            <td>P1 a P5</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>Produto</td>
+                            <td>P6 a P10</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>Produto</td>
+                            <td>P11 a P15</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2>Formula Oficial</h2>
+            <div class="table-card">
+                <p><strong>Pontuacao = Solicitante x Tipo de Atendimento x Categoria x Produto</strong></p>
+                <p>
+                    A classificacao final e definida pela pontuacao resultante da multiplicacao dos 4 eixos.
+                </p>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2>Faixas de Classificacao Oficiais</h2>
+            <div class="table-card">
+                <table class="table-visual">
+                    <thead>
+                        <tr>
+                            <th>Prioridade</th>
+                            <th>Faixa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>P1 - Critica</td>
+                            <td>141-180</td>
+                        </tr>
+                        <tr>
+                            <td>P2 - Alta</td>
+                            <td>101-140</td>
+                        </tr>
+                        <tr>
+                            <td>P3 - Moderada</td>
+                            <td>61-100</td>
+                        </tr>
+                        <tr>
+                            <td>P4 - Baixa</td>
+                            <td>26-60</td>
+                        </tr>
+                        <tr>
+                            <td>P5 - Planejada</td>
+                            <td>1-25</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2>Integracao com a Simulacao</h2>
+            <p>
+                Esta estrutura e a base tecnica consumida por <strong>simulacao.html</strong>.
+                A simulacao aplica os mesmos eixos, os mesmos pesos e as mesmas faixas oficiais
+                para retornar a prioridade do ticket de forma consistente.
+            </p>
+            <div class="config-flow">
+                <div class="config-flow-step">Selecao dos 4 eixos</div>
+                <div class="config-flow-step">Multiplicacao dos pesos</div>
+                <div class="config-flow-step">Classificacao em P1-P5</div>
+                <div class="config-flow-step">Resultado final da simulacao</div>
+            </div>
+        </section>
+
+        <section class="section-card">
+            <h2>Navegacao</h2>
+            <div class="final-nav">
+                <div class="final-card">
+                    <h3>Voltar para explicacao da matriz</h3>
+                    <p>Rever logica e fundamentos da matriz.</p>
+                    <a href="explicacao.html" class="btn-link-like">Ver logica da matriz</a>
+                </div>
+                <div class="final-card">
+                    <h3>Avancar para simulacao</h3>
+                    <p>Aplicar esta estrutura oficial na simulacao de tickets.</p>
+                    <a href="simulacao.html" class="btn-link-like">Abrir simulacao</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Matriz de Prioridade</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/prioridade.js"></script>
+</body>
+</html>
+
+

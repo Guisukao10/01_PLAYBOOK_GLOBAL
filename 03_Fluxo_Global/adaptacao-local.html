@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo Global - Adaptação Local</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/fluxo.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Fluxo Global</h1>
+                    <p>Adaptação local com preservação do padrão global</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para módulo</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb-bar"><div class="container"><p class="breadcrumb" data-fluxo-breadcrumb></p></div></section>
+    <section class="module-nav"><div class="container" data-fluxo-nav></div></section>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>Flexibilidade regional com governança</h2>
+                <p>
+                    A operação local pode ajustar elementos táticos sem quebrar o padrão global.
+                    O princípio é manter o núcleo do fluxo intacto e adaptar apenas o que não compromete comparabilidade.
+                </p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>O que é fixo (não negociável)</h2>
+                <div class="exec-grid">
+                    <article class="executive-card">
+                        <h3>Etapas oficiais</h3>
+                        <p>As 9 etapas do fluxo devem permanecer idênticas em todas as regiões.</p>
+                    </article>
+                    <article class="executive-card">
+                        <h3>Status oficiais</h3>
+                        <p>Aberto, Em Atendimento, Aguardando Cliente, Aguardando Assistência Técnica, Aguardando Peça e Fechado.</p>
+                    </article>
+                    <article class="executive-card">
+                        <h3>Movimentação formal</h3>
+                        <p>Somente suporte técnico interno pode mover ticket entre etapas.</p>
+                    </article>
+                    <article class="executive-card">
+                        <h3>Automações críticas</h3>
+                        <p>Datas e tempos automáticos devem ser preservados sem intervenção manual indevida.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>O que pode ser adaptado (com aprovação)</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Elemento</th>
+                                <th>Permite adaptação local</th>
+                                <th>Condição obrigatória</th>
+                                <th>Exemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Texto de comunicação</td><td>Sim</td><td>Sem alterar regra de processo</td><td>Modelo de retorno ao cliente por idioma local</td></tr>
+                            <tr><td>Campos desejáveis</td><td>Sim</td><td>Sem converter em obrigatório global sem aprovação</td><td>Campo opcional de referência fiscal local</td></tr>
+                            <tr><td>Prazos internos de follow-up</td><td>Sim</td><td>Sem quebrar SLA global e rastreabilidade</td><td>Frequência regional de lembrete em espera</td></tr>
+                            <tr><td>Estrutura de workflow</td><td>Não sem aprovação global</td><td>Exige comitê de governança</td><td>Criar novo status local permanente</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <h2>Processo para aprovar variações locais</h2>
+                <div class="exec-grid">
+                    <article class="executive-card">
+                        <h3>1. Solicitar</h3>
+                        <p>A unidade regional descreve necessidade, impacto e prazo esperado.</p>
+                    </article>
+                    <article class="executive-card">
+                        <h3>2. Avaliar</h3>
+                        <p>Governança valida aderência ao fluxo global, KPI e conformidade operacional.</p>
+                    </article>
+                    <article class="executive-card">
+                        <h3>3. Decidir</h3>
+                        <p>Aprovação ou rejeição formal com responsável e data de vigência.</p>
+                    </article>
+                    <article class="executive-card">
+                        <h3>4. Monitorar</h3>
+                        <p>Revisão periódica para garantir que a variação não gere desvio estrutural.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Checklist de conformidade local</h2>
+                <div class="executive-card">
+                    <ul class="key-list">
+                        <li>Etapas oficiais preservadas sem exclusão ou renomeação local.</li>
+                        <li>Status oficiais preservados com as mesmas regras de transição.</li>
+                        <li>Movimentação mantida apenas por suporte técnico interno.</li>
+                        <li>Automações de data e tempo funcionando corretamente.</li>
+                        <li>Resumo de resolução manual obrigatório mantido no fechamento.</li>
+                        <li>Ajustes locais documentados e aprovados pela governança global.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="module-pager"><div class="container" data-fluxo-pager></div></section>
+
+    <footer class="footer">
+        <div class="container"><p>Playbook Global - Fluxo Global / Adaptação Local</p></div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/fluxo.js"></script>
+</body>
+</html>
+
+

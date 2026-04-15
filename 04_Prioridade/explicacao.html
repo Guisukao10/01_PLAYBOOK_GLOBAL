@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Matriz de Prioridade: Explicacao</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/prioridade.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Matriz de Prioridade</h1>
+                    <p>Visao conceitual da classificacao de criticidade</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para modulo Matriz</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <div class="intro-card">
+                    <h2>O que e a Matriz de Prioridade</h2>
+                    <p>
+                        A Matriz de Prioridade e o modelo que padroniza como a criticidade dos tickets e definida.
+                        Em vez de depender de percepcao individual, a classificacao passa a seguir uma regra comum.
+                    </p>
+                    <p>
+                        Ela existe para garantir foco no que e mais critico, aumentar previsibilidade do atendimento
+                        e melhorar a tomada de decisao no dia a dia da operacao.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Como a Matriz Reduz Subjetividade</h2>
+                <div class="section-card">
+                    <p>
+                        Com criterios fixos e pesos oficiais, chamados semelhantes recebem tratamento semelhante.
+                        Isso reduz variacao entre analistas e torna a priorizacao mais transparente para todos os times.
+                    </p>
+                    <p>
+                        O resultado pratico e mais consistencia para SLA, melhor ordenacao de backlog
+                        e maior governanca sobre as filas de atendimento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Grupos de Fatores que Influenciam a Criticidade</h2>
+                <div class="variables-grid">
+                    <div class="variable-card">
+                        <h3>Solicitante</h3>
+                        <p>Identifica quem solicita o atendimento e o contexto da demanda.</p>
+                    </div>
+                    <div class="variable-card">
+                        <h3>Tipo de Atendimento</h3>
+                        <p>Representa a natureza do atendimento esperado para o chamado.</p>
+                    </div>
+                    <div class="variable-card">
+                        <h3>Categoria</h3>
+                        <p>Define o tipo de assunto associado ao ticket.</p>
+                    </div>
+                    <div class="variable-card">
+                        <h3>Produto</h3>
+                        <p>Considera o produto relacionado ao caso para compor a criticidade.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="logic-section">
+            <div class="container">
+                <div class="intro-card">
+                    <h2>Logica Geral da Regra Oficial</h2>
+                    <p>
+                        A matriz aplica pesos para cada um dos 4 eixos e calcula a pontuacao por multiplicacao:
+                        <strong>Solicitante x Tipo de Atendimento x Categoria x Produto</strong>.
+                    </p>
+                    <p>
+                        A pontuacao final posiciona o ticket em uma classificacao objetiva:
+                        <strong>P1, P2, P3, P4 ou P5</strong>.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <h2>Fluxo Conceitual</h2>
+                <div class="flow-board">
+                    <div class="flow-step">
+                        <div class="flow-card-large">Formulario</div>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-arrow">v</span>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-card-large">Matriz</div>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-arrow">v</span>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-card-large">Prioridade</div>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-arrow">v</span>
+                    </div>
+                    <div class="flow-step">
+                        <div class="flow-card-large">Ticket</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Matriz de Prioridade</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/prioridade.js"></script>
+</body>
+</html>
+
+

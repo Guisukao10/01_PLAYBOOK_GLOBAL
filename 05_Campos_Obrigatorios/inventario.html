@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Campos Obrigatorios: Inventario Oficial</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./campos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Campos Obrigatorios</h1>
+                    <p>Inventario oficial do modelo global de dados</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para Campos Obrigatorios</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <p><strong>Inicio > Campos Obrigatorios > Inventario</strong></p>
+                <h2>Inventario Oficial de Campos</h2>
+                <p>Catalogo completo dos campos do modelo global, organizado por camada operacional.</p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <div class="card">
+                    <h3>Visao do inventario</h3>
+                    <p>
+                        O inventario esta dividido em quatro grupos: Abertura, Operacao, Condicionais por Status e
+                        Fechamento. Assim, o ticket nasce completo, evolui com governanca e encerra com qualidade.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Campos Obrigatorios de Abertura (Cliente)</h2>
+                <div class="card">
+                    <p><strong>Camada:</strong> Abertura do Ticket</p>
+                    <div class="co-table-wrap">
+                        <table class="co-table">
+                            <thead>
+                                <tr class="co-table-head-row">
+                                    <th class="co-head">Campo</th>
+                                    <th class="co-head">Entidade</th>
+                                    <th class="co-head">Finalidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="co-cell">Nome do contato</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Identificacao do contato principal na abertura.</td></tr>
+                                <tr><td class="co-cell">Email</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Canal formal de comunicacao do caso.</td></tr>
+                                <tr><td class="co-cell">Telefone</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Canal direto para contato operacional.</td></tr>
+                                <tr><td class="co-cell">Solicitante</td><td class="co-cell">Ticket</td><td class="co-cell">Identifica quem abriu o chamado.</td></tr>
+                                <tr><td class="co-cell">Tipo de atendimento</td><td class="co-cell">Ticket</td><td class="co-cell">Define natureza da demanda para roteamento.</td></tr>
+                                <tr><td class="co-cell">Regiao</td><td class="co-cell">Ticket</td><td class="co-cell">Segmenta operacao por macroterritorio.</td></tr>
+                                <tr><td class="co-cell">Categoria</td><td class="co-cell">Ticket</td><td class="co-cell">Organiza motivo do chamado para triagem e KPI.</td></tr>
+                                <tr><td class="co-cell">Produto</td><td class="co-cell">Ticket</td><td class="co-cell">Conecta o caso ao item atendido.</td></tr>
+                                <tr><td class="co-cell">Marca</td><td class="co-cell">Ticket</td><td class="co-cell">Permite analise por fabricante.</td></tr>
+                                <tr><td class="co-cell">Numero de serie</td><td class="co-cell">Ticket</td><td class="co-cell">Regra obrigatoria global para rastreabilidade do ativo, com excecao contextual controlada na abertura.</td></tr>
+                                <tr><td class="co-cell">CPF/CNPJ</td><td class="co-cell">Ticket</td><td class="co-cell">Identificacao fiscal vinculada ao atendimento/ticket.</td></tr>
+                                <tr><td class="co-cell">Assunto</td><td class="co-cell">Ticket</td><td class="co-cell">Resumo inicial do motivo da abertura.</td></tr>
+                                <tr><td class="co-cell">Descricao</td><td class="co-cell">Ticket</td><td class="co-cell">Contexto inicial para diagnostico e tratativa.</td></tr>
+                                <tr><td class="co-cell">Anexo</td><td class="co-cell">Ticket</td><td class="co-cell">Evidencias para acelerar triagem tecnica.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Campos Operacionais Internos</h2>
+                <div class="card">
+                    <p><strong>Camada:</strong> Operacao Interna</p>
+                    <div class="co-table-wrap">
+                        <table class="co-table">
+                            <thead>
+                                <tr class="co-table-head-row">
+                                    <th class="co-head">Campo</th>
+                                    <th class="co-head">Entidade</th>
+                                    <th class="co-head">Finalidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="co-cell">Prioridade</td><td class="co-cell">Ticket</td><td class="co-cell">Define ordem de fila, SLA e escalonamento.</td></tr>
+                                <tr><td class="co-cell">Status</td><td class="co-cell">Ticket</td><td class="co-cell">Controle de ciclo do atendimento.</td></tr>
+                                <tr><td class="co-cell">Departamento</td><td class="co-cell">Ticket</td><td class="co-cell">Ownership e governanca de fila.</td></tr>
+                                <tr><td class="co-cell">Responsavel</td><td class="co-cell">Ticket</td><td class="co-cell">Atribuicao nominal para conducao do caso.</td></tr>
+                                <tr><td class="co-cell">Classificacoes complementares</td><td class="co-cell">Ticket</td><td class="co-cell">Aprimora leitura gerencial e segmentacao.</td></tr>
+                                <tr><td class="co-cell">Campos adicionais de tratamento</td><td class="co-cell">Ticket</td><td class="co-cell">Detalhes internos de acompanhamento e execucao.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Campos Condicionais por Status - Aguardando Assistencia Tecnica</h2>
+                <div class="card">
+                    <p><strong>Status de ativacao:</strong> Aguardando Assistencia Tecnica</p>
+                    <div class="co-table-wrap">
+                        <table class="co-table">
+                            <thead>
+                                <tr class="co-table-head-row">
+                                    <th class="co-head">Campo</th>
+                                    <th class="co-head">Classificacao</th>
+                                    <th class="co-head">Finalidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="co-cell">Tipo de Assistencia Tecnica (AT Interna / AT Terceirizada)</td><td class="co-cell">Obrigatorio condicional</td><td class="co-cell">Define modelo de atendimento tecnico acionado.</td></tr>
+                                <tr><td class="co-cell">Assistencia Tecnica Responsavel</td><td class="co-cell">Obrigatorio condicional</td><td class="co-cell">Registra ownership da execucao tecnica.</td></tr>
+                                <tr><td class="co-cell">Data de acionamento da AT</td><td class="co-cell">Automatico condicional</td><td class="co-cell">Preenchimento automatico na primeira entrada no status, sem sobrescrever em reentrada.</td></tr>
+                                <tr><td class="co-cell">Previsao de atendimento</td><td class="co-cell">Desejavel</td><td class="co-cell">Apoia comunicacao de prazo e gestao de expectativa.</td></tr>
+                                <tr><td class="co-cell">Observacoes</td><td class="co-cell">Desejavel</td><td class="co-cell">Contexto adicional para acompanhamento.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Campos Condicionais por Status - Aguardando Peca</h2>
+                <div class="card">
+                    <p><strong>Regra atual:</strong> todos os campos desta etapa sao desejaveis (nao obrigatorios por enquanto).</p>
+                    <div class="co-table-wrap">
+                        <table class="co-table">
+                            <thead>
+                                <tr class="co-table-head-row">
+                                    <th class="co-head">Campo</th>
+                                    <th class="co-head">Classificacao</th>
+                                    <th class="co-head">Finalidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="co-cell">Peca necessaria</td><td class="co-cell">Desejavel</td><td class="co-cell">Identifica item de reposicao requerido.</td></tr>
+                                <tr><td class="co-cell">Codigo / descricao da peca</td><td class="co-cell">Desejavel</td><td class="co-cell">Detalha item para rastreio e compras.</td></tr>
+                                <tr><td class="co-cell">Quantidade</td><td class="co-cell">Desejavel</td><td class="co-cell">Planejamento de abastecimento.</td></tr>
+                                <tr><td class="co-cell">Data da solicitacao</td><td class="co-cell">Desejavel</td><td class="co-cell">Historico do acionamento de peca.</td></tr>
+                                <tr><td class="co-cell">Status da peca</td><td class="co-cell">Desejavel</td><td class="co-cell">Acompanhamento logistico.</td></tr>
+                                <tr><td class="co-cell">Previsao de chegada</td><td class="co-cell">Desejavel</td><td class="co-cell">Estimativa para continuidade do atendimento.</td></tr>
+                                <tr><td class="co-cell">Observacoes</td><td class="co-cell">Desejavel</td><td class="co-cell">Contexto complementar para controle operacional.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Campos Obrigatorios de Fechamento</h2>
+                <div class="card">
+                    <p><strong>Camada:</strong> Fechamento</p>
+                    <div class="co-table-wrap">
+                        <table class="co-table">
+                            <thead>
+                                <tr class="co-table-head-row">
+                                    <th class="co-head">Campo</th>
+                                    <th class="co-head">Entidade</th>
+                                    <th class="co-head">Finalidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="co-cell">Resumo de Resolucao</td><td class="co-cell">Ticket</td><td class="co-cell">Obrigatorio para encerramento; resume causa, acao executada e resultado final para auditoria, leitura gerencial e aprendizado futuro.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Campos Estruturais de Contato / Cliente</h2>
+                <div class="card">
+                    <p><strong>Entidade:</strong> Contato / Cliente (sem CPF/CNPJ)</p>
+                    <div class="co-table-wrap">
+                        <table class="co-table">
+                            <thead>
+                                <tr class="co-table-head-row">
+                                    <th class="co-head">Campo</th>
+                                    <th class="co-head">Entidade</th>
+                                    <th class="co-head">Finalidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="co-cell">Name</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Identifica titular do cadastro do cliente.</td></tr>
+                                <tr><td class="co-cell">Address</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Contexto de localizacao para visitas e logistica.</td></tr>
+                                <tr><td class="co-cell">Phone</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Canal primario de contato.</td></tr>
+                                <tr><td class="co-cell">Email</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Canal formal para comunicacoes.</td></tr>
+                                <tr><td class="co-cell">Dealer</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Vinculo ao parceiro comercial.</td></tr>
+                                <tr><td class="co-cell">Scanner Model</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Base para suporte tecnico especializado.</td></tr>
+                                <tr><td class="co-cell">Installation Date</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Contexto de ciclo de uso e garantia.</td></tr>
+                                <tr><td class="co-cell">Scanner Serial Number</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Rastreabilidade do ativo instalado.</td></tr>
+                                <tr><td class="co-cell">PC Model</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Analise de compatibilidade tecnica.</td></tr>
+                                <tr><td class="co-cell">PC Serial Number</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Rastreio de ativo conectado.</td></tr>
+                                <tr><td class="co-cell">Parts Warranty</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Cobertura de pecas para decisao de atendimento.</td></tr>
+                                <tr><td class="co-cell">Labor Warranty</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Cobertura de servico para execucao tecnica.</td></tr>
+                                <tr><td class="co-cell">FDA 2579 Form Number</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Referencia documental para compliance regulatorio.</td></tr>
+                                <tr><td class="co-cell">FDA 2579 Form Date</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Controle de data oficial para auditoria.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <h2>Conexao com outros modulos</h2>
+                <p>
+                    O inventario oficial conecta abertura, operacao, Kanban, fluxo, KPIs e governanca com a mesma
+                    base de dados obrigatorios.
+                </p>
+                <div class="connection-flow">
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Campos Obrigatorios</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Abertura do Ticket</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Kanban / Fluxo</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>KPIs / Governanca</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Proxima Etapa</h2>
+                <article class="module-card active">
+                    <h3>Classificacao dos Campos</h3>
+                    <p>Avance para ver obrigatoriedade por camada e por status.</p>
+                    <a href="classificacao.html" class="btn-module">Proxima etapa -> Classificacao dos Campos</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Campos Obrigatorios</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+</body>
+</html>
+
+
+
+
+

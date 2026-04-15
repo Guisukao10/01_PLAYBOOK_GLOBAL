@@ -1,0 +1,387 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="prioridade.title">Playbook Global - Matriz de Prioridade</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/prioridade.css">
+</head>
+<body class="module-page" data-prioridade-page="index" data-disable-wayfinder="true">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1 data-i18n="prioridade.index.header.title">Matriz de Prioridade</h1>
+                    <p data-i18n="prioridade.index.header.subtitle">Classificacao global de criticidade para ordenacao operacional e decisao</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                        <li><a href="../index.html#epic-global-service" class="btn btn-secondary" data-i18n="common.buttons.viewGlobalServiceEpic">Ver épico Global Service</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="epic-context-strip is-global-service">
+        <div class="container">
+            <span class="module-badge-home" data-i18n="common.labels.epicGlobalService">Épico Global Service</span>
+            <p data-i18n="common.contexts.globalServiceModule">Este módulo pertence ao épico Global Service.</p>
+        </div>
+    </section>
+
+    <section class="module-hero prioridade-page-opening">
+        <div class="container">
+            <div class="prioridade-opening-shell">
+                <div class="prioridade-opening-head">
+                    <p class="page-breadcrumb prioridade-breadcrumb" data-i18n="prioridade.main.opening.breadcrumb">Início &gt; Global Service &gt; Matriz de Prioridade</p>
+                    <div class="prioridade-opening-context">
+                        <span class="inline-context-label" data-i18n="common.labels.epicGlobalService">Épico Global Service</span>
+                        <p class="prioridade-opening-module" data-i18n="prioridade.main.opening.moduleLabel">Módulo: Matriz de Prioridade</p>
+                        <p class="prioridade-opening-objective" data-i18n="prioridade.main.opening.operationalContext">Contexto operacional: regra oficial para ordenar atendimento, fila e leitura de SLA por criticidade.</p>
+                    </div>
+                </div>
+                <div class="prioridade-opening-hero">
+                    <h2 data-i18n="prioridade.main.opening.title">Matriz de Prioridade</h2>
+                    <p data-i18n="prioridade.main.opening.description">Regra que transforma o contexto do ticket em prioridade operacional, reduzindo decisão subjetiva e guiando a ordem ideal de atendimento.</p>
+                </div>
+                <nav class="prioridade-main-nav" data-i18n-aria-label="prioridade.main.nav.label">
+                    <p class="prioridade-main-nav-label" data-i18n="prioridade.main.nav.label">Navegação interna do módulo</p>
+                    <div class="prioridade-main-nav-links">
+                        <a href="index.html" class="prioridade-main-nav-link is-active" aria-current="page" data-i18n="prioridade.main.nav.matrix">Matriz de Prioridade</a>
+                        <a href="simulacao.html" class="prioridade-main-nav-link" data-i18n="prioridade.main.nav.simulation">Simulação de Prioridade</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <section class="prioridade-official-map">
+            <div class="container">
+                <article class="prioridade-map-shell">
+                    <header class="prioridade-map-header">
+                        <p class="prioridade-map-kicker" data-i18n="prioridade.main.rule.kicker">Mapa Oficial da Prioridade</p>
+                        <h3 data-i18n="prioridade.main.rule.title">Entrada do ticket -&gt; critérios e pesos -&gt; score -&gt; P1-P5 -&gt; MTFC -&gt; uso na fila</h3>
+                        <p data-i18n="prioridade.main.rule.summary">A prioridade resume criticidade operacional. Ela orienta a ordem de atendimento e deve ser aplicada como regra, não como escolha subjetiva do agente.</p>
+                    </header>
+
+                    <div class="prioridade-map-flow">
+                        <span class="prioridade-flow-step" data-i18n="prioridade.main.rule.flow.ticketInput">Entrada do ticket</span>
+                        <span class="prioridade-flow-arrow" aria-hidden="true">-&gt;</span>
+                        <span class="prioridade-flow-step" data-i18n="prioridade.main.rule.flow.criteriaWeights">Critérios e pesos</span>
+                        <span class="prioridade-flow-arrow" aria-hidden="true">-&gt;</span>
+                        <span class="prioridade-flow-step" data-i18n="prioridade.main.rule.flow.score">Score final</span>
+                        <span class="prioridade-flow-arrow" aria-hidden="true">-&gt;</span>
+                        <span class="prioridade-flow-step" data-i18n="prioridade.main.rule.flow.priorityClass">Classificação P1-P5</span>
+                        <span class="prioridade-flow-arrow" aria-hidden="true">-&gt;</span>
+                        <span class="prioridade-flow-step" data-i18n="prioridade.main.rule.flow.mtfc">MTFC / primeira resposta</span>
+                        <span class="prioridade-flow-arrow" aria-hidden="true">-&gt;</span>
+                        <span class="prioridade-flow-step" data-i18n="prioridade.main.rule.flow.queueUsage">Uso na fila</span>
+                    </div>
+
+                    <div class="prioridade-map-overview">
+                        <article class="prioridade-overview-item">
+                            <h4 data-i18n="prioridade.main.rule.whatIs.title">O que é a Matriz de Prioridade</h4>
+                            <p data-i18n="prioridade.main.rule.whatIs.text">É a regra que transforma o contexto do ticket em prioridade operacional. A prioridade resume criticidade e guia a ordem ideal de atendimento.</p>
+                        </article>
+                        <article class="prioridade-overview-item">
+                            <h4 data-i18n="prioridade.main.rule.forWho.title">Para quem serve</h4>
+                            <ul>
+                                <li data-i18n="prioridade.main.rule.forWho.agent">Agentes: entender qual ticket atender primeiro.</li>
+                                <li data-i18n="prioridade.main.rule.forWho.coordinator">Coordenadores: organizar fila, backlog e aging.</li>
+                                <li data-i18n="prioridade.main.rule.forWho.manager">Gestores: acompanhar operação por prioridade, SLA e volume.</li>
+                            </ul>
+                        </article>
+                        <article class="prioridade-overview-item">
+                            <h4 data-i18n="prioridade.main.rule.whereAppears.title">Onde aparece</h4>
+                            <ul>
+                                <li data-i18n="prioridade.main.rule.whereAppears.ticket">No ticket do Zoho Desk.</li>
+                                <li data-i18n="prioridade.main.rule.whereAppears.queue">Na fila/lista de tickets.</li>
+                                <li data-i18n="prioridade.main.rule.whereAppears.boards">Em visualizações por prioridade/board.</li>
+                                <li data-i18n="prioridade.main.rule.whereAppears.dashboards">Em dashboards e análises operacionais.</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="prioridade-map-core">
+                        <section class="prioridade-criteria-panel">
+                            <h4 data-i18n="prioridade.main.criteria.title">Como é calculada: critérios e pesos oficiais</h4>
+                            <p data-i18n="prioridade.main.criteria.description">A prioridade é calculada por Solicitante, Tipo de atendimento, Categoria e Produto. Cada opção possui um peso para composição do score final.</p>
+                            <p class="prioridade-formula" data-i18n="prioridade.main.criteria.formula">Score = Solicitante x Tipo de atendimento x Categoria x Produto</p>
+
+                            <div class="prioridade-criteria-grid">
+                                <article class="prioridade-criteria-card">
+                                    <h5 data-i18n="prioridade.main.criteria.solicitante.title">Solicitante</h5>
+                                    <div class="prioridade-table-wrap">
+                                        <table class="prioridade-table">
+                                            <thead>
+                                                <tr>
+                                                    <th data-i18n="prioridade.main.criteria.columns.code">Código</th>
+                                                    <th data-i18n="prioridade.main.criteria.columns.option">Opção</th>
+                                                    <th data-i18n="prioridade.main.criteria.columns.weight">Peso</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>S1</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.solicitante.opcoes.assistencia_distribuidor.label">Assistencia / Distribuidor</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>S2</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.solicitante.opcoes.cliente.label">Cliente</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>S3</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.solicitante.opcoes.cliente_locacao.label">Cliente de Locacao</td>
+                                                    <td>3</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </article>
+
+                                <article class="prioridade-criteria-card">
+                                    <h5 data-i18n="prioridade.main.criteria.tipoAtendimento.title">Tipo de atendimento</h5>
+                                    <div class="prioridade-table-wrap">
+                                        <table class="prioridade-table">
+                                            <thead>
+                                                <tr>
+                                                    <th data-i18n="prioridade.main.criteria.columns.code">Código</th>
+                                                    <th data-i18n="prioridade.main.criteria.columns.option">Opção</th>
+                                                    <th data-i18n="prioridade.main.criteria.columns.weight">Peso</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>A1</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.tipo_atendimento.opcoes.dentista_especialista_produto.label">Quero falar com um dentista especialista de produto</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A2</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.tipo_atendimento.opcoes.falar_com_sac.label">Falar com o SAC</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A3</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.tipo_atendimento.opcoes.tecnico_especializado.label">Quero ser atendido por um tecnico especializado</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>A4</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.tipo_atendimento.opcoes.locacao_suporte_tecnico.label">Sou cliente de locacao de produto e preciso de suporte tecnico</td>
+                                                    <td>4</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </article>
+
+                                <article class="prioridade-criteria-card">
+                                    <h5 data-i18n="prioridade.main.criteria.categoria.title">Categoria</h5>
+                                    <div class="prioridade-table-wrap">
+                                        <table class="prioridade-table">
+                                            <thead>
+                                                <tr>
+                                                    <th data-i18n="prioridade.main.criteria.columns.code">Código</th>
+                                                    <th data-i18n="prioridade.main.criteria.columns.option">Opção</th>
+                                                    <th data-i18n="prioridade.main.criteria.columns.weight">Peso</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>C1</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.categoria.opcoes.duvidas_gerais_sac.label">Duvidas gerais (SAC)</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>C2</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.categoria.opcoes.instalacao_linha_imagem.label">Instalacao de produtos da linha de imagem</td>
+                                                    <td>2</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>C3</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.categoria.opcoes.duvidas_gerais_equipamento.label">Duvidas gerais sobre o equipamento</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>C4</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.categoria.opcoes.assuntos_financeiros.label">Assuntos Financeiros</td>
+                                                    <td>4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>C5</td>
+                                                    <td data-i18n="prioridade.data.matrixConfig.campos.categoria.opcoes.problemas_tecnicos_equipamento.label">Problemas tecnicos com o equipamento</td>
+                                                    <td>5</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </article>
+
+                                <article class="prioridade-criteria-card prioridade-criteria-card-product">
+                                    <h5 data-i18n="prioridade.main.criteria.produto.title">Produto</h5>
+                                    <div class="prioridade-table-wrap">
+                                        <table class="prioridade-table">
+                                            <thead>
+                                                <tr>
+                                                    <th data-i18n="prioridade.main.criteria.columns.code">Código</th>
+                                                    <th data-i18n="prioridade.main.criteria.columns.option">Opção</th>
+                                                    <th data-i18n="prioridade.main.criteria.columns.weight">Peso</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr><td>P1</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.fotopolimerizador.label">Fotopolimerizador</td><td>1</td></tr>
+                                                <tr><td>P2</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.peca_de_mao.label">Peca de Mao</td><td>1</td></tr>
+                                                <tr><td>P3</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.bomba_vacuo.label">Bomba Vacuo</td><td>1</td></tr>
+                                                <tr><td>P4</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.compressor.label">Compressor</td><td>1</td></tr>
+                                                <tr><td>P5</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.micro_motor_eletrico.label">Micro Motor Eletrico</td><td>1</td></tr>
+                                                <tr><td>P6</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.raio_x_periapical.label">Raio-X Periapical</td><td>2</td></tr>
+                                                <tr><td>P7</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.autoclave.label">Autoclave</td><td>2</td></tr>
+                                                <tr><td>P8</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.profilaxia.label">Profilaxia</td><td>2</td></tr>
+                                                <tr><td>P9</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.digitalizador_eagle_ps.label">Digitalizador Eagle PS</td><td>2</td></tr>
+                                                <tr><td>P10</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.raio_x_portatil.label">Raio-X Portatil</td><td>2</td></tr>
+                                                <tr><td>P11</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.sensor_intraoral.label">Sensor Intraoral</td><td>3</td></tr>
+                                                <tr><td>P12</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.consultorios.label">Consultorios</td><td>3</td></tr>
+                                                <tr><td>P13</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.scanner_ios.label">Scanner IOS</td><td>3</td></tr>
+                                                <tr><td>P14</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.eagle_scan.label">Eagle Scan</td><td>3</td></tr>
+                                                <tr><td>P15</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.tomografo_panoramico.label">Tomografo / Panoramico</td><td>3</td></tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+
+                        <aside class="prioridade-classification-panel">
+                            <h4 data-i18n="prioridade.main.classification.title">Classificação oficial P1-P5 e MTFC</h4>
+                            <p data-i18n="prioridade.main.classification.description">A classificação abaixo representa a distribuição operacional base e o foco de SLA nesta página: MTFC (primeira resposta).</p>
+                            <p class="prioridade-classification-note" data-i18n="prioridade.main.classification.scoreCalculationNote">O score individual do ticket é calculado pela multiplicação dos pesos dos critérios. A matriz P1–P5 mostra a distribuição estimada das combinações possíveis por faixa de prioridade.</p>
+                            <p class="prioridade-scale-legend" data-i18n="prioridade.main.classification.scaleLegend">Escala operacional: do mais urgente para o menos urgente.</p>
+                            <div class="prioridade-scale" role="list" data-i18n-aria-label="prioridade.main.classification.scaleLegend">
+                                <article class="prioridade-scale-item prioridade-scale-item-p1" role="listitem">
+                                    <div class="prioridade-scale-head">
+                                        <p class="prioridade-scale-priority"><strong class="prioridade-scale-code">P1</strong> <span data-i18n="prioridade.main.classification.levels.p1.name">Urgente</span></p>
+                                        <span class="prioridade-scale-rank" data-i18n="prioridade.main.classification.highestUrgency">Maior urgência</span>
+                                    </div>
+                                    <div class="prioridade-scale-metrics">
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.estimatedCombinations">Combinações estimadas</span> <strong>10</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.share">Classificação aproximada</span> <strong data-i18n="prioridade.main.classification.levels.p1.share">1%</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfc">MTFC</span> <strong data-i18n="prioridade.main.classification.levels.p1.mtfc">1h</strong></p>
+                                    </div>
+                                    <p class="prioridade-scale-interpretation" data-i18n="prioridade.main.classification.levels.p1.interpretation">Atendimento imediato e priorização máxima na fila.</p>
+                                </article>
+
+                                <article class="prioridade-scale-item prioridade-scale-item-p2" role="listitem">
+                                    <div class="prioridade-scale-head">
+                                        <p class="prioridade-scale-priority"><strong class="prioridade-scale-code">P2</strong> <span data-i18n="prioridade.main.classification.levels.p2.name">Alta</span></p>
+                                    </div>
+                                    <div class="prioridade-scale-metrics">
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.estimatedCombinations">Combinações estimadas</span> <strong>25</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.share">Classificação aproximada</span> <strong data-i18n="prioridade.main.classification.levels.p2.share">3%</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfc">MTFC</span> <strong data-i18n="prioridade.main.classification.levels.p2.mtfc">2h</strong></p>
+                                    </div>
+                                    <p class="prioridade-scale-interpretation" data-i18n="prioridade.main.classification.levels.p2.interpretation">Alta criticidade com janela curta para primeira resposta.</p>
+                                </article>
+
+                                <article class="prioridade-scale-item prioridade-scale-item-p3" role="listitem">
+                                    <div class="prioridade-scale-head">
+                                        <p class="prioridade-scale-priority"><strong class="prioridade-scale-code">P3</strong> <span data-i18n="prioridade.main.classification.levels.p3.name">Média</span></p>
+                                    </div>
+                                    <div class="prioridade-scale-metrics">
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.estimatedCombinations">Combinações estimadas</span> <strong>70</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.share">Classificação aproximada</span> <strong data-i18n="prioridade.main.classification.levels.p3.share">8%</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfc">MTFC</span> <strong data-i18n="prioridade.main.classification.levels.p3.mtfc">3h</strong></p>
+                                    </div>
+                                    <p class="prioridade-scale-interpretation" data-i18n="prioridade.main.classification.levels.p3.interpretation">Fluxo padrão com monitoramento contínuo de SLA.</p>
+                                </article>
+
+                                <article class="prioridade-scale-item prioridade-scale-item-p4" role="listitem">
+                                    <div class="prioridade-scale-head">
+                                        <p class="prioridade-scale-priority"><strong class="prioridade-scale-code">P4</strong> <span data-i18n="prioridade.main.classification.levels.p4.name">Baixa</span></p>
+                                    </div>
+                                    <div class="prioridade-scale-metrics">
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.estimatedCombinations">Combinações estimadas</span> <strong>245</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.share">Classificação aproximada</span> <strong data-i18n="prioridade.main.classification.levels.p4.share">27%</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfc">MTFC</span> <strong data-i18n="prioridade.main.classification.levels.p4.mtfc">5h</strong></p>
+                                    </div>
+                                    <p class="prioridade-scale-interpretation" data-i18n="prioridade.main.classification.levels.p4.interpretation">Priorização de rotina com foco em estabilidade da fila.</p>
+                                </article>
+
+                                <article class="prioridade-scale-item prioridade-scale-item-p5" role="listitem">
+                                    <div class="prioridade-scale-head">
+                                        <p class="prioridade-scale-priority"><strong class="prioridade-scale-code">P5</strong> <span data-i18n="prioridade.main.classification.levels.p5.name">Muito baixa</span></p>
+                                        <span class="prioridade-scale-rank prioridade-scale-rank-low" data-i18n="prioridade.main.classification.lowestUrgency">Menor urgência</span>
+                                    </div>
+                                    <div class="prioridade-scale-metrics">
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.estimatedCombinations">Combinações estimadas</span> <strong>550</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.share">Classificação aproximada</span> <strong data-i18n="prioridade.main.classification.levels.p5.share">61%</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfc">MTFC</span> <strong data-i18n="prioridade.main.classification.levels.p5.mtfc">6h</strong></p>
+                                    </div>
+                                    <p class="prioridade-scale-interpretation" data-i18n="prioridade.main.classification.levels.p5.interpretation">Baixa criticidade, mantendo controle de volume e aging.</p>
+                                </article>
+                            </div>
+                            <p class="prioridade-classification-note" data-i18n="prioridade.main.classification.totalBase">Total base estimada: 900 combinações.</p>
+                            <p class="prioridade-classification-note" data-i18n="prioridade.main.classification.firstResponseNote">Nesta leitura, o SLA está orientado para MTFC e primeira resposta.</p>
+                            <p class="prioridade-classification-note" data-i18n="prioridade.main.classification.resolutionNote">A regra de resolução pode ser tratada separadamente da diferenciação de primeira resposta.</p>
+                            <div class="prioridade-exception-inline">
+                                <h5 data-i18n="prioridade.main.classification.exceptionTitle">Exceção oficial</h5>
+                                <p data-i18n="prioridade.main.classification.exceptionText">Out of the box / Zero hora deve virar prioridade Urgente.</p>
+                            </div>
+                        </aside>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="prioridade-support prioridade-support-operation">
+            <div class="container">
+                <article class="prioridade-support-shell">
+                    <h3 data-i18n="prioridade.main.operation.title">Como usar na operação</h3>
+                    <ul>
+                        <li data-i18n="prioridade.main.operation.agent">Agente usa prioridade para ordenar atendimento na fila.</li>
+                        <li data-i18n="prioridade.main.operation.coordinator">Coordenador usa prioridade para acompanhar fila, backlog e aging.</li>
+                        <li data-i18n="prioridade.main.operation.manager">Gestor usa prioridade para leitura de SLA e volume.</li>
+                        <li data-i18n="prioridade.main.operation.antiSubjective">Prioridade ajuda a evitar decisão subjetiva na rotina.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="prioridade-support prioridade-support-exception">
+            <div class="container">
+                <article class="prioridade-support-shell">
+                    <h3 data-i18n="prioridade.main.exception.title">Exceções e cuidados</h3>
+                    <ul>
+                        <li data-i18n="prioridade.main.exception.zeroHour">Out of the box / Zero hora = Urgente.</li>
+                        <li data-i18n="prioridade.main.exception.reviewInvalidData">Prioridade deve ser revisada se dados obrigatórios estiverem incorretos.</li>
+                        <li data-i18n="prioridade.main.exception.wrongFields">Campos errados podem gerar prioridade errada.</li>
+                        <li data-i18n="prioridade.main.exception.humanFollowUp">Prioridade não substitui acompanhamento humano.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="prioridade.index.footer">Playbook Global - Matriz de Prioridade</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/locales/stage7-ui.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/prioridade.js"></script>
+</body>
+</html>

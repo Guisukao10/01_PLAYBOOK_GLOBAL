@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo Global - Campos por Etapa</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/fluxo.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Fluxo Global</h1>
+                    <p>Matriz de campos por etapa e classificação</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para módulo</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb-bar"><div class="container"><p class="breadcrumb" data-fluxo-breadcrumb></p></div></section>
+    <section class="module-nav"><div class="container" data-fluxo-nav></div></section>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>Classificação oficial dos campos</h2>
+                <p>
+                    Cada campo é analisado por dois eixos: obrigatoriedade (Obrigatório, Obrigatório condicional, Desejável)
+                    e forma de preenchimento (Manual, Automático).
+                </p>
+                <div class="pill-row">
+                    <span class="type-chip obrigatorio">Obrigatório</span>
+                    <span class="type-chip obrigatorio-condicional">Obrigatório condicional</span>
+                    <span class="type-chip desejavel">Desejável</span>
+                    <span class="type-chip manual">Manual</span>
+                    <span class="type-chip automatico">Automático</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Campos por etapa</h2>
+                <div class="table-wrap">
+                    <table class="table-wide">
+                        <thead>
+                            <tr>
+                                <th>Campo</th>
+                                <th>Etapa(s)</th>
+                                <th>Classificação 1</th>
+                                <th>Classificação 2</th>
+                                <th>Regra operacional</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Nome do contato / E-mail / Telefone</td><td>Abertura</td><td>Obrigatório</td><td>Manual</td><td>Sem estes dados o ticket não segue para triagem.</td></tr>
+                            <tr><td>Solicitante / Tipo de atendimento / Região / Categoria</td><td>Abertura e Triagem</td><td>Obrigatório</td><td>Manual</td><td>Base para classificação inicial e fila correta.</td></tr>
+                            <tr><td>Produto / Marca / Número de série / CPF-CNPJ</td><td>Abertura e Classificação</td><td>Obrigatório</td><td>Manual</td><td>Número de série segue regra obrigatória global, com exceção contextual controlada quando indisponível na abertura.</td></tr>
+                            <tr><td>Assunto / Descrição</td><td>Abertura</td><td>Obrigatório</td><td>Manual</td><td>Contexto mínimo para triagem e encaminhamento.</td></tr>
+                            <tr><td>Anexo</td><td>Abertura</td><td>Obrigatório condicional</td><td>Manual</td><td>Obrigatório quando necessário para diagnóstico técnico.</td></tr>
+                            <tr><td>Prioridade</td><td>Priorização e demais etapas</td><td>Obrigatório</td><td>Automático</td><td>Definida automaticamente pela matriz oficial.</td></tr>
+                            <tr><td>Responsável</td><td>Direcionamento e demais etapas</td><td>Obrigatório</td><td>Automático</td><td>Atribuição automática por regra de ownership.</td></tr>
+                            <tr><td>Departamento</td><td>Direcionamento e demais etapas</td><td>Obrigatório</td><td>Automático</td><td>Definição automática da fila responsável.</td></tr>
+                            <tr><td>Data de abertura</td><td>Abertura</td><td>Obrigatório</td><td>Automático</td><td>Gerada na criação do ticket.</td></tr>
+                            <tr><td>Data da primeira resposta</td><td>Em Atendimento</td><td>Obrigatório</td><td>Automático</td><td>Gerada no primeiro retorno formal do atendimento.</td></tr>
+                            <tr><td>Data de mudança de status</td><td>Todas as transições</td><td>Obrigatório</td><td>Automático</td><td>Registrada em toda mudança de estado.</td></tr>
+                            <tr><td>Tipo de Assistência Técnica</td><td>Aguardando Assistência Técnica</td><td>Obrigatório condicional</td><td>Manual</td><td>Obrigatório ao entrar no substatus de AT.</td></tr>
+                            <tr><td>Assistência Técnica Responsável</td><td>Aguardando Assistência Técnica</td><td>Obrigatório condicional</td><td>Manual</td><td>Obrigatório ao acionar dependência técnica externa.</td></tr>
+                            <tr><td>Data de solicitação AT</td><td>Aguardando Assistência Técnica</td><td>Obrigatório</td><td>Automático</td><td>Gerada na primeira entrada, sem sobrescrita em reentrada.</td></tr>
+                            <tr><td>Data de pedido de peça</td><td>Aguardando Peça</td><td>Obrigatório</td><td>Automático</td><td>Gerada na primeira entrada no status.</td></tr>
+                            <tr><td>Peça necessária / Código / Quantidade</td><td>Aguardando Peça</td><td>Desejável</td><td>Manual</td><td>Aumenta previsibilidade de suprimento e prazo.</td></tr>
+                            <tr><td>Tempo em aberto</td><td>Todas as etapas</td><td>Obrigatório</td><td>Automático</td><td>Cálculo automático para leitura de SLA e aging.</td></tr>
+                            <tr><td>Tempo em espera</td><td>Espera Controlada</td><td>Obrigatório</td><td>Automático</td><td>Cálculo automático por permanência nos substatus de espera.</td></tr>
+                            <tr><td>Resumo de resolução</td><td>Resolução e Fechamento</td><td>Obrigatório</td><td>Manual</td><td>Condição obrigatória para permitir encerramento formal.</td></tr>
+                            <tr><td>Data de fechamento</td><td>Fechamento</td><td>Obrigatório</td><td>Automático</td><td>Gerada automaticamente na entrada em Fechado.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Automações obrigatórias</h2>
+                <div class="exec-grid">
+                    <article class="executive-card">
+                        <h3>Datas e tempos automáticos</h3>
+                        <ul class="key-list">
+                            <li>Data de abertura automática.</li>
+                            <li>Data da primeira resposta automática.</li>
+                            <li>Data de solicitação AT automática.</li>
+                            <li>Data de pedido de peça automática.</li>
+                            <li>Data de fechamento automática.</li>
+                            <li>Tempo em aberto automático.</li>
+                            <li>Tempo em espera automático.</li>
+                        </ul>
+                    </article>
+                    <article class="executive-card">
+                        <h3>Controle de fila e responsabilidade</h3>
+                        <ul class="key-list">
+                            <li>Prioridade automática via matriz.</li>
+                            <li>Responsável automático por regra.</li>
+                            <li>Departamento automático por fila.</li>
+                            <li>Data de mudança de status automática em todas as transições.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="module-pager"><div class="container" data-fluxo-pager></div></section>
+
+    <footer class="footer">
+        <div class="container"><p>Playbook Global - Fluxo Global / Campos por Etapa</p></div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/fluxo.js"></script>
+</body>
+</html>
+
+

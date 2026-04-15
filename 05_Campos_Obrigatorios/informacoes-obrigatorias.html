@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos Obrigatorios - Informacoes Obrigatorias</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./campos.css">
+</head>
+<body data-campos-page="informacoes">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Informacoes Obrigatorias</h1>
+                    <p>Leitura rapida dos campos que precisam ser garantidos</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para Campos Obrigatorios</a></li>
+                        <li><a href="matriz-consolidada.html" class="btn btn-secondary">Matriz Completa</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <p><strong>Inicio > Campos Obrigatorios > Informacoes Obrigatorias</strong></p>
+                <h2>Resumo executivo de obrigatoriedade</h2>
+                <p>Este submodulo concentra apenas campos obrigatorios globais, obrigatorios de fechamento e obrigatorios condicionais quando aplicaveis.</p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <div class="co-topic-grid">
+                    <article class="card co-required-card">
+                        <h3>A. Ticket - Obrigatorios na abertura</h3>
+                        <ul id="required-ticket-list" class="co-required-list"></ul>
+                    </article>
+                    <article class="card co-required-card">
+                        <h3>B. Contato/Cliente - Obrigatorios na abertura</h3>
+                        <ul id="required-contact-list" class="co-required-list"></ul>
+                        <p class="co-note">E-mail e Telefone/Celular devem estar presentes para garantir contato formal e operacional.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>C. Obrigatorios condicionais</h2>
+                <div class="card co-matrix-card">
+                    <p class="co-table-caption">Campos condicionais passam a ser obrigatorios quando o contexto exigir.</p>
+                    <div class="co-table-wrap">
+                        <table class="co-table co-table-wide">
+                            <thead>
+                                <tr class="co-table-head-row">
+                                    <th class="co-head">Campo</th>
+                                    <th class="co-head">Classificacao</th>
+                                    <th class="co-head">Tipo de campo</th>
+                                    <th class="co-head">Owner</th>
+                                    <th class="co-head">Etapa de preenchimento</th>
+                                    <th class="co-head">Observacao</th>
+                                </tr>
+                            </thead>
+                            <tbody id="required-conditional-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>D. Obrigatorios de fechamento</h2>
+                <div class="card co-matrix-card">
+                    <div class="co-table-wrap">
+                        <table class="co-table co-table-wide">
+                            <thead>
+                                <tr class="co-table-head-row">
+                                    <th class="co-head">Campo</th>
+                                    <th class="co-head">Classificacao</th>
+                                    <th class="co-head">Tipo de campo</th>
+                                    <th class="co-head">Owner</th>
+                                    <th class="co-head">Etapa de preenchimento</th>
+                                    <th class="co-head">Observacao</th>
+                                </tr>
+                            </thead>
+                            <tbody id="required-closing-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"><div class="container"><p>Playbook Global - Campos Obrigatorios</p></div></footer>
+
+    <script src="./campos-home.js"></script>
+    <script src="./campos-topicos.js"></script>
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+</body>
+</html>
+

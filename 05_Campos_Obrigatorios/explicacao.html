@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Campos Obrigatorios: Conceito Global</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./campos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Campos Obrigatorios</h1>
+                    <p>Conceito global para dados padronizados no atendimento</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para Campos Obrigatorios</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <p><strong>Inicio > Campos Obrigatorios > Conceito</strong></p>
+                <h2>Campos Obrigatorios - Conceito Global</h2>
+                <p>
+                    Os campos obrigatorios estruturam governanca, prioridade, fluxo, auditoria e KPI com base unica
+                    e padronizada para todos os tickets.
+                </p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Logica Oficial do Modulo</h2>
+                <div class="modules-grid">
+                    <article class="module-card active">
+                        <h3>1. Abertura</h3>
+                        <p>Campos minimos preenchidos pelo cliente na criacao do ticket.</p>
+                        <p>O Kanban recebe ticket com dados obrigatorios de entrada ja capturados.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>2. Operacao</h3>
+                        <p>Campos internos preenchidos durante triagem, tratamento e conducao.</p>
+                        <p>Exemplos: Prioridade, Status, Departamento e Responsavel.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>3. Condicionais por Status</h3>
+                        <p>Campos que passam a valer quando o ticket entra em status especificos.</p>
+                        <p>Exemplos: Aguardando Assistencia Tecnica e Aguardando Peca.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>4. Fechamento</h3>
+                        <p>Campos obrigatorios para concluir o atendimento com qualidade.</p>
+                        <p>Resumo de Resolucao e obrigatorio para encerramento.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Pacote Minimo de Abertura (Cliente)</h2>
+                <div class="card">
+                    <p>
+                        Na abertura, o cliente deve preencher: Nome do contato, Email, Telefone, Solicitante,
+                        Tipo de atendimento, Regiao, Categoria, Produto, Marca, Numero de serie, CPF/CNPJ,
+                        Assunto, Descricao e Anexo.
+                    </p>
+                    <p>
+                        O Numero de serie segue regra obrigatoria global; quando o cliente nao tiver a informacao no momento
+                        da abertura, a excecao contextual deve ser registrada e o complemento precisa ocorrer na evolucao.
+                    </p>
+                    <p>
+                        Esses dados entram no ticket desde a primeira etapa operacional e evitam a entrada de ticket vazio.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <h2>Integracao com Kanban e KPIs</h2>
+                <p>
+                    O Kanban deve assumir ticket criado com pacote minimo de dados de abertura.
+                    A operacao evolui com campos internos, campos condicionais por status e fechamento qualificado.
+                </p>
+                <div class="connection-flow">
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Campos Obrigatorios</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Abertura do Ticket</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Kanban / Fluxo</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>KPIs / Governanca</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Regras Criticas do Modelo Atual</h2>
+                <div class="modules-grid">
+                    <article class="module-card">
+                        <h3>CPF/CNPJ no Ticket</h3>
+                        <p>CPF/CNPJ pertence ao ticket e nao ao cadastro estrutural de Contato / Cliente.</p>
+                    </article>
+                    <article class="module-card">
+                        <h3>Aguardando Assistencia Tecnica</h3>
+                        <p>Tipo de AT e AT Responsavel sao obrigatorios condicionais; Data de acionamento AT e automatica na primeira entrada.</p>
+                    </article>
+                    <article class="module-card">
+                        <h3>Aguardando Peca</h3>
+                        <p>Campos dessa etapa sao desejaveis/recomendados, sem obrigatoriedade neste momento.</p>
+                    </article>
+                    <article class="module-card">
+                        <h3>Fechamento com qualidade</h3>
+                        <p>Resumo de Resolucao deve registrar causa, acao executada e resultado final.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Proxima Etapa</h2>
+                <article class="module-card active">
+                    <h3>Inventario de Campos</h3>
+                    <p>Avance para visualizar o inventario completo alinhado ao modelo atual.</p>
+                    <a href="inventario.html" class="btn-module">Proxima etapa -> Inventario de Campos</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Campos Obrigatorios</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+</body>
+</html>
+
+
+
+
+

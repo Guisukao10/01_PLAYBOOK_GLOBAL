@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="home.title">Playbook Global - Página Inicial</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="home-portal">
+    <header class="header home-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo home-logo">
+                    <h1 data-i18n="home.logo">PLAYBOOK GLOBAL</h1>
+                    <p data-i18n="home.header.subtitle">Global Service Governance Hub</p>
+                </div>
+
+                <button
+                    id="homeMenuToggle"
+                    class="home-nav-toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="homePrimaryNav"
+                    data-i18n-aria-label="home.header.menuAria"
+                    aria-label="Abrir menu principal"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav id="homePrimaryNav" class="nav home-nav" aria-label="Navegação principal do portal">
+                    <ul>
+                        <li><a id="navGlobalService" href="#epic-global-service" data-i18n="navigation.main.globalService">Global Service</a></li>
+                        <li><a id="navZohoDesk" href="#epic-zoho-desk" data-i18n="navigation.main.zohoDesk">Zoho Desk</a></li>
+                        <li><a id="navExecutiveBi" href="#" data-i18n="navigation.main.executiveBi">BI Executivo</a></li>
+                    </ul>
+                </nav>
+
+                <a id="headerBiCta" href="#" class="btn-primary header-bi-cta" data-i18n="home.header.ctaBi">Acessar BI</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="home-shell">
+        <section class="hero home-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-kicker" data-i18n="home.hero.kicker">Hub Operacional Global</p>
+                    <h1 data-i18n="home.hero.mainTitle">Padronize o atendimento global e opere o Zoho Desk com direção única</h1>
+                    <p class="hero-subtitle" data-i18n="home.hero.mainSubtitle">Acesse o BI Executivo, escolha seu eixo de trabalho e siga por trilhas claras.</p>
+                    <div class="hero-actions">
+                        <a id="heroBiCta" class="btn-primary" href="#" data-i18n="home.hero.ctaBi">Acessar BI</a>
+                        <a id="heroModulesCta" class="btn-secondary" href="#macro-eixos" data-i18n="home.hero.ctaModules">Ver eixos e módulos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="quick-access" id="quick-access">
+            <div class="container">
+                <div class="section-header compact-header">
+                    <h2 data-i18n="home.quickAccess.title">Comece por aqui</h2>
+                    <p class="section-lead" data-i18n="home.quickAccess.subtitle">Novo por aqui? Inicie no Tutorial Zoho. Gestão e acompanhamento? Vá direto ao BI Executivo.</p>
+                </div>
+                <div class="quick-access-grid">
+                    <a id="quickBi" class="quick-card is-bi" href="#">
+                        <span class="quick-pill" data-i18n="home.quickAccess.items.bi.pill">Prioridade</span>
+                        <h3 data-i18n="home.quickAccess.items.bi.title">BI Executivo</h3>
+                        <p data-i18n="home.quickAccess.items.bi.desc">Acompanhe indicadores, desempenho e riscos operacionais.</p>
+                    </a>
+                    <a id="quickTutorialZoho" class="quick-card" href="#">
+                        <span class="quick-pill" data-i18n="home.quickAccess.items.tutorial.pill">Onboarding</span>
+                        <h3 data-i18n="home.quickAccess.items.tutorial.title">Novo por aqui? Tutorial Zoho</h3>
+                        <p data-i18n="home.quickAccess.items.tutorial.desc">Entenda o uso do sistema e a rotina operacional passo a passo.</p>
+                    </a>
+                    <a id="quickGlobalService" class="quick-card" href="#">
+                        <span class="quick-pill" data-i18n="home.quickAccess.items.globalService.pill">Governança</span>
+                        <h3 data-i18n="home.quickAccess.items.globalService.title">Global Service</h3>
+                        <p data-i18n="home.quickAccess.items.globalService.desc">Consulte padrões globais, regras operacionais e governança.</p>
+                    </a>
+                    <a id="quickZohoDesk" class="quick-card" href="#">
+                        <span class="quick-pill" data-i18n="home.quickAccess.items.zohoDesk.pill">Plataforma</span>
+                        <h3 data-i18n="home.quickAccess.items.zohoDesk.title">Zoho Desk</h3>
+                        <p data-i18n="home.quickAccess.items.zohoDesk.desc">Acesse orientações de uso, configuração e operação da ferramenta.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="macro-eixos" class="macro-eixos">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-i18n="home.axes.title">Global Service e Zoho Desk: escolha o eixo certo para sua necessidade</h2>
+                    <p class="section-lead" data-i18n="home.axes.subtitle">Global Service define o padrão de governança do atendimento. Zoho Desk orienta o uso e a operação prática da plataforma.</p>
+                </div>
+
+                <div class="macro-grid">
+                    <article id="epic-global-service" class="macro-panel is-global-service">
+                        <div class="macro-panel-head">
+                            <span class="module-badge-home" data-i18n="home.axes.globalService.badge">Global Service</span>
+                            <h3 data-i18n="home.axes.globalService.title">Global Service | Governança do Atendimento</h3>
+                            <p data-i18n="home.axes.globalService.desc">Diretrizes globais para padronizar operação, controles e leitura gerencial do atendimento.</p>
+                        </div>
+
+                        <ul class="macro-list">
+                            <li data-i18n="home.axes.globalService.items.priority">Prioridade, criticidade e filas</li>
+                            <li data-i18n="home.axes.globalService.items.requiredFields">Campos obrigatórios e qualidade do registro</li>
+                            <li data-i18n="home.axes.globalService.items.channels">Canais de entrada e regras de governança</li>
+                            <li data-i18n="home.axes.globalService.items.kpis">KPIs, desempenho e leitura operacional</li>
+                        </ul>
+
+                        <a id="macroGlobalService" href="#" class="btn-primary macro-entry-btn" data-i18n="home.axes.globalService.cta">Entrar no Global Service</a>
+
+                        <div class="macro-modules">
+                            <p class="macro-modules-title" data-i18n="home.axes.modulesTitle">Módulos do eixo</p>
+                            <div class="modules-grid" id="globalServiceModules"></div>
+                        </div>
+                    </article>
+
+                    <article id="epic-zoho-desk" class="macro-panel is-zoho-desk">
+                        <div class="macro-panel-head">
+                            <span class="module-badge-home" data-i18n="home.axes.zohoDesk.badge">Zoho Desk</span>
+                            <h3 data-i18n="home.axes.zohoDesk.title">Zoho Desk | Operação da Plataforma</h3>
+                            <p data-i18n="home.axes.zohoDesk.desc">Orientações práticas para usar, configurar e operar o Zoho Desk com consistência.</p>
+                        </div>
+
+                        <ul class="macro-list">
+                            <li data-i18n="home.axes.zohoDesk.items.tutorial">Tutorial e onboarding</li>
+                            <li data-i18n="home.axes.zohoDesk.items.config">Configuração funcional e layouts</li>
+                            <li data-i18n="home.axes.zohoDesk.items.rules">Regras operacionais e automações</li>
+                            <li data-i18n="home.axes.zohoDesk.items.operation">Execução diária na ferramenta</li>
+                        </ul>
+
+                        <a id="macroZohoDesk" href="#" class="btn-secondary macro-entry-btn" data-i18n="home.axes.zohoDesk.cta">Entrar no Zoho Desk</a>
+
+                        <div class="macro-modules">
+                            <p class="macro-modules-title" data-i18n="home.axes.modulesTitle">Módulos do eixo</p>
+                            <div class="modules-grid" id="zohoDeskModules"></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="platform-value" id="platform-value">
+            <div class="container">
+                <div class="section-header compact-header">
+                    <h2 data-i18n="home.value.title">O que este portal entrega</h2>
+                </div>
+
+                <div class="value-grid">
+                    <article class="value-card">
+                        <h3 data-i18n="home.value.items.standards.title">Padrão global oficial</h3>
+                        <p data-i18n="home.value.items.standards.desc">Uma referência única para políticas, regras e governança do atendimento.</p>
+                    </article>
+                    <article class="value-card">
+                        <h3 data-i18n="home.value.items.zoho.title">Operação no Zoho Desk</h3>
+                        <p data-i18n="home.value.items.zoho.desc">Guia objetivo para executar o processo dentro da plataforma.</p>
+                    </article>
+                    <article class="value-card">
+                        <h3 data-i18n="home.value.items.bi.title">Leitura de indicadores</h3>
+                        <p data-i18n="home.value.items.bi.desc">Visibilidade rápida para acompanhamento de desempenho e decisão.</p>
+                    </article>
+                    <article class="value-card">
+                        <h3 data-i18n="home.value.items.onboarding.title">Onboarding e implantação regional</h3>
+                        <p data-i18n="home.value.items.onboarding.desc">Base de apoio para novos colaboradores, key users e novas regiões.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer home-footer">
+        <div class="container">
+            <p class="footer-title" data-i18n="common.footer.global">Playbook Global - Global Service Governance</p>
+            <p class="footer-subtitle" data-i18n="home.footer.support">Base oficial para governança global, operação no Zoho Desk e implantação regional.</p>
+        </div>
+    </footer>
+
+    <script src="i18n/locales/pt-BR.js"></script>
+    <script src="i18n/locales/es.js"></script>
+    <script src="i18n/locales/en.js"></script>
+    <script src="i18n/locales/stage7-ui.js"></script>
+    <script src="i18n/i18n.js"></script>
+    <script src="i18n/init.js"></script>
+    <script src="js/global.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

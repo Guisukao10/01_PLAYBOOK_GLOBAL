@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operação diária no Zoho Desk - Tickets e rotina operacional</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/operacao-zoho.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Operação diária no Zoho Desk</h1>
+                    <p>Etapa 2 - Tickets e rotina operacional</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Home do Módulo</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary">Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <article class="zd-step-hero">
+                    <div class="zd-step-header">
+                        <div>
+                            <p class="zd-breadcrumb"><a href="index.html">Operação diária no Zoho Desk</a> / Tickets e rotina operacional</p>
+                            <h2>Recebi ou visualizei um ticket. Como começo a agir?</h2>
+                        </div>
+                        <span class="zd-step-meta" data-step-indicator></span>
+                    </div>
+                    <p>Esta etapa ensina a interpretar o ticket e transformar informação em ação operacional com ownership claro e rastreabilidade.</p>
+                    <div class="zd-summary-box">
+                        <p><strong>Pergunta central:</strong> "Como interpretar o card do ticket e iniciar atendimento sem erro?"</p>
+                    </div>
+                    <div class="zd-step-mini" data-step-mini></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container zd-section-stack">
+                <div class="zd-grid cols-2">
+                    <article class="zd-card">
+                        <span class="zd-pill">O que você está vendo</span>
+                        <h3>Leitura de card e detalhe de ticket</h3>
+                        <ul>
+                            <li>Status atual do ticket.</li>
+                            <li>Assunto e contexto resumido.</li>
+                            <li>Contato/cliente associado.</li>
+                            <li>Data de criação e última atualização.</li>
+                            <li>Sinais de prioridade/criticidade (quando configurado).</li>
+                        </ul>
+                    </article>
+                    <article class="zd-card">
+                        <span class="zd-pill">O que isso significa</span>
+                        <p>O card mostra o estado operacional daquele atendimento. Ele indica urgência, pendência atual e o risco de atraso se não houver ação.</p>
+                    </article>
+                </div>
+
+                <div class="zd-grid cols-2">
+                    <figure class="zd-figure">
+                        <img src="Imagens_de_treinamento/Home%20Tickets.png" alt="Tela inicial de tickets no Zoho Desk com a fila de atendimento">
+                        <figcaption>Home Tickets: visão principal da fila. Use esta tela para triagem inicial e definição da ordem de atuação.</figcaption>
+                    </figure>
+                    <div class="zd-image-block">
+                        <article class="zd-card">
+                            <span class="zd-pill">O que você está vendo</span>
+                            <p>Lista principal de tickets, status atual, contexto do chamado e sinais de prioridade para iniciar o atendimento.</p>
+                        </article>
+                        <article class="zd-card">
+                            <span class="zd-pill">O que você pode fazer aqui</span>
+                            <p>Selecionar os tickets mais críticos primeiro, abrir o detalhe do ticket e iniciar atualização com base no histórico recente.</p>
+                        </article>
+                        <div class="zd-note zd-note-attention">
+                            <strong>Atenção</strong>
+                            Não trate tickets por ordem visual aleatória. Priorize risco de SLA, criticidade e tempo sem atualização.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="zd-grid cols-2">
+                    <article class="zd-card">
+                        <span class="zd-pill">O que você pode fazer</span>
+                        <ul>
+                            <li>Abrir o detalhe completo para validar histórico.</li>
+                            <li>Atualizar status, owner e campos de evolução.</li>
+                            <li>Responder cliente ou registrar nota interna.</li>
+                            <li>Definir próximo passo e data de retorno.</li>
+                        </ul>
+                    </article>
+                    <article class="zd-card">
+                        <span class="zd-pill">O que revisar antes de agir</span>
+                        <ol>
+                            <li>Histórico recente: o que já foi tentado.</li>
+                            <li>Status: representa a realidade atual?</li>
+                            <li>Pendência: está clara e com responsável definido?</li>
+                            <li>Campos críticos: categoria, prioridade, contato e produto.</li>
+                            <li>SLA: existe risco imediato de violação?</li>
+                        </ol>
+                    </article>
+                </div>
+
+                <article class="zd-situation">
+                    <h3>Situação real</h3>
+                    <p>Ticket está em "Em atendimento", mas sem atualização há dois dias.</p>
+                    <div class="zd-situation-grid">
+                        <div class="zd-situation-item">
+                            <h4>O que fazer</h4>
+                            <p>Validar pendência atual, atualizar status correto e registrar próximo passo com prazo.</p>
+                        </div>
+                        <div class="zd-situation-item">
+                            <h4>O que evitar</h4>
+                            <p>Responder cliente sem corrigir o estado operacional do ticket.</p>
+                        </div>
+                        <div class="zd-situation-item">
+                            <h4>Impacto na governança</h4>
+                            <p>Melhora leitura de aging, reduz backlog oculto e protege SLA.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="zd-grid cols-2">
+                    <figure class="zd-figure">
+                        <img src="Imagens_de_treinamento/Dentro%20do%20ticket.png" alt="Detalhe interno do ticket no Zoho Desk com histórico e campos">
+                        <figcaption>Dentro do ticket: área de histórico, campos e interação. É aqui que a rastreabilidade realmente acontece.</figcaption>
+                    </figure>
+                    <div class="zd-image-block">
+                        <article class="zd-card">
+                            <span class="zd-pill">O que você está vendo</span>
+                            <p>Painel com informações detalhadas do ticket, interações anteriores e campos de controle operacional.</p>
+                        </article>
+                        <article class="zd-card">
+                            <span class="zd-pill">O que você pode fazer aqui</span>
+                            <p>Atualizar status e owner, registrar ação executada, documentar pendência e preparar o próximo passo com prazo.</p>
+                        </article>
+                        <div class="zd-note zd-note-good">
+                            <strong>Boa prática</strong>
+                            Toda interação deve terminar com o ticket atualizado, evitando lacunas para o próximo agente.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="zd-grid cols-2">
+                    <article class="zd-card">
+                        <span class="zd-pill">Erros comuns</span>
+                        <ul>
+                            <li>Atuar sem ler o histórico completo.</li>
+                            <li>Trocar owner sem justificar no ticket.</li>
+                            <li>Deixar ticket ativo sem próximo passo definido.</li>
+                            <li>Tratar todos os tickets na mesma ordem, ignorando criticidade.</li>
+                        </ul>
+                    </article>
+                    <article class="zd-card">
+                        <span class="zd-pill">Boa prática</span>
+                        <p>Toda ação precisa fechar um ciclo: atualização de status + registro de decisão + indicação de próxima ação.</p>
+                    </article>
+                </div>
+
+                <div class="zd-callout">
+                    <h3>Impacto operacional e de governança</h3>
+                    <p>Tickets bem interpretados e atualizados aumentam rastreabilidade, mantêm backlog legível e permitem comparabilidade de desempenho entre regiões.</p>
+                </div>
+
+                <div class="zd-page-close">
+                    <p><strong>Fechamento da etapa:</strong> interpretar card e agir com método evita fila desorganizada. Na próxima etapa, você vai usar views e modo status para enxergar melhor a operação.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <div class="zd-step-nav" data-step-nav></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Operação diária no Zoho Desk</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/operacao-zoho.js"></script>
+</body>
+</html>
+

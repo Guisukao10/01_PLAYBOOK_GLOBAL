@@ -1,0 +1,233 @@
+/* Estilos locais do modulo 06_Governanca */
+
+.gov-hero {
+    background:
+        linear-gradient(145deg, rgba(14, 48, 90, 0.95), rgba(30, 82, 146, 0.9)),
+        radial-gradient(circle at 84% 12%, rgba(188, 218, 249, 0.35), transparent 38%);
+    color: #f6fbff;
+}
+
+.module-page .gov-hero > .container {
+    border: 1px solid rgba(185, 209, 235, 0.42);
+    background: rgba(233, 244, 255, 0.08);
+}
+
+.gov-hero .hero-content {
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gov-hero h1,
+.gov-hero h2 {
+    color: #f7fbff;
+}
+
+.gov-hero h2 {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+}
+
+.module-page .gov-hero .hero-content h2,
+.module-page .gov-hero .hero-content p,
+.module-page .gov-hero .hero-content h1 {
+    color: #f7fbff;
+}
+
+.module-page .gov-hero .hero-content h2 {
+    font-family: var(--font-body);
+    font-weight: 500;
+}
+
+.gov-hero p {
+    margin: 0 auto 1.4rem;
+    color: rgba(229, 241, 255, 0.92);
+    max-width: 860px;
+}
+
+.gov-stack-flow {
+    max-width: 520px;
+    margin: 1.5rem auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.gov-stack-item {
+    width: 100%;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border-strong);
+    background: linear-gradient(180deg, #ffffff 0%, #f4f8ff 100%);
+    color: var(--color-brand-900);
+    font-weight: 700;
+    box-shadow: var(--shadow-xs);
+}
+
+.gov-stack-arrow {
+    color: var(--color-brand-700);
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.gov-rituals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.gov-ritual-card,
+.gov-audit-card {
+    padding: 1.1rem;
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: var(--shadow-sm);
+    line-height: 1.55;
+}
+
+.gov-ritual-card h3,
+.gov-audit-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+}
+
+.gov-ritual-card h4 {
+    margin-top: 0.7rem;
+    margin-bottom: 0.35rem;
+    color: var(--color-text-strong);
+}
+
+.gov-ritual-card p,
+.gov-audit-card p {
+    margin-bottom: 0.45rem;
+}
+
+.gov-ritual-card ul,
+.gov-audit-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--color-text-soft);
+}
+
+.gov-ritual-card li,
+.gov-audit-card li {
+    margin-bottom: 0.2rem;
+}
+
+.gov-table-wrap {
+    overflow-x: auto;
+}
+
+.gov-table {
+    min-width: 640px;
+}
+
+.gov-table th {
+    white-space: nowrap;
+}
+
+.gov-audit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    align-items: stretch;
+}
+
+.gov-audit-highlight {
+    border-color: rgba(36, 93, 166, 0.52);
+    background: linear-gradient(165deg, #ffffff 0%, #edf5ff 100%);
+}
+
+.gov-pyramid {
+    margin-top: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.gov-pyramid-level {
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    padding: 1rem;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.gov-level-executive {
+    width: min(100%, 560px);
+    border-color: rgba(34, 97, 173, 0.5);
+    background: linear-gradient(160deg, #ffffff 0%, #edf5ff 100%);
+}
+
+.gov-level-tactical {
+    width: min(100%, 760px);
+    border-color: rgba(70, 128, 197, 0.42);
+    background: linear-gradient(160deg, #ffffff 0%, #f3f8ff 100%);
+}
+
+.gov-level-operational {
+    width: min(100%, 960px);
+    border-color: rgba(102, 147, 203, 0.34);
+    background: linear-gradient(160deg, #ffffff 0%, #f7fbff 100%);
+}
+
+.gov-pyramid-level h3 {
+    margin: 0;
+}
+
+.gov-level-subtitle {
+    margin: 0;
+    color: var(--color-text-soft);
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.gov-level-block {
+    border: 1px solid #dbe6f3;
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.82);
+    padding: 0.65rem 0.72rem;
+}
+
+.gov-level-block h4 {
+    margin: 0 0 0.25rem;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: #365a86;
+}
+
+.gov-level-block p {
+    margin: 0;
+    color: var(--color-text-soft);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+    .gov-hero .hero-content {
+        text-align: left;
+    }
+
+    .gov-hero p {
+        margin-left: 0;
+    }
+
+    .gov-table {
+        min-width: 560px;
+    }
+
+    .gov-pyramid-level {
+        width: 100%;
+        padding: 0.9rem;
+    }
+}

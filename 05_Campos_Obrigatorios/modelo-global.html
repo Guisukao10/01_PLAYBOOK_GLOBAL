@@ -1,0 +1,212 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Campos Obrigatorios: Modelo Global de Campos</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./campos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Campos Obrigatorios</h1>
+                    <p>Target model consolidado do atendimento global</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para Campos Obrigatorios</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <p><strong>Inicio > Campos Obrigatorios > Modelo Global</strong></p>
+                <h2>Modelo Global de Campos</h2>
+                <p>Estrutura consolidada do atendimento global com abertura, operacao, condicionais e fechamento.</p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <div class="card">
+                    <h3>Visao consolidada do modelo-alvo</h3>
+                    <p>
+                        O target model oficial organiza campos por momento operacional, mantendo consistencia entre
+                        entidades, status e regras de governanca.
+                    </p>
+                    <p>
+                        Regra estrutural: CPF/CNPJ pertence ao Ticket, pois e dado vinculado ao atendimento/caso.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Camadas do Modelo Global</h2>
+                <div class="modules-grid">
+                    <article class="module-card active">
+                        <h3>Abertura</h3>
+                        <p>Pacote minimo preenchido pelo cliente no nascimento do ticket.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Operacao</h3>
+                        <p>Campos internos usados em triagem, tratamento e conducao.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Condicionais por Status</h3>
+                        <p>Campos ativados em status especificos do fluxo.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Fechamento</h3>
+                        <p>Campos obrigatorios para encerramento qualificado.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Abertura do Ticket (Cliente)</h2>
+                <div class="modules-grid">
+                    <article class="module-card"><h3>Contato</h3><p>Nome do contato, Email e Telefone.</p></article>
+                    <article class="module-card"><h3>Contexto do caso</h3><p>Solicitante, Tipo de atendimento, Regiao, Categoria e Produto.</p></article>
+                    <article class="module-card"><h3>Ativo e identificacao</h3><p>Marca, Numero de serie (obrigatorio com excecao contextual controlada) e CPF/CNPJ (entidade Ticket).</p></article>
+                    <article class="module-card"><h3>Descricao inicial</h3><p>Assunto, Descricao e Anexo para triagem inicial.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Operacionais Internos</h2>
+                <div class="modules-grid">
+                    <article class="module-card"><h3>Prioridade</h3><p>Ordenacao de fila e SLA.</p></article>
+                    <article class="module-card"><h3>Status</h3><p>Controle do ciclo do atendimento.</p></article>
+                    <article class="module-card"><h3>Departamento</h3><p>Ownership da etapa operacional.</p></article>
+                    <article class="module-card"><h3>Responsavel</h3><p>Execucao da tratativa do ticket.</p></article>
+                    <article class="module-card"><h3>Classificacoes complementares</h3><p>Detalhamento para leitura gerencial.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Condicionais por Status</h2>
+                <div class="modules-grid">
+                    <article class="module-card active">
+                        <h3>Aguardando Assistencia Tecnica</h3>
+                        <p>Obrigatorios: Tipo de Assistencia Tecnica e Assistencia Tecnica Responsavel.</p>
+                        <p>Automatico: Data de acionamento da AT na primeira entrada no status.</p>
+                        <p>Desejaveis: Previsao de atendimento e Observacoes.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Aguardando Peca</h3>
+                        <p>Campos recomendados: Peca necessaria, Codigo/descricao, Quantidade, Data da solicitacao, Status da peca, Previsao de chegada e Observacoes.</p>
+                        <p>Nenhum campo obrigatorio por enquanto nesta etapa.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Fechamento Obrigatorio</h2>
+                <div class="modules-grid">
+                    <article class="module-card active">
+                        <h3>Resumo de Resolucao</h3>
+                        <p>Campo obrigatorio para fechamento do ticket.</p>
+                        <p>Deve registrar causa, acao executada e resultado final, evitando textos genericos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Campos Estruturais de Contato / Cliente</h2>
+                <div class="modules-grid">
+                    <article class="module-card"><h3>Name</h3><p>Identificacao principal do cliente.</p></article>
+                    <article class="module-card"><h3>Address</h3><p>Contexto de localizacao e atendimento.</p></article>
+                    <article class="module-card"><h3>Phone</h3><p>Canal direto de contato.</p></article>
+                    <article class="module-card"><h3>Email</h3><p>Canal formal de comunicacao.</p></article>
+                    <article class="module-card"><h3>Dealer</h3><p>Vinculo com parceiro comercial.</p></article>
+                    <article class="module-card"><h3>Scanner Model</h3><p>Direcionamento tecnico por modelo.</p></article>
+                    <article class="module-card"><h3>Installation Date</h3><p>Contexto de ciclo de uso.</p></article>
+                    <article class="module-card"><h3>Scanner Serial Number</h3><p>Rastreabilidade da base instalada.</p></article>
+                    <article class="module-card"><h3>PC Model</h3><p>Compatibilidade e diagnostico tecnico.</p></article>
+                    <article class="module-card"><h3>PC Serial Number</h3><p>Identificacao do ativo conectado.</p></article>
+                    <article class="module-card"><h3>Parts Warranty</h3><p>Cobertura de pecas e elegibilidade.</p></article>
+                    <article class="module-card"><h3>Labor Warranty</h3><p>Cobertura de servico e atendimento.</p></article>
+                    <article class="module-card"><h3>FDA 2579 Form Number</h3><p>Rastreabilidade documental regulatoria.</p></article>
+                    <article class="module-card"><h3>FDA 2579 Form Date</h3><p>Validade e conformidade documental.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <h2>Conexao com os outros modulos</h2>
+                <p>
+                    O modelo global consolidado garante que o Kanban receba ticket com base minima de abertura e evolua
+                    com governanca ate o fechamento.
+                </p>
+                <div class="connection-flow">
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Campos Obrigatorios</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Abertura do Ticket</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Kanban / Fluxo</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>KPIs / Governanca</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Proxima Etapa</h2>
+                <article class="module-card active">
+                    <h3>Governanca de Preenchimento</h3>
+                    <p>Avance para definir quem preenche cada campo e em qual momento.</p>
+                    <a href="governanca.html" class="btn-module">Proxima etapa -> Governanca de Preenchimento</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Campos Obrigatorios</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+</body>
+</html>
+
+
+
+

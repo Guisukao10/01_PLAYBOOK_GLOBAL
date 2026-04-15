@@ -1,0 +1,157 @@
+﻿import routes from "../config/routes.js";
+import epicModules from "../config/modules-config.js";
+
+const POWER_BI_URL =
+    "https://app.powerbi.com/view?r=eyJrIjoiZWJjZGJmODYtZmVmNC00ZjRkLWI1NDUtZTZkZDA0NDE1OTdhIiwidCI6ImE2NzRhMDgxLTBjNTMtNGQyZC1hZWQ2LWRiZjgwNmY5NWExYiJ9";
+
+function getI18n() {
+    return (
+        window.PlaybookI18n || {
+            t: function (_key, fallback) {
+                return fallback;
+            }
+        }
+    );
+}
+
+function buildModuleActionLabel(moduleMeta, i18n) {
+    const configured = i18n.t("home.moduleCtas." + moduleMeta.id, "");
+    if (configured) return configured;
+
+    if (/dashboard/i.test(moduleMeta.id)) {
+        return i18n.t("home.moduleCtas.fallbackDashboard", "Abrir Dashboard");
+    }
+
+    if (/map|mapa/i.test(moduleMeta.id)) {
+        return i18n.t("home.moduleCtas.fallbackMap", "Abrir mapa");
+    }
+
+    return i18n.t("home.moduleCtas.fallbackGeneric", "Abrir módulo");
+}
+
+function createModuleCard(moduleMeta, i18n) {
+    const card = document.createElement("article");
+    card.className = "module-card";
+
+    const isComingSoon = moduleMeta.status === "coming_soon";
+    card.classList.add(isComingSoon ? "is-coming-soon" : "is-available");
+
+    const title = document.createElement("h3");
+    title.textContent = i18n.t("home.modules." + moduleMeta.id + ".title", moduleMeta.id);
+
+    const description = document.createElement("p");
+    description.textContent = i18n.t("home.modules." + moduleMeta.id + ".description", "");
+
+    if (isComingSoon) {
+        const statusBadge = document.createElement("span");
+        statusBadge.className = "module-badge-home";
+        statusBadge.textContent = i18n.t("home.labels.comingSoon", "Em breve");
+        card.appendChild(statusBadge);
+    }
+
+    card.appendChild(title);
+    card.appendChild(description);
+
+    if (isComingSoon) {
+        const plannedTag = document.createElement("span");
+        plannedTag.className = "module-plan-tag";
+        plannedTag.textContent = i18n.t("home.labels.plannedModule", "Módulo planejado");
+        card.appendChild(plannedTag);
+        return card;
+    }
+
+    const action = document.createElement("a");
+    action.className = "btn-module";
+    action.href = moduleMeta.link;
+    action.textContent = buildModuleActionLabel(moduleMeta, i18n);
+    card.appendChild(action);
+
+    return card;
+}
+
+function renderEpicModules(containerId, epicId, i18n) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const epicMeta = epicModules[epicId];
+    if (!epicMeta || !Array.isArray(epicMeta.modules)) return;
+
+    container.innerHTML = "";
+    epicMeta.modules.forEach(function (moduleMeta) {
+        container.appendChild(createModuleCard(moduleMeta, i18n));
+    });
+}
+
+function setLink(id, href, isExternal) {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    el.href = href;
+
+    if (isExternal) {
+        el.target = "_blank";
+        el.rel = "noopener noreferrer";
+    }
+}
+
+function setupMobileNavigation() {
+    const toggle = document.getElementById("homeMenuToggle");
+    const nav = document.getElementById("homePrimaryNav");
+
+    if (!toggle || !nav) return;
+
+    function closeMenu() {
+        nav.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+    }
+
+    function openMenu() {
+        nav.classList.add("is-open");
+        toggle.setAttribute("aria-expanded", "true");
+    }
+
+    toggle.addEventListener("click", function () {
+        const expanded = toggle.getAttribute("aria-expanded") === "true";
+        if (expanded) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            closeMenu();
+        });
+    });
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 980) {
+            closeMenu();
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const i18n = getI18n();
+
+    setLink("navGlobalService", routes.globalServiceHome);
+    setLink("navZohoDesk", routes.zohoDeskHome);
+    setLink("navExecutiveBi", POWER_BI_URL, true);
+
+    setLink("headerBiCta", POWER_BI_URL, true);
+    setLink("heroBiCta", "https://globalplaybook.netlify.app/01_kpi/kpi_v2/dashboard", true);
+
+    setLink("quickBi", "https://globalplaybook.netlify.app/01_kpi/kpi_v2/dashboard", true);
+    setLink("quickTutorialZoho", routes.operacaoZohoHome);
+    setLink("quickGlobalService", routes.globalServiceHome);
+    setLink("quickZohoDesk", routes.zohoDeskHome);
+
+    setLink("macroGlobalService", routes.globalServiceHome);
+    setLink("macroZohoDesk", routes.zohoDeskHome);
+
+    renderEpicModules("globalServiceModules", "global_service", i18n);
+    renderEpicModules("zohoDeskModules", "zoho_desk", i18n);
+
+    setupMobileNavigation();
+});

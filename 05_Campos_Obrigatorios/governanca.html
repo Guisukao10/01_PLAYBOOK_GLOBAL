@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Campos Obrigatorios: Governanca de Preenchimento</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./campos.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Campos Obrigatorios</h1>
+                    <p>Responsabilidade, momento e regra de preenchimento</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para Campos Obrigatorios</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <p><strong>Inicio > Campos Obrigatorios > Governanca</strong></p>
+                <h2>Governanca de Preenchimento</h2>
+                <p>Responsabilidade, momento e regra de preenchimento para cada camada do modelo global.</p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <div class="card">
+                    <h3>Por que governanca de preenchimento e essencial</h3>
+                    <p>
+                        Governanca define dono do dado, momento de captura e regra de obrigatoriedade.
+                        Isso evita ticket incompleto, protege auditoria e melhora leitura gerencial.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Responsaveis por Camada</h2>
+                <div class="modules-grid">
+                    <article class="module-card active">
+                        <h3>Cliente (Abertura)</h3>
+                        <p>Preenche o pacote minimo para criacao do ticket.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Atendimento / Operacao</h3>
+                        <p>Preenche campos internos durante triagem e tratamento.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Tecnico / Especialista</h3>
+                        <p>Atualiza campos condicionais tecnicos quando status exigir.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Sistema / Automacao</h3>
+                        <p>Preenche campos automaticos, incluindo data de acionamento AT.</p>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Responsavel pelo fechamento</h3>
+                        <p>Registra Resumo de Resolucao antes de encerrar o ticket.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <h2>Momento de Captura</h2>
+                <p>O dado correto deve ser capturado no momento correto para sustentar Kanban, KPIs e governanca.</p>
+                <div class="connection-flow">
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Abertura</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Operacao</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Condicionais por Status</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Fechamento</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Matriz de Governanca</h2>
+                <div class="card">
+                    <div class="co-table-wrap">
+                        <table class="co-table co-table-xwide">
+                            <thead>
+                                <tr class="co-table-head-row">
+                                    <th class="co-head">Campo</th>
+                                    <th class="co-head">Entidade</th>
+                                    <th class="co-head">Quem preenche</th>
+                                    <th class="co-head">Quando preenche</th>
+                                    <th class="co-head">Regra</th>
+                                    <th class="co-head">Finalidade</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="co-cell">Nome do contato</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Identificacao inicial do contato.</td></tr>
+                                <tr><td class="co-cell">Email</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Canal formal de comunicacao.</td></tr>
+                                <tr><td class="co-cell">Telefone</td><td class="co-cell">Contato / Cliente</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Canal operacional imediato.</td></tr>
+                                <tr><td class="co-cell">Solicitante</td><td class="co-cell">Ticket</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Identificacao de quem abriu o ticket.</td></tr>
+                                <tr><td class="co-cell">Tipo de atendimento</td><td class="co-cell">Ticket</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Direcionamento inicial.</td></tr>
+                                <tr><td class="co-cell">Regiao</td><td class="co-cell">Ticket</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Segmentacao global.</td></tr>
+                                <tr><td class="co-cell">Categoria</td><td class="co-cell">Ticket</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Classificacao inicial do assunto.</td></tr>
+                                <tr><td class="co-cell">Produto</td><td class="co-cell">Ticket</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Contexto tecnico do ticket.</td></tr>
+                                <tr><td class="co-cell">Marca</td><td class="co-cell">Ticket</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Leitura por fabricante.</td></tr>
+                                <tr><td class="co-cell">Numero de serie</td><td class="co-cell">Ticket</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio global com excecao contextual</td><td class="co-cell">Rastreabilidade de ativo; quando indisponivel na abertura, registrar excecao e completar na evolucao.</td></tr>
+                                <tr><td class="co-cell">CPF/CNPJ</td><td class="co-cell">Ticket</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Dado fiscal vinculado ao atendimento.</td></tr>
+                                <tr><td class="co-cell">Assunto / Descricao / Anexo</td><td class="co-cell">Ticket</td><td class="co-cell">Cliente</td><td class="co-cell">Abertura</td><td class="co-cell">Obrigatorio de abertura</td><td class="co-cell">Contexto inicial para triagem e Kanban.</td></tr>
+
+                                <tr><td class="co-cell">Prioridade</td><td class="co-cell">Ticket</td><td class="co-cell">Atendimento / Agente</td><td class="co-cell">Triagem e tratamento</td><td class="co-cell">Operacional interno</td><td class="co-cell">Fila, SLA e escalonamento.</td></tr>
+                                <tr><td class="co-cell">Status</td><td class="co-cell">Ticket</td><td class="co-cell">Atendimento / Agente</td><td class="co-cell">Todo o ciclo</td><td class="co-cell">Operacional interno</td><td class="co-cell">Controle de andamento do fluxo.</td></tr>
+                                <tr><td class="co-cell">Departamento</td><td class="co-cell">Ticket</td><td class="co-cell">Atendimento / Gestao</td><td class="co-cell">Triagem</td><td class="co-cell">Operacional interno</td><td class="co-cell">Ownership da fila.</td></tr>
+                                <tr><td class="co-cell">Responsavel</td><td class="co-cell">Ticket</td><td class="co-cell">Atendimento / Gestao</td><td class="co-cell">Triagem e transferencias</td><td class="co-cell">Operacional interno</td><td class="co-cell">Execucao da tratativa.</td></tr>
+
+                                <tr><td class="co-cell">Tipo de Assistencia Tecnica</td><td class="co-cell">Ticket</td><td class="co-cell">Atendimento / Operacao</td><td class="co-cell">Ao entrar em Aguardando Assistencia Tecnica</td><td class="co-cell">Obrigatorio condicional</td><td class="co-cell">Define AT Interna ou AT Terceirizada.</td></tr>
+                                <tr><td class="co-cell">Assistencia Tecnica Responsavel</td><td class="co-cell">Ticket</td><td class="co-cell">Atendimento / Operacao</td><td class="co-cell">Ao entrar em Aguardando Assistencia Tecnica</td><td class="co-cell">Obrigatorio condicional</td><td class="co-cell">Responsavel pela execucao tecnica.</td></tr>
+                                <tr><td class="co-cell">Data de acionamento da AT</td><td class="co-cell">Ticket</td><td class="co-cell">Sistema / Automacao</td><td class="co-cell">Primeira entrada em Aguardando Assistencia Tecnica</td><td class="co-cell">Automatico condicional</td><td class="co-cell">Nao sobrescrever em nova entrada no mesmo status.</td></tr>
+                                <tr><td class="co-cell">Previsao de atendimento (AT)</td><td class="co-cell">Ticket</td><td class="co-cell">Atendimento / Operacao</td><td class="co-cell">Durante Aguardando Assistencia Tecnica</td><td class="co-cell">Desejavel condicional</td><td class="co-cell">Gestao de expectativa e prazo.</td></tr>
+                                <tr><td class="co-cell">Observacoes (AT)</td><td class="co-cell">Ticket</td><td class="co-cell">Atendimento / Operacao</td><td class="co-cell">Durante Aguardando Assistencia Tecnica</td><td class="co-cell">Desejavel condicional</td><td class="co-cell">Contexto complementar da tratativa.</td></tr>
+
+                                <tr><td class="co-cell">Campos de Aguardando Peca</td><td class="co-cell">Ticket</td><td class="co-cell">Atendimento / Operacao</td><td class="co-cell">Durante Aguardando Peca</td><td class="co-cell">Desejavel condicional</td><td class="co-cell">Peca necessaria, codigo/descricao, quantidade, data, status, previsao e observacoes; sem obrigatoriedade por enquanto.</td></tr>
+
+                                <tr><td class="co-cell">Resumo de Resolucao</td><td class="co-cell">Ticket</td><td class="co-cell">Responsavel pelo fechamento</td><td class="co-cell">Antes de encerrar</td><td class="co-cell">Obrigatorio de fechamento</td><td class="co-cell">Registro de causa, acao executada e resultado final para auditoria, historico e aprendizado.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <h2>Conexao com o Projeto</h2>
+                <p>
+                    Governanca de preenchimento garante que o ticket entre completo no Kanban e atravesse o fluxo
+                    com dados confiaveis ate o fechamento.
+                </p>
+                <div class="connection-flow">
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Campos Obrigatorios</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Abertura do Ticket</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>Kanban / Fluxo</h4></div>
+                        <span class="arrow">></span>
+                    </div>
+                    <div class="flow-item">
+                        <div class="flow-card"><h4>KPIs / Governanca</h4></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="container">
+                <div class="card">
+                    <h3>Fechamento do modulo</h3>
+                    <p>
+                        Com dono, regra e momento definidos, os campos deixam de ser cadastro solto e passam a ser
+                        base operacional de governanca, auditoria e melhoria continua.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Encerramento</h2>
+                <article class="module-card active">
+                    <h3>Voltar para Campos Obrigatorios</h3>
+                    <p>Retorne ao indice do modulo para revisar toda a trilha construida.</p>
+                    <a href="index.html" class="btn-module">Voltar para Campos Obrigatorios</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Campos Obrigatorios</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+</body>
+</html>
+
+
+
+
+

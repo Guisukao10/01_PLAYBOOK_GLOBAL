@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxo Global - Conexões</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/fluxo.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Fluxo Global</h1>
+                    <p>Conexões com os demais módulos do Playbook</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para módulo</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="breadcrumb-bar"><div class="container"><p class="breadcrumb" data-fluxo-breadcrumb></p></div></section>
+    <section class="module-nav"><div class="container" data-fluxo-nav></div></section>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>Como este módulo se conecta ao ecossistema</h2>
+                <p>
+                    O Fluxo Global é a espinha dorsal do Playbook: ele orienta como os demais módulos leem,
+                    executam e medem a operação.
+                </p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Integração com módulos estruturantes</h2>
+                <div class="connection-grid">
+                    <article class="connection-card">
+                        <span class="module-tag">02_Kanban</span>
+                        <h4>Camada visual do status</h4>
+                        <p>Consome status e transições oficiais para representar o andamento do atendimento.</p>
+                    </article>
+                    <article class="connection-card">
+                        <span class="module-tag">04_Prioridade</span>
+                        <h4>Criticidade automática</h4>
+                        <p>Fornece prioridade automática para direcionamento e execução da fila.</p>
+                    </article>
+                    <article class="connection-card">
+                        <span class="module-tag">05_Campos_Obrigatorios</span>
+                        <h4>Qualidade de dados</h4>
+                        <p>Define os campos mínimos e condicionais usados ao longo das etapas.</p>
+                    </article>
+                    <article class="connection-card">
+                        <span class="module-tag">01_KPI</span>
+                        <h4>Leitura de desempenho</h4>
+                        <p>Usa eventos e tempos automáticos para medir SLA, aging e eficiência global.</p>
+                    </article>
+                    <article class="connection-card">
+                        <span class="module-tag">06_Governanca</span>
+                        <h4>Conformidade operacional</h4>
+                        <p>Valida aderência ao padrão e controla exceções de aplicação local.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Dependências críticas e sincronização</h2>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dependência</th>
+                                <th>Módulo relacionado</th>
+                                <th>Ponto de sincronização</th>
+                                <th>Risco se houver desalinhamento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Status oficiais</td><td>02_Kanban</td><td>Colunas e regras de movimentação</td><td>Kanban fora do fluxo aprovado</td></tr>
+                            <tr><td>Matriz de prioridade</td><td>04_Prioridade</td><td>Priorização automática do ticket</td><td>Fila sem critério único de criticidade</td></tr>
+                            <tr><td>Classificação de campos</td><td>05_Campos_Obrigatorios</td><td>Obrigatoriedade por etapa</td><td>Quebra de dados para SLA e KPI</td></tr>
+                            <tr><td>Eventos de data e tempo</td><td>01_KPI</td><td>Métricas de tempo em aberto e espera</td><td>Indicadores inconsistentes entre operações</td></tr>
+                            <tr><td>Ownership e exceções</td><td>06_Governanca</td><td>Política de movimentação e compliance</td><td>Perda de rastreabilidade e governança</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <h2>Boas práticas de integração</h2>
+                <div class="exec-grid">
+                    <article class="executive-card">
+                        <h3>Fonte única de regras</h3>
+                        <p>Manter o Fluxo Global como referência oficial para etapas, status e transições.</p>
+                    </article>
+                    <article class="executive-card">
+                        <h3>Revisão cruzada periódica</h3>
+                        <p>Sincronizar mudanças com os responsáveis de Kanban, Prioridade, Campos, KPI e Governança.</p>
+                    </article>
+                    <article class="executive-card">
+                        <h3>Controle formal de mudança</h3>
+                        <p>Qualquer exceção local deve passar por validação da coordenação global.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="module-pager"><div class="container" data-fluxo-pager></div></section>
+
+    <footer class="footer">
+        <div class="container"><p>Playbook Global - Fluxo Global / Conexões</p></div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/fluxo.js"></script>
+</body>
+</html>
+
+
