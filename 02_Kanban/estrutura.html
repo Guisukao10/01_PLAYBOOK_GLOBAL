@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Kanban: Status e Objetivos</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/kanban.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>02 - Kanban Global</h1>
+                    <p>Objetivo operacional de cada status oficial</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para modulo Kanban</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="kanban-highlight">
+        <div class="container">
+            <div class="kanban-highlight-card">
+                <p>
+                    Esta pagina concentra o que importa para operacao diaria: o objetivo de cada coluna, quando usar, permanencia correta e risco de uso incorreto.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module-nav">
+        <div class="container" data-kanban-nav></div>
+    </section>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>Objetivo de cada status</h2>
+                <p class="section-lead">
+                    Os seis status abaixo formam a estrutura oficial do Kanban. O ticket deve estar sempre na coluna que representa a condicao real do atendimento.
+                </p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <div class="status-objective-grid" data-kanban-objective-cards></div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <h2>Regra global de fechamento</h2>
+                <div class="executive-card">
+                    <p class="flow-note">
+                        Nao existe coluna Resolvido no modelo oficial. O encerramento formal ocorre diretamente em Fechado, com registro consistente da resolucao.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Modulo 02 Kanban</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/kanban.js"></script>
+</body>
+</html>
+

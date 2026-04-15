@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Simulador: Cenarios de Simulacao</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./simulador.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Cenarios de Simulacao</h1>
+                    <p>Biblioteca de casos para validar abertura, prioridade, fluxo e governanca</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para Simulador</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <p><strong>Inicio > Simulador > Cenarios de Simulacao</strong></p>
+                <h2>Escolha um cenario e rode a simulacao</h2>
+                <p>
+                    Esta pagina concentra cenarios prontos para teste rapido. Cada cenario representa uma situacao real
+                    de operacao e mostra como a qualidade da entrada altera risco, fila e leitura gerencial.
+                </p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <div class="sim-scenario-toolbar">
+                    <a href="comparacao.html" class="btn btn-secondary">Comparar dois cenarios lado a lado</a>
+                </div>
+                <div class="sim-scenarios-grid" id="simScenariosGrid"></div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <div class="sim-cta-note">
+                    <h2>Como interpretar o resultado</h2>
+                    <p>
+                        Use os cenarios para responder tres perguntas: o ticket nasceu com qualidade?
+                        a prioridade ficou coerente? o fluxo sugerido protege SLA, backlog e governanca?
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Simulador de Ticket</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./simulador.js"></script>
+</body>
+</html>
+
+

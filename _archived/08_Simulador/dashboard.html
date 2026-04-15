@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Simulador: Dashboard Executivo</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./simulador.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Dashboard de Simulacao</h1>
+                    <p>Consolidado executivo do impacto operacional e de governanca</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para Simulador</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <p><strong>Inicio > Simulador > Dashboard</strong></p>
+                <h2>Leitura executiva do cenario simulado</h2>
+                <p>
+                    O dashboard traduz o cenario em sinais de decisao: risco de SLA, pressao de backlog,
+                    qualidade de dados e efeito da governanca sobre consistencia operacional.
+                </p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Resumo do cenario</h2>
+                <div class="sim-dashboard-summary" id="dashboardScenarioSummary"></div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>KPIs simulados</h2>
+                <div class="sim-kpi-grid" id="dashboardKpiGrid"></div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Comparacao com e sem governanca</h2>
+                <div class="sim-governance-compare" id="dashboardGovernanceCompare"></div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Painel de impacto por volume</h2>
+                <div class="sim-volume-controls">
+                    <button type="button" class="btn btn-secondary" data-volume="10">Simular 10 tickets</button>
+                    <button type="button" class="btn btn-secondary" data-volume="50">Simular 50 tickets</button>
+                    <button type="button" class="btn btn-secondary" data-volume="100">Simular 100 tickets</button>
+                </div>
+                <div class="sim-impact-kpi-grid" id="dashboardVolumeImpact"></div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <div class="sim-executive-reading" id="dashboardExecutiveReading"></div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Navegacao do modulo</h2>
+                <div class="modules-grid sim-nav-grid">
+                    <article class="module-card active">
+                        <h3>Simulacao Guiada</h3>
+                        <p>Revisar escolhas operacionais do ticket passo a passo.</p>
+                        <a href="simulacao-guiada.html" class="btn-module">Abrir Simulacao Guiada</a>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Timeline</h3>
+                        <p>Analisar status, tempo, SLA e risco ao longo da vida do ticket.</p>
+                        <a href="timeline.html" class="btn-module">Abrir Timeline</a>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Comparacao de Cenarios</h3>
+                        <p>Comparar cenarios para validar ganho de governanca.</p>
+                        <a href="comparacao.html" class="btn-module">Abrir Comparacao</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Simulador de Ticket</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./simulador.js"></script>
+</body>
+</html>
+
+

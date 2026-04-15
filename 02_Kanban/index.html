@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="kanban.title">Playbook Global - Kanban Operacional</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/kanban.css">
+</head>
+<body class="module-page">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1 data-i18n="kanban.index.header.title">02 - Kanban Global</h1>
+                    <p data-i18n="kanban.index.header.subtitle">Leitura operacional do fluxo de tickets por status oficial</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                        <li><a href="../index.html#epic-global-service" class="btn btn-secondary" data-i18n="common.buttons.viewGlobalServiceEpic">Ver épico Global Service</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="epic-context-strip is-global-service">
+        <div class="container">
+            <span class="module-badge-home" data-i18n="common.labels.epicGlobalService">Épico Global Service</span>
+            <p data-i18n="common.contexts.globalServiceModule">Este módulo pertence ao épico Global Service.</p>
+        </div>
+    </section>
+
+    <section class="kanban-highlight">
+        <div class="container">
+                <div class="kanban-highlight-card module-context-card">
+                <p data-i18n="kanban.landing.highlight">
+                    O Kanban existe para tornar o status do ticket claro, orientar movimentacao correta e melhorar leitura de backlog, aging e SLA.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module-nav">
+        <div class="container" data-kanban-nav></div>
+    </section>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2 data-i18n="kanban.landing.overview.title">Visao geral do quadro Kanban</h2>
+                <p class="section-lead" data-i18n="kanban.landing.overview.description">
+                    O quadro oficial organiza a jornada do ticket em seis status padronizados. Cada movimento deve refletir o estado real do atendimento, sem atalhos e sem uso de status generico.
+                </p>
+                <div class="executive-card short-rule-card">
+                    <p class="flow-note" data-i18n="kanban.landing.overview.rule">
+                        Regra central: movimentacao formal entre status e exclusiva dos agentes de suporte tecnico interno.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2 data-i18n="kanban.landing.statusStructure.title">Estrutura oficial dos status</h2>
+                <div class="status-sequence-grid" data-kanban-status-order></div>
+            </div>
+        </section>
+
+        <section class="modules lane-section">
+            <div class="container">
+                <h2 data-i18n="kanban.landing.visualReading.title">Leitura visual: trabalho ativo x espera</h2>
+                <div class="lane-grid">
+                    <article class="lane-card lane-active">
+                        <h3 data-i18n="kanban.landing.visualReading.active.title">Trabalho ativo</h3>
+                        <p data-i18n="kanban.landing.visualReading.active.description">Status em que o time esta executando acao direta no ticket.</p>
+                        <ul data-kanban-active-statuses></ul>
+                    </article>
+                    <article class="lane-card lane-waiting">
+                        <h3 data-i18n="kanban.landing.visualReading.waiting.title">Em espera</h3>
+                        <p data-i18n="kanban.landing.visualReading.waiting.description">Status em que o proximo passo depende de terceiros ou de condicao externa.</p>
+                        <ul data-kanban-waiting-statuses></ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2 data-i18n="kanban.landing.flowReading.title">Leitura operacional do fluxo</h2>
+                <div class="flow-row">
+                    <span data-i18n="kanban.landing.flowReading.sequence.open">Aberto</span>
+                    <span class="arrow">></span>
+                    <span data-i18n="kanban.landing.flowReading.sequence.inProgress1">Em Atendimento</span>
+                    <span class="arrow">></span>
+                    <span data-i18n="kanban.landing.flowReading.sequence.waiting">Aguardando</span>
+                    <span class="arrow">></span>
+                    <span data-i18n="kanban.landing.flowReading.sequence.inProgress2">Em Atendimento</span>
+                    <span class="arrow">></span>
+                    <span data-i18n="kanban.landing.flowReading.sequence.closed">Fechado</span>
+                </div>
+                <p class="flow-caption" data-i18n="kanban.landing.flowReading.caption">
+                    A leitura acima mostra o ciclo base: ativa o atendimento, registra esperas reais e retorna para execucao ate o fechamento formal.
+                </p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2 data-i18n="kanban.landing.navigation.title">Navegacao essencial do módulo</h2>
+                <div class="modules-grid compact-modules-grid">
+                    <article class="module-card">
+                        <h3 data-i18n="kanban.landing.navigation.statusObjectives.title">Status e Objetivos</h3>
+                        <p data-i18n="kanban.landing.navigation.statusObjectives.description">Objetivo, permanencia correta e risco de uso incorreto de cada coluna.</p>
+                        <a class="btn-module" href="estrutura.html" data-i18n="common.buttons.open">Abrir</a>
+                    </article>
+                    <article class="module-card">
+                        <h3 data-i18n="kanban.landing.navigation.rulesManagement.title">Regras e Gestao</h3>
+                        <p data-i18n="kanban.landing.navigation.rulesManagement.description">Passagens esperadas, movimentos a evitar e leitura gerencial do quadro.</p>
+                        <a class="btn-module" href="regras.html" data-i18n="common.buttons.open">Abrir</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p data-i18n="kanban.index.footer">Playbook Global - Módulo 02 Kanban</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/locales/stage7-ui.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/kanban.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,1259 @@
+/* ==========================================================
+   MODULO 08_SIMULADOR
+   Base visual da Fase 1 + Fase 2 (wizard interativo)
+   ========================================================== */
+
+/* ===== Base ===== */
+.sim-hero {
+    background:
+        linear-gradient(140deg, rgba(16, 48, 90, 0.94), rgba(31, 86, 152, 0.9)),
+        radial-gradient(circle at 84% 14%, rgba(179, 214, 251, 0.36), transparent 38%);
+}
+
+.sim-connect-grid,
+.sim-nav-grid,
+.sim-scenarios-grid,
+.sim-stage-grid {
+    margin-top: 1.2rem;
+    align-items: stretch;
+}
+
+.sim-main-area,
+.sim-side-panel,
+.sim-stage-card,
+.sim-cta-note,
+.sim-scenario-card {
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-soft);
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: var(--shadow-sm);
+    line-height: 1.55;
+}
+
+/* ===== Blocos da home do modulo ===== */
+.sim-connect-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.9rem;
+}
+
+.sim-connect-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 86px;
+    text-align: center;
+    padding: 0.85rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border-soft);
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    box-shadow: var(--shadow-sm);
+    color: var(--color-brand-900);
+    font-weight: 700;
+}
+
+/* ===== Jornada visual ===== */
+.sim-journey-flow {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.sim-journey-step {
+    min-width: 132px;
+    text-align: center;
+    padding: 0.72rem 0.86rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border-strong);
+    background: linear-gradient(180deg, #ffffff 0%, #f2f8ff 100%);
+    color: var(--color-brand-900);
+    font-weight: 700;
+}
+
+.sim-journey-arrow {
+    color: var(--color-brand-700);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* ===== Barra de etapas (wizard) ===== */
+.sim-steps-bar {
+    list-style: none;
+    padding: 0;
+    margin: 1.1rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.6rem;
+}
+
+.sim-step-item {
+    padding: 0.56rem 0.48rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border-soft);
+    background: #f8fbff;
+    color: #44648d;
+    font-size: 0.78rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.sim-step-item span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: #e5eef9;
+    color: #325784;
+    font-size: 0.75rem;
+}
+
+.sim-step-item.is-current {
+    border-color: rgba(30, 87, 154, 0.56);
+    background: linear-gradient(165deg, #ffffff 0%, #eaf3ff 100%);
+    color: var(--color-brand-900);
+}
+
+.sim-step-item.is-current span {
+    background: var(--color-brand-700);
+    color: #ffffff;
+}
+
+.sim-step-item.is-complete {
+    border-color: #b8d9c7;
+    background: #ecf9f1;
+    color: #246245;
+}
+
+.sim-step-item.is-complete span {
+    background: #2d8a57;
+    color: #ffffff;
+}
+
+/* ===== Layout do wizard ===== */
+.sim-layout-grid {
+    display: grid;
+    grid-template-columns: 1.45fr 0.9fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.sim-main-area {
+    padding: 1.2rem;
+}
+
+.sim-main-area > h3,
+.sim-step-screen h3 {
+    margin-bottom: 0.5rem;
+}
+
+.sim-step-screen > p {
+    color: var(--color-text-soft);
+    margin-bottom: 0.95rem;
+}
+
+.sim-side-panel {
+    padding: 1.1rem;
+    position: sticky;
+    top: 92px;
+}
+
+.sim-side-panel h3 {
+    margin-bottom: 0.72rem;
+}
+
+.sim-side-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.16rem;
+    padding: 0.62rem 0;
+    border-bottom: 1px solid #e3ecf7;
+}
+
+.sim-side-item:last-child {
+    border-bottom: 0;
+}
+
+.sim-side-item span {
+    font-size: 0.8rem;
+    color: #5d789c;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.sim-side-item strong {
+    color: var(--color-brand-900);
+    font-size: 0.92rem;
+}
+
+/* ===== Etapa 1: canais ===== */
+.sim-channel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 0.82rem;
+}
+
+.sim-channel-card {
+    border: 1px solid var(--color-border-soft);
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+    border-radius: var(--radius-md);
+    padding: 0.9rem;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sim-channel-card h4 {
+    margin: 0 0 0.3rem;
+    color: var(--color-text-strong);
+}
+
+.sim-channel-card p {
+    margin: 0;
+    color: var(--color-text-soft);
+    font-size: 0.9rem;
+}
+
+.sim-channel-card:hover,
+.sim-channel-card.is-selected {
+    border-color: rgba(30, 87, 154, 0.56);
+    box-shadow: 0 10px 18px rgba(13, 52, 96, 0.16);
+    transform: translateY(-1px);
+}
+
+.sim-inline-feedback {
+    margin-top: 0.65rem;
+    color: var(--color-brand-900);
+    font-size: 0.92rem;
+    font-weight: 600;
+}
+
+/* ===== Etapa 2: formulario ===== */
+.sim-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+}
+
+.sim-form-grid label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-weight: 700;
+    color: var(--color-text-strong);
+    font-size: 0.9rem;
+}
+
+.sim-form-grid select,
+.sim-form-grid input,
+.sim-form-grid textarea {
+    border: 1px solid var(--color-border-strong);
+    border-radius: 10px;
+    font-size: 0.92rem;
+    color: var(--color-text-main);
+    background: #ffffff;
+    padding: 0.64rem 0.72rem;
+    font-family: var(--font-body);
+}
+
+.sim-form-grid select:focus,
+.sim-form-grid input:focus,
+.sim-form-grid textarea:focus {
+    outline: none;
+    border-color: var(--color-brand-700);
+    box-shadow: 0 0 0 3px rgba(35, 98, 174, 0.16);
+}
+
+.sim-form-span-2 {
+    grid-column: span 2;
+}
+
+/* ===== Etapa 3: obrigatorios ===== */
+.sim-legend-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    margin-bottom: 0.8rem;
+}
+
+.sim-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.26rem 0.62rem;
+    border-radius: var(--radius-pill);
+    border: 1px solid transparent;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.status-preenchido {
+    background: #e8f8ee;
+    border-color: #b9dfc6;
+    color: #235e41;
+}
+
+.status-faltante {
+    background: #fdeaea;
+    border-color: #efbcbc;
+    color: #873636;
+}
+
+.status-automatico {
+    background: #edf4ff;
+    border-color: #c8d9f0;
+    color: #2f5788;
+}
+
+.status-pendente {
+    background: #fff5de;
+    border-color: #f1d595;
+    color: #7c5f1a;
+}
+
+.sim-required-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 0.65rem;
+}
+
+.sim-required-item {
+    border: 1px solid var(--color-border-soft);
+    border-radius: 11px;
+    background: #fbfdff;
+    padding: 0.68rem;
+}
+
+.sim-required-item strong {
+    display: block;
+    margin-bottom: 0.28rem;
+    color: var(--color-text-strong);
+    font-size: 0.9rem;
+}
+
+.sim-required-item span {
+    color: var(--color-text-soft);
+    font-size: 0.86rem;
+}
+
+.sim-opening-quality {
+    margin-top: 0.9rem;
+    padding: 0.82rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-border-soft);
+    background: #f8fbff;
+}
+
+.sim-opening-quality h4 {
+    margin: 0 0 0.35rem;
+}
+
+.sim-opening-quality p {
+    margin: 0;
+    color: var(--color-text-soft);
+}
+
+.sim-opening-quality.quality-consistente {
+    border-color: #b9dfc6;
+    background: #edf9f2;
+}
+
+.sim-opening-quality.quality-parcial {
+    border-color: #f0d8a3;
+    background: #fff8e8;
+}
+
+.sim-opening-quality.quality-critica {
+    border-color: #efbcbc;
+    background: #fdeeee;
+}
+
+.sim-confirm-check {
+    margin-top: 0.85rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: var(--color-text-main);
+    font-size: 0.9rem;
+}
+
+/* ===== Etapa 4: prioridade ===== */
+.sim-criteria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.7rem;
+}
+
+.sim-criterion-card {
+    border: 1px solid var(--color-border-soft);
+    border-radius: 11px;
+    background: #fbfdff;
+    padding: 0.75rem;
+}
+
+.sim-criterion-card h4 {
+    margin: 0 0 0.45rem;
+    font-size: 0.92rem;
+}
+
+.sim-segmented {
+    display: inline-flex;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.sim-segmented button {
+    border: 0;
+    background: #ffffff;
+    color: #3f6089;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 0.45rem 0.62rem;
+    cursor: pointer;
+    min-width: 62px;
+}
+
+.sim-segmented button + button {
+    border-left: 1px solid var(--color-border-soft);
+}
+
+.sim-segmented button.is-selected {
+    background: #eaf3ff;
+    color: var(--color-brand-900);
+}
+
+.sim-priority-result {
+    margin-top: 0.85rem;
+    padding: 0.85rem;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 12px;
+    background: #f8fbff;
+}
+
+.sim-priority-result h4 {
+    margin: 0 0 0.35rem;
+}
+
+.sim-priority-result p {
+    margin: 0;
+    color: var(--color-text-soft);
+}
+
+/* ===== Etapa 5: fluxo ===== */
+.sim-flow-track {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.sim-flow-node {
+    border: 1px solid var(--color-border-soft);
+    border-radius: 10px;
+    background: #fbfdff;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #3f6089;
+}
+
+.sim-flow-node.is-current {
+    border-color: rgba(30, 87, 154, 0.56);
+    background: #eaf3ff;
+    color: var(--color-brand-900);
+}
+
+.sim-flow-arrow {
+    color: var(--color-brand-700);
+    font-weight: 700;
+}
+
+.sim-flow-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-bottom: 0.75rem;
+}
+
+.sim-flow-option {
+    border: 1px solid var(--color-border-strong);
+    background: #ffffff;
+    color: #3a5b84;
+    border-radius: 999px;
+    padding: 0.42rem 0.72rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.sim-flow-option.is-selected {
+    border-color: rgba(30, 87, 154, 0.56);
+    background: #eaf3ff;
+    color: var(--color-brand-900);
+}
+
+.sim-flow-read {
+    border: 1px solid var(--color-border-soft);
+    border-radius: 12px;
+    background: #f8fbff;
+    padding: 0.75rem;
+    color: var(--color-text-soft);
+    font-size: 0.9rem;
+}
+
+/* ===== Etapa 6: resultado ===== */
+.sim-result-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 0.7rem;
+}
+
+.sim-result-card {
+    border: 1px solid var(--color-border-soft);
+    border-radius: 11px;
+    background: #fbfdff;
+    padding: 0.8rem;
+}
+
+.sim-result-card h4 {
+    margin: 0 0 0.35rem;
+}
+
+.sim-result-card p,
+.sim-result-card li {
+    margin: 0;
+    color: var(--color-text-soft);
+    font-size: 0.9rem;
+}
+
+.sim-result-card ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.sim-result-actions {
+    margin-top: 0.8rem;
+    border: 1px solid var(--color-border-strong);
+    border-radius: 12px;
+    padding: 0.8rem;
+    background: linear-gradient(165deg, #ffffff 0%, #edf5ff 100%);
+}
+
+.sim-result-actions h4 {
+    margin: 0 0 0.35rem;
+}
+
+.sim-result-actions ul {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--color-text-main);
+}
+
+/* ===== Navegacao do wizard ===== */
+.sim-nav-controls {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.sim-nav-actions-right {
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+.sim-wizard-message {
+    margin-top: 0.55rem;
+    min-height: 20px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--color-text-soft);
+}
+
+.sim-wizard-message.error {
+    color: var(--color-state-danger);
+}
+
+.sim-wizard-message.success {
+    color: var(--color-state-success);
+}
+
+/* ===== Cenarios prontos ===== */
+.sim-scenarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0.95rem;
+}
+
+.sim-scenario-card {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    height: 100%;
+}
+
+.sim-scenario-card:hover {
+    transform: translateY(-2px);
+}
+
+.sim-scenario-card.is-selected {
+    border-color: rgba(30, 85, 152, 0.56);
+}
+
+.sim-scenario-tag {
+    width: fit-content;
+    display: inline-flex;
+    padding: 0.24rem 0.55rem;
+    border-radius: var(--radius-pill);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.tag-atencao {
+    background: #fff4da;
+    border: 1px solid #f2d38c;
+    color: #7d5a12;
+}
+
+.tag-consistente {
+    background: #e6f7ee;
+    border: 1px solid #b6dfc6;
+    color: #236244;
+}
+
+.tag-critico {
+    background: #fde9e9;
+    border: 1px solid #efbbbb;
+    color: #8a3333;
+}
+
+.sim-scenario-card h3 {
+    margin: 0;
+    font-size: 1.02rem;
+}
+
+.sim-scenario-card p {
+    margin: 0;
+    color: var(--color-text-soft);
+}
+
+.sim-scenario-card .btn-module {
+    margin-top: auto;
+    width: fit-content;
+    align-self: flex-start;
+}
+
+/* ===== CTA ===== */
+.sim-cta-note {
+    padding: 1.15rem;
+    text-align: center;
+}
+
+.sim-cta-note h2 {
+    margin-bottom: 0.45rem;
+}
+
+.sim-cta-note p {
+    color: var(--color-text-soft);
+    margin: 0;
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 1060px) {
+    .sim-layout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sim-side-panel {
+        position: static;
+    }
+}
+
+@media (max-width: 900px) {
+    .sim-steps-bar {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .sim-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sim-form-span-2 {
+        grid-column: span 1;
+    }
+
+    .sim-nav-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sim-nav-actions-right {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sim-nav-actions-right .btn,
+    .sim-nav-controls .btn {
+        width: 100%;
+    }
+
+    .sim-journey-flow {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .sim-journey-arrow {
+        transform: rotate(90deg);
+        text-align: center;
+    }
+
+    .sim-journey-step {
+        width: 100%;
+    }
+
+    .sim-cta-note {
+        text-align: left;
+    }
+
+    .sim-scenario-card .btn-module {
+        width: 100%;
+    }
+}
+
+@media (max-width: 560px) {
+    .sim-steps-bar {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* ===== Fase 3: cenarios e comparacao ===== */
+.sim-loaded-scenario {
+    margin-top: 0.8rem;
+    padding: 0.68rem 0.78rem;
+    border: 1px solid #bad3f2;
+    border-radius: 10px;
+    background: #edf5ff;
+    color: var(--color-brand-900);
+    font-weight: 700;
+}
+
+.sim-scenario-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.8rem;
+}
+
+.sim-comparison-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.9rem;
+}
+
+.sim-comparison-controls label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-weight: 700;
+    color: var(--color-text-strong);
+    font-size: 0.9rem;
+}
+
+.sim-comparison-controls select {
+    border: 1px solid var(--color-border-strong);
+    border-radius: 10px;
+    padding: 0.6rem 0.72rem;
+    font-size: 0.92rem;
+    font-family: var(--font-body);
+}
+
+.sim-comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.sim-compare-column {
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: var(--shadow-sm);
+    padding: 0.9rem;
+}
+
+.sim-compare-column h3 {
+    margin: 0;
+    font-size: 0.84rem;
+    text-transform: uppercase;
+    color: #52719a;
+}
+
+.sim-compare-column h4 {
+    margin: 0.26rem 0 0.55rem;
+}
+
+.sim-compare-column ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.sim-compare-column li {
+    margin-bottom: 0.28rem;
+    color: var(--color-text-soft);
+}
+
+.sim-impact-box {
+    margin-top: 0.9rem;
+    border: 1px solid #c5d8ef;
+    border-radius: var(--radius-md);
+    background: linear-gradient(165deg, #ffffff 0%, #eef6ff 100%);
+    padding: 0.9rem;
+}
+
+.sim-impact-box h3 {
+    margin: 0 0 0.55rem;
+}
+
+.sim-impact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+}
+
+.sim-impact-card {
+    border: 1px solid var(--color-border-soft);
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 0.68rem;
+}
+
+.sim-impact-card h4 {
+    margin: 0 0 0.35rem;
+}
+
+.sim-impact-card p {
+    margin: 0;
+    color: var(--color-text-soft);
+}
+
+.sim-impact-footer {
+    margin-top: 0.6rem;
+    color: #3e6089;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .sim-comparison-grid,
+    .sim-impact-grid,
+    .sim-comparison-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .sim-scenario-toolbar {
+        justify-content: stretch;
+    }
+
+    .sim-scenario-toolbar .btn {
+        width: 100%;
+    }
+}
+
+/* ===== Fase 4: timeline e kanban ===== */
+.sim-layout-grid-timeline {
+    grid-template-columns: 1.4fr 0.9fr;
+}
+
+.sim-ticket-summary {
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: var(--shadow-sm);
+    padding: 0.9rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.55rem;
+}
+
+.sim-ticket-summary-item {
+    border: 1px solid #e1eaf7;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 0.55rem;
+}
+
+.sim-ticket-summary-item span {
+    display: block;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    color: #5b7699;
+    margin-bottom: 0.2rem;
+}
+
+.sim-ticket-summary-item strong {
+    color: var(--color-brand-900);
+}
+
+.sim-time-controls {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.55rem;
+}
+
+.sim-timeline-message {
+    min-height: 24px;
+    margin: 0 0 0.6rem;
+    font-weight: 700;
+    color: var(--color-text-soft);
+}
+
+.sim-sla-box {
+    border: 1px solid var(--color-border-soft);
+    border-radius: 12px;
+    padding: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+.sim-sla-box.sla-ontrack {
+    background: #ebf9f2;
+    border-color: #badfca;
+}
+
+.sim-sla-box.sla-risk {
+    background: #fff7e7;
+    border-color: #edd59d;
+}
+
+.sim-sla-box.sla-breached {
+    background: #fdeeee;
+    border-color: #edbbbb;
+}
+
+.sim-timeline-track {
+    display: grid;
+    gap: 0.55rem;
+    margin-bottom: 1rem;
+}
+
+.sim-timeline-node {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 0.55rem;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 11px;
+    padding: 0.62rem;
+    background: #fbfdff;
+}
+
+.sim-timeline-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: #e5effb;
+    color: #345d8d;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.sim-timeline-title {
+    font-weight: 700;
+    color: var(--color-text-strong);
+}
+
+.sim-timeline-time {
+    color: var(--color-text-soft);
+    font-size: 0.84rem;
+}
+
+.sim-timeline-risk {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-pill);
+}
+
+.sim-risk-low {
+    background: #e9f8f0;
+    color: #245e42;
+}
+
+.sim-risk-medium {
+    background: #fff5dd;
+    color: #775912;
+}
+
+.sim-risk-high {
+    background: #fdeaea;
+    color: #873636;
+}
+
+.sim-timeline-node.is-current {
+    border-color: rgba(30, 87, 154, 0.6);
+    background: #eaf3ff;
+}
+
+.sim-timeline-node.is-done {
+    border-color: #bcdcc9;
+    background: #effaf4;
+}
+
+.sim-kanban-board {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(170px, 1fr));
+    gap: 0.55rem;
+    overflow-x: auto;
+    padding-bottom: 0.3rem;
+}
+
+.sim-kanban-column {
+    min-height: 150px;
+    border: 1px solid var(--color-border-soft);
+    border-radius: 11px;
+    background: #fbfdff;
+    padding: 0.5rem;
+}
+
+.sim-kanban-column h4 {
+    margin: 0 0 0.45rem;
+    font-size: 0.86rem;
+    color: #3c5d87;
+}
+
+.sim-kanban-ticket {
+    border: 1px solid rgba(30, 87, 154, 0.45);
+    border-radius: 9px;
+    padding: 0.42rem;
+    background: #ffffff;
+    box-shadow: 0 6px 10px rgba(17, 58, 105, 0.12);
+    animation: sim-kanban-in 0.22s ease;
+}
+
+.sim-kanban-ticket strong {
+    font-size: 0.84rem;
+    color: var(--color-brand-900);
+}
+
+.sim-kanban-ticket p {
+    margin: 0.2rem 0 0;
+    font-size: 0.78rem;
+    color: var(--color-text-soft);
+}
+
+@keyframes sim-kanban-in {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1020px) {
+    .sim-layout-grid-timeline {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 780px) {
+    .sim-time-controls {
+        flex-direction: column;
+    }
+
+    .sim-time-controls .btn {
+        width: 100%;
+    }
+
+    .sim-timeline-node {
+        grid-template-columns: auto 1fr;
+        grid-template-areas:
+            "icon title"
+            "icon time"
+            "risk risk";
+    }
+
+    .sim-timeline-icon {
+        grid-area: icon;
+    }
+
+    .sim-timeline-title {
+        grid-area: title;
+    }
+
+    .sim-timeline-time {
+        grid-area: time;
+    }
+
+    .sim-timeline-risk {
+        grid-area: risk;
+        justify-self: start;
+    }
+}
+
+/* ===== Fase 5: dashboard executivo ===== */
+.sim-dashboard-summary {
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+    box-shadow: var(--shadow-sm);
+    padding: 0.9rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 0.6rem;
+}
+
+.sim-dashboard-item {
+    border: 1px solid #dfe8f5;
+    border-radius: 10px;
+    background: #ffffff;
+    padding: 0.58rem;
+}
+
+.sim-dashboard-item span {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    color: #587397;
+}
+
+.sim-dashboard-item strong {
+    color: var(--color-brand-900);
+}
+
+.sim-kpi-grid,
+.sim-impact-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.7rem;
+}
+
+.sim-kpi-card {
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    background: #ffffff;
+    box-shadow: var(--shadow-sm);
+    padding: 0.82rem;
+}
+
+.sim-kpi-card h3 {
+    margin: 0 0 0.42rem;
+    font-size: 0.92rem;
+}
+
+.sim-kpi-value {
+    font-size: 1.28rem;
+    font-weight: 800;
+    color: var(--color-brand-900);
+    line-height: 1.1;
+}
+
+.sim-kpi-note {
+    margin-top: 0.25rem;
+    color: var(--color-text-soft);
+    font-size: 0.82rem;
+}
+
+.sim-kpi-state-ontrack {
+    border-color: #b7ddc6;
+    background: #ecf9f1;
+}
+
+.sim-kpi-state-risk {
+    border-color: #edd59d;
+    background: #fff7e7;
+}
+
+.sim-kpi-state-breach {
+    border-color: #edbbbb;
+    background: #fdeeee;
+}
+
+.sim-governance-compare {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.sim-governance-column {
+    border: 1px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    background: #ffffff;
+    box-shadow: var(--shadow-sm);
+    padding: 0.82rem;
+}
+
+.sim-governance-column h3 {
+    margin: 0 0 0.48rem;
+}
+
+.sim-governance-column ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.sim-governance-column li {
+    margin-bottom: 0.28rem;
+    color: var(--color-text-soft);
+}
+
+.sim-volume-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.sim-volume-controls .btn.active {
+    border-color: rgba(30, 87, 154, 0.64);
+    background: #eaf3ff;
+    color: var(--color-brand-900);
+}
+
+.sim-executive-reading {
+    border: 1px solid #bfd4ef;
+    border-radius: var(--radius-md);
+    background: linear-gradient(165deg, #ffffff 0%, #edf5ff 100%);
+    box-shadow: var(--shadow-sm);
+    padding: 1rem;
+}
+
+.sim-executive-reading h3 {
+    margin: 0 0 0.45rem;
+}
+
+.sim-executive-reading p {
+    margin: 0;
+    color: #365a88;
+    font-weight: 600;
+}
+
+@media (max-width: 900px) {
+    .sim-governance-compare {
+        grid-template-columns: 1fr;
+    }
+}

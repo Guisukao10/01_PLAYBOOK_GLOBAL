@@ -1,0 +1,395 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Service Governance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <h1>Global Service Governance Dashboard</h1>
+                <p>VisÃ£o executiva e operacional do atendimento global</p>
+            </div>
+            <div class="header-right">
+                <p>PerÃ­odo: Jan 2026 â€“ Dez 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="filters">
+        <div class="filter-group">
+            <label>RegiÃ£o</label>
+            <select><option>Todas</option></select>
+        </div>
+        <div class="filter-group">
+            <label>PaÃ­s</label>
+            <select><option>Todos</option></select>
+        </div>
+        <div class="filter-group">
+            <label>Marca</label>
+            <select><option>Todas</option></select>
+        </div>
+        <div class="filter-group">
+            <label>Produto</label>
+            <select><option>Todos</option></select>
+        </div>
+        <div class="filter-group">
+            <label>Tipo de atendimento</label>
+            <select><option>Todos</option></select>
+        </div>
+        <div class="filter-group">
+            <label>Categoria</label>
+            <select><option>Todas</option></select>
+        </div>
+        <div class="filter-group">
+            <label>Criticidade</label>
+            <select><option>Todas</option></select>
+        </div>
+        <div class="filter-group">
+            <label>Canal</label>
+            <select><option>Todos</option></select>
+        </div>
+        <div class="filter-group">
+            <label>Departamento</label>
+            <select><option>Todos</option></select>
+        </div>
+    </section>
+
+    <div class="container">
+    <main>
+        <section class="kpis-principais" id="kpis-principais">
+            <h2>KPIs Principais</h2>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>Total de Tickets</h3>
+                    <div class="kpi-value">2.967</div>
+                    <div class="kpi-trend">+5,2%</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>Tickets Fechados</h3>
+                    <div class="kpi-value">2.716</div>
+                    <div class="kpi-trend">+3,8%</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>MTTS</h3>
+                    <div class="kpi-value">4,41 dias</div>
+                    <div class="kpi-trend">-2,1%</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>MTTR</h3>
+                    <div class="kpi-value">7,38 h</div>
+                    <div class="kpi-trend">-1,5%</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>SLA Compliance</h3>
+                    <div class="kpi-value">45,87%</div>
+                    <div class="kpi-trend">+0,8%</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>ResoluÃ§Ã£o Remota</h3>
+                    <div class="kpi-value">62%</div>
+                    <div class="kpi-trend">+4,2%</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>Backlog</h3>
+                    <div class="kpi-value">251</div>
+                    <div class="kpi-trend">-7,3%</div>
+                </div>
+                <div class="kpi-card">
+                    <h3>Aging > 5 dias</h3>
+                    <div class="kpi-value">68,92%</div>
+                    <div class="kpi-trend">-3,4%</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="visao-global">
+            <h2>VisÃ£o Global</h2>
+            <div class="global-view">
+                <div class="map-card">
+                    <img src="globalizacao-global-mapa-do-mundo-conceito-de-conservacao-ambiental_53876-124164.avif" alt="Mapa Mundial">
+                </div>
+                <div class="region-summary">
+                    <h3>Resumo por RegiÃ£o</h3>
+                    <div class="region-item">Brasil â€” 1.540 tickets â€” SLA 52% â€” MTTR 6,2h</div>
+                    <div class="region-item">Argentina â€” 276 tickets â€” SLA 61% â€” MTTR 11 dias</div>
+                    <div class="region-item">MÃ©xico â€” 190 tickets â€” SLA 43% â€” MTTR 8 dias</div>
+                    <div class="region-item">EUA â€” 320 tickets â€” SLA 49% â€” MTTR 5,8h</div>
+                    <div class="region-item">Europa â€” 450 tickets â€” SLA 55% â€” MTTR 7,1h</div>
+                    <div class="region-item">ROW â€” 114 tickets â€” SLA 39% â€” MTTR 9,3h</div>
+                    <div class="region-item">AmÃ©rica Latina â€” 97 tickets â€” SLA 48% â€” MTTR 10,5h</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="comparativo-regiao">
+            <h2>Comparativo por RegiÃ£o</h2>
+            <div class="charts">
+                <div class="chart">
+                    <h3>Volume de Tickets</h3>
+                    <div class="bar-chart">
+                        <div class="bar" style="height: 154px;">Brasil: 1540</div>
+                        <div class="bar" style="height: 45px;">Argentina: 276</div>
+                        <div class="bar" style="height: 32px;">MÃ©xico: 190</div>
+                        <div class="bar" style="height: 64px;">EUA: 320</div>
+                        <div class="bar" style="height: 90px;">Europa: 450</div>
+                        <div class="bar" style="height: 23px;">ROW: 114</div>
+                        <div class="bar" style="height: 19px;">AmÃ©rica Latina: 97</div>
+                    </div>
+                </div>
+                <div class="chart">
+                    <h3>SLA</h3>
+                    <div class="bar-chart">
+                        <div class="bar" style="height: 52px;">Brasil: 52%</div>
+                        <div class="bar" style="height: 61px;">Argentina: 61%</div>
+                        <div class="bar" style="height: 43px;">MÃ©xico: 43%</div>
+                        <div class="bar" style="height: 49px;">EUA: 49%</div>
+                        <div class="bar" style="height: 55px;">Europa: 55%</div>
+                        <div class="bar" style="height: 39px;">ROW: 39%</div>
+                        <div class="bar" style="height: 48px;">AmÃ©rica Latina: 48%</div>
+                    </div>
+                </div>
+                <div class="chart">
+                    <h3>MTTR</h3>
+                    <div class="bar-chart">
+                        <div class="bar" style="height: 62px;">Brasil: 6,2h</div>
+                        <div class="bar" style="height: 110px;">Argentina: 11d</div>
+                        <div class="bar" style="height: 80px;">MÃ©xico: 8d</div>
+                        <div class="bar" style="height: 58px;">EUA: 5,8h</div>
+                        <div class="bar" style="height: 71px;">Europa: 7,1h</div>
+                        <div class="bar" style="height: 93px;">ROW: 9,3h</div>
+                        <div class="bar" style="height: 105px;">AmÃ©rica Latina: 10,5h</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="operacao">
+            <h2>OperaÃ§Ã£o</h2>
+            <div class="charts">
+                <div class="chart">
+                    <h3>Volume de Tickets por MÃªs</h3>
+                    <div class="line-chart">
+                        <!-- SimulaÃ§Ã£o de grÃ¡fico de linha -->
+                        <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                            <polyline points="0,150 50,140 100,130 150,120 200,110 250,100 300,90 350,80 400,70" fill="none" stroke="#007bff" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="chart">
+                    <h3>Backlog por MÃªs</h3>
+                    <div class="line-chart">
+                        <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                            <polyline points="0,180 50,170 100,160 150,150 200,140 250,130 300,120 350,110 400,100" fill="none" stroke="#28a745" stroke-width="3"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="chart">
+                    <h3>Tickets por Tipo de Atendimento</h3>
+                    <div class="pie-chart">
+                        <div class="pie-segment" style="background: #007bff; width: 40%;">Suporte TÃ©cnico: 45%</div>
+                        <div class="pie-segment" style="background: #28a745; width: 30%;">SAC: 30%</div>
+                        <div class="pie-segment" style="background: #ffc107; width: 20%;">Especialista: 20%</div>
+                        <div class="pie-segment" style="background: #dc3545; width: 10%;">LocaÃ§Ã£o: 5%</div>
+                    </div>
+                </div>
+                <div class="chart">
+                    <h3>Tickets por Canal</h3>
+                    <div class="pie-chart">
+                        <div class="pie-segment" style="background: #007bff; width: 35%;">Telefone: 35%</div>
+                        <div class="pie-segment" style="background: #28a745; width: 30%;">E-mail: 30%</div>
+                        <div class="pie-segment" style="background: #ffc107; width: 20%;">Portal: 20%</div>
+                        <div class="pie-segment" style="background: #dc3545; width: 15%;">WhatsApp: 15%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="performance-produto">
+            <h2>Performance por Produto / Marca</h2>
+            <table class="performance-table">
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Produto</th>
+                        <th>Tickets</th>
+                        <th>SLA</th>
+                        <th>MTTR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dabi Atlante</td>
+                        <td>ConsultÃ³rios</td>
+                        <td>482</td>
+                        <td>54%</td>
+                        <td>4,1 dias</td>
+                    </tr>
+                    <tr>
+                        <td>Saevo</td>
+                        <td>TomÃ³grafo</td>
+                        <td>318</td>
+                        <td>41%</td>
+                        <td>6,7 dias</td>
+                    </tr>
+                    <tr>
+                        <td>Prexion</td>
+                        <td>Scanner IOS</td>
+                        <td>127</td>
+                        <td>62%</td>
+                        <td>3,2 dias</td>
+                    </tr>
+                    <tr>
+                        <td>Outro</td>
+                        <td>VÃ¡rios</td>
+                        <td>2040</td>
+                        <td>45%</td>
+                        <td>7,5 dias</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="alertas-executivos">
+            <h2>Principais Alertas</h2>
+            <div class="alerts">
+                <div class="alert">Backlog elevado em Argentina</div>
+                <div class="alert">SLA abaixo do target em ROW</div>
+                <div class="alert">Produto "TomÃ³grafo" concentra maior tempo mÃ©dio de resoluÃ§Ã£o</div>
+                <div class="alert">Brasil apresenta maior volume de tickets</div>
+                <div class="alert">ResoluÃ§Ã£o remota apresenta oportunidade de expansÃ£o em MÃ©xico</div>
+            </div>
+        </section>
+
+        <section class="arquitetura-kpis">
+            <h2>Arquitetura Global de KPIs</h2>
+            <div class="architecture">
+                <div class="main-kpi">
+                    <div class="kpi-box main">GLOBAL DASHBOARD</div>
+                    <div class="connector"></div>
+                </div>
+                <div class="sub-kpis">
+                    <div class="kpi-group">
+                        <div class="connector"></div>
+                        <div class="kpi-box">Volume de Tickets</div>
+                        <p class="kpi-description">Mede volume total e distribuiÃ§Ã£o dos chamados</p>
+                        <div class="connector"></div>
+                        <div class="sub-boxes">
+                            <div class="kpi-box sub" title="Permite comparar desempenho entre regiÃµes globais">RegiÃ£o</div>
+                            <div class="kpi-box sub" title="Permite analisar volume e performance por equipamento">Produto</div>
+                            <div class="kpi-box sub" title="Permite entender concentraÃ§Ã£o por tipo de problema">Categoria</div>
+                            <div class="kpi-box sub" title="Permite separar suporte tÃ©cnico, SAC, especialista e locaÃ§Ã£o">Tipo atendimento</div>
+                        </div>
+                    </div>
+                    <div class="kpi-group">
+                        <div class="connector"></div>
+                        <div class="kpi-box">Tempo de Primeira Resposta</div>
+                        <p class="kpi-description">Mede agilidade inicial no retorno ao cliente</p>
+                        <div class="connector"></div>
+                        <div class="sub-boxes">
+                            <div class="kpi-box sub" title="Permite comparar desempenho entre regiÃµes globais">RegiÃ£o</div>
+                            <div class="kpi-box sub" title="Permite analisar volume e performance por equipamento">Produto</div>
+                            <div class="kpi-box sub" title="Permite analisar urgÃªncia e prioridade do atendimento">Criticidade</div>
+                            <div class="kpi-box sub" title="Permite avaliar desempenho por Ã¡rea responsÃ¡vel">Departamento</div>
+                        </div>
+                    </div>
+                    <div class="kpi-group">
+                        <div class="connector"></div>
+                        <div class="kpi-box">Tempo de ResoluÃ§Ã£o</div>
+                        <p class="kpi-description">Mede o tempo atÃ© conclusÃ£o do atendimento</p>
+                        <div class="connector"></div>
+                        <div class="sub-boxes">
+                            <div class="kpi-box sub" title="Permite comparar desempenho entre regiÃµes globais">RegiÃ£o</div>
+                            <div class="kpi-box sub" title="Permite analisar volume e performance por equipamento">Produto</div>
+                            <div class="kpi-box sub" title="Permite comparar produtividade e resoluÃ§Ã£o individual">TÃ©cnico</div>
+                            <div class="kpi-box sub" title="Permite analisar urgÃªncia e prioridade do atendimento">Criticidade</div>
+                        </div>
+                    </div>
+                    <div class="kpi-group">
+                        <div class="connector"></div>
+                        <div class="kpi-box">SLA</div>
+                        <p class="kpi-description">Mede conformidade do atendimento com os prazos definidos</p>
+                        <div class="connector"></div>
+                        <div class="sub-boxes">
+                            <div class="kpi-box sub" title="Permite comparar desempenho entre regiÃµes globais">RegiÃ£o</div>
+                            <div class="kpi-box sub" title="Permite analisar volume e performance por equipamento">Produto</div>
+                            <div class="kpi-box sub" title="Permite analisar urgÃªncia e prioridade do atendimento">Criticidade</div>
+                            <div class="kpi-box sub" title="Permite avaliar desempenho por Ã¡rea responsÃ¡vel">Departamento</div>
+                        </div>
+                    </div>
+                    <div class="kpi-group">
+                        <div class="connector"></div>
+                        <div class="kpi-box">Qualidade</div>
+                        <p class="kpi-description">Mede eficiÃªncia, comportamento do atendimento e saÃºde operacional</p>
+                        <div class="connector"></div>
+                        <div class="sub-boxes">
+                            <div class="kpi-box sub" title="Mostra percentual de tickets resolvidos sem visita presencial">ResoluÃ§Ã£o remota</div>
+                            <div class="kpi-box sub" title="Indica tickets conduzidos com interaÃ§Ã£o remota ao cliente">Atendimento remoto</div>
+                            <div class="kpi-box sub" title="Mostra reincidÃªncia ou necessidade de reabrir tickets">Reabertura</div>
+                            <div class="kpi-box sub" title="Mostra tickets ainda pendentes de conclusÃ£o">Backlog</div>
+                            <div class="kpi-box sub" title="Mostra tickets envelhecidos acima do prazo ideal">Aging</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dimensoes-analise">
+            <h2>DimensÃµes de AnÃ¡lise</h2>
+            <div class="dimension-grid">
+            <div class="dimension-card">
+                    <h3>Geografia</h3>
+                    <p class="description">Campos usados para segmentaÃ§Ã£o geogrÃ¡fica do atendimento</p>
+                    <ul>
+                        <li title="Macro agrupador global">RegiÃ£o</li>
+                        <li title="LocalizaÃ§Ã£o principal do atendimento">PaÃ­s</li>
+                        <li title="Detalhamento local quando aplicÃ¡vel">Cidade</li>
+                    </ul>
+                </div>
+                <div class="dimension-card">
+                    <h3>Produto</h3>
+                    <p class="description">Campos usados para anÃ¡lise tÃ©cnica e comparativo entre equipamentos</p>
+                    <ul>
+                        <li title="Marca do equipamento">Marca</li>
+                        <li title="Equipamento ou famÃ­lia atendida">Produto</li>
+                        <li title="Agrupamento tÃ©cnico/comercial do produto">Linha</li>
+                    </ul>
+                </div>
+                <div class="dimension-card">
+                    <h3>OperaÃ§Ã£o</h3>
+                    <p class="description">Campos operacionais que definem fluxo, prioridade e modelo do atendimento</p>
+                    <ul>
+                        <li title="Tipo macro do chamado">Categoria</li>
+                        <li title="Modelo de atendimento solicitado">Tipo de atendimento</li>
+                        <li title="Ãrea responsÃ¡vel pelo ticket">Departamento</li>
+                        <li title="NÃ­vel de prioridade do chamado">Criticidade</li>
+                        <li title="Indica se o atendimento ocorreu com suporte remoto">Atendimento remoto</li>
+                    </ul>
+                </div>
+                <div class="dimension-card">
+                    <h3>Tempo</h3>
+                    <p class="description">Campos para anÃ¡lise temporal e tendÃªncia dos indicadores</p>
+                    <ul>
+                        <li title="Permitem anÃ¡lise de evoluÃ§Ã£o no tempo">Ano</li>
+                        <li title="Permitem anÃ¡lise de evoluÃ§Ã£o no tempo">MÃªs</li>
+                        <li title="Permitem anÃ¡lise de evoluÃ§Ã£o no tempo">Semana</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    </div>
+
+        <script src="../../i18n/locales/pt-BR.js"></script>
+    <script src="../../i18n/locales/es.js"></script>
+    <script src="../../i18n/locales/en.js"></script>
+    <script src="../../i18n/i18n.js"></script>
+    <script src="../../i18n/init.js"></script>
+    <script src="../../js/global.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+

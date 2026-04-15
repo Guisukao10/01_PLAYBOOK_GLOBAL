@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Dashboard Executivo</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body>
+    <header class="global-header"></header>
+    <main class="page-container">
+      <section class="info-block">
+        <h1 class="section-title">Global Dashboard</h1>
+        <p class="section-subtitle">VisÃ£o executiva do atendimento global</p>
+      </section>
+
+      <section class="filters info-block">
+        <h2 class="section-title">Filtros</h2>
+        <div class="card-grid" id="filters"></div>
+      </section>
+
+      <section class="kpis">
+        <h2 class="section-title">KPIs</h2>
+        <div class="card-grid" id="kpiCards"></div>
+      </section>
+
+      <section class="overview info-block">
+        <h2 class="section-title">VisÃ£o Global</h2>
+        <div class="card-grid" id="regionSummary"></div>
+      </section>
+
+      <section class="comparative info-block">
+        <h2 class="section-title">Comparativo</h2>
+        <div class="card-grid" id="comparativeCards"></div>
+      </section>
+
+      <section class="operation info-block">
+        <h2 class="section-title">OperaÃ§Ã£o</h2>
+        <div id="operationSections" class="card-grid"></div>
+      </section>
+
+      <section class="products info-block">
+        <h2 class="section-title">Produtos</h2>
+        <table class="table-sample" id="productsTable">
+          <thead><tr><th>Marca</th><th>Produto</th><th>Tickets</th><th>SLA</th><th>MTTR</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="alerts info-block">
+        <h2 class="section-title">Alertas</h2>
+        <div class="card-grid" id="alertCards"></div>
+      </section>
+    </main>
+    <script src="../../../i18n/locales/pt-BR.js"></script>
+    <script src="../../../i18n/locales/es.js"></script>
+    <script src="../../../i18n/locales/en.js"></script>
+    <script src="../../../i18n/i18n.js"></script>
+    <script src="../../../i18n/init.js"></script>
+    <script src="js/global.js"></script>
+    <script src="data/mock-data.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
+

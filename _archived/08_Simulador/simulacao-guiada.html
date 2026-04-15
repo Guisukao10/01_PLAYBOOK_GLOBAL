@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Simulador: Simulacao Guiada</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./simulador.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Simulacao Guiada</h1>
+                    <p>Monte passo a passo a jornada operacional de um ticket no modelo global</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para Simulador</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <p><strong>Inicio > Simulador > Simulacao Guiada</strong></p>
+                <h2>Simulacao Guiada</h2>
+                <p>Preencha as informacoes do cenario e acompanhe como o ticket e interpretado pelo modelo, desde a entrada ate a leitura de risco e governanca.</p>
+                <div class="sim-loaded-scenario" id="loadedScenarioBanner" hidden></div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Etapas da simulacao</h2>
+                <ol class="sim-steps-bar" aria-label="Etapas do wizard de simulacao">
+                    <li class="sim-step-item" data-step-index="0"><span>1</span>Entrada</li>
+                    <li class="sim-step-item" data-step-index="1"><span>2</span>Dados do Ticket</li>
+                    <li class="sim-step-item" data-step-index="2"><span>3</span>Campos Obrigatorios</li>
+                    <li class="sim-step-item" data-step-index="3"><span>4</span>Prioridade</li>
+                    <li class="sim-step-item" data-step-index="4"><span>5</span>Fluxo</li>
+                    <li class="sim-step-item" data-step-index="5"><span>6</span>Resultado</li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <div class="sim-layout-grid sim-layout-grid-wizard" id="simWizardRoot">
+                    <article class="sim-main-area sim-main-area-wizard">
+                        <div class="sim-step-screen" data-step="0">
+                            <h3>Etapa 1 - Entrada</h3>
+                            <p>Defina como o ticket chegou ao atendimento.</p>
+                            <div class="sim-channel-grid" id="channelGrid">
+                                <button type="button" class="sim-channel-card" data-channel="Telefone">
+                                    <h4>Telefone</h4>
+                                    <p>Entrada rapida, com risco maior de depender de registro manual complementar.</p>
+                                </button>
+                                <button type="button" class="sim-channel-card" data-channel="WhatsApp">
+                                    <h4>WhatsApp</h4>
+                                    <p>Canal conveniente, mas sujeito a abertura incompleta.</p>
+                                </button>
+                                <button type="button" class="sim-channel-card" data-channel="Formulario">
+                                    <h4>Formulario</h4>
+                                    <p>Canal mais estruturado para garantir informacoes minimas.</p>
+                                </button>
+                                <button type="button" class="sim-channel-card" data-channel="E-mail">
+                                    <h4>E-mail</h4>
+                                    <p>Canal tradicional, mas com maior chance de chegar sem padrao.</p>
+                                </button>
+                            </div>
+                            <div class="sim-inline-feedback" id="channelFeedback"></div>
+                        </div>
+
+                        <div class="sim-step-screen" data-step="1" hidden>
+                            <h3>Etapa 2 - Dados do Ticket</h3>
+                            <p>Defina o contexto operacional do ticket.</p>
+                            <div class="sim-form-grid">
+                                <label>
+                                    Regiao
+                                    <select id="ticketRegion" name="region">
+                                        <option value="">Selecione</option>
+                                        <option>Brasil</option>
+                                        <option>Argentina</option>
+                                        <option>Mexico</option>
+                                        <option>LATAM</option>
+                                        <option>ROW</option>
+                                        <option>EUA</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    Pais
+                                    <input id="ticketCountry" name="country" type="text" placeholder="Ex.: Brasil">
+                                </label>
+                                <label>
+                                    Marca
+                                    <input id="ticketBrand" name="brand" type="text" placeholder="Ex.: Saevo">
+                                </label>
+                                <label>
+                                    Produto / Linha
+                                    <input id="ticketProduct" name="product" type="text" placeholder="Ex.: Autoclave">
+                                </label>
+                                <label>
+                                    Tipo de atendimento
+                                    <select id="ticketServiceType" name="serviceType">
+                                        <option value="">Selecione</option>
+                                        <option>Suporte Tecnico</option>
+                                        <option>SAC</option>
+                                        <option>Pecas</option>
+                                        <option>Assistencia Tecnica</option>
+                                    </select>
+                                </label>
+                                <label>
+                                    Categoria
+                                    <select id="ticketCategory" name="category">
+                                        <option value="">Selecione</option>
+                                        <option>Instalacao</option>
+                                        <option>Duvida</option>
+                                        <option>Falha tecnica</option>
+                                        <option>Manutencao</option>
+                                        <option>Peca</option>
+                                        <option>Solicitacao geral</option>
+                                    </select>
+                                </label>
+                                <label class="sim-form-span-2">
+                                    Descricao resumida do problema
+                                    <textarea id="ticketDescription" name="description" rows="4" placeholder="Descreva o contexto principal do problema"></textarea>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="sim-step-screen" data-step="2" hidden>
+                            <h3>Etapa 3 - Campos Obrigatorios</h3>
+                            <p>Canal de entrada pode variar. O padrao minimo do ticket nao.</p>
+
+                            <div class="sim-legend-row">
+                                <span class="sim-status-badge status-preenchido">Preenchido</span>
+                                <span class="sim-status-badge status-faltante">Faltante</span>
+                                <span class="sim-status-badge status-automatico">Automatico</span>
+                                <span class="sim-status-badge status-pendente">Pendente</span>
+                            </div>
+
+                            <div class="sim-required-grid" id="requiredFieldsGrid"></div>
+
+                            <div class="sim-opening-quality" id="openingQualityBox"></div>
+
+                            <label class="sim-confirm-check">
+                                <input type="checkbox" id="requiredReviewCheck">
+                                Confirmo a leitura dos campos obrigatorios e sua influencia na abertura do ticket.
+                            </label>
+                        </div>
+
+                        <div class="sim-step-screen" data-step="3" hidden>
+                            <h3>Etapa 4 - Prioridade</h3>
+                            <p>Marque os fatores de criticidade para gerar prioridade simulada.</p>
+
+                            <div class="sim-criteria-grid">
+                                <article class="sim-criterion-card">
+                                    <h4>Cliente parado?</h4>
+                                    <div class="sim-segmented" data-factor="clienteParado">
+                                        <button type="button" data-value="alto">Alto</button>
+                                        <button type="button" data-value="medio">Medio</button>
+                                        <button type="button" data-value="baixo">Baixo</button>
+                                    </div>
+                                </article>
+                                <article class="sim-criterion-card">
+                                    <h4>Equipamento critico?</h4>
+                                    <div class="sim-segmented" data-factor="equipamentoCritico">
+                                        <button type="button" data-value="alto">Alto</button>
+                                        <button type="button" data-value="medio">Medio</button>
+                                        <button type="button" data-value="baixo">Baixo</button>
+                                    </div>
+                                </article>
+                                <article class="sim-criterion-card">
+                                    <h4>Impacto no cliente</h4>
+                                    <div class="sim-segmented" data-factor="impactoCliente">
+                                        <button type="button" data-value="alto">Alto</button>
+                                        <button type="button" data-value="medio">Medio</button>
+                                        <button type="button" data-value="baixo">Baixo</button>
+                                    </div>
+                                </article>
+                                <article class="sim-criterion-card">
+                                    <h4>Operacao interrompida?</h4>
+                                    <div class="sim-segmented" data-factor="operacaoInterrompida">
+                                        <button type="button" data-value="alto">Alto</button>
+                                        <button type="button" data-value="medio">Medio</button>
+                                        <button type="button" data-value="baixo">Baixo</button>
+                                    </div>
+                                </article>
+                                <article class="sim-criterion-card">
+                                    <h4>Pode aguardar?</h4>
+                                    <div class="sim-segmented" data-factor="podeAguardar">
+                                        <button type="button" data-value="alto">Alto</button>
+                                        <button type="button" data-value="medio">Medio</button>
+                                        <button type="button" data-value="baixo">Baixo</button>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="sim-priority-result" id="priorityResultBox"></div>
+                        </div>
+
+                        <div class="sim-step-screen" data-step="4" hidden>
+                            <h3>Etapa 5 - Fluxo</h3>
+                            <p>Visualize o status inicial sugerido e os proximos caminhos provaveis.</p>
+
+                            <div class="sim-flow-track" id="flowTrack"></div>
+
+                            <div class="sim-flow-options" id="flowOptions"></div>
+
+                            <div class="sim-flow-read" id="flowReadBox"></div>
+                        </div>
+
+                        <div class="sim-step-screen" data-step="5" hidden>
+                            <h3>Etapa 6 - Resultado</h3>
+                            <p>Consolidado executivo da simulacao.</p>
+
+                            <div class="sim-result-grid">
+                                <article class="sim-result-card" id="resultTicketSummary"></article>
+                                <article class="sim-result-card" id="resultOpeningQuality"></article>
+                                <article class="sim-result-card" id="resultPriority"></article>
+                                <article class="sim-result-card" id="resultFlow"></article>
+                                <article class="sim-result-card" id="resultRisks"></article>
+                                <article class="sim-result-card" id="resultGovernance"></article>
+                            </div>
+
+                            <div class="sim-result-actions" id="resultActions"></div>
+                        </div>
+
+                        <div class="sim-nav-controls">
+                            <button type="button" class="btn btn-secondary" id="wizardPrevBtn">Voltar</button>
+                            <div class="sim-nav-actions-right">
+                                <button type="button" class="btn btn-secondary" id="wizardRestartBtn">Reiniciar simulacao</button>
+                                <button type="button" class="btn btn-primary" id="wizardNextBtn">Proximo</button>
+                            </div>
+                        </div>
+                        <p class="sim-wizard-message" id="wizardMessage" aria-live="polite"></p>
+                    </article>
+
+                    <aside class="sim-side-panel sim-side-panel-wizard" aria-label="Painel lateral de leitura operacional">
+                        <h3>Leitura Operacional</h3>
+                        <div class="sim-side-item">
+                            <span>Canal selecionado</span>
+                            <strong id="sideChannel">Nao definido</strong>
+                        </div>
+                        <div class="sim-side-item">
+                            <span>Qualidade da abertura</span>
+                            <strong id="sideOpeningQuality">Pendente</strong>
+                        </div>
+                        <div class="sim-side-item">
+                            <span>Prioridade atual</span>
+                            <strong id="sidePriority">Pendente</strong>
+                        </div>
+                        <div class="sim-side-item">
+                            <span>Fluxo sugerido</span>
+                            <strong id="sideFlow">Aguardando analise</strong>
+                        </div>
+                        <div class="sim-side-item">
+                            <span>Risco operacional</span>
+                            <strong id="sideRisk">Nao calculado</strong>
+                        </div>
+                        <div class="sim-side-item">
+                            <span>Impacto em governanca</span>
+                            <strong id="sideGovernance">Sem leitura final</strong>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Simulador de Ticket</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./simulador.js"></script>
+</body>
+</html>
+

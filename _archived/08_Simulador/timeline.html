@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Simulador: Timeline de Fluxo</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./simulador.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Timeline de Fluxo do Ticket</h1>
+                    <p>Evolucao do ticket por status, tempo, risco e impacto de governanca</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para Simulador</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <p><strong>Inicio > Simulador > Timeline</strong></p>
+                <h2>Leitura sequencial da vida do ticket</h2>
+                <p>
+                    Esta timeline mostra como as transicoes de status alteram tempo acumulado, risco de SLA
+                    e qualidade da leitura operacional. Use para validar se o fluxo esta coerente com o modelo global.
+                </p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Resumo do ticket</h2>
+                <div class="sim-ticket-summary" id="timelineSummaryCard"></div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <div class="sim-layout-grid sim-layout-grid-timeline">
+                    <article class="sim-main-area">
+                        <h3>Timeline do ticket</h3>
+                        <div class="sim-time-controls">
+                            <button type="button" class="btn btn-primary" id="timelineAdvanceBtn">Avancar simulacao</button>
+                            <button type="button" class="btn btn-secondary" id="timelineRestartBtn">Reiniciar</button>
+                            <button type="button" class="btn btn-secondary" id="timelineAutoBtn">Simular automaticamente</button>
+                        </div>
+                        <p class="sim-timeline-message" id="timelineMessage" aria-live="polite"></p>
+
+                        <div class="sim-sla-box" id="timelineSlaBox"></div>
+                        <div class="sim-timeline-track" id="timelineTrack"></div>
+
+                        <h3>Visualizacao em quadro</h3>
+                        <div class="sim-kanban-board" id="timelineKanban"></div>
+                    </article>
+
+                    <aside class="sim-side-panel" aria-label="Leitura operacional dinamica">
+                        <h3>Leitura operacional</h3>
+                        <div class="sim-side-item"><span>Status atual</span><strong id="timelineSideStatus">-</strong></div>
+                        <div class="sim-side-item"><span>Tempo acumulado</span><strong id="timelineSideTime">-</strong></div>
+                        <div class="sim-side-item"><span>SLA atual</span><strong id="timelineSideSla">-</strong></div>
+                        <div class="sim-side-item"><span>Risco operacional</span><strong id="timelineSideRisk">-</strong></div>
+                        <div class="sim-side-item"><span>Impacto em governanca</span><strong id="timelineSideGovernance">-</strong></div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Navegacao do modulo</h2>
+                <div class="modules-grid sim-nav-grid">
+                    <article class="module-card active">
+                        <h3>Simulacao Guiada</h3>
+                        <p>Revisar criterios de abertura, prioridade e fluxo no passo a passo.</p>
+                        <a href="simulacao-guiada.html" class="btn-module">Abrir Simulacao Guiada</a>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Cenarios de Simulacao</h3>
+                        <p>Selecionar cenario pronto para alimentar a timeline automaticamente.</p>
+                        <a href="cenarios.html" class="btn-module">Abrir Cenarios</a>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Comparacao de Cenarios</h3>
+                        <p>Comparar impacto operacional e de governanca entre dois cenarios.</p>
+                        <a href="comparacao.html" class="btn-module">Abrir Comparacao</a>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Dashboard Executivo</h3>
+                        <p>Consolidar sinais criticos em uma leitura unica para decisao.</p>
+                        <a href="dashboard.html" class="btn-module">Abrir Dashboard</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Simulador de Ticket</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./simulador.js"></script>
+</body>
+</html>
+
+

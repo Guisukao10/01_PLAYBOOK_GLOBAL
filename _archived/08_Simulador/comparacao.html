@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Simulador: Comparacao de Cenarios</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./simulador.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Comparacao de Cenarios</h1>
+                    <p>Leitura lado a lado para apoiar decisao operacional e de governanca</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para Simulador</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <p><strong>Inicio > Simulador > Comparacao de Cenarios</strong></p>
+                <h2>Compare impacto de escolhas diferentes</h2>
+                <p>
+                    Esta comparacao mostra como mudancas na abertura do ticket alteram prioridade,
+                    caminho de fluxo e risco de governanca. Use para treinamento e calibracao de criterio operacional.
+                </p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <div class="sim-comparison-controls">
+                    <label>
+                        Cenario A
+                        <select id="compareScenarioA"></select>
+                    </label>
+                    <label>
+                        Cenario B
+                        <select id="compareScenarioB"></select>
+                    </label>
+                </div>
+
+                <div class="sim-comparison-grid" id="comparisonGrid"></div>
+                <div class="sim-impact-box" id="governanceImpactBox"></div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Acao rapida</h2>
+                <div class="modules-grid sim-nav-grid">
+                    <article class="module-card active">
+                        <h3>Simular Cenario A</h3>
+                        <p>Abre a simulacao guiada com os parametros do cenario selecionado em A.</p>
+                        <button type="button" class="btn-module" id="simulateScenarioA">Simular Cenario A</button>
+                    </article>
+                    <article class="module-card active">
+                        <h3>Simular Cenario B</h3>
+                        <p>Abre a simulacao guiada com os parametros do cenario selecionado em B.</p>
+                        <button type="button" class="btn-module" id="simulateScenarioB">Simular Cenario B</button>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Simulador de Ticket</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./simulador.js"></script>
+</body>
+</html>
+
+

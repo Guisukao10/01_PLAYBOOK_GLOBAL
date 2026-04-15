@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="kpi.v2.dashboard.title">Dashboard Executivo - Global Service Governance</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <h1 data-i18n="kpi.v2.dashboard.header.brand">KPI Linha Oficial</h1>
+                <p class="header-meta">Global Service | Painel Executivo</p>
+                <span class="context-pill"><strong>Contexto:</strong> Global Service</span>
+            </div>
+            <nav class="header-nav" aria-label="Navegacao principal de KPI">
+                <a href="../../index.html" class="nav-link">Voltar para Home</a>
+                <a href="index.html" class="nav-link" data-i18n="kpi.v2.index.nav.architecture">Arquitetura KPI</a>
+                <a href="dashboard.html" class="nav-link active" data-i18n="kpi.v2.index.nav.dashboard">Dashboard KPI</a>
+                <a href="kpi-map.html" class="nav-link" data-i18n="kpi.v2.index.nav.expandedMap">Mapa Expandido KPI</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="dashboard-page">
+        <section class="dashboard-intro">
+            <div class="container">
+                <div class="dashboard-intro-card">
+                    <h2 class="dashboard-title">Global Dashboard</h2>
+                    <p class="dashboard-subtitle">Visao executiva do atendimento global</p>
+                    <a href="kpi-map.html" class="map-link" data-i18n="kpi.v2.index.hero.viewExpandedMap">Mapa Expandido</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-embed-section">
+            <div class="container">
+                <div class="dashboard-embed-card">
+                    <div class="bi-frame-wrap" aria-label="Painel Power BI incorporado">
+                        <iframe
+                            id="dashboardBiFrame"
+                            title="Power BI - Dashboard Executivo"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://app.powerbi.com/view?r=eyJrIjoiMGVmMTQwYjMtZDI5OS00NWRhLTk2M2QtZTgwNzY3NWM2YmZiIiwidCI6ImE2NzRhMDgxLTBjNTMtNGQyZC1hZWQ2LWRiZjgwNmY5NWExYiJ9"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Dashboard KPI</p>
+        </div>
+    </footer>
+
+    <script src="../../i18n/locales/pt-BR.js"></script>
+    <script src="../../i18n/locales/es.js"></script>
+    <script src="../../i18n/locales/en.js"></script>
+    <script src="../../i18n/locales/stage7-ui.js"></script>
+    <script src="../../i18n/i18n.js"></script>
+    <script src="../../i18n/init.js"></script>
+    <script src="js/global.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

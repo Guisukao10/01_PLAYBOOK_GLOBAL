@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook Global - Kanban: Regras e Gestao</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="./css/kanban.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>02 - Kanban Global</h1>
+                    <p>Movimentacao correta e leitura de gestao do quadro</p>
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html" class="btn btn-secondary">Voltar para modulo Kanban</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="kanban-highlight">
+        <div class="container">
+            <div class="kanban-highlight-card">
+                <p>
+                    Regras simples e obrigatorias para preservar fila real, reduzir ruido operacional e garantir leitura confiavel de backlog, aging e SLA.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="module-nav">
+        <div class="container" data-kanban-nav></div>
+    </section>
+
+    <main>
+        <section class="about">
+            <div class="container">
+                <h2>Regras basicas de movimentacao</h2>
+                <p class="section-lead">
+                    O ticket avanca por estado real de trabalho. O status deve responder com clareza: o que esta sendo feito agora ou o que esta bloqueando o proximo passo.
+                </p>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Passagens esperadas no fluxo</h2>
+                <div class="executive-card">
+                    <ul class="transition-list" data-kanban-valid-transitions></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Movimentos que devem ser evitados</h2>
+                <div class="executive-card">
+                    <ul class="transition-list transition-invalid" data-kanban-avoid-moves></ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Regra de fechamento e ownership</h2>
+                <div class="modules-grid compact-modules-grid">
+                    <article class="executive-card">
+                        <h3>Fechamento oficial</h3>
+                        <p>O encerramento ocorre em Fechado, com documentacao minima de resolucao.</p>
+                    </article>
+                    <article class="executive-card">
+                        <h3>Ownership de movimentacao</h3>
+                        <p>Somente agentes de suporte tecnico interno fazem transicao formal entre colunas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="connection">
+            <div class="container">
+                <h2>Leitura de gestao do quadro</h2>
+                <div class="management-grid" data-kanban-management-cards></div>
+            </div>
+        </section>
+
+        <section class="modules">
+            <div class="container">
+                <h2>Nomenclatura oficial por idioma</h2>
+                <div class="executive-card" data-kanban-language-table></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Playbook Global - Modulo 02 Kanban</p>
+        </div>
+    </footer>
+
+    <script src="../i18n/locales/pt-BR.js"></script>
+    <script src="../i18n/locales/es.js"></script>
+    <script src="../i18n/locales/en.js"></script>
+    <script src="../i18n/i18n.js"></script>
+    <script src="../i18n/init.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="./js/kanban.js"></script>
+</body>
+</html>
+
