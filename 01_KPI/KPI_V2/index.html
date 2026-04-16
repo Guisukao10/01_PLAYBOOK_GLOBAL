@@ -1,202 +1,110 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="kpi.v2.index.title">Global Service Governance - KPI Linha Oficial</title>
+    <title data-i18n="kpi.main.meta.pageTitleDashboard">Playbook Global - KPI Dashboard</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
-<body>
+<body data-disable-wayfinder="true" data-kpi-page="dashboard">
     <header class="header">
         <div class="header-container">
             <div class="header-logo">
-                <h1 data-i18n="kpi.v2.index.header.brand">KPI Linha Oficial</h1>
-                <p class="header-meta">Global Service | Playbook Global</p>
-                <span class="context-pill"><strong>Contexto:</strong> Global Service</span>
+                <h1 data-i18n="kpi.main.header.brand">KPI Dashboard</h1>
+                <p class="header-meta" data-i18n="kpi.main.header.meta">Global Service | Módulo KPI</p>
+                <span class="context-pill">
+                    <strong data-i18n="kpi.main.header.contextLabel">Contexto:</strong>
+                    <span data-i18n="kpi.main.header.contextValue">Global Service</span>
+                </span>
             </div>
-            <nav class="header-nav" aria-label="Navegacao principal de KPI">
-                <a href="../../index.html" class="nav-link" data-i18n="common.buttons.backToPlaybook">Voltar para Home</a>
-                <a href="index.html" class="nav-link active" data-i18n="kpi.v2.index.nav.architecture">Arquitetura KPI</a>
-                <a href="dashboard.html" class="nav-link" data-i18n="kpi.v2.index.nav.dashboard">Dashboard KPI</a>
-                <a href="kpi-map.html" class="nav-link" data-i18n="kpi.v2.index.nav.expandedMap">Mapa Expandido KPI</a>
+            <nav class="header-nav" data-i18n-aria-label="kpi.main.header.mainNavAria">
+                <a href="../../index.html" class="nav-link" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="module-hero">
+        <section class="module-hero kpi-opening">
             <div class="container">
-                <div class="module-hero-content">
-                    <p class="module-eyebrow">Global Service Governance</p>
-                    <h2 class="module-hero-title" data-i18n="kpi.v2.index.hero.title">KPIs Globais - Playbook Global</h2>
-                    <p class="module-hero-subtitle" data-i18n="kpi.v2.index.hero.subtitle">Arquitetura de indicadores para leitura executiva, operacao e desdobramento analitico.</p>
-                    <p class="module-hero-text" data-i18n="kpi.v2.index.hero.description">Esta pagina organiza a linha oficial de KPIs para orientar comparabilidade entre regioes, produtos e frentes operacionais.</p>
-                    <div class="module-hero-actions">
-                        <a href="dashboard.html" class="btn btn-primary" data-i18n="kpi.v2.index.hero.openDashboard">Abrir Dashboard</a>
-                        <a href="kpi-map.html" class="btn btn-secondary" data-i18n="kpi.v2.index.hero.viewExpandedMap">Ver Mapa Expandido</a>
+                <div class="kpi-opening-shell">
+                    <div class="kpi-opening-head">
+                        <p class="page-breadcrumb" data-i18n="kpi.main.opening.breadcrumb">Início &gt; Global Service &gt; KPI Dashboard</p>
+                        <div class="kpi-opening-context">
+                            <span class="inline-context-label" data-i18n="common.labels.epicGlobalService">Épico Global Service</span>
+                            <p class="kpi-opening-module" data-i18n="kpi.main.opening.moduleLabel">Módulo: KPI Dashboard</p>
+                            <p class="kpi-opening-operational" data-i18n="kpi.main.opening.operationalContext">Contexto operacional: porta oficial para leitura executiva e operacional dos indicadores globais.</p>
+                        </div>
                     </div>
-                    <div class="intro-structure">
-                        <span class="structure-chip">Eixo: Governanca</span>
-                        <span class="structure-chip">Papel: Leitura Executiva</span>
-                        <span class="structure-chip">Linha: KPI Oficial</span>
+                    <div class="kpi-opening-hero">
+                        <p class="module-eyebrow" data-i18n="kpi.main.opening.eyebrow">Global Service Governance</p>
+                        <h2 data-i18n="kpi.main.opening.title">KPI Dashboard</h2>
+                        <p data-i18n="kpi.main.opening.description">Acompanhe o dashboard oficial do módulo KPI e use a leitura guiada para interpretar as três páginas da visão executiva.</p>
+                    </div>
+                    <nav class="kpi-main-nav" data-i18n-aria-label="kpi.main.nav.label">
+                        <p class="kpi-main-nav-label" data-i18n="kpi.main.nav.label">Navegação interna do módulo</p>
+                        <div class="kpi-main-nav-links">
+                            <a href="index.html" class="kpi-main-nav-link is-active" aria-current="page" data-i18n="kpi.main.nav.dashboard">KPI Dashboard</a>
+                            <a href="kpi-map.html" class="kpi-main-nav-link" data-i18n="kpi.main.nav.reading">Leitura KPI’s</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="kpi-dashboard-visual">
+            <div class="container">
+                <article class="dashboard-pages-summary">
+                    <h3 data-i18n="kpi.main.dashboard.sectionTitle">Dashboard oficial em 3 páginas</h3>
+                    <p data-i18n="kpi.main.dashboard.sectionDescription">Use esta sequência para leitura rápida do cenário global e aprofundamento operacional.</p>
+                    <ol class="dashboard-pages-list">
+                        <li class="dashboard-page-item">
+                            <h4 data-i18n="kpi.main.pages.executive.title">Visão Executiva Global</h4>
+                            <p data-i18n="kpi.main.pages.executive.description">Leitura macro da saúde da operação com Volume, cumprimento de SLA, MTTS, MTFC, CSAT e comparação regional.</p>
+                        </li>
+                        <li class="dashboard-page-item">
+                            <h4 data-i18n="kpi.main.pages.governance.title">Governança de Dados</h4>
+                            <p data-i18n="kpi.main.pages.governance.description">Acompanhe qualidade e completude da base, preenchimento de campos obrigatórios, tickets com falhas e risco operacional.</p>
+                        </li>
+                        <li class="dashboard-page-item">
+                            <h4 data-i18n="kpi.main.pages.agents.title">Gestão de Agentes</h4>
+                            <p data-i18n="kpi.main.pages.agents.description">Leitura da operação da equipe com tickets abertos/fechados, fila de pendências, produtividade, SLA/desempenho e envelhecimento.</p>
+                        </li>
+                    </ol>
+                </article>
+
+                <div class="dashboard-embed-shell">
+                    <div class="bi-frame-wrap" data-i18n-aria-label="kpi.main.dashboard.embedAria">
+                        <iframe
+                            id="dashboardBiFrame"
+                            title="Power BI - KPI Dashboard"
+                            data-i18n-title="kpi.main.dashboard.embedTitle"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            src="https://app.powerbi.com/view?r=eyJrIjoiMGVmMTQwYjMtZDI5OS00NWRhLTk2M2QtZTgwNzY3NWM2YmZiIiwidCI6ImE2NzRhMDgxLTBjNTMtNGQyZC1hZWQ2LWRiZjgwNmY5NWExYiJ9"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="arquitetura" class="architecture">
+        <section class="kpi-auxiliary">
             <div class="container">
-                <h2 class="section-title" data-i18n="kpi.v2.index.sections.architecture">Arquitetura Global de KPIs</h2>
-
-                <div class="arquitetura-diagram">
-                    <div class="global-dashboard">
-                        <div class="global-dashboard-card">
-                            <h3 data-i18n="kpi.v2.index.architecture.globalDashboard">GLOBAL DASHBOARD</h3>
-                        </div>
-                    </div>
-
-                    <div class="pilares-container">
-                        <div class="pilar">
-                            <div class="pilar-header">
-                                <h4 class="pilar-title" data-i18n="kpi.v2.index.architecture.pillars.ticketVolume.title">Volume de Tickets</h4>
-                                <p class="pilar-description" data-i18n="kpi.v2.index.architecture.pillars.ticketVolume.description">Monitora demanda e distribuicao dos chamados.</p>
-                            </div>
-                            <div class="pilar-subcampos">
-                                <span class="pilar-chip">Regiao</span>
-                                <span class="pilar-chip">Produto</span>
-                                <span class="pilar-chip">Categoria</span>
-                                <span class="pilar-chip">Tipo atendimento</span>
-                            </div>
-                        </div>
-
-                        <div class="pilar">
-                            <div class="pilar-header">
-                                <h4 class="pilar-title" data-i18n="kpi.v2.index.architecture.pillars.firstResponseTime.title">Tempo de Primeira Resposta</h4>
-                                <p class="pilar-description" data-i18n="kpi.v2.index.architecture.pillars.firstResponseTime.description">Mede a agilidade do primeiro retorno ao cliente.</p>
-                            </div>
-                            <div class="pilar-subcampos">
-                                <span class="pilar-chip">Regiao</span>
-                                <span class="pilar-chip">Produto</span>
-                                <span class="pilar-chip">Criticidade</span>
-                                <span class="pilar-chip">Departamento</span>
-                            </div>
-                        </div>
-
-                        <div class="pilar">
-                            <div class="pilar-header">
-                                <h4 class="pilar-title" data-i18n="kpi.v2.index.architecture.pillars.resolutionTime.title">Tempo de Resolucao</h4>
-                                <p class="pilar-description" data-i18n="kpi.v2.index.architecture.pillars.resolutionTime.description">Mede o tempo ate a conclusao do atendimento.</p>
-                            </div>
-                            <div class="pilar-subcampos">
-                                <span class="pilar-chip">Regiao</span>
-                                <span class="pilar-chip">Produto</span>
-                                <span class="pilar-chip">Tecnico</span>
-                                <span class="pilar-chip">Criticidade</span>
-                            </div>
-                        </div>
-
-                        <div class="pilar">
-                            <div class="pilar-header">
-                                <h4 class="pilar-title" data-i18n="kpi.v2.index.architecture.pillars.sla.title">SLA</h4>
-                                <p class="pilar-description" data-i18n="kpi.v2.index.architecture.pillars.sla.description">Mede a aderencia aos prazos de atendimento.</p>
-                            </div>
-                            <div class="pilar-subcampos">
-                                <span class="pilar-chip">Regiao</span>
-                                <span class="pilar-chip">Produto</span>
-                                <span class="pilar-chip">Criticidade</span>
-                                <span class="pilar-chip">Departamento</span>
-                            </div>
-                        </div>
-
-                        <div class="pilar">
-                            <div class="pilar-header">
-                                <h4 class="pilar-title" data-i18n="kpi.v2.index.architecture.pillars.quality.title">Qualidade</h4>
-                                <p class="pilar-description" data-i18n="kpi.v2.index.architecture.pillars.quality.description">Mede eficiencia operacional, estabilidade da fila e qualidade de entrega.</p>
-                            </div>
-                            <div class="pilar-subcampos">
-                                <span class="pilar-chip">Resolucao remota</span>
-                                <span class="pilar-chip">Atendimento remoto</span>
-                                <span class="pilar-chip">Reabertura</span>
-                                <span class="pilar-chip">Backlog</span>
-                                <span class="pilar-chip">Aging</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="dimensoes">
-            <div class="container">
-                <h2 class="section-title" data-i18n="kpi.v2.index.sections.dimensions">Dimensoes de Analise</h2>
-
-                <div class="dimensoes-grid">
-                    <div class="dimensao-card">
-                        <h3 class="dimensao-title">Geografia</h3>
-                        <p class="dimensao-description">Segmenta o atendimento por territorio e contexto regional.</p>
-                        <ul class="dimensao-itens">
-                            <li>Regiao</li>
-                            <li>Pais</li>
-                            <li>Cidade</li>
+                <div class="kpi-auxiliary-grid">
+                    <article class="kpi-aux-card">
+                        <h3 data-i18n="kpi.main.usage.title">Como usar o dashboard</h3>
+                        <ul class="kpi-aux-list">
+                            <li data-i18n="kpi.main.usage.executive">Use a página executiva para leitura global da operação.</li>
+                            <li data-i18n="kpi.main.usage.governance">Use governança de dados para acompanhar completude e falhas.</li>
+                            <li data-i18n="kpi.main.usage.agents">Use gestão de agentes para leitura operacional da equipe.</li>
                         </ul>
-                    </div>
-
-                    <div class="dimensao-card">
-                        <h3 class="dimensao-title">Produto</h3>
-                        <p class="dimensao-description">Permite leitura tecnica e comparativa entre linhas e equipamentos.</p>
-                        <ul class="dimensao-itens">
-                            <li>Marca</li>
-                            <li>Produto</li>
-                            <li>Linha</li>
-                        </ul>
-                    </div>
-
-                    <div class="dimensao-card">
-                        <h3 class="dimensao-title">Operacao</h3>
-                        <p class="dimensao-description">Organiza fluxo, prioridade e forma de execucao do atendimento.</p>
-                        <ul class="dimensao-itens">
-                            <li>Categoria</li>
-                            <li>Tipo de atendimento</li>
-                            <li>Departamento</li>
-                            <li>Criticidade</li>
-                            <li>Atendimento remoto</li>
-                        </ul>
-                    </div>
-
-                    <div class="dimensao-card">
-                        <h3 class="dimensao-title">Tempo</h3>
-                        <p class="dimensao-description">Suporta analise de tendencia e comparacao entre periodos.</p>
-                        <ul class="dimensao-itens">
-                            <li>Ano</li>
-                            <li>Mes</li>
-                            <li>Semana</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="navegacao">
-            <div class="container">
-                <h2 class="section-title" data-i18n="kpi.v2.index.sections.navigation">Navegacao</h2>
-
-                <div class="navegacao-grid">
-                    <div class="navegacao-card">
-                        <div class="navegacao-card-content">
-                            <h3 class="navegacao-card-title" data-i18n="kpi.v2.index.navigation.dashboard.title">Dashboard Executivo</h3>
-                            <p class="navegacao-card-text" data-i18n="kpi.v2.index.navigation.dashboard.description">Acesse a leitura consolidada dos principais indicadores executivos e operacionais.</p>
-                            <a href="dashboard.html" class="btn btn-primary btn-full" data-i18n="kpi.v2.index.navigation.dashboard.cta">Abrir Dashboard</a>
-                        </div>
-                    </div>
-
-                    <div class="navegacao-card">
-                        <div class="navegacao-card-content">
-                            <h3 class="navegacao-card-title" data-i18n="kpi.v2.index.navigation.expandedMap.title">Mapa Expandido</h3>
-                            <p class="navegacao-card-text" data-i18n="kpi.v2.index.navigation.expandedMap.description">Aprofunde cortes, cruzamentos e causas para analise detalhada dos KPIs.</p>
-                            <a href="kpi-map.html" class="btn btn-secondary btn-full" data-i18n="kpi.v2.index.navigation.expandedMap.cta">Ver Mapa Expandido</a>
-                        </div>
-                    </div>
+                    </article>
+                    <article class="kpi-aux-card">
+                        <h3 data-i18n="kpi.main.readingAccess.title">Acesso à leitura detalhada</h3>
+                        <p data-i18n="kpi.main.readingAccess.description">Abra o submódulo de Leitura KPI’s para seguir o guia de interpretação das páginas do dashboard.</p>
+                        <a href="kpi-map.html" class="btn btn-primary" data-i18n="kpi.main.readingAccess.cta">Abrir Leitura KPI’s</a>
+                    </article>
                 </div>
             </div>
         </section>
@@ -204,7 +112,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>Playbook Global - KPI Linha Oficial</p>
+            <p data-i18n="kpi.main.footer.dashboard">Playbook Global - KPI Dashboard</p>
         </div>
     </footer>
 

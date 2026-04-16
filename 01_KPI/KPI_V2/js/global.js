@@ -10,10 +10,94 @@ document.addEventListener("DOMContentLoaded", function () {
     initializeLanguageSelector();
     initializeNavigationScroll();
     enableSmoothScroll();
-    injectCompactLocalNav();
-    applyWayfindingLayer();
+    enforceKpiWayfinderLock();
+    if (!isWayfinderDisabled()) {
+        injectCompactLocalNav();
+        applyWayfindingLayer();
+    }
     markCurrentLocalLinks();
+    enforceKpiWayfinderLock();
 });
+
+function isWayfinderDisabled() {
+    if (isKpiV2Scope()) return true;
+
+    const body = document.body;
+    if (!body) return false;
+
+    const value = body.getAttribute("data-disable-wayfinder");
+    if (value === null) return false;
+
+    return value === "" || value.toLowerCase() === "true";
+}
+
+function isKpiV2Scope() {
+    const body = document.body;
+    if (body && body.hasAttribute("data-kpi-page")) return true;
+
+    const path = normalizePath(window.location.pathname);
+    return path.indexOf("/01_kpi/kpi_v2/") !== -1;
+}
+
+function normalizeTextValue(value) {
+    const source = String(value || "").toLowerCase();
+    if (typeof source.normalize !== "function") {
+        return source.replace(/\s+/g, " ").trim();
+    }
+
+    return source
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function removeKpiWayfinderArtifacts() {
+    if (!isKpiV2Scope()) return;
+
+    document.querySelectorAll(".ux-wayfinder, .ux-wayfinder-grid, .ux-wayfinder-card, .ux-related-list").forEach(function (node) {
+        node.remove();
+    });
+
+    const forbiddenHeadings = [
+        "proxima acao",
+        "paginas relacionadas",
+        "relacionados",
+        "next action",
+        "related pages",
+        "proxima accion"
+    ];
+
+    document.querySelectorAll("main section, main article, main aside, main div").forEach(function (container) {
+        const heading = container.querySelector(":scope > h1, :scope > h2, :scope > h3, :scope > h4, :scope > h5, :scope > h6");
+        if (!heading) return;
+
+        const normalizedHeading = normalizeTextValue(heading.textContent);
+        if (forbiddenHeadings.indexOf(normalizedHeading) === -1) return;
+
+        container.remove();
+    });
+}
+
+function enforceKpiWayfinderLock() {
+    if (!isKpiV2Scope()) return;
+
+    removeKpiWayfinderArtifacts();
+
+    if (window.__kpiWayfinderObserverActive) return;
+    if (typeof MutationObserver !== "function" || !document.body) return;
+
+    const observer = new MutationObserver(function () {
+        removeKpiWayfinderArtifacts();
+    });
+
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true
+    });
+
+    window.__kpiWayfinderObserverActive = true;
+}
 
 function initializeLanguageSelector() {
     if (!window.PlaybookI18n || !window.playbookSetLocale) return;
@@ -112,7 +196,7 @@ function injectCompactLocalNav() {
 
     const title = document.createElement("p");
     title.className = "internal-local-nav-title";
-    title.textContent = getI18n().t("common.ux.pageNavigation", "Navegacao desta pagina");
+    title.textContent = getI18n().t("common.ux.pageNavigation", "Navegação desta página");
 
     const list = document.createElement("div");
     list.className = "internal-local-nav-list";
@@ -301,6 +385,8 @@ function markCurrentLocalLinks() {
 }
 
 function applyWayfindingLayer() {
+    if (isKpiV2Scope()) return;
+
     const i18n = getI18n();
     renderWayfinder(i18n);
 }

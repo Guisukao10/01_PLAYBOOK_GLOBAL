@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="governanca.title">Playbook Global - Governanca Global</title>
+    <title data-i18n="governanca.main.opening.pageTitle">Playbook Global - Governanca Global</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="./css/governanca.css">
 </head>
-<body class="module-page">
+<body class="module-page" data-governanca-page="main" data-disable-wayfinder="true">
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <h1 data-i18n="governanca.index.header.title">Governanca Global</h1>
-                    <p data-i18n="governanca.index.header.subtitle">Estrutura de governanca operacional do modelo global de atendimento</p>
+                    <p data-i18n="governanca.index.header.subtitle">Governanca operacional para leitura diaria, quinzenal e mensal da operacao</p>
                 </div>
                 <nav class="nav">
                     <ul>
                         <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
-                        <li><a href="../index.html#epic-global-service" class="btn btn-secondary" data-i18n="common.buttons.viewGlobalServiceEpic">Ver épico Global Service</a></li>
+                        <li><a href="../index.html#epic-global-service" class="btn btn-secondary" data-i18n="common.buttons.viewGlobalServiceEpic">Ver epico Global Service</a></li>
                     </ul>
                 </nav>
             </div>
@@ -28,138 +28,269 @@
 
     <section class="epic-context-strip is-global-service">
         <div class="container">
-            <span class="module-badge-home" data-i18n="common.labels.epicGlobalService">Épico Global Service</span>
-            <p data-i18n="common.contexts.globalServiceModule">Este módulo pertence ao épico Global Service.</p>
+            <span class="module-badge-home" data-i18n="common.labels.epicGlobalService">Epico Global Service</span>
+            <p data-i18n="common.contexts.globalServiceModule">Este modulo pertence ao epico Global Service.</p>
+        </div>
+    </section>
+
+    <section class="module-hero governanca-main-opening">
+        <div class="container">
+            <div class="governanca-opening-shell">
+                <div class="governanca-opening-head">
+                    <p class="page-breadcrumb governanca-breadcrumb" data-i18n="governanca.main.opening.breadcrumb">Inicio &gt; Global Service &gt; Governanca Global</p>
+                    <div class="governanca-opening-context">
+                        <span class="inline-context-label" data-i18n="common.labels.epicGlobalService">Epico Global Service</span>
+                        <p class="governanca-opening-module" data-i18n="governanca.main.opening.moduleLabel">Modulo: Governanca Global</p>
+                        <p class="governanca-opening-operational" data-i18n="governanca.main.opening.operationalContext">Contexto operacional: acompanhamento curto para manter fila visivel, ritmo de atendimento e decisao de correcao.</p>
+                    </div>
+                </div>
+
+                <div class="governanca-opening-main">
+                    <h2 data-i18n="governanca.main.opening.title">Governanca Global</h2>
+                    <p data-i18n="governanca.main.opening.description">Pagina unica para acompanhar o que controlar em cada frequencia, como ler o Power BI e como agir quando houver desvio operacional.</p>
+                    <p class="governanca-opening-summary" data-i18n="governanca.main.opening.context">Escopo desta pagina: o que acompanhar, com qual frequencia, por que importa e qual acao esperada por camada.</p>
+                </div>
+
+                <nav class="governanca-main-nav" data-governanca-anchor-nav data-i18n-aria-label="governanca.main.nav.label">
+                    <p class="governanca-main-nav-label" data-i18n="governanca.main.nav.label">Navegacao interna do modulo</p>
+                    <div class="governanca-main-nav-links">
+                        <a href="#governanca-camadas" class="governanca-main-nav-link" data-i18n="governanca.main.nav.layers">Governanca por Camada</a>
+                        <a href="#como-acompanhar-bi" class="governanca-main-nav-link" data-i18n="governanca.main.nav.bi">Como acompanhar no Power BI</a>
+                        <a href="#desvios-e-acoes" class="governanca-main-nav-link" data-i18n="governanca.main.nav.deviations">O que fazer quando houver desvio</a>
+                    </div>
+                </nav>
+            </div>
         </div>
     </section>
 
     <main>
-        <section class="hero gov-hero module-hero">
+        <section id="governanca-camadas" class="governanca-layers-section">
             <div class="container">
-                <div class="hero-content module-hero-content">
-                    <h1 data-i18n="governanca.index.header.title">Governanca Global</h1>
-                    <h2 data-i18n="governanca.landing.hero.subtitle">Ritmo de decisao, disciplina operacional e leitura executiva do modelo global</h2>
-                    <p data-i18n="governanca.landing.hero.description">Este módulo consolida como a operacao e acompanhada, corrigida e escalada por rituais, responsabilidades, indicadores e auditoria.</p>
-                    <div class="hero-buttons module-cta-row">
-                        <a href="visao-geral.html" class="btn-primary" data-i18n="governanca.landing.hero.startOverview">Comecar pela Visao Geral</a>
-                        <a href="#navegacao-interna" class="btn-secondary" data-i18n="governanca.landing.hero.viewNavigation">Ver navegacao do módulo</a>
+                <article class="governanca-layers-panel">
+                    <header class="governanca-layers-header">
+                        <p class="governanca-kicker" data-i18n="governanca.main.layers.kicker">Painel principal</p>
+                        <h3 data-i18n="governanca.main.layers.title">Governanca por Camada</h3>
+                        <p data-i18n="governanca.main.layers.description">As tres camadas abaixo mostram frequencia, foco, leitura e acao esperada para manter a operacao sob controle.</p>
+                        <div class="governanca-reading-tags">
+                            <span data-i18n="governanca.main.layers.operationalReading">Leitura operacional</span>
+                            <span data-i18n="governanca.main.layers.executiveReading">Leitura executiva</span>
+                        </div>
+                    </header>
+
+                    <div class="governanca-layers-track" role="list" data-i18n-aria-label="governanca.main.layers.title">
+                        <article class="governanca-layer-card is-daily" role="listitem">
+                            <header class="governanca-layer-head">
+                                <p class="governanca-layer-step" data-i18n="governanca.main.layers.daily.step">Camada 1</p>
+                                <h4 data-i18n="governanca.main.layers.daily.name">Diario</h4>
+                            </header>
+                            <dl class="governanca-layer-meta">
+                                <div>
+                                    <dt data-i18n="governanca.main.layers.frequencyLabel">Frequencia</dt>
+                                    <dd data-i18n="governanca.main.layers.daily.frequency">Diario</dd>
+                                </div>
+                                <div>
+                                    <dt data-i18n="governanca.main.layers.focusLabel">Foco principal</dt>
+                                    <dd data-i18n="governanca.main.layers.daily.focus">Backlog</dd>
+                                </div>
+                                <div>
+                                    <dt data-i18n="governanca.main.layers.toolLabel">Ferramenta</dt>
+                                    <dd data-i18n="governanca.main.layers.daily.tool">Power BI</dd>
+                                </div>
+                            </dl>
+                            <div class="governanca-layer-block">
+                                <p class="governanca-layer-label" data-i18n="governanca.main.layers.trackLabel">O que acompanhar</p>
+                                <ul>
+                                    <li data-i18n="governanca.main.layers.daily.track.backlog">Backlog aberto por fila</li>
+                                    <li data-i18n="governanca.main.layers.daily.track.paused">Tickets parados sem evolucao</li>
+                                    <li data-i18n="governanca.main.layers.daily.track.aging">Aging inicial e leitura de fila</li>
+                                </ul>
+                            </div>
+                            <div class="governanca-layer-block">
+                                <p class="governanca-layer-label" data-i18n="governanca.main.layers.whyLabel">Por que acompanhar</p>
+                                <p data-i18n="governanca.main.layers.daily.why">Evita tickets esquecidos, fila invisivel e envelhecimento descontrolado do backlog.</p>
+                            </div>
+                            <div class="governanca-layer-block">
+                                <p class="governanca-layer-label" data-i18n="governanca.main.layers.expectedActionLabel">Acao esperada</p>
+                                <p data-i18n="governanca.main.layers.daily.expectedAction">Identificar acumulo rapidamente e priorizar acao imediata na fila critica.</p>
+                            </div>
+                        </article>
+
+                        <article class="governanca-layer-card is-biweekly" role="listitem">
+                            <header class="governanca-layer-head">
+                                <p class="governanca-layer-step" data-i18n="governanca.main.layers.biweekly.step">Camada 2</p>
+                                <h4 data-i18n="governanca.main.layers.biweekly.name">Quinzenal</h4>
+                            </header>
+                            <dl class="governanca-layer-meta">
+                                <div>
+                                    <dt data-i18n="governanca.main.layers.frequencyLabel">Frequencia</dt>
+                                    <dd data-i18n="governanca.main.layers.biweekly.frequency">Quinzenal</dd>
+                                </div>
+                                <div>
+                                    <dt data-i18n="governanca.main.layers.focusLabel">Foco principal</dt>
+                                    <dd data-i18n="governanca.main.layers.biweekly.focus">MTTS, MTFC, CSAT, backlog e aging</dd>
+                                </div>
+                                <div>
+                                    <dt data-i18n="governanca.main.layers.toolLabel">Ferramenta</dt>
+                                    <dd data-i18n="governanca.main.layers.biweekly.tool">Power BI</dd>
+                                </div>
+                            </dl>
+                            <div class="governanca-layer-block">
+                                <p class="governanca-layer-label" data-i18n="governanca.main.layers.trackLabel">O que acompanhar</p>
+                                <ul>
+                                    <li data-i18n="governanca.main.layers.biweekly.track.kpis">MTTS, MTFC, CSAT, backlog e aging</li>
+                                    <li data-i18n="governanca.main.layers.biweekly.track.status">Uso correto de status e concentracao indevida</li>
+                                    <li data-i18n="governanca.main.layers.biweekly.track.fields">Completude dos campos como apoio de leitura</li>
+                                </ul>
+                            </div>
+                            <div class="governanca-layer-block">
+                                <p class="governanca-layer-label" data-i18n="governanca.main.layers.whyLabel">Por que acompanhar</p>
+                                <p data-i18n="governanca.main.layers.biweekly.why">Tira o time da urgencia diaria e confirma se a operacao esta rodando dentro do padrao esperado.</p>
+                            </div>
+                            <div class="governanca-layer-block">
+                                <p class="governanca-layer-label" data-i18n="governanca.main.layers.expectedActionLabel">Acao esperada</p>
+                                <p data-i18n="governanca.main.layers.biweekly.expectedAction">Corrigir desvios de processo, alinhar comportamento operacional e definir owners de acao.</p>
+                            </div>
+                        </article>
+
+                        <article class="governanca-layer-card is-monthly" role="listitem">
+                            <header class="governanca-layer-head">
+                                <p class="governanca-layer-step" data-i18n="governanca.main.layers.monthly.step">Camada 3</p>
+                                <h4 data-i18n="governanca.main.layers.monthly.name">Mensal</h4>
+                            </header>
+                            <dl class="governanca-layer-meta">
+                                <div>
+                                    <dt data-i18n="governanca.main.layers.frequencyLabel">Frequencia</dt>
+                                    <dd data-i18n="governanca.main.layers.monthly.frequency">Mensal</dd>
+                                </div>
+                                <div>
+                                    <dt data-i18n="governanca.main.layers.focusLabel">Foco principal</dt>
+                                    <dd data-i18n="governanca.main.layers.monthly.focus">SLA compliance</dd>
+                                </div>
+                                <div>
+                                    <dt data-i18n="governanca.main.layers.toolLabel">Ferramenta</dt>
+                                    <dd data-i18n="governanca.main.layers.monthly.tool">Power BI</dd>
+                                </div>
+                            </dl>
+                            <div class="governanca-layer-block">
+                                <p class="governanca-layer-label" data-i18n="governanca.main.layers.trackLabel">O que acompanhar</p>
+                                <ul>
+                                    <li data-i18n="governanca.main.layers.monthly.track.sla">SLA compliance consolidado</li>
+                                    <li data-i18n="governanca.main.layers.monthly.track.mtts">MTTS como indicador de apoio</li>
+                                    <li data-i18n="governanca.main.layers.monthly.track.priority">Prioridades de correcao para o ciclo seguinte</li>
+                                </ul>
+                            </div>
+                            <div class="governanca-layer-block">
+                                <p class="governanca-layer-label" data-i18n="governanca.main.layers.whyLabel">Por que acompanhar</p>
+                                <p data-i18n="governanca.main.layers.monthly.why">Mostra se o padrao de atendimento esta sustentado e se a operacao entrega consistencia executiva.</p>
+                            </div>
+                            <div class="governanca-layer-block">
+                                <p class="governanca-layer-label" data-i18n="governanca.main.layers.expectedActionLabel">Acao esperada</p>
+                                <p data-i18n="governanca.main.layers.monthly.expectedAction">Consolidar leitura executiva da saude operacional e priorizar as correcoes estruturais.</p>
+                            </div>
+                        </article>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section class="connection">
+        <section id="como-acompanhar-bi" class="governanca-support governanca-support-bi">
             <div class="container">
-                <h2 data-i18n="governanca.landing.architecture.title">Arquitetura de Governanca</h2>
-                <div class="gov-stack-flow" data-i18n-aria-label="governanca.landing.architecture.ariaLabel" aria-label="Fluxo da governanca operacional">
-                    <div class="gov-stack-item" data-i18n="governanca.landing.architecture.stack.global">Governanca Global</div>
-                    <div class="gov-stack-arrow">&darr;</div>
-                    <div class="gov-stack-item" data-i18n="governanca.landing.architecture.stack.regional">Governanca Regional</div>
-                    <div class="gov-stack-arrow">&darr;</div>
-                    <div class="gov-stack-item" data-i18n="governanca.landing.architecture.stack.local">Governanca Local</div>
-                    <div class="gov-stack-arrow">&darr;</div>
-                    <div class="gov-stack-item" data-i18n="governanca.landing.architecture.stack.rituals">Rituais Operacionais</div>
-                    <div class="gov-stack-arrow">&darr;</div>
-                    <div class="gov-stack-item" data-i18n="governanca.landing.architecture.stack.indicators">Indicadores</div>
-                    <div class="gov-stack-arrow">&darr;</div>
-                    <div class="gov-stack-item" data-i18n="governanca.landing.architecture.stack.audit">Auditoria</div>
-                </div>
+                <article class="governanca-support-shell">
+                    <header class="governanca-support-header">
+                        <h3 data-i18n="governanca.main.bi.title">Como acompanhar no Power BI</h3>
+                        <p data-i18n="governanca.main.bi.description">Use o BI como ferramenta unica de leitura diaria, quinzenal e mensal para transformar sinal em acao objetiva.</p>
+                    </header>
+
+                    <div class="governanca-bi-grid">
+                        <div class="governanca-bi-guides">
+                            <article class="governanca-bi-step">
+                                <h4 data-i18n="governanca.main.bi.daily.title">Diario</h4>
+                                <ul>
+                                    <li data-i18n="governanca.main.bi.daily.item1">Acompanhar backlog aberto por fila e equipe.</li>
+                                    <li data-i18n="governanca.main.bi.daily.item2">Identificar tickets parados sem movimentacao.</li>
+                                    <li data-i18n="governanca.main.bi.daily.item3">Observar aging inicial para acao preventiva.</li>
+                                </ul>
+                            </article>
+
+                            <article class="governanca-bi-step">
+                                <h4 data-i18n="governanca.main.bi.biweekly.title">Quinzenal</h4>
+                                <ul>
+                                    <li data-i18n="governanca.main.bi.biweekly.item1">Revisar MTTS, MTFC, CSAT, backlog e aging.</li>
+                                    <li data-i18n="governanca.main.bi.biweekly.item2">Identificar desvios de processo e status.</li>
+                                    <li data-i18n="governanca.main.bi.biweekly.item3">Comparar evolucao entre periodos e equipes.</li>
+                                </ul>
+                            </article>
+
+                            <article class="governanca-bi-step">
+                                <h4 data-i18n="governanca.main.bi.monthly.title">Mensal</h4>
+                                <ul>
+                                    <li data-i18n="governanca.main.bi.monthly.item1">Acompanhar SLA compliance consolidado.</li>
+                                    <li data-i18n="governanca.main.bi.monthly.item2">Usar MTTS como leitura de apoio.</li>
+                                    <li data-i18n="governanca.main.bi.monthly.item3">Consolidar leitura executiva para priorizacao.</li>
+                                </ul>
+                            </article>
+                        </div>
+
+                        <aside class="governanca-bi-placeholder" aria-label="Power BI Placeholder">
+                            <div class="governanca-bi-placeholder-visual" aria-hidden="true">
+                                <span>Power BI</span>
+                            </div>
+                            <h4 data-i18n="governanca.main.bi.placeholder.title">Espaco para print do painel</h4>
+                            <p data-i18n="governanca.main.bi.placeholder.description">Quando o print oficial estiver disponivel, inserir aqui a visao consolidada para leitura rapida.</p>
+                        </aside>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section id="navegacao-interna" class="modules">
+        <section id="desvios-e-acoes" class="governanca-support governanca-support-deviations">
             <div class="container">
-                <h2 data-i18n="governanca.landing.pyramid.title">Piramide de Governanca</h2>
-                <p data-i18n="governanca.landing.pyramid.description">Niveis de reuniao, responsaveis, saidas e decisoes para governanca operacional e executiva.</p>
-                <div class="gov-pyramid" data-i18n-aria-label="governanca.landing.pyramid.ariaLabel" aria-label="Estrutura de reunioes de governanca em tres niveis">
-                    <article class="gov-pyramid-level gov-level-executive">
-                        <h3>Reuniao Executiva</h3>
-                        <p class="gov-level-subtitle">Topo estrategico e institucional</p>
-                        <div class="gov-level-block">
-                            <h4>Responsaveis</h4>
-                            <p>Sponsor, liderancas executivas e heads/diretoria (quando aplicavel).</p>
-                        </div>
-                        <div class="gov-level-block">
-                            <h4>Saidas</h4>
-                            <p>Leitura executiva da operacao, principais riscos, evolucao da padronizacao e status de implementacao.</p>
-                        </div>
-                        <div class="gov-level-block">
-                            <h4>Decisoes</h4>
-                            <p>Direcionamentos estrategicos, validacao de mudancas relevantes, priorizacao institucional e remocao de bloqueios macro.</p>
-                        </div>
-                    </article>
+                <article class="governanca-support-shell">
+                    <header class="governanca-support-header">
+                        <h3 data-i18n="governanca.main.deviations.title">O que fazer quando houver desvio</h3>
+                        <p data-i18n="governanca.main.deviations.description">Quando os sinais sairem do esperado, execute acao curta, com owner definido e na cadencia adequada.</p>
+                    </header>
 
-                    <article class="gov-pyramid-level gov-level-tactical">
-                        <h3>Reuniao Tatica</h3>
-                        <p class="gov-level-subtitle">Coordenacao regional e ajuste de rota</p>
-                        <div class="gov-level-block">
-                            <h4>Responsaveis</h4>
-                            <p>Coordenacao, gestao regional e liderancas de service/CX.</p>
-                        </div>
-                        <div class="gov-level-block">
-                            <h4>Saidas</h4>
-                            <p>Visao consolidada dos indicadores, gargalos recorrentes, aderencia ao fluxo e temas interareas.</p>
-                        </div>
-                        <div class="gov-level-block">
-                            <h4>Decisoes</h4>
-                            <p>Plano de acao tatico, definicao de owners, priorizacao de melhorias e escalonamento para o nivel executivo.</p>
-                        </div>
-                    </article>
+                    <div class="governanca-deviation-legend">
+                        <span data-i18n="governanca.main.deviations.deviationLabel">Desvio</span>
+                        <span data-i18n="governanca.main.deviations.expectedActionLabel">Acao esperada</span>
+                    </div>
 
-                    <article class="gov-pyramid-level gov-level-operational">
-                        <h3>Reuniao Operacional</h3>
-                        <p class="gov-level-subtitle">Base de controle diario da operacao</p>
-                        <div class="gov-level-block">
-                            <h4>Responsaveis</h4>
-                            <p>Supervisores, coordenadores locais e times de operacao.</p>
-                        </div>
-                        <div class="gov-level-block">
-                            <h4>Saidas</h4>
-                            <p>Status da operacao, backlog, aging, desvios de SLA, pendencias criticas e disciplina operacional.</p>
-                        </div>
-                        <div class="gov-level-block">
-                            <h4>Decisoes</h4>
-                            <p>Priorizacoes imediatas, acoes corretivas, cobranca de pendencias e escalonamentos necessarios.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="modules">
-            <div class="container">
-                <h2 data-i18n="governanca.landing.navigation.title">Navegacao Interna</h2>
-                <div class="modules-grid">
-                    <article class="module-card active">
-                        <h3 data-i18n="governanca.landing.navigation.cards.overview.title">Visao Geral</h3>
-                        <p data-i18n="governanca.landing.navigation.cards.overview.description">Conceito e camadas da governanca operacional global.</p>
-                        <a href="visao-geral.html" class="btn-module" data-i18n="governanca.landing.navigation.cards.overview.cta">Ver Visao Geral</a>
-                    </article>
-
-                    <article class="module-card active">
-                        <h3 data-i18n="governanca.landing.navigation.cards.rituals.title">Rituais de Governanca</h3>
-                        <p data-i18n="governanca.landing.navigation.cards.rituals.description">Cadencia operacional diaria, quinzenal, mensal e quarterly.</p>
-                        <a href="rituais-governanca.html" class="btn-module" data-i18n="governanca.landing.navigation.cards.rituals.cta">Ver Rituais</a>
-                    </article>
-
-                    <article class="module-card active">
-                        <h3 data-i18n="governanca.landing.navigation.cards.responsibilities.title">Responsabilidades</h3>
-                        <p data-i18n="governanca.landing.navigation.cards.responsibilities.description">Matriz de papeis por nivel de governanca.</p>
-                        <a href="responsabilidades.html" class="btn-module" data-i18n="governanca.landing.navigation.cards.responsibilities.cta">Ver Responsabilidades</a>
-                    </article>
-
-                    <article class="module-card active">
-                        <h3 data-i18n="governanca.landing.navigation.cards.indicators.title">Indicadores de Governanca</h3>
-                        <p data-i18n="governanca.landing.navigation.cards.indicators.description">Indicadores para monitorar adocao e consistencia operacional.</p>
-                        <a href="indicadores-governanca.html" class="btn-module" data-i18n="governanca.landing.navigation.cards.indicators.cta">Ver Indicadores</a>
-                    </article>
-
-                    <article class="module-card active">
-                        <h3 data-i18n="governanca.landing.navigation.cards.audit.title">Auditoria</h3>
-                        <p data-i18n="governanca.landing.navigation.cards.audit.description">Metodo de avaliacao, amostragem e plano de melhoria.</p>
-                        <a href="auditoria.html" class="btn-module" data-i18n="governanca.landing.navigation.cards.audit.cta">Ver Auditoria</a>
-                    </article>
-                </div>
+                    <ul class="governanca-deviation-list">
+                        <li>
+                            <p class="governanca-deviation-name" data-i18n="governanca.main.deviations.items.backlog.name">Backlog subindo</p>
+                            <p data-i18n="governanca.main.deviations.items.backlog.action">Revisar fila, redistribuir prioridade e atacar tickets esquecidos na rotina diaria.</p>
+                        </li>
+                        <li>
+                            <p class="governanca-deviation-name" data-i18n="governanca.main.deviations.items.aging.name">Aging aumentando</p>
+                            <p data-i18n="governanca.main.deviations.items.aging.action">Mapear onde os tickets estao parando e corrigir o ponto de bloqueio operacional.</p>
+                        </li>
+                        <li>
+                            <p class="governanca-deviation-name" data-i18n="governanca.main.deviations.items.sla.name">SLA compliance caindo</p>
+                            <p data-i18n="governanca.main.deviations.items.sla.action">Repriorizar fila critica e alinhar plano de recuperacao na governanca mensal.</p>
+                        </li>
+                        <li>
+                            <p class="governanca-deviation-name" data-i18n="governanca.main.deviations.items.mtts.name">MTTS piorando</p>
+                            <p data-i18n="governanca.main.deviations.items.mtts.action">Revisar tempo de triagem e remocao de impedimentos na passagem para atendimento.</p>
+                        </li>
+                        <li>
+                            <p class="governanca-deviation-name" data-i18n="governanca.main.deviations.items.mtfc.name">MTFC piorando</p>
+                            <p data-i18n="governanca.main.deviations.items.mtfc.action">Ajustar priorizacao da primeira resposta e monitorar cumprimento por equipe.</p>
+                        </li>
+                        <li>
+                            <p class="governanca-deviation-name" data-i18n="governanca.main.deviations.items.csat.name">CSAT caindo</p>
+                            <p data-i18n="governanca.main.deviations.items.csat.action">Revisar qualidade de tratativa e alinhar comunicacao com o cliente nas filas criticas.</p>
+                        </li>
+                        <li>
+                            <p class="governanca-deviation-name" data-i18n="governanca.main.deviations.items.status.name">Uso incorreto de status</p>
+                            <p data-i18n="governanca.main.deviations.items.status.action">Corrigir disciplina de status no dia a dia e reforcar regra na cadencia quinzenal.</p>
+                        </li>
+                        <li>
+                            <p class="governanca-deviation-name" data-i18n="governanca.main.deviations.items.fields.name">Campos incompletos</p>
+                            <p data-i18n="governanca.main.deviations.items.fields.action">Cobrar preenchimento correto e bloquear recorrencia com orientacao objetiva para o time.</p>
+                        </li>
+                    </ul>
+                </article>
             </div>
         </section>
     </main>
@@ -180,7 +311,3 @@
     <script src="./js/governanca.js"></script>
 </body>
 </html>
-
-
-
-

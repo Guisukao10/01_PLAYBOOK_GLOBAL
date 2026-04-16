@@ -79,32 +79,36 @@
                                 <p data-i18n="camposObrigatorios.home.groups.mandatory.definition">Base minima para abrir e qualificar o ticket sem retrabalho.</p>
                             </header>
 
-                            <div class="co-map-cluster">
-                                <p class="co-map-group-subtitle" data-i18n="camposObrigatorios.home.groups.mandatory.ticketLabel">Ticket - abertura</p>
-                                <ul class="co-map-list">
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.requesterName">Nome do solicitante/cliente</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.email">E-mail</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.phone">Telefone</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.requester">Solicitante</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.serviceType">Tipo de atendimento</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.category">Categoria</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.product">Produto</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.productBrand">Marca do produto</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.serialNumber">Numero de serie do equipamento, com excecao contextual</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.subject">Assunto</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.description">Descricao</li>
-                                </ul>
-                            </div>
+                            <div class="co-map-group-body co-map-group-body--mandatory">
+                                <div class="co-mandatory-columns">
+                                    <div class="co-map-cluster">
+                                        <p class="co-map-group-subtitle" data-i18n="camposObrigatorios.home.groups.mandatory.ticketLabel">Ticket - abertura</p>
+                                        <ul class="co-map-list co-map-list--mandatory">
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.requesterName">Nome do solicitante/cliente</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.email">E-mail</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.phone">Telefone</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.requester">Solicitante</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.serviceType">Tipo de atendimento</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.category">Categoria</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.product">Produto</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.productBrand">Marca do produto</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.serialNumber">Numero de serie do equipamento, com excecao contextual</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.subject">Assunto</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.ticket.description">Descricao</li>
+                                        </ul>
+                                    </div>
 
-                            <div class="co-map-cluster">
-                                <p class="co-map-group-subtitle" data-i18n="camposObrigatorios.home.groups.mandatory.contactLabel">Contato/Cliente</p>
-                                <ul class="co-map-list">
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.contact.firstName">Nome</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.contact.lastName">Sobrenome</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.contact.accountName">Nome da conta</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.contact.email">E-mail</li>
-                                    <li data-i18n="camposObrigatorios.home.groups.mandatory.contact.phoneMobile">Telefone/Celular</li>
-                                </ul>
+                                    <div class="co-map-cluster">
+                                        <p class="co-map-group-subtitle" data-i18n="camposObrigatorios.home.groups.mandatory.contactLabel">Contato/Cliente</p>
+                                        <ul class="co-map-list co-map-list--mandatory">
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.contact.firstName">Nome</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.contact.lastName">Sobrenome</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.contact.accountName">Nome da conta</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.contact.email">E-mail</li>
+                                            <li data-i18n="camposObrigatorios.home.groups.mandatory.contact.phoneMobile">Telefone/Celular</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </article>
 
@@ -114,11 +118,13 @@
                                 <h4 data-i18n="camposObrigatorios.home.groups.conditional.title">Condicionais</h4>
                                 <p data-i18n="camposObrigatorios.home.groups.conditional.definition">Obrigatorio somente quando o contexto regional ou de solicitante exige.</p>
                             </header>
-                            <ul class="co-map-list">
-                                <li data-i18n="camposObrigatorios.home.groups.conditional.stateBrazil">Estado: obrigatorio apenas Brasil</li>
-                                <li data-i18n="camposObrigatorios.home.groups.conditional.provinceArgentina">Provincia: obrigatoria apenas Argentina</li>
-                                <li data-i18n="camposObrigatorios.home.groups.conditional.assistanceDistributor">Nome da assistencia/distribuidor: obrigatorio para Assistencia / Distribuidor</li>
-                            </ul>
+                            <div class="co-map-group-body">
+                                <ul class="co-map-list co-map-list--rule-blocks">
+                                    <li data-i18n="camposObrigatorios.home.groups.conditional.stateBrazil">Estado: obrigatorio apenas Brasil</li>
+                                    <li data-i18n="camposObrigatorios.home.groups.conditional.provinceArgentina">Provincia: obrigatoria apenas Argentina</li>
+                                    <li data-i18n="camposObrigatorios.home.groups.conditional.assistanceDistributor">Nome da assistencia/distribuidor: obrigatorio para Assistencia / Distribuidor</li>
+                                </ul>
+                            </div>
                         </article>
 
                         <article class="co-map-group co-map-group-automatic">
@@ -127,17 +133,19 @@
                                 <h4 data-i18n="camposObrigatorios.home.groups.automatic.title">Automaticos/sistemicos</h4>
                                 <p data-i18n="camposObrigatorios.home.groups.automatic.definition">Dados preenchidos e atualizados pelo sistema ao longo da jornada.</p>
                             </header>
-                            <ul class="co-map-list">
-                                <li data-i18n="camposObrigatorios.home.groups.automatic.ticketId">ID do ticket</li>
-                                <li data-i18n="camposObrigatorios.home.groups.automatic.openingDate">Data de abertura</li>
-                                <li data-i18n="camposObrigatorios.home.groups.automatic.channel">Canal</li>
-                                <li data-i18n="camposObrigatorios.home.groups.automatic.owner">Proprietario do ticket</li>
-                                <li data-i18n="camposObrigatorios.home.groups.automatic.status">Status</li>
-                                <li data-i18n="camposObrigatorios.home.groups.automatic.priority">Prioridade, calculada pela matriz</li>
-                                <li data-i18n="camposObrigatorios.home.groups.automatic.slaFirstResponse">SLA de primeira resposta</li>
-                                <li data-i18n="camposObrigatorios.home.groups.automatic.slaResolution">SLA de resolucao</li>
-                                <li data-i18n="camposObrigatorios.home.groups.automatic.slaIndicators">Tempos e indicadores de SLA</li>
-                            </ul>
+                            <div class="co-map-group-body">
+                                <ul class="co-map-list co-map-list--functional">
+                                    <li data-i18n="camposObrigatorios.home.groups.automatic.ticketId">ID do ticket</li>
+                                    <li data-i18n="camposObrigatorios.home.groups.automatic.openingDate">Data de abertura</li>
+                                    <li data-i18n="camposObrigatorios.home.groups.automatic.channel">Canal</li>
+                                    <li data-i18n="camposObrigatorios.home.groups.automatic.owner">Proprietario do ticket</li>
+                                    <li data-i18n="camposObrigatorios.home.groups.automatic.status">Status</li>
+                                    <li data-i18n="camposObrigatorios.home.groups.automatic.priority">Prioridade, calculada pela matriz</li>
+                                    <li data-i18n="camposObrigatorios.home.groups.automatic.slaFirstResponse">SLA de primeira resposta</li>
+                                    <li data-i18n="camposObrigatorios.home.groups.automatic.slaResolution">SLA de resolucao</li>
+                                    <li data-i18n="camposObrigatorios.home.groups.automatic.slaIndicators">Tempos e indicadores de SLA</li>
+                                </ul>
+                            </div>
                         </article>
 
                         <article class="co-map-group co-map-group-recommended">
@@ -146,33 +154,43 @@
                                 <h4 data-i18n="camposObrigatorios.home.groups.recommended.title">Desejaveis oficiais</h4>
                                 <p data-i18n="camposObrigatorios.home.groups.recommended.definition">Nao bloqueiam abertura, mas elevam a qualidade da leitura operacional.</p>
                             </header>
-                            <ul class="co-map-list">
-                                <li data-i18n="camposObrigatorios.home.groups.recommended.country">Pais</li>
-                                <li data-i18n="camposObrigatorios.home.groups.recommended.zeroHour">Zero hora / Out of the box</li>
-                                <li data-i18n="camposObrigatorios.home.groups.recommended.needsPart">Necessita peca</li>
-                                <li data-i18n="camposObrigatorios.home.groups.recommended.partnerDistributor">Parceiro/distribuidor, quando nao obrigatorio</li>
-                                <li data-i18n="camposObrigatorios.home.groups.recommended.racSent">RAC Enviada? - Sim/Nao</li>
-                                <li data-i18n="camposObrigatorios.home.groups.recommended.assistanceType">Tipo de assistencia tecnica</li>
-                                <li data-i18n="camposObrigatorios.home.groups.recommended.closingReason">Motivo do fechamento</li>
-                                <li data-i18n="camposObrigatorios.home.groups.recommended.solutionMode">Solucao em campo/remoto</li>
-                                <li data-i18n="camposObrigatorios.home.groups.recommended.usedPart">Peca utilizada</li>
-                                <li data-i18n="camposObrigatorios.home.groups.recommended.finalPartsQty">Quantidade final de pecas</li>
-                            </ul>
-                            <p class="co-subtle-note" data-i18n="camposObrigatorios.home.note.excludedOfficial">Nao fazem parte da lista oficial de desejaveis nesta fase: acoes executadas, quantidade de pecas, peca solicitada, codigo da peca, datas/status da peca, numero do pedido, causa provavel e data prevista de retorno ao cliente.</p>
+                            <div class="co-map-group-body">
+                                <div class="co-map-primary-block">
+                                    <ul class="co-map-list">
+                                        <li data-i18n="camposObrigatorios.home.groups.recommended.country">Pais</li>
+                                        <li data-i18n="camposObrigatorios.home.groups.recommended.zeroHour">Zero hora / Out of the box</li>
+                                        <li data-i18n="camposObrigatorios.home.groups.recommended.needsPart">Necessita peca</li>
+                                        <li data-i18n="camposObrigatorios.home.groups.recommended.partnerDistributor">Parceiro/distribuidor, quando nao obrigatorio</li>
+                                        <li data-i18n="camposObrigatorios.home.groups.recommended.racSent">RAC Enviada? - Sim/Nao</li>
+                                        <li data-i18n="camposObrigatorios.home.groups.recommended.assistanceType">Tipo de assistencia tecnica</li>
+                                        <li data-i18n="camposObrigatorios.home.groups.recommended.closingReason">Motivo do fechamento</li>
+                                        <li data-i18n="camposObrigatorios.home.groups.recommended.solutionMode">Solucao em campo/remoto</li>
+                                        <li data-i18n="camposObrigatorios.home.groups.recommended.usedPart">Peca utilizada</li>
+                                        <li data-i18n="camposObrigatorios.home.groups.recommended.finalPartsQty">Quantidade final de pecas</li>
+                                    </ul>
+                                </div>
+                                <aside class="co-map-secondary-note">
+                                    <p class="co-subtle-note" data-i18n="camposObrigatorios.home.note.excludedOfficial">Nao fazem parte da lista oficial de desejaveis nesta fase: acoes executadas, quantidade de pecas, peca solicitada, codigo da peca, datas/status da peca, numero do pedido, causa provavel e data prevista de retorno ao cliente.</p>
+                                </aside>
+                            </div>
                         </article>
                     </div>
 
                     <div class="co-impact-strip">
-                        <p class="co-impact-label" data-i18n="camposObrigatorios.home.visual.impactLabel">Impacto direto em</p>
-                        <ul class="co-impact-list">
-                            <li data-i18n="camposObrigatorios.home.visual.impact.dataQuality">Qualidade de dados</li>
-                            <li data-i18n="camposObrigatorios.home.visual.impact.flow">Fluxo</li>
-                            <li data-i18n="camposObrigatorios.home.visual.impact.priority">Prioridade</li>
-                            <li data-i18n="camposObrigatorios.home.visual.impact.sla">SLA</li>
-                            <li data-i18n="camposObrigatorios.home.visual.impact.kpi">KPI</li>
-                            <li data-i18n="camposObrigatorios.home.visual.impact.audit">Auditoria</li>
-                        </ul>
-                        <a href="matriz-consolidada.html" class="btn-module" data-i18n="camposObrigatorios.home.visual.matrixCta">Consultar Matriz Consolidada</a>
+                        <div class="co-impact-content">
+                            <p class="co-impact-label" data-i18n="camposObrigatorios.home.visual.impactLabel">Impacto direto em</p>
+                            <ul class="co-impact-list">
+                                <li data-i18n="camposObrigatorios.home.visual.impact.dataQuality">Qualidade de dados</li>
+                                <li data-i18n="camposObrigatorios.home.visual.impact.flow">Fluxo</li>
+                                <li data-i18n="camposObrigatorios.home.visual.impact.priority">Prioridade</li>
+                                <li data-i18n="camposObrigatorios.home.visual.impact.sla">SLA</li>
+                                <li data-i18n="camposObrigatorios.home.visual.impact.kpi">KPI</li>
+                                <li data-i18n="camposObrigatorios.home.visual.impact.audit">Auditoria</li>
+                            </ul>
+                        </div>
+                        <div class="co-impact-cta">
+                            <a href="matriz-consolidada.html" class="btn-module co-impact-button" data-i18n="camposObrigatorios.home.visual.matrixCta">Consultar Matriz Consolidada</a>
+                        </div>
                     </div>
                 </article>
             </div>

@@ -660,8 +660,96 @@
 
     en.governanca.title = "Playbook Global - Global Governance";
     en.governanca.index.header.title = "Global Governance";
-    en.governanca.index.header.subtitle = "Operational governance framework for the global service model";
+    en.governanca.index.header.subtitle = "Operational governance for daily, biweekly, and monthly operation reading";
     en.governanca.index.footer = "Playbook Global - Global Governance";
+    en.governanca.main.opening.pageTitle = "Playbook Global - Global Governance";
+    en.governanca.main.opening.breadcrumb = "Home > Global Service > Global Governance";
+    en.governanca.main.opening.moduleLabel = "Module: Global Governance";
+    en.governanca.main.opening.operationalContext = "Operational context: short follow-up to keep queue visibility, service pace, and correction decisions.";
+    en.governanca.main.opening.title = "Global Governance";
+    en.governanca.main.opening.description = "Single page to track what to monitor by frequency, how to read Power BI, and how to act when there is a deviation.";
+    en.governanca.main.opening.context = "Scope of this page: what to track, at what frequency, why it matters, and the expected action by layer.";
+    en.governanca.main.nav.label = "Module internal navigation";
+    en.governanca.main.nav.layers = "Governance by Layer";
+    en.governanca.main.nav.bi = "How to track in Power BI";
+    en.governanca.main.nav.deviations = "What to do when there is a deviation";
+    en.governanca.main.layers.kicker = "Main panel";
+    en.governanca.main.layers.title = "Governance by Layer";
+    en.governanca.main.layers.description = "The three layers below show frequency, focus, reading, and expected action to keep operations under control.";
+    en.governanca.main.layers.operationalReading = "Operational reading";
+    en.governanca.main.layers.executiveReading = "Executive reading";
+    en.governanca.main.layers.frequencyLabel = "Frequency";
+    en.governanca.main.layers.focusLabel = "Main focus";
+    en.governanca.main.layers.toolLabel = "Tool";
+    en.governanca.main.layers.trackLabel = "What to track";
+    en.governanca.main.layers.whyLabel = "Why track";
+    en.governanca.main.layers.expectedActionLabel = "Expected action";
+    en.governanca.main.layers.daily.step = "Layer 1";
+    en.governanca.main.layers.daily.name = "Daily";
+    en.governanca.main.layers.daily.frequency = "Daily";
+    en.governanca.main.layers.daily.focus = "Backlog";
+    en.governanca.main.layers.daily.tool = "Power BI";
+    en.governanca.main.layers.daily.track.backlog = "Open backlog by queue";
+    en.governanca.main.layers.daily.track.paused = "Stalled tickets without progress";
+    en.governanca.main.layers.daily.track.aging = "Early aging and queue reading";
+    en.governanca.main.layers.daily.why = "Prevents forgotten tickets, invisible queue, and uncontrolled backlog aging.";
+    en.governanca.main.layers.daily.expectedAction = "Quickly identify accumulation and prioritize immediate action on critical queue.";
+    en.governanca.main.layers.biweekly.step = "Layer 2";
+    en.governanca.main.layers.biweekly.name = "Biweekly";
+    en.governanca.main.layers.biweekly.frequency = "Biweekly";
+    en.governanca.main.layers.biweekly.focus = "MTTS, MTFC, CSAT, backlog, and aging";
+    en.governanca.main.layers.biweekly.tool = "Power BI";
+    en.governanca.main.layers.biweekly.track.kpis = "MTTS, MTFC, CSAT, backlog, and aging";
+    en.governanca.main.layers.biweekly.track.status = "Correct status usage and improper concentration";
+    en.governanca.main.layers.biweekly.track.fields = "Field completeness as reading support";
+    en.governanca.main.layers.biweekly.why = "Takes the team out of daily urgency and checks whether operations run within the expected standard.";
+    en.governanca.main.layers.biweekly.expectedAction = "Correct process deviations, align operational behavior, and define action owners.";
+    en.governanca.main.layers.monthly.step = "Layer 3";
+    en.governanca.main.layers.monthly.name = "Monthly";
+    en.governanca.main.layers.monthly.frequency = "Monthly";
+    en.governanca.main.layers.monthly.focus = "SLA compliance";
+    en.governanca.main.layers.monthly.tool = "Power BI";
+    en.governanca.main.layers.monthly.track.sla = "Consolidated SLA compliance";
+    en.governanca.main.layers.monthly.track.mtts = "MTTS as supporting metric";
+    en.governanca.main.layers.monthly.track.priority = "Correction priorities for the next cycle";
+    en.governanca.main.layers.monthly.why = "Shows whether service standards are sustained and operations deliver executive consistency.";
+    en.governanca.main.layers.monthly.expectedAction = "Consolidate executive reading of operational health and prioritize structural corrections.";
+    en.governanca.main.bi.title = "How to track in Power BI";
+    en.governanca.main.bi.description = "Use BI as the single tool for daily, biweekly, and monthly reading to turn signals into objective action.";
+    en.governanca.main.bi.daily.title = "Daily";
+    en.governanca.main.bi.daily.item1 = "Track open backlog by queue and team.";
+    en.governanca.main.bi.daily.item2 = "Identify stalled tickets without movement.";
+    en.governanca.main.bi.daily.item3 = "Watch early aging for preventive action.";
+    en.governanca.main.bi.biweekly.title = "Biweekly";
+    en.governanca.main.bi.biweekly.item1 = "Review MTTS, MTFC, CSAT, backlog, and aging.";
+    en.governanca.main.bi.biweekly.item2 = "Identify process and status deviations.";
+    en.governanca.main.bi.biweekly.item3 = "Compare evolution across periods and teams.";
+    en.governanca.main.bi.monthly.title = "Monthly";
+    en.governanca.main.bi.monthly.item1 = "Track consolidated SLA compliance.";
+    en.governanca.main.bi.monthly.item2 = "Use MTTS as a supporting reading.";
+    en.governanca.main.bi.monthly.item3 = "Consolidate executive reading for prioritization.";
+    en.governanca.main.bi.placeholder.title = "Space for dashboard screenshot";
+    en.governanca.main.bi.placeholder.description = "When the official screenshot is available, place the consolidated view here for quick reading.";
+    en.governanca.main.deviations.title = "What to do when there is a deviation";
+    en.governanca.main.deviations.description = "When signals move outside expected ranges, execute short actions with clear ownership in the right cadence.";
+    en.governanca.main.deviations.deviationLabel = "Deviation";
+    en.governanca.main.deviations.expectedActionLabel = "Expected action";
+    en.governanca.main.deviations.items.backlog.name = "Backlog increasing";
+    en.governanca.main.deviations.items.backlog.action = "Review queue, rebalance priority, and address forgotten tickets in the daily routine.";
+    en.governanca.main.deviations.items.aging.name = "Aging increasing";
+    en.governanca.main.deviations.items.aging.action = "Map where tickets are stalling and fix the operational blocking point.";
+    en.governanca.main.deviations.items.sla.name = "SLA compliance dropping";
+    en.governanca.main.deviations.items.sla.action = "Reprioritize critical queue and align a recovery plan in monthly governance.";
+    en.governanca.main.deviations.items.mtts.name = "MTTS worsening";
+    en.governanca.main.deviations.items.mtts.action = "Review triage time and remove blockers in handoff to handling.";
+    en.governanca.main.deviations.items.mtfc.name = "MTFC worsening";
+    en.governanca.main.deviations.items.mtfc.action = "Adjust first-response prioritization and monitor compliance by team.";
+    en.governanca.main.deviations.items.csat.name = "CSAT dropping";
+    en.governanca.main.deviations.items.csat.action = "Review handling quality and align customer communication on critical queues.";
+    en.governanca.main.deviations.items.status.name = "Incorrect status usage";
+    en.governanca.main.deviations.items.status.action = "Correct status discipline in daily routine and reinforce rule in biweekly cadence.";
+    en.governanca.main.deviations.items.fields.name = "Incomplete fields";
+    en.governanca.main.deviations.items.fields.action = "Enforce proper completion and prevent recurrence with objective team guidance.";
 
     en.canaisEntrada.title = "Playbook Global - Input Channels";
     en.canaisEntrada.index.header.title = "Input Channels";
@@ -727,38 +815,41 @@
         { key: "aberto", title: "Open", lane: "ativo", objective: "Register the ticket and make it ready for triage.", when: "At opening, with minimum information to start service.", correctStay: "Short stay until first handling.", risk: "Stalling here creates hidden intake backlog." },
         { key: "em_atendimento", title: "In Progress", lane: "ativo", objective: "Perform actual technical work on the ticket.", when: "Only while effective action is underway.", correctStay: "Frequent updates and concrete progress.", risk: "Using it as a generic status hides waiting queues." },
         { key: "aguardando_cliente", title: "Waiting for Customer", lane: "espera", objective: "Wait for customer response or action.", when: "When the next step objectively depends on the customer.", correctStay: "With a clear waiting reason and registered context.", risk: "Waiting without context reduces aging and SLA control." },
-        { key: "aguardando_assistencia_tecnica", title: "Waiting for Technical Assistance", lane: "espera", objective: "Wait for technical assistance action.", when: "When resolution depends on dedicated internal/external technical support.", correctStay: "With a recorded request and monitored ETA.", risk: "Without clear records, tickets disappear from bottleneck analysis." },
         { key: "aguardando_peca", title: "Waiting for Parts", lane: "espera", objective: "Wait for parts, materials, or logistics to continue.", when: "When execution depends on physical item availability.", correctStay: "With traceable order and monitored arrival forecast.", risk: "Without control, aging increases without cause visibility." },
-        { key: "fechado", title: "Closed", lane: "final", objective: "Formalize closure with minimum resolution records.", when: "After concluding service and validating closure conditions.", correctStay: "Ticket completed with a consistent closure trail.", risk: "Closing too early distorts SLA and causes rework through reopenings." }
+        { key: "aguardando_terceiro", title: "Waiting for Third Party / Technical Visit", lane: "espera", objective: "Wait for third-party work or a technical visit.", when: "When the ticket depends on technical assistance/third party, internal or external.", correctStay: "With dependency logged and return ETA monitored.", risk: "Without dependency control, bottlenecks become invisible." },
+        { key: "resolvido", title: "Resolved", lane: "final", objective: "Record applied solution before final closure.", when: "When handling is complete but closure validation is still pending.", correctStay: "With a clear solution summary and completion evidence.", risk: "Skipping this stage distorts rework and quality visibility." },
+        { key: "fechado", title: "Closed", lane: "final", objective: "Formalize closure with minimum resolution records.", when: "After passing through Resolved and validating closure conditions.", correctStay: "Ticket completed with a consistent closure trail.", risk: "Closing too early distorts SLA and causes rework through reopenings." }
     ];
     en.kanban.data.languageRows = [
         { pt: "Aberto", en: "Open", es: "Abierto" },
         { pt: "Em Atendimento", en: "In Progress", es: "En Atencion" },
         { pt: "Aguardando Cliente", en: "Waiting for Customer", es: "Esperando al Cliente" },
-        { pt: "Aguardando Assistencia Tecnica", en: "Waiting for Technical Assistance", es: "Esperando Asistencia Tecnica" },
         { pt: "Aguardando Peca", en: "Waiting for Parts", es: "Esperando Repuesto" },
+        { pt: "Aguardando Terceiro / Visita Tecnica", en: "Waiting for Third Party / Technical Visit", es: "Esperando Tercero / Visita Tecnica" },
+        { pt: "Resolvido", en: "Resolved", es: "Resuelto" },
         { pt: "Fechado", en: "Closed", es: "Cerrado" }
     ];
     en.kanban.data.validTransitions = [
-        "Open -> In Progress",
+        "Entry -> Open -> In Progress",
         "In Progress -> Waiting for Customer",
-        "In Progress -> Waiting for Technical Assistance",
         "In Progress -> Waiting for Parts",
+        "In Progress -> Waiting for Third Party / Technical Visit",
+        "In Progress -> Resolved",
         "Waiting for Customer -> In Progress",
-        "Waiting for Technical Assistance -> In Progress",
         "Waiting for Parts -> In Progress",
-        "In Progress -> Closed"
+        "Waiting for Third Party / Technical Visit -> In Progress",
+        "Resolved -> Closed"
     ];
     en.kanban.data.avoidMoves = [
         "Open -> Closed without actual handling",
         "Using In Progress without effective action",
         "Moving to waiting without minimum context",
-        "Closing ticket without resolution summary",
+        "Closing ticket without passing through Resolved",
         "Movements by profiles outside internal technical support"
     ];
     en.kanban.data.managementSignals = [
         { topic: "Active backlog", reading: "High volume in Open/In Progress with no daily turnover.", action: "Prioritize triage and rebalance active queue capacity." },
-        { topic: "Waiting bottleneck", reading: "Concentration in Waiting for Customer, TA, or Parts.", action: "Act on the dominant blocker and monitor waiting time." },
+        { topic: "Waiting bottleneck", reading: "Concentration in Waiting for Customer, Third Party/Technical Visit, or Parts.", action: "Act on the dominant blocker and monitor waiting time." },
         { topic: "Aging", reading: "Tickets aging in the same column.", action: "Launch an action plan by stage root cause." },
         { topic: "SLA", reading: "Response/resolution time pressured by incorrect queues.", action: "Correct statuses to recover real compliance visibility." }
     ];
@@ -1319,6 +1410,173 @@
     const en = window.PLAYBOOK_I18N_LOCALES["en"];
     if (!en) return;
 
+    en.kpi = en.kpi || {};
+    en.kpi.main = en.kpi.main || {};
+    en.kpi.main.meta = en.kpi.main.meta || {};
+    en.kpi.main.header = en.kpi.main.header || {};
+    en.kpi.main.opening = en.kpi.main.opening || {};
+    en.kpi.main.nav = en.kpi.main.nav || {};
+    en.kpi.main.dashboard = en.kpi.main.dashboard || {};
+    en.kpi.main.pages = en.kpi.main.pages || {};
+    en.kpi.main.usage = en.kpi.main.usage || {};
+    en.kpi.main.readingAccess = en.kpi.main.readingAccess || {};
+    en.kpi.main.footer = en.kpi.main.footer || {};
+    en.kpi.reading = en.kpi.reading || {};
+    en.kpi.reading.opening = en.kpi.reading.opening || {};
+    en.kpi.reading.nav = en.kpi.reading.nav || {};
+    en.kpi.reading.labels = en.kpi.reading.labels || {};
+    en.kpi.reading.pages = en.kpi.reading.pages || {};
+    en.kpi.reading.pages.executive = en.kpi.reading.pages.executive || {};
+    en.kpi.reading.pages.executive.watch = en.kpi.reading.pages.executive.watch || {};
+    en.kpi.reading.pages.executive.when = en.kpi.reading.pages.executive.when || {};
+    en.kpi.reading.pages.dataGovernance = en.kpi.reading.pages.dataGovernance || {};
+    en.kpi.reading.pages.dataGovernance.watch = en.kpi.reading.pages.dataGovernance.watch || {};
+    en.kpi.reading.pages.dataGovernance.when = en.kpi.reading.pages.dataGovernance.when || {};
+    en.kpi.reading.pages.agentManagement = en.kpi.reading.pages.agentManagement || {};
+    en.kpi.reading.pages.agentManagement.watch = en.kpi.reading.pages.agentManagement.watch || {};
+    en.kpi.reading.pages.agentManagement.when = en.kpi.reading.pages.agentManagement.when || {};
+    en.kpi.reading.usage = en.kpi.reading.usage || {};
+    en.kpi.reading.roles = en.kpi.reading.roles || {};
+    en.kpi.reading.roles.manager = en.kpi.reading.roles.manager || {};
+    en.kpi.reading.roles.coordinator = en.kpi.reading.roles.coordinator || {};
+    en.kpi.reading.roles.operations = en.kpi.reading.roles.operations || {};
+    en.kpi.reading.stage = en.kpi.reading.stage || {};
+    en.kpi.reading.next = en.kpi.reading.next || {};
+    en.kpi.reading.cta = en.kpi.reading.cta || {};
+    en.kpi.legacy = en.kpi.legacy || {};
+    en.kpi.legacy.meta = en.kpi.legacy.meta || {};
+    en.kpi.legacy.notice = en.kpi.legacy.notice || {};
+
+    en.kpi.main.meta.pageTitleDashboard = "Playbook Global - KPI Dashboard";
+    en.kpi.main.meta.pageTitleReading = "Playbook Global - KPI Reading";
+    en.kpi.main.header.brand = "KPI Dashboard";
+    en.kpi.main.header.meta = "Global Service | KPI Module";
+    en.kpi.main.header.contextLabel = "Context:";
+    en.kpi.main.header.contextValue = "Global Service";
+    en.kpi.main.header.mainNavAria = "KPI module main navigation";
+    en.kpi.main.opening.breadcrumb = "Home > Global Service > KPI Dashboard";
+    en.kpi.main.opening.eyebrow = "Global Service Governance";
+    en.kpi.main.opening.moduleLabel = "Module: KPI Dashboard";
+    en.kpi.main.opening.title = "KPI Dashboard";
+    en.kpi.main.opening.description = "Follow the official KPI module dashboard and use guided reading to interpret the three executive pages.";
+    en.kpi.main.opening.operationalContext = "Operational context: official entry point for executive and operational reading of global indicators.";
+    en.kpi.main.nav.label = "Module internal navigation";
+    en.kpi.main.nav.dashboard = "KPI Dashboard";
+    en.kpi.main.nav.reading = "KPI Reading";
+    en.kpi.main.dashboard.sectionTitle = "Official dashboard in 3 pages";
+    en.kpi.main.dashboard.sectionDescription = "Use this sequence for quick global reading and operational drill-down.";
+    en.kpi.main.dashboard.embedAria = "Embedded Power BI KPI Dashboard";
+    en.kpi.main.dashboard.embedTitle = "Power BI - KPI Dashboard";
+    en.kpi.main.pages.executive = en.kpi.main.pages.executive || {};
+    en.kpi.main.pages.executive.title = "Global Executive View";
+    en.kpi.main.pages.executive.description = "Macro health reading with Volume, SLA compliance, MTTS, MTFC, CSAT, and regional comparison.";
+    en.kpi.main.pages.governance = en.kpi.main.pages.governance || {};
+    en.kpi.main.pages.governance.title = "Data Governance";
+    en.kpi.main.pages.governance.description = "Track data quality and completeness, required field completion, failed tickets, and operational risk.";
+    en.kpi.main.pages.agents = en.kpi.main.pages.agents || {};
+    en.kpi.main.pages.agents.title = "Agent Management";
+    en.kpi.main.pages.agents.description = "Team operations reading with open/closed tickets, backlog, productivity, SLA/performance, and aging.";
+    en.kpi.main.usage.title = "How to use the dashboard";
+    en.kpi.main.usage.executive = "Use the executive page for global operations reading.";
+    en.kpi.main.usage.governance = "Use data governance to monitor completeness and failures.";
+    en.kpi.main.usage.agents = "Use agent management for team operational reading.";
+    en.kpi.main.readingAccess.title = "Access detailed reading";
+    en.kpi.main.readingAccess.description = "Open KPI Reading to follow the interpretation guide for the dashboard pages.";
+    en.kpi.main.readingAccess.cta = "Open KPI Reading";
+    en.kpi.main.footer.dashboard = "Playbook Global - KPI Dashboard";
+    en.kpi.main.footer.reading = "Playbook Global - KPI Reading";
+
+    en.kpi.reading.opening.breadcrumb = "Home > Global Service > KPI Reading";
+    en.kpi.reading.opening.eyebrow = "Global Service Governance";
+    en.kpi.reading.opening.moduleLabel = "Module: KPI Reading";
+    en.kpi.reading.opening.title = "KPI Reading";
+    en.kpi.reading.opening.description = "Short guide to understand what each BI page shows, what to watch, and when to use it.";
+    en.kpi.reading.opening.operationalContext = "Operational context: fast interpretation of the 3 official dashboard pages.";
+
+    en.kpi.reading.nav.label = "Module internal navigation";
+    en.kpi.reading.nav.dashboard = "KPI Dashboard";
+    en.kpi.reading.nav.reading = "KPI Reading";
+
+    en.kpi.reading.labels.forWhat = "What it is for";
+    en.kpi.reading.labels.watch = "What to watch";
+    en.kpi.reading.labels.whenToUse = "When to use";
+
+    en.kpi.reading.pages.title = "Reading the 3 official BI pages";
+    en.kpi.reading.pages.description = "Use this order for quick reading: global view, data quality, and team management.";
+
+    en.kpi.reading.pages.executive.order = "Page 1";
+    en.kpi.reading.pages.executive.title = "Global Executive View";
+    en.kpi.reading.pages.executive.forWhat = "Macro reading of overall operations health.";
+    en.kpi.reading.pages.executive.watch.totalTickets = "Total Tickets";
+    en.kpi.reading.pages.executive.watch.slaCompliance = "SLA Compliance";
+    en.kpi.reading.pages.executive.watch.mtts = "MTTS";
+    en.kpi.reading.pages.executive.watch.mtfc = "MTFC";
+    en.kpi.reading.pages.executive.watch.csat = "CSAT";
+    en.kpi.reading.pages.executive.watch.regionalComparison = "Regional comparison";
+    en.kpi.reading.pages.executive.when.executiveReading = "Executive reading";
+    en.kpi.reading.pages.executive.when.regionalComparison = "Cross-region comparison";
+    en.kpi.reading.pages.executive.when.globalTracking = "Global operations tracking";
+
+    en.kpi.reading.pages.dataGovernance.order = "Page 2";
+    en.kpi.reading.pages.dataGovernance.title = "Data Governance";
+    en.kpi.reading.pages.dataGovernance.forWhat = "Track base quality and completeness.";
+    en.kpi.reading.pages.dataGovernance.watch.requiredCompletion = "Mandatory field completion";
+    en.kpi.reading.pages.dataGovernance.watch.failedTickets = "Tickets with failures";
+    en.kpi.reading.pages.dataGovernance.watch.operationalRisk = "Tickets with operational risk";
+    en.kpi.reading.pages.dataGovernance.watch.fieldQuality = "Field-level quality";
+    en.kpi.reading.pages.dataGovernance.watch.regionQuality = "Region-level quality";
+    en.kpi.reading.pages.dataGovernance.when.qualityReview = "Data quality review";
+    en.kpi.reading.pages.dataGovernance.when.audit = "Fill-in audit";
+    en.kpi.reading.pages.dataGovernance.when.processCorrection = "Process correction";
+
+    en.kpi.reading.pages.agentManagement.order = "Page 3";
+    en.kpi.reading.pages.agentManagement.title = "Agent Management";
+    en.kpi.reading.pages.agentManagement.forWhat = "Track team productivity and operations.";
+    en.kpi.reading.pages.agentManagement.watch.openClosed = "Open/closed tickets";
+    en.kpi.reading.pages.agentManagement.watch.currentBacklog = "Current backlog";
+    en.kpi.reading.pages.agentManagement.watch.statusBacklog = "Backlog by status";
+    en.kpi.reading.pages.agentManagement.watch.productivity = "Productivity";
+    en.kpi.reading.pages.agentManagement.watch.slaPerformance = "SLA/performance";
+    en.kpi.reading.pages.agentManagement.watch.agingRisk = "aging/risk";
+    en.kpi.reading.pages.agentManagement.watch.detailTable = "Detailed table";
+    en.kpi.reading.pages.agentManagement.when.operationRoutine = "Operational routine";
+    en.kpi.reading.pages.agentManagement.when.teamFollowUp = "Team follow-up";
+    en.kpi.reading.pages.agentManagement.when.queueManagement = "Queue management";
+
+    en.kpi.reading.usage.title = "How to use the BI";
+    en.kpi.reading.usage.page1 = "Page 1 = global operations view.";
+    en.kpi.reading.usage.page2 = "Page 2 = data quality and completeness.";
+    en.kpi.reading.usage.page3 = "Page 3 = team operational management.";
+
+    en.kpi.reading.roles.title = "Quick reading by role";
+    en.kpi.reading.roles.manager.label = "Manager";
+    en.kpi.reading.roles.manager.description = "Global executive view.";
+    en.kpi.reading.roles.coordinator.label = "Coordinator";
+    en.kpi.reading.roles.coordinator.description = "Data governance + agent management.";
+    en.kpi.reading.roles.operations.label = "Operations/local leadership";
+    en.kpi.reading.roles.operations.description = "Agent management + backlog/status.";
+
+    en.kpi.reading.stage.title = "KPI Reading";
+    en.kpi.reading.stage.description = "The official reading page is active with practical guidance for the 3 BI pages.";
+    en.kpi.reading.next.title = "Official dashboard sequence";
+    en.kpi.reading.next.executive = "Global Executive View: macro reading with Total Tickets, SLA Compliance, MTTS, MTFC, and CSAT.";
+    en.kpi.reading.next.governance = "Data Governance: mandatory completion, failures, and operational risk.";
+    en.kpi.reading.next.agents = "Agent Management: productivity, backlog, SLA/performance, and aging.";
+    en.kpi.reading.cta.dashboard = "Go to KPI Dashboard";
+
+    en.kpi.legacy.meta.pageTitle = "Playbook Global - KPI Dashboard (Legacy URL)";
+    en.kpi.legacy.notice.tag = "Compatibility URL";
+    en.kpi.legacy.notice.title = "This page was consolidated into the official KPI Dashboard";
+    en.kpi.legacy.notice.description = "Use the official home for embedded Power BI and use KPI Reading for interpretation guidance.";
+    en.kpi.legacy.notice.ctaDashboard = "Go to KPI Dashboard";
+    en.kpi.legacy.notice.ctaReading = "Go to KPI Reading";
+    en.kpi.legacy.footer = "Playbook Global - KPI Dashboard (Legacy URL)";
+})();
+
+(function () {
+    const en = window.PLAYBOOK_I18N_LOCALES["en"];
+    if (!en) return;
+
     en.camposObrigatorios = en.camposObrigatorios || {};
     en.camposObrigatorios.home = en.camposObrigatorios.home || {};
 
@@ -1431,4 +1689,101 @@
     en.camposObrigatorios.home.usage.matrixDetails = "Use the Consolidated Matrix for full details.";
     en.camposObrigatorios.home.usage.coordinators = "Coordinators should use the matrix to enforce completeness.";
     en.camposObrigatorios.home.usage.agents = "Agents should use it as reference for correct field completion.";
+
+    en.kanban = en.kanban || {};
+    en.kanban.main = en.kanban.main || {};
+
+    en.kanban.main.header = en.kanban.main.header || {};
+    en.kanban.main.header.title = "02 - Global Kanban";
+    en.kanban.main.header.subtitle = "Fast visual reading of tickets by official status";
+    en.kanban.main.footer = "Playbook Global - Module 02 Kanban";
+
+    en.kanban.main.opening = en.kanban.main.opening || {};
+    en.kanban.main.opening.pageTitle = "Playbook Global - Global Kanban";
+    en.kanban.main.opening.breadcrumb = "Home > Global Service > Global Kanban";
+    en.kanban.main.opening.moduleLabel = "Module: Global Kanban";
+    en.kanban.main.opening.title = "Global Kanban";
+    en.kanban.main.opening.description = "Single-page visual reading of the flow: official statuses, essential transitions, operational bottlenecks, and mistakes that distort backlog and aging.";
+    en.kanban.main.opening.operationalContext = "Operational context: quick reading to place tickets in the correct status and expose the real queue.";
+
+    en.kanban.main.nav = en.kanban.main.nav || {};
+    en.kanban.main.nav.label = "Module internal navigation";
+    en.kanban.main.nav.board = "Kanban Board";
+    en.kanban.main.nav.transitions = "Transitions";
+    en.kanban.main.nav.operations = "Operational Reading";
+    en.kanban.main.nav.mistakes = "Common Mistakes";
+
+    en.kanban.main.board = en.kanban.main.board || {};
+    en.kanban.main.board.kicker = "Official operational board";
+    en.kanban.main.board.title = "Kanban Board with the 7 official statuses";
+    en.kanban.main.board.description = "Each column shows only what matters to quickly decide where the ticket should be.";
+    en.kanban.main.board.goalLabel = "Purpose";
+    en.kanban.main.board.whenLabel = "When to use";
+
+    en.kanban.main.statuses = en.kanban.main.statuses || {};
+    en.kanban.main.statuses.open = {
+        name: "Open",
+        purpose: "Register and qualify the ticket to start handling.",
+        when: "When the ticket has just entered and technical action has not started yet."
+    };
+    en.kanban.main.statuses.inProgress = {
+        name: "In Progress",
+        purpose: "Run active technical analysis and execution.",
+        when: "When the team is directly working on the ticket."
+    };
+    en.kanban.main.statuses.waitingCustomer = {
+        name: "Waiting for Customer",
+        purpose: "Wait for customer response or action to move forward.",
+        when: "When the next step objectively depends on the customer."
+    };
+    en.kanban.main.statuses.waitingParts = {
+        name: "Waiting for Parts",
+        purpose: "Wait for parts, materials, or logistics to continue.",
+        when: "When execution depends on a physical item to proceed."
+    };
+    en.kanban.main.statuses.waitingThirdParty = {
+        name: "Waiting for Third Party / Technical Visit",
+        purpose: "Wait for third-party work or technical visit execution.",
+        when: "When the ticket depends on technical assistance or a third party, internal or external."
+    };
+    en.kanban.main.statuses.resolved = {
+        name: "Resolved",
+        purpose: "Record that the solution was applied before final closure.",
+        when: "When handling is complete but final closure validation is still pending."
+    };
+    en.kanban.main.statuses.closed = {
+        name: "Closed",
+        purpose: "Formalize final ticket closure.",
+        when: "When the ticket has already passed through Resolved and has no pending action."
+    };
+
+    en.kanban.main.transitions = en.kanban.main.transitions || {};
+    en.kanban.main.transitions.title = "Transitions";
+    en.kanban.main.transitions.description = "Base logic for moving tickets through the Kanban.";
+    en.kanban.main.transitions.entryFlow = "Entry -> Open -> In Progress";
+    en.kanban.main.transitions.branchLabel = "From In Progress, the ticket can move to:";
+    en.kanban.main.transitions.branchCustomer = "Waiting for Customer";
+    en.kanban.main.transitions.branchParts = "Waiting for Parts";
+    en.kanban.main.transitions.branchThirdParty = "Waiting for Third Party / Technical Visit";
+    en.kanban.main.transitions.branchResolved = "Resolved";
+    en.kanban.main.transitions.finalFlow = "Resolved -> Closed";
+    en.kanban.main.transitions.notes = en.kanban.main.transitions.notes || {};
+    en.kanban.main.transitions.notes.resolveNotClose = "Resolving is not closing.";
+    en.kanban.main.transitions.notes.waitingMustBeReal = "Stopped tickets must move to the correct waiting status.";
+    en.kanban.main.transitions.notes.waitingReflectsDependency = "Waiting statuses must reflect real dependency.";
+
+    en.kanban.main.operations = en.kanban.main.operations || {};
+    en.kanban.main.operations.title = "Operational Reading";
+    en.kanban.main.operations.backlog = "Backlog is not only volume: it also means stuck or misclassified tickets.";
+    en.kanban.main.operations.aging = "Aging gets worse when tickets stay in the wrong status.";
+    en.kanban.main.operations.bottlenecks = "The Kanban board makes Bottlenecks and dependencies visible.";
+    en.kanban.main.operations.flowAndSla = "Correct status usage improves flow, SLA, and operational reading.";
+
+    en.kanban.main.mistakes = en.kanban.main.mistakes || {};
+    en.kanban.main.mistakes.title = "Common Mistakes";
+    en.kanban.main.mistakes.waitingCustomer = "Do not keep tickets In Progress when they are Waiting for Customer.";
+    en.kanban.main.mistakes.waitingParts = "Do not keep tickets In Progress when they are Waiting for Parts.";
+    en.kanban.main.mistakes.maskQueue = "Do not use the wrong status to hide queue volume.";
+    en.kanban.main.mistakes.skipResolved = "Do not close tickets directly without passing through Resolved.";
+    en.kanban.main.mistakes.realStatus = "The status must reflect the real ticket situation.";
 })();

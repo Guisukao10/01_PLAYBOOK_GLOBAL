@@ -7,8 +7,7 @@ const epicModules = {
       { id: "campos", link: "./05_Campos_Obrigatorios/index.html", status: "available" },
       { id: "kanban", link: "./02_Kanban/index.html", status: "available" },
       { id: "governanca", link: "./06_Governanca/index.html", status: "available" },
-      { id: "kpi", link: "./01_KPI/KPI_V2/index.html", status: "available" },
-      { id: "canais_entrada", link: "./07_Canais_de_Entrada/index.html", status: "available" }
+      { id: "kpi", link: "./01_KPI/KPI_V2/index.html", status: "available" }
     ]
   },
   zoho_desk: {

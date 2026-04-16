@@ -3,455 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="kpi.v2.map.title">Mapa Expandido de KPIs - Global Service Governance</title>
+    <title data-i18n="kpi.main.meta.pageTitleReading">Playbook Global - Leitura KPI’s</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/kpi-map.css">
 </head>
-<body>
+<body data-disable-wayfinder="true" data-kpi-page="reading">
     <header class="header">
         <div class="header-container">
             <div class="header-logo">
-                <h1 data-i18n="kpi.v2.dashboard.header.brand">KPI Linha Oficial</h1>
-                <p class="header-meta">Global Service | Mapa Analitico</p>
-                <span class="context-pill"><strong>Contexto:</strong> Global Service</span>
+                <h1 data-i18n="kpi.main.header.brand">KPI Dashboard</h1>
+                <p class="header-meta" data-i18n="kpi.main.header.meta">Global Service | Módulo KPI</p>
+                <span class="context-pill">
+                    <strong data-i18n="kpi.main.header.contextLabel">Contexto:</strong>
+                    <span data-i18n="kpi.main.header.contextValue">Global Service</span>
+                </span>
             </div>
-            <nav class="header-nav" aria-label="Navegacao principal de KPI">
-                <a href="../../index.html" class="nav-link">Voltar para Home</a>
-                <a href="index.html" class="nav-link" data-i18n="kpi.v2.index.nav.architecture">Arquitetura KPI</a>
-                <a href="dashboard.html" class="nav-link" data-i18n="kpi.v2.index.nav.dashboard">Dashboard KPI</a>
-                <a href="kpi-map.html" class="nav-link active" data-i18n="kpi.v2.index.nav.expandedMap">Mapa Expandido KPI</a>
+            <nav class="header-nav" data-i18n-aria-label="kpi.main.header.mainNavAria">
+                <a href="../../index.html" class="nav-link" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="kpi-hero">
+        <section class="module-hero kpi-reading-opening">
             <div class="container">
-                <div class="kpi-hero-content">
-                    <h2 class="kpi-hero-title" data-i18n="kpi.v2.map.hero.title">Mapa Expandido de KPIs</h2>
-                    <p class="kpi-hero-subtitle" data-i18n="kpi.v2.map.hero.subtitle">Exploracao analitica completa dos indicadores globais.</p>
-                    <p class="kpi-hero-description" data-i18n="kpi.v2.map.hero.description">Esta pagina detalha os desdobramentos dos principais KPIs, seus cortes analiticos e cruzamentos prioritarios para leitura executiva e operacional.</p>
-
-                    <div class="kpi-hero-structure">
-                        <div class="structure-item">
-                            <span class="structure-label" data-i18n="kpi.v2.map.structure.level1.label">Nivel 1</span>
-                            <span class="structure-text" data-i18n="kpi.v2.map.structure.level1.text">KPI principal</span>
-                        </div>
-                        <div class="structure-item">
-                            <span class="structure-label" data-i18n="kpi.v2.map.structure.level2.label">Nivel 2</span>
-                            <span class="structure-text" data-i18n="kpi.v2.map.structure.level2.text">Cortes principais</span>
-                        </div>
-                        <div class="structure-item">
-                            <span class="structure-label" data-i18n="kpi.v2.map.structure.level3.label">Nivel 3</span>
-                            <span class="structure-text" data-i18n="kpi.v2.map.structure.level3.text">Cruzamentos prioritarios</span>
-                        </div>
+                <div class="kpi-reading-shell">
+                    <p class="page-breadcrumb" data-i18n="kpi.reading.opening.breadcrumb">Início &gt; Global Service &gt; Leitura KPI’s</p>
+                    <div class="kpi-reading-context">
+                        <span class="inline-context-label" data-i18n="common.labels.epicGlobalService">Épico Global Service</span>
+                        <p class="kpi-reading-module" data-i18n="kpi.reading.opening.moduleLabel">Módulo: Leitura KPI’s</p>
+                        <p class="kpi-reading-operational" data-i18n="kpi.reading.opening.operationalContext">Contexto operacional: guia curto para interpretar as 3 páginas do dashboard oficial.</p>
                     </div>
+                    <div class="kpi-reading-hero">
+                        <p class="module-eyebrow" data-i18n="kpi.reading.opening.eyebrow">Global Service Governance</p>
+                        <h2 data-i18n="kpi.reading.opening.title">Leitura KPI’s</h2>
+                        <p data-i18n="kpi.reading.opening.description">Página prática para explicar o que cada página do BI mostra, o que observar e quando usar.</p>
+                    </div>
+                    <nav class="kpi-main-nav" data-i18n-aria-label="kpi.reading.nav.label">
+                        <p class="kpi-main-nav-label" data-i18n="kpi.reading.nav.label">Navegação interna do módulo</p>
+                        <div class="kpi-main-nav-links">
+                            <a href="index.html" class="kpi-main-nav-link" data-i18n="kpi.reading.nav.dashboard">KPI Dashboard</a>
+                            <a href="kpi-map.html" class="kpi-main-nav-link is-active" aria-current="page" data-i18n="kpi.reading.nav.reading">Leitura KPI’s</a>
+                        </div>
+                    </nav>
                 </div>
             </div>
         </section>
 
-        <section class="explicacao-logica">
+        <section class="kpi-reading-visual">
             <div class="container">
-                <h2 class="section-title" data-i18n="kpi.v2.map.reading.title">Como ler este mapa</h2>
+                <article class="reading-journey" aria-labelledby="readingJourneyTitle">
+                    <header class="reading-journey-head">
+                        <h3 id="readingJourneyTitle" data-i18n="kpi.reading.pages.title">Leitura das 3 páginas oficiais do BI</h3>
+                        <p data-i18n="kpi.reading.pages.description">Siga esta sequência para uma interpretação rápida: macro da operação, qualidade dos dados e gestão da equipe.</p>
+                    </header>
 
-                <div class="logica-cards">
-                    <div class="logica-card">
-                        <div class="logica-card-number">1</div>
-                        <h3 class="logica-card-title">Nivel 1 - KPI Principal</h3>
-                        <p class="logica-card-text">Representa o indicador agregado que consolida a visao global de um aspecto do atendimento.</p>
-                    </div>
+                    <div class="reading-page-flow">
+                        <section class="reading-page-block" aria-labelledby="readingPageExecutive">
+                            <div class="reading-page-header">
+                                <p class="reading-page-order" data-i18n="kpi.reading.pages.executive.order">Página 1</p>
+                                <h4 id="readingPageExecutive" data-i18n="kpi.reading.pages.executive.title">Visão Executiva Global</h4>
+                            </div>
+                            <div class="reading-page-columns">
+                                <div class="reading-topic">
+                                    <h5 data-i18n="kpi.reading.labels.forWhat">Para que serve</h5>
+                                    <p data-i18n="kpi.reading.pages.executive.forWhat">Leitura macro da saúde da operação.</p>
+                                </div>
+                                <div class="reading-topic">
+                                    <h5 data-i18n="kpi.reading.labels.watch">O que olhar</h5>
+                                    <ul class="reading-topic-list">
+                                        <li data-i18n="kpi.reading.pages.executive.watch.totalTickets">Tickets Total</li>
+                                        <li data-i18n="kpi.reading.pages.executive.watch.slaCompliance">SLA Compliance</li>
+                                        <li data-i18n="kpi.reading.pages.executive.watch.mtts">MTTS</li>
+                                        <li data-i18n="kpi.reading.pages.executive.watch.mtfc">MTFC</li>
+                                        <li data-i18n="kpi.reading.pages.executive.watch.csat">CSAT</li>
+                                        <li data-i18n="kpi.reading.pages.executive.watch.regionalComparison">Comparação regional</li>
+                                    </ul>
+                                </div>
+                                <div class="reading-topic">
+                                    <h5 data-i18n="kpi.reading.labels.whenToUse">Quando usar</h5>
+                                    <ul class="reading-topic-list">
+                                        <li data-i18n="kpi.reading.pages.executive.when.executiveReading">Leitura executiva</li>
+                                        <li data-i18n="kpi.reading.pages.executive.when.regionalComparison">Comparação entre regiões</li>
+                                        <li data-i18n="kpi.reading.pages.executive.when.globalTracking">Acompanhamento global da operação</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
 
-                    <div class="logica-card">
-                        <div class="logica-card-number">2</div>
-                        <h3 class="logica-card-title">Nivel 2 - Cortes Analiticos</h3>
-                        <p class="logica-card-text">Mostra os principais eixos de segmentacao para desdobramento do KPI principal.</p>
-                    </div>
+                        <section class="reading-page-block" aria-labelledby="readingPageDataGovernance">
+                            <div class="reading-page-header">
+                                <p class="reading-page-order" data-i18n="kpi.reading.pages.dataGovernance.order">Página 2</p>
+                                <h4 id="readingPageDataGovernance" data-i18n="kpi.reading.pages.dataGovernance.title">Governança de Dados</h4>
+                            </div>
+                            <div class="reading-page-columns">
+                                <div class="reading-topic">
+                                    <h5 data-i18n="kpi.reading.labels.forWhat">Para que serve</h5>
+                                    <p data-i18n="kpi.reading.pages.dataGovernance.forWhat">Acompanhar qualidade e completude da base.</p>
+                                </div>
+                                <div class="reading-topic">
+                                    <h5 data-i18n="kpi.reading.labels.watch">O que olhar</h5>
+                                    <ul class="reading-topic-list">
+                                        <li data-i18n="kpi.reading.pages.dataGovernance.watch.requiredCompletion">Completude dos campos obrigatórios</li>
+                                        <li data-i18n="kpi.reading.pages.dataGovernance.watch.failedTickets">Tickets com falhas</li>
+                                        <li data-i18n="kpi.reading.pages.dataGovernance.watch.operationalRisk">Tickets com risco operacional</li>
+                                        <li data-i18n="kpi.reading.pages.dataGovernance.watch.fieldQuality">Qualidade por campo</li>
+                                        <li data-i18n="kpi.reading.pages.dataGovernance.watch.regionQuality">Qualidade por região</li>
+                                    </ul>
+                                </div>
+                                <div class="reading-topic">
+                                    <h5 data-i18n="kpi.reading.labels.whenToUse">Quando usar</h5>
+                                    <ul class="reading-topic-list">
+                                        <li data-i18n="kpi.reading.pages.dataGovernance.when.qualityReview">Revisão de qualidade de dados</li>
+                                        <li data-i18n="kpi.reading.pages.dataGovernance.when.audit">Auditoria de preenchimento</li>
+                                        <li data-i18n="kpi.reading.pages.dataGovernance.when.processCorrection">Correção de processo</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
 
-                    <div class="logica-card">
-                        <div class="logica-card-number">3</div>
-                        <h3 class="logica-card-title">Nivel 3 - Cruzamentos Prioritarios</h3>
-                        <p class="logica-card-text">Apresenta combinacoes analiticas estrategicas para leitura mais profunda.</p>
+                        <section class="reading-page-block" aria-labelledby="readingPageAgentManagement">
+                            <div class="reading-page-header">
+                                <p class="reading-page-order" data-i18n="kpi.reading.pages.agentManagement.order">Página 3</p>
+                                <h4 id="readingPageAgentManagement" data-i18n="kpi.reading.pages.agentManagement.title">Gestão de Agentes</h4>
+                            </div>
+                            <div class="reading-page-columns">
+                                <div class="reading-topic">
+                                    <h5 data-i18n="kpi.reading.labels.forWhat">Para que serve</h5>
+                                    <p data-i18n="kpi.reading.pages.agentManagement.forWhat">Acompanhar produtividade e operação da equipe.</p>
+                                </div>
+                                <div class="reading-topic">
+                                    <h5 data-i18n="kpi.reading.labels.watch">O que olhar</h5>
+                                    <ul class="reading-topic-list">
+                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.openClosed">Tickets abertos/fechados</li>
+                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.currentBacklog">Fila de pendências atual</li>
+                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.statusBacklog">Fila de pendências por status</li>
+                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.productivity">Produtividade</li>
+                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.slaPerformance">SLA/performance</li>
+                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.agingRisk">Envelhecimento/risco</li>
+                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.detailTable">Tabela detalhada</li>
+                                    </ul>
+                                </div>
+                                <div class="reading-topic">
+                                    <h5 data-i18n="kpi.reading.labels.whenToUse">Quando usar</h5>
+                                    <ul class="reading-topic-list">
+                                        <li data-i18n="kpi.reading.pages.agentManagement.when.operationRoutine">Rotina operacional</li>
+                                        <li data-i18n="kpi.reading.pages.agentManagement.when.teamFollowUp">Acompanhamento da equipe</li>
+                                        <li data-i18n="kpi.reading.pages.agentManagement.when.queueManagement">Gestão da fila</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section class="navegacao-kpis">
+        <section class="kpi-reading-support">
             <div class="container">
-                <div class="nav-kpis-bar">
-                    <a href="#volume-tickets" class="nav-kpi-chip" data-i18n="kpi.v2.map.nav.ticketVolume">Volume de Tickets</a>
-                    <a href="#mtfc" class="nav-kpi-chip" data-i18n="kpi.v2.map.nav.mtfc">MTFC</a>
-                    <a href="#mttr" class="nav-kpi-chip" data-i18n="kpi.v2.map.nav.mttr">MTTR</a>
-                    <a href="#sla" class="nav-kpi-chip" data-i18n="kpi.v2.map.nav.sla">SLA</a>
-                    <a href="#qualidade" class="nav-kpi-chip" data-i18n="kpi.v2.map.nav.quality">Qualidade</a>
-                </div>
-            </div>
-        </section>
+                <div class="kpi-reading-support-grid">
+                    <article class="kpi-reading-support-card">
+                        <h3 data-i18n="kpi.reading.usage.title">Como usar o BI</h3>
+                        <ul class="reading-topic-list">
+                            <li data-i18n="kpi.reading.usage.page1">Página 1 = visão global da operação.</li>
+                            <li data-i18n="kpi.reading.usage.page2">Página 2 = qualidade de dados e consistência da base.</li>
+                            <li data-i18n="kpi.reading.usage.page3">Página 3 = gestão operacional da equipe.</li>
+                        </ul>
+                    </article>
 
-        <section id="volume-tickets" class="kpi-bloco">
-            <div class="container">
-                <div class="kpi-header">
-                    <h2 class="kpi-titulo">Volume de Tickets</h2>
-                    <p class="kpi-definicao">Mede a quantidade de tickets registrados no periodo e sua distribuicao entre dimensoes de analise.</p>
-                </div>
-
-                <div class="kpi-content">
-                    <div class="kpi-niveis">
-                        <div class="nivel-coluna nivel-2">
-                            <h3 class="nivel-titulo">Nivel 2 - Cortes Principais</h3>
-                            <div class="nivel-items">
-                                <div class="nivel-item">Volume por regiao</div>
-                                <div class="nivel-item">Volume por pais</div>
-                                <div class="nivel-item">Volume por produto</div>
-                                <div class="nivel-item">Volume por marca</div>
-                                <div class="nivel-item">Volume por categoria</div>
-                                <div class="nivel-item">Volume por tipo de atendimento</div>
-                                <div class="nivel-item">Volume por canal</div>
-                                <div class="nivel-item">Volume por departamento</div>
-                            </div>
-                        </div>
-
-                        <div class="nivel-coluna nivel-3">
-                            <h3 class="nivel-titulo">Nivel 3 - Cruzamentos Prioritarios</h3>
-                            <div class="nivel-items">
-                                <div class="nivel-item">Volume por regiao + produto</div>
-                                <div class="nivel-item">Volume por regiao + categoria</div>
-                                <div class="nivel-item">Volume por regiao + tipo atendimento</div>
-                                <div class="nivel-item">Volume por produto + categoria</div>
-                                <div class="nivel-item">Volume por canal + regiao</div>
-                                <div class="nivel-item">Volume por marca + produto</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="kpi-estrategias">
-                        <div class="estrategia-box">
-                            <h3 class="estrategia-titulo">Estrategias de Leitura</h3>
-                            <ul class="estrategia-list">
-                                <li>Identificar regioes com maior demanda</li>
-                                <li>Comparar familias de produtos com maior volume</li>
-                                <li>Entender concentracao por categoria</li>
-                                <li>Avaliar peso dos canais de entrada</li>
-                                <li>Identificar perfis de atendimento predominantes</li>
-                            </ul>
-                        </div>
-
-                        <div class="estrategia-box">
-                            <h3 class="estrategia-titulo">Sugestoes de Visualizacao</h3>
-                            <ul class="estrategia-list">
-                                <li>Ranking por regiao</li>
-                                <li>Barras por produto</li>
-                                <li>Pizza por canal</li>
-                                <li>Heatmap regiao - produto</li>
-                                <li>Linha do tempo mensal</li>
-                                <li>Tabela de volume por categoria</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="mtfc" class="kpi-bloco">
-            <div class="container">
-                <div class="kpi-header">
-                    <h2 class="kpi-titulo">MTFC - Tempo de Primeira Resposta</h2>
-                    <p class="kpi-definicao">Mede o tempo medio ate o primeiro retorno ao cliente apos abertura do ticket.</p>
-                </div>
-
-                <div class="kpi-content">
-                    <div class="kpi-niveis">
-                        <div class="nivel-coluna nivel-2">
-                            <h3 class="nivel-titulo">Nivel 2 - Cortes Principais</h3>
-                            <div class="nivel-items">
-                                <div class="nivel-item">MTFC por regiao</div>
-                                <div class="nivel-item">MTFC por pais</div>
-                                <div class="nivel-item">MTFC por produto</div>
-                                <div class="nivel-item">MTFC por marca</div>
-                                <div class="nivel-item">MTFC por categoria</div>
-                                <div class="nivel-item">MTFC por departamento</div>
-                                <div class="nivel-item">MTFC por canal</div>
-                                <div class="nivel-item">MTFC por criticidade</div>
-                                <div class="nivel-item">MTFC por tecnico</div>
-                            </div>
-                        </div>
-
-                        <div class="nivel-coluna nivel-3">
-                            <h3 class="nivel-titulo">Nivel 3 - Cruzamentos Prioritarios</h3>
-                            <div class="nivel-items">
-                                <div class="nivel-item">MTFC por regiao + produto</div>
-                                <div class="nivel-item">MTFC por regiao + criticidade</div>
-                                <div class="nivel-item">MTFC por produto + criticidade</div>
-                                <div class="nivel-item">MTFC por regiao + departamento</div>
-                                <div class="nivel-item">MTFC por canal + regiao</div>
-                                <div class="nivel-item">MTFC por marca + produto</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="kpi-estrategias">
-                        <div class="estrategia-box">
-                            <h3 class="estrategia-titulo">Estrategias de Leitura</h3>
-                            <ul class="estrategia-list">
-                                <li>Comparar agilidade entre regioes</li>
-                                <li>Avaliar impacto da criticidade na primeira resposta</li>
-                                <li>Identificar gargalos por departamento</li>
-                                <li>Entender influencia do canal na velocidade inicial</li>
-                                <li>Comparar linhas de produto com maior tempo de retorno</li>
-                            </ul>
-                        </div>
-
-                        <div class="estrategia-box">
-                            <h3 class="estrategia-titulo">Sugestoes de Visualizacao</h3>
-                            <ul class="estrategia-list">
-                                <li>Ranking por regiao</li>
-                                <li>Barras por criticidade</li>
-                                <li>Tendencia mensal</li>
-                                <li>Matriz regiao - produto</li>
-                                <li>Tabela por departamento</li>
-                                <li>Heatmap canal - regiao</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="mttr" class="kpi-bloco">
-            <div class="container">
-                <div class="kpi-header">
-                    <h2 class="kpi-titulo">MTTR - Tempo de Resolucao</h2>
-                    <p class="kpi-definicao">Mede o tempo medio necessario para concluir o atendimento de um ticket.</p>
-                </div>
-
-                <div class="kpi-content">
-                    <div class="kpi-niveis">
-                        <div class="nivel-coluna nivel-2">
-                            <h3 class="nivel-titulo">Nivel 2 - Cortes Principais</h3>
-                            <div class="nivel-items">
-                                <div class="nivel-item">MTTR por regiao</div>
-                                <div class="nivel-item">MTTR por pais</div>
-                                <div class="nivel-item">MTTR por produto</div>
-                                <div class="nivel-item">MTTR por marca</div>
-                                <div class="nivel-item">MTTR por tecnico</div>
-                                <div class="nivel-item">MTTR por criticidade</div>
-                                <div class="nivel-item">MTTR por departamento</div>
-                                <div class="nivel-item">MTTR por canal</div>
-                            </div>
-                        </div>
-
-                        <div class="nivel-coluna nivel-3">
-                            <h3 class="nivel-titulo">Nivel 3 - Cruzamentos Prioritarios</h3>
-                            <div class="nivel-items">
-                                <div class="nivel-item">MTTR por regiao + produto</div>
-                                <div class="nivel-item">MTTR por regiao + criticidade</div>
-                                <div class="nivel-item">MTTR por produto + criticidade</div>
-                                <div class="nivel-item">MTTR por regiao + departamento</div>
-                                <div class="nivel-item">MTTR por tecnico + produto</div>
-                                <div class="nivel-item">MTTR por canal + criticidade</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="kpi-estrategias">
-                        <div class="estrategia-box">
-                            <h3 class="estrategia-titulo">Estrategias de Leitura</h3>
-                            <ul class="estrategia-list">
-                                <li>Identificar gargalos de resolucao</li>
-                                <li>Comparar complexidade por produto</li>
-                                <li>Entender impacto da criticidade na resolucao</li>
-                                <li>Avaliar diferencas entre departamentos</li>
-                                <li>Comparar produtividade tecnica</li>
-                                <li>Mapear tickets mais demorados por regiao</li>
-                            </ul>
-                        </div>
-
-                        <div class="estrategia-box">
-                            <h3 class="estrategia-titulo">Sugestoes de Visualizacao</h3>
-                            <ul class="estrategia-list">
-                                <li>Barras por produto</li>
-                                <li>Ranking por tecnico</li>
-                                <li>Heatmap regiao - criticidade</li>
-                                <li>Linha temporal mensal</li>
-                                <li>Tabela comparativa por departamento</li>
-                                <li>Scatter plot tecnico - MTTR</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="sla" class="kpi-bloco">
-            <div class="container">
-                <div class="kpi-header">
-                    <h2 class="kpi-titulo">SLA - Cumprimento de Prazo</h2>
-                    <p class="kpi-definicao">Mede o percentual de tickets atendidos dentro do prazo estabelecido.</p>
-                </div>
-
-                <div class="kpi-content">
-                    <div class="kpi-niveis">
-                        <div class="nivel-coluna nivel-2">
-                            <h3 class="nivel-titulo">Nivel 2 - Cortes Principais</h3>
-                            <div class="nivel-items">
-                                <div class="nivel-item">SLA por regiao</div>
-                                <div class="nivel-item">SLA por pais</div>
-                                <div class="nivel-item">SLA por produto</div>
-                                <div class="nivel-item">SLA por marca</div>
-                                <div class="nivel-item">SLA por criticidade</div>
-                                <div class="nivel-item">SLA por departamento</div>
-                                <div class="nivel-item">SLA por canal</div>
-                                <div class="nivel-item">SLA por tecnico</div>
-                            </div>
-                        </div>
-
-                        <div class="nivel-coluna nivel-3">
-                            <h3 class="nivel-titulo">Nivel 3 - Cruzamentos Prioritarios</h3>
-                            <div class="nivel-items">
-                                <div class="nivel-item">SLA por regiao + produto</div>
-                                <div class="nivel-item">SLA por regiao + criticidade</div>
-                                <div class="nivel-item">SLA por produto + criticidade</div>
-                                <div class="nivel-item">SLA por regiao + departamento</div>
-                                <div class="nivel-item">SLA por canal + regiao</div>
-                                <div class="nivel-item">SLA por tecnico + criticidade</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="kpi-estrategias">
-                        <div class="estrategia-box">
-                            <h3 class="estrategia-titulo">Estrategias de Leitura</h3>
-                            <ul class="estrategia-list">
-                                <li>Identificar regioes fora do target</li>
-                                <li>Comparar aderencia entre produtos</li>
-                                <li>Avaliar impacto da criticidade no cumprimento</li>
-                                <li>Entender performance por departamento</li>
-                                <li>Identificar canais com maior ou menor SLA</li>
-                                <li>Comparar tecnicos e areas</li>
-                            </ul>
-                        </div>
-
-                        <div class="estrategia-box">
-                            <h3 class="estrategia-titulo">Sugestoes de Visualizacao</h3>
-                            <ul class="estrategia-list">
-                                <li>Semaforo por regiao</li>
-                                <li>Ranking por produto</li>
-                                <li>Barras por criticidade</li>
-                                <li>Matriz regiao - departamento</li>
-                                <li>Tendencia mensal de SLA</li>
-                                <li>Tabela de aderencia por canal</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="qualidade" class="kpi-bloco">
-            <div class="container">
-                <div class="kpi-header">
-                    <h2 class="kpi-titulo">Qualidade</h2>
-                    <p class="kpi-definicao">Conjunto de indicadores para medir eficiencia operacional e saude da operacao.</p>
-                </div>
-
-                <div class="qualidade-subindicadores">
-                    <h3 class="qualidade-titulo-sub">Subindicadores Principais</h3>
-                    <div class="qualidade-grid">
-                        <div class="qualidade-sub">
-                            <span class="qualidade-nome">Resolucao Remota</span>
-                            <span class="qualidade-desc">Percentual de tickets resolvidos sem intervencao presencial</span>
-                        </div>
-                        <div class="qualidade-sub">
-                            <span class="qualidade-nome">Atendimento Remoto</span>
-                            <span class="qualidade-desc">Percentual de atendimentos realizados remotamente</span>
-                        </div>
-                        <div class="qualidade-sub">
-                            <span class="qualidade-nome">Reabertura</span>
-                            <span class="qualidade-desc">Percentual de tickets reabertos apos fechamento</span>
-                        </div>
-                        <div class="qualidade-sub">
-                            <span class="qualidade-nome">Backlog</span>
-                            <span class="qualidade-desc">Quantidade de tickets pendentes acumulados</span>
-                        </div>
-                        <div class="qualidade-sub">
-                            <span class="qualidade-nome">Aging</span>
-                            <span class="qualidade-desc">Percentual de tickets com idade superior ao aceitavel</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="kpi-content">
-                    <div class="kpi-niveis">
-                        <div class="nivel-coluna nivel-2">
-                            <h3 class="nivel-titulo">Nivel 2 - Cortes Principais</h3>
-                            <div class="nivel-items">
-                                <div class="nivel-item">Resolucao remota por regiao</div>
-                                <div class="nivel-item">Resolucao remota por produto</div>
-                                <div class="nivel-item">Atendimento remoto por regiao</div>
-                                <div class="nivel-item">Atendimento remoto por departamento</div>
-                                <div class="nivel-item">Reabertura por produto</div>
-                                <div class="nivel-item">Reabertura por regiao</div>
-                                <div class="nivel-item">Backlog por regiao</div>
-                                <div class="nivel-item">Backlog por produto</div>
-                                <div class="nivel-item">Aging por regiao</div>
-                                <div class="nivel-item">Aging por produto</div>
-                            </div>
-                        </div>
-
-                        <div class="nivel-coluna nivel-3">
-                            <h3 class="nivel-titulo">Nivel 3 - Cruzamentos Prioritarios</h3>
-                            <div class="nivel-items">
-                                <div class="nivel-item">Aging por regiao + produto</div>
-                                <div class="nivel-item">Backlog por regiao + criticidade</div>
-                                <div class="nivel-item">Reabertura por produto + regiao</div>
-                                <div class="nivel-item">Resolucao remota por produto + criticidade</div>
-                                <div class="nivel-item">Atendimento remoto por regiao + departamento</div>
-                                <div class="nivel-item">Backlog por produto + departamento</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="kpi-estrategias">
-                        <div class="estrategia-box">
-                            <h3 class="estrategia-titulo">Estrategias de Leitura</h3>
-                            <ul class="estrategia-list">
-                                <li>Identificar envelhecimento de tickets</li>
-                                <li>Avaliar maturidade de resolucao remota</li>
-                                <li>Entender reincidencia de problemas</li>
-                                <li>Monitorar acumulo de backlog</li>
-                                <li>Comparar operacao remota versus intervencao presencial</li>
-                                <li>Identificar linhas de produto com recorrencia</li>
-                            </ul>
-                        </div>
-
-                        <div class="estrategia-box">
-                            <h3 class="estrategia-titulo">Sugestoes de Visualizacao</h3>
-                            <ul class="estrategia-list">
-                                <li>Semaforo de aging</li>
-                                <li>Ranking de backlog</li>
-                                <li>Barras de resolucao remota por regiao</li>
-                                <li>Tabela de reabertura por produto</li>
-                                <li>Linha temporal de backlog</li>
-                                <li>Matriz produto - criticidade</li>
-                                <li>Comparacao remoto versus presencial</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="bloco-final">
-            <div class="container">
-                <h2 class="section-title" data-i18n="kpi.v2.map.final.title">Como usar este mapa</h2>
-
-                <div class="final-content">
-                    <p class="final-text" data-i18n="kpi.v2.map.final.description">Este mapa expandido orienta a construcao e leitura do dashboard executivo, apoiando definicao de KPIs, filtros, cruzamentos prioritarios e estrategias de visualizacao.</p>
-
-                    <div class="final-ctas">
-                        <a href="index.html" class="btn btn-secondary" data-i18n="kpi.v2.map.final.backArchitecture">Voltar para Arquitetura</a>
-                        <a href="dashboard.html" class="btn btn-primary" data-i18n="kpi.v2.map.final.backDashboard">Abrir Dashboard</a>
-                    </div>
+                    <article class="kpi-reading-support-card">
+                        <h3 data-i18n="kpi.reading.roles.title">Leitura rápida por perfil</h3>
+                        <ul class="reading-role-list">
+                            <li>
+                                <strong data-i18n="kpi.reading.roles.manager.label">Gestor</strong>
+                                <span data-i18n="kpi.reading.roles.manager.description">Visão executiva global.</span>
+                            </li>
+                            <li>
+                                <strong data-i18n="kpi.reading.roles.coordinator.label">Coordenador</strong>
+                                <span data-i18n="kpi.reading.roles.coordinator.description">Governança de dados + gestão de agentes.</span>
+                            </li>
+                            <li>
+                                <strong data-i18n="kpi.reading.roles.operations.label">Operação/liderança local</strong>
+                                <span data-i18n="kpi.reading.roles.operations.description">Gestão de agentes + fila de pendências/status.</span>
+                            </li>
+                        </ul>
+                    </article>
                 </div>
             </div>
         </section>
@@ -459,7 +195,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>Playbook Global - Mapa Expandido KPI</p>
+            <p data-i18n="kpi.main.footer.reading">Playbook Global - Leitura KPI’s</p>
         </div>
     </footer>
 

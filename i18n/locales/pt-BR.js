@@ -621,7 +621,7 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                     ticketId: "ID do ticket",
                     openingDate: "Data de abertura",
                     channel: "Canal",
-                    owner: "Proprietário do ticket",
+                    owner: "Responsável pelo ticket",
                     status: "Status",
                     priority: "Prioridade, calculada pela matriz",
                     slaFirstResponse: "SLA de primeira resposta",
@@ -736,7 +736,7 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
             },
             dominant: {
                 title: "Matriz Consolidada Oficial",
-                description: "Filtre por entidade, classificação, etapa ou owner para consultar rapidamente a regra de cada campo."
+                description: "Filtre por entidade, classificação, etapa ou responsável para consultar rapidamente a regra de cada campo."
             },
             columns: {
                 entity: "Entidade",
@@ -744,7 +744,7 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                 classification: "Classificação",
                 condition: "Condição",
                 stage: "Etapa",
-                owner: "Owner",
+                owner: "Responsável",
                 impact: "Impacto",
                 rule: "Regra"
             },
@@ -752,7 +752,7 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                 entity: "Entidade",
                 classification: "Classificação",
                 stage: "Etapa",
-                owner: "Owner",
+                owner: "Responsável",
                 all: "Todos",
                 resultSingular: "campo encontrado",
                 resultPlural: "campos encontrados",
@@ -844,7 +844,7 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                 ticket_id: "ID do ticket",
                 ticket_opening_date: "Data de abertura",
                 ticket_channel: "Canal",
-                ticket_owner: "Proprietario do ticket",
+                ticket_owner: "Responsável pelo ticket",
                 ticket_status: "Status",
                 ticket_priority: "Prioridade",
                 ticket_sla_first_response: "SLA de primeira resposta",
@@ -873,16 +873,16 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                 contact_trade_name: "Nome Fantasia",
                 contact_language: "Idioma",
                 contact_address: "Endereco",
-                contact_scanner_model: "Scanner Model",
-                contact_installation_date: "Installation Date",
-                contact_dealer: "Dealer",
-                contact_scanner_serial_number: "Scanner Serial Number",
-                contact_pc_model: "PC Model",
-                contact_pc_serial_number: "PC Serial Number",
-                contact_parts_warranty: "Parts Warranty",
-                contact_labor_warranty: "Labor Warranty",
-                contact_fda_2579_form_number: "FDA 2579 Form Number",
-                contact_fda_2579_form_date: "FDA 2579 Form Date"
+                contact_scanner_model: "Modelo do scanner",
+                contact_installation_date: "Data de instalação",
+                contact_dealer: "Revendedor / Dealer",
+                contact_scanner_serial_number: "Número de série do scanner",
+                contact_pc_model: "Modelo do PC",
+                contact_pc_serial_number: "Número de série do PC",
+                contact_parts_warranty: "Garantia de peças",
+                contact_labor_warranty: "Garantia de mão de obra",
+                contact_fda_2579_form_number: "Número do formulário FDA 2579",
+                contact_fda_2579_form_date: "Data do formulário FDA 2579"
             },
             support: {
                 interpretation: {
@@ -912,9 +912,147 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
         index: {
             header: {
                 title: "Governança Global",
-                subtitle: "Estrutura de governança operacional do modelo global de atendimento"
+                subtitle: "Governança operacional para leitura diária, quinzenal e mensal da operação"
             },
             footer: "Playbook Global - Governança Global"
+        },
+        main: {
+            opening: {
+                pageTitle: "Playbook Global - Governança Global",
+                breadcrumb: "Início > Global Service > Governança Global",
+                moduleLabel: "Módulo: Governança Global",
+                operationalContext: "Contexto operacional: acompanhamento curto para manter fila visível, ritmo de atendimento e decisão de correção.",
+                title: "Governança Global",
+                description: "Página única para acompanhar o que controlar em cada frequência, como ler o Power BI e como agir quando houver desvio operacional.",
+                context: "Escopo desta página: o que acompanhar, com qual frequência, por que importa e qual ação esperada por camada."
+            },
+            nav: {
+                label: "Navegação interna do módulo",
+                layers: "Governança por Camada",
+                bi: "Como acompanhar no Power BI",
+                deviations: "O que fazer quando houver desvio"
+            },
+            layers: {
+                kicker: "Painel principal",
+                title: "Governança por Camada",
+                description: "As três camadas abaixo mostram frequência, foco, leitura e ação esperada para manter a operação sob controle.",
+                operationalReading: "Leitura operacional",
+                executiveReading: "Leitura executiva",
+                frequencyLabel: "Frequência",
+                focusLabel: "Foco principal",
+                toolLabel: "Ferramenta",
+                trackLabel: "O que acompanhar",
+                whyLabel: "Por que acompanhar",
+                expectedActionLabel: "Ação esperada",
+                daily: {
+                    step: "Camada 1",
+                    name: "Diário",
+                    frequency: "Diário",
+                    focus: "Backlog",
+                    tool: "Power BI",
+                    track: {
+                        backlog: "Backlog aberto por fila",
+                        paused: "Tickets parados sem evolução",
+                        aging: "Aging inicial e leitura de fila"
+                    },
+                    why: "Evita tickets esquecidos, fila invisível e envelhecimento descontrolado do backlog.",
+                    expectedAction: "Identificar acúmulo rapidamente e priorizar ação imediata na fila crítica."
+                },
+                biweekly: {
+                    step: "Camada 2",
+                    name: "Quinzenal",
+                    frequency: "Quinzenal",
+                    focus: "MTTS, MTFC, CSAT, backlog e aging",
+                    tool: "Power BI",
+                    track: {
+                        kpis: "MTTS, MTFC, CSAT, backlog e aging",
+                        status: "Uso correto de status e concentração indevida",
+                        fields: "Completude dos campos como apoio de leitura"
+                    },
+                    why: "Tira o time da urgência diária e confirma se a operação está rodando dentro do padrão esperado.",
+                    expectedAction: "Corrigir desvios de processo, alinhar comportamento operacional e definir owners de ação."
+                },
+                monthly: {
+                    step: "Camada 3",
+                    name: "Mensal",
+                    frequency: "Mensal",
+                    focus: "SLA compliance",
+                    tool: "Power BI",
+                    track: {
+                        sla: "SLA compliance consolidado",
+                        mtts: "MTTS como indicador de apoio",
+                        priority: "Prioridades de correção para o ciclo seguinte"
+                    },
+                    why: "Mostra se o padrão de atendimento está sustentado e se a operação entrega consistência executiva.",
+                    expectedAction: "Consolidar leitura executiva da saúde operacional e priorizar as correções estruturais."
+                }
+            },
+            bi: {
+                title: "Como acompanhar no Power BI",
+                description: "Use o BI como ferramenta única de leitura diária, quinzenal e mensal para transformar sinal em ação objetiva.",
+                daily: {
+                    title: "Diário",
+                    item1: "Acompanhar backlog aberto por fila e equipe.",
+                    item2: "Identificar tickets parados sem movimentação.",
+                    item3: "Observar aging inicial para ação preventiva."
+                },
+                biweekly: {
+                    title: "Quinzenal",
+                    item1: "Revisar MTTS, MTFC, CSAT, backlog e aging.",
+                    item2: "Identificar desvios de processo e status.",
+                    item3: "Comparar evolução entre períodos e equipes."
+                },
+                monthly: {
+                    title: "Mensal",
+                    item1: "Acompanhar SLA compliance consolidado.",
+                    item2: "Usar MTTS como leitura de apoio.",
+                    item3: "Consolidar leitura executiva para priorização."
+                },
+                placeholder: {
+                    title: "Espaço para print do painel",
+                    description: "Quando o print oficial estiver disponível, inserir aqui a visão consolidada para leitura rápida."
+                }
+            },
+            deviations: {
+                title: "O que fazer quando houver desvio",
+                description: "Quando os sinais saírem do esperado, execute ação curta, com owner definido e na cadência adequada.",
+                deviationLabel: "Desvio",
+                expectedActionLabel: "Ação esperada",
+                items: {
+                    backlog: {
+                        name: "Backlog subindo",
+                        action: "Revisar fila, redistribuir prioridade e atacar tickets esquecidos na rotina diária."
+                    },
+                    aging: {
+                        name: "Aging aumentando",
+                        action: "Mapear onde os tickets estão parando e corrigir o ponto de bloqueio operacional."
+                    },
+                    sla: {
+                        name: "SLA compliance caindo",
+                        action: "Repriorizar fila crítica e alinhar plano de recuperação na governança mensal."
+                    },
+                    mtts: {
+                        name: "MTTS piorando",
+                        action: "Revisar tempo de triagem e remoção de impedimentos na passagem para atendimento."
+                    },
+                    mtfc: {
+                        name: "MTFC piorando",
+                        action: "Ajustar priorização da primeira resposta e monitorar cumprimento por equipe."
+                    },
+                    csat: {
+                        name: "CSAT caindo",
+                        action: "Revisar qualidade de tratativa e alinhar comunicação com o cliente nas filas críticas."
+                    },
+                    status: {
+                        name: "Uso incorreto de status",
+                        action: "Corrigir disciplina de status no dia a dia e reforçar regra na cadência quinzenal."
+                    },
+                    fields: {
+                        name: "Campos incompletos",
+                        action: "Cobrar preenchimento correto e bloquear recorrência com orientação objetiva para o time."
+                    }
+                }
+            }
         }
     },
     canaisEntrada: {
@@ -1181,13 +1319,13 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                     risk: "Espera sem contexto reduz controle de aging e SLA."
                 },
                 {
-                    key: "aguardando_assistencia_tecnica",
-                    title: "Aguardando Assistencia Tecnica",
+                    key: "aguardando_terceiro",
+                    title: "Aguardando Terceiro / Visita Tecnica",
                     lane: "espera",
-                    objective: "Aguardar acao da assistencia tecnica.",
-                    when: "Quando a resolucao depende de atuacao tecnica externa/interna dedicada.",
-                    correctStay: "Com solicitacao registrada e acompanhamento da previsao.",
-                    risk: "Sem registro claro, o ticket some da leitura de gargalo."
+                    objective: "Aguardar atuacao de terceiro ou visita tecnica responsavel.",
+                    when: "Quando o ticket depende de assistencia tecnica/terceiro, interno ou externo.",
+                    correctStay: "Com dependencia registrada e previsao de retorno acompanhada.",
+                    risk: "Sem controle de dependencia, o gargalo fica invisivel."
                 },
                 {
                     key: "aguardando_peca",
@@ -1199,11 +1337,20 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                     risk: "Sem controle, aumenta aging sem visibilidade de causa."
                 },
                 {
+                    key: "resolvido",
+                    title: "Resolvido",
+                    lane: "final",
+                    objective: "Registrar solucao aplicada antes do encerramento definitivo.",
+                    when: "Quando a tratativa terminou, mas ainda esta em validacao de fechamento.",
+                    correctStay: "Com resumo claro da solucao e evidencias da conclusao.",
+                    risk: "Pular esta etapa distorce leitura de retrabalho e qualidade."
+                },
+                {
                     key: "fechado",
                     title: "Fechado",
                     lane: "final",
                     objective: "Formalizar encerramento com registro minimo de resolucao.",
-                    when: "Apos concluir atendimento e validar condicoes de fechamento.",
+                    when: "Apos passar por Resolvido e validar condicoes de fechamento.",
                     correctStay: "Ticket concluido, com trilha de encerramento consistente.",
                     risk: "Fechar cedo distorce SLA e gera retrabalho por reabertura."
                 }
@@ -1212,25 +1359,27 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                 { pt: "Aberto", en: "Open", es: "Abierto" },
                 { pt: "Em Atendimento", en: "In Progress", es: "En Atencion" },
                 { pt: "Aguardando Cliente", en: "Waiting for Customer", es: "En Espera del Cliente" },
-                { pt: "Aguardando Assistencia Tecnica", en: "Waiting for Technical Assistance", es: "En Espera de Asistencia Tecnica" },
                 { pt: "Aguardando Peça", en: "Waiting for Parts", es: "En Espera de Repuestos" },
+                { pt: "Aguardando Terceiro / Visita Tecnica", en: "Waiting for Third Party / Technical Visit", es: "En Espera de Tercero / Visita Tecnica" },
+                { pt: "Resolvido", en: "Resolved", es: "Resuelto" },
                 { pt: "Fechado", en: "Closed", es: "Cerrado" }
             ],
             validTransitions: [
-                "Aberto -> Em Atendimento",
+                "Entrada -> Aberto -> Em Atendimento",
                 "Em Atendimento -> Aguardando Cliente",
-                "Em Atendimento -> Aguardando Assistencia Tecnica",
                 "Em Atendimento -> Aguardando Peça",
+                "Em Atendimento -> Aguardando Terceiro / Visita Tecnica",
+                "Em Atendimento -> Resolvido",
                 "Aguardando Cliente -> Em Atendimento",
-                "Aguardando Assistencia Tecnica -> Em Atendimento",
                 "Aguardando Peça -> Em Atendimento",
-                "Em Atendimento -> Fechado"
+                "Aguardando Terceiro / Visita Tecnica -> Em Atendimento",
+                "Resolvido -> Fechado"
             ],
             avoidMoves: [
                 "Aberto -> Fechado sem tratamento real",
                 "Usar Em Atendimento sem acao efetiva",
                 "Mover para espera sem contexto minimo",
-                "Fechar ticket sem resumo de resolucao",
+                "Fechar ticket sem passar por Resolvido",
                 "Movimentacao por perfis fora do suporte tecnico interno"
             ],
             managementSignals: [
@@ -1241,7 +1390,7 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                 },
                 {
                     topic: "Gargalo de espera",
-                    reading: "Concentracao em Aguardando Cliente, AT ou Peca.",
+                    reading: "Concentracao em Aguardando Cliente, Terceiro/Visita Tecnica ou Peca.",
                     action: "Atuar no bloqueio dominante e monitorar tempo de espera."
                 },
                 {
@@ -1837,22 +1986,22 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
     pt.camposObrigatorios.home = pt.camposObrigatorios.home || {};
 
     pt.camposObrigatorios.home.opening = pt.camposObrigatorios.home.opening || {};
-    pt.camposObrigatorios.home.opening.pageTitle = "Playbook Global - Campos Obrigatorios";
-    pt.camposObrigatorios.home.opening.breadcrumb = "Inicio > Global Service > Campos Obrigatorios";
-    pt.camposObrigatorios.home.opening.moduleLabel = "Modulo: Campos Obrigatorios";
-    pt.camposObrigatorios.home.opening.title = "Campos Obrigatorios";
+    pt.camposObrigatorios.home.opening.pageTitle = "Playbook Global - Campos Obrigatórios";
+    pt.camposObrigatorios.home.opening.breadcrumb = "Início > Global Service > Campos Obrigatórios";
+    pt.camposObrigatorios.home.opening.moduleLabel = "Módulo: Campos Obrigatórios";
+    pt.camposObrigatorios.home.opening.title = "Campos Obrigatórios";
     pt.camposObrigatorios.home.opening.description = "Leitura executiva dos campos que sustentam abertura correta, fluxo, prioridade, SLA, KPI e qualidade de dados.";
-    pt.camposObrigatorios.home.opening.operationalContext = "Contexto operacional: padrao minimo para abertura, acompanhamento e qualidade dos tickets.";
+    pt.camposObrigatorios.home.opening.operationalContext = "Contexto operacional: padrão mínimo para abertura, acompanhamento e qualidade dos tickets.";
 
     pt.camposObrigatorios.home.nav = pt.camposObrigatorios.home.nav || {};
-    pt.camposObrigatorios.home.nav.label = "Navegacao interna do modulo";
-    pt.camposObrigatorios.home.nav.fields = "Campos Obrigatorios";
+    pt.camposObrigatorios.home.nav.label = "Navegação interna do módulo";
+    pt.camposObrigatorios.home.nav.fields = "Campos Obrigatórios";
     pt.camposObrigatorios.home.nav.matrix = "Matriz Consolidada";
 
     pt.camposObrigatorios.home.visual = pt.camposObrigatorios.home.visual || {};
-    pt.camposObrigatorios.home.visual.eyebrow = "Mapa dos Campos Obrigatorios";
+    pt.camposObrigatorios.home.visual.eyebrow = "Mapa dos Campos Obrigatórios";
     pt.camposObrigatorios.home.visual.title = "Mapa dos Campos do Ticket";
-    pt.camposObrigatorios.home.visual.description = "Resumo unico dos 4 grupos oficiais para leitura rapida da regra operacional.";
+    pt.camposObrigatorios.home.visual.description = "Resumo único dos 4 grupos oficiais para leitura rápida da regra operacional.";
     pt.camposObrigatorios.home.visual.impactLabel = "Impacto direto em";
     pt.camposObrigatorios.home.visual.matrixCta = "Consultar Matriz Consolidada";
     pt.camposObrigatorios.home.visual.impact = pt.camposObrigatorios.home.visual.impact || {};
@@ -1866,9 +2015,9 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
     pt.camposObrigatorios.home.groups = pt.camposObrigatorios.home.groups || {};
 
     pt.camposObrigatorios.home.groups.mandatory = pt.camposObrigatorios.home.groups.mandatory || {};
-    pt.camposObrigatorios.home.groups.mandatory.tag = "Obrigatorio";
-    pt.camposObrigatorios.home.groups.mandatory.title = "Obrigatorios principais";
-    pt.camposObrigatorios.home.groups.mandatory.definition = "Base minima para abrir e qualificar o ticket sem retrabalho.";
+    pt.camposObrigatorios.home.groups.mandatory.tag = "Obrigatório";
+    pt.camposObrigatorios.home.groups.mandatory.title = "Obrigatórios principais";
+    pt.camposObrigatorios.home.groups.mandatory.definition = "Base mínima para abrir e qualificar o ticket sem retrabalho.";
     pt.camposObrigatorios.home.groups.mandatory.ticketLabel = "Ticket - abertura";
     pt.camposObrigatorios.home.groups.mandatory.ticket = pt.camposObrigatorios.home.groups.mandatory.ticket || {};
     pt.camposObrigatorios.home.groups.mandatory.ticket.requesterName = "Nome do solicitante/cliente";
@@ -1879,9 +2028,9 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
     pt.camposObrigatorios.home.groups.mandatory.ticket.category = "Categoria";
     pt.camposObrigatorios.home.groups.mandatory.ticket.product = "Produto";
     pt.camposObrigatorios.home.groups.mandatory.ticket.productBrand = "Marca do produto";
-    pt.camposObrigatorios.home.groups.mandatory.ticket.serialNumber = "Numero de serie do equipamento, com excecao contextual";
+    pt.camposObrigatorios.home.groups.mandatory.ticket.serialNumber = "Número de série do equipamento, com exceção contextual";
     pt.camposObrigatorios.home.groups.mandatory.ticket.subject = "Assunto";
-    pt.camposObrigatorios.home.groups.mandatory.ticket.description = "Descricao";
+    pt.camposObrigatorios.home.groups.mandatory.ticket.description = "Descrição";
     pt.camposObrigatorios.home.groups.mandatory.contactLabel = "Contato/Cliente";
     pt.camposObrigatorios.home.groups.mandatory.contact = pt.camposObrigatorios.home.groups.mandatory.contact || {};
     pt.camposObrigatorios.home.groups.mandatory.contact.firstName = "Nome";
@@ -1893,56 +2042,320 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
     pt.camposObrigatorios.home.groups.conditional = pt.camposObrigatorios.home.groups.conditional || {};
     pt.camposObrigatorios.home.groups.conditional.tag = "Condicional";
     pt.camposObrigatorios.home.groups.conditional.title = "Condicionais";
-    pt.camposObrigatorios.home.groups.conditional.definition = "Obrigatorio somente quando o contexto regional ou de solicitante exige.";
-    pt.camposObrigatorios.home.groups.conditional.stateBrazil = "Estado: obrigatorio apenas Brasil";
-    pt.camposObrigatorios.home.groups.conditional.provinceArgentina = "Provincia: obrigatoria apenas Argentina";
-    pt.camposObrigatorios.home.groups.conditional.assistanceDistributor = "Nome da assistencia/distribuidor: obrigatorio para Assistencia / Distribuidor";
+    pt.camposObrigatorios.home.groups.conditional.definition = "Obrigatório somente quando o contexto regional ou do solicitante exige.";
+    pt.camposObrigatorios.home.groups.conditional.stateBrazil = "Estado: obrigatório apenas Brasil";
+    pt.camposObrigatorios.home.groups.conditional.provinceArgentina = "Província: obrigatória apenas Argentina";
+    pt.camposObrigatorios.home.groups.conditional.assistanceDistributor = "Nome da assistência/distribuidor: obrigatório para Assistência / Distribuidor";
 
     pt.camposObrigatorios.home.groups.automatic = pt.camposObrigatorios.home.groups.automatic || {};
-    pt.camposObrigatorios.home.groups.automatic.tag = "Automatico";
-    pt.camposObrigatorios.home.groups.automatic.title = "Automaticos/sistemicos";
+    pt.camposObrigatorios.home.groups.automatic.tag = "Automático";
+    pt.camposObrigatorios.home.groups.automatic.title = "Automáticos/sistêmicos";
     pt.camposObrigatorios.home.groups.automatic.definition = "Dados preenchidos e atualizados pelo sistema ao longo da jornada.";
     pt.camposObrigatorios.home.groups.automatic.ticketId = "ID do ticket";
     pt.camposObrigatorios.home.groups.automatic.openingDate = "Data de abertura";
     pt.camposObrigatorios.home.groups.automatic.channel = "Canal";
-    pt.camposObrigatorios.home.groups.automatic.owner = "Proprietario do ticket";
+    pt.camposObrigatorios.home.groups.automatic.owner = "Responsável pelo ticket";
     pt.camposObrigatorios.home.groups.automatic.status = "Status";
     pt.camposObrigatorios.home.groups.automatic.priority = "Prioridade, calculada pela matriz";
     pt.camposObrigatorios.home.groups.automatic.slaFirstResponse = "SLA de primeira resposta";
-    pt.camposObrigatorios.home.groups.automatic.slaResolution = "SLA de resolucao";
+    pt.camposObrigatorios.home.groups.automatic.slaResolution = "SLA de resolução";
     pt.camposObrigatorios.home.groups.automatic.slaIndicators = "Tempos e indicadores de SLA";
 
     pt.camposObrigatorios.home.groups.recommended = pt.camposObrigatorios.home.groups.recommended || {};
-    pt.camposObrigatorios.home.groups.recommended.tag = "Desejavel";
-    pt.camposObrigatorios.home.groups.recommended.title = "Desejaveis oficiais";
-    pt.camposObrigatorios.home.groups.recommended.definition = "Nao bloqueiam abertura, mas elevam a qualidade da leitura operacional.";
-    pt.camposObrigatorios.home.groups.recommended.country = "Pais";
+    pt.camposObrigatorios.home.groups.recommended.tag = "Desejável";
+    pt.camposObrigatorios.home.groups.recommended.title = "Desejáveis oficiais";
+    pt.camposObrigatorios.home.groups.recommended.definition = "Não bloqueiam a abertura, mas elevam a qualidade da leitura operacional.";
+    pt.camposObrigatorios.home.groups.recommended.country = "País";
     pt.camposObrigatorios.home.groups.recommended.zeroHour = "Zero hora / Out of the box";
-    pt.camposObrigatorios.home.groups.recommended.needsPart = "Necessita peca";
-    pt.camposObrigatorios.home.groups.recommended.partnerDistributor = "Parceiro/distribuidor, quando nao obrigatorio";
-    pt.camposObrigatorios.home.groups.recommended.racSent = "RAC Enviada? - Sim/Não";
-    pt.camposObrigatorios.home.groups.recommended.assistanceType = "Tipo de assistencia tecnica";
+    pt.camposObrigatorios.home.groups.recommended.needsPart = "Necessita peça";
+    pt.camposObrigatorios.home.groups.recommended.partnerDistributor = "Parceiro/distribuidor, quando não obrigatório";
+    pt.camposObrigatorios.home.groups.recommended.racSent = "RAC enviada? - Sim/Não";
+    pt.camposObrigatorios.home.groups.recommended.assistanceType = "Tipo de assistência técnica";
     pt.camposObrigatorios.home.groups.recommended.closingReason = "Motivo do fechamento";
-    pt.camposObrigatorios.home.groups.recommended.solutionMode = "Solucao em campo/remoto";
-    pt.camposObrigatorios.home.groups.recommended.usedPart = "Peca utilizada";
-    pt.camposObrigatorios.home.groups.recommended.finalPartsQty = "Quantidade final de pecas";
+    pt.camposObrigatorios.home.groups.recommended.solutionMode = "Solução em campo/remoto";
+    pt.camposObrigatorios.home.groups.recommended.usedPart = "Peça utilizada";
+    pt.camposObrigatorios.home.groups.recommended.finalPartsQty = "Quantidade final de peças";
 
     pt.camposObrigatorios.home.note = pt.camposObrigatorios.home.note || {};
-    pt.camposObrigatorios.home.note.excludedOfficial = "Nao fazem parte da lista oficial de desejaveis nesta fase: acoes executadas, quantidade de pecas, peca solicitada, codigo da peca, datas/status da peca, numero do pedido, causa provavel e data prevista de retorno ao cliente.";
+    pt.camposObrigatorios.home.note.excludedOfficial = "Não fazem parte da lista oficial de desejáveis nesta fase: ações executadas, quantidade de peças, peça solicitada, código da peça, datas/status da peça, número do pedido, causa provável e data prevista de retorno ao cliente.";
 
     pt.camposObrigatorios.home.rules = pt.camposObrigatorios.home.rules || {};
-    pt.camposObrigatorios.home.rules.title = "Regras criticas";
-    pt.camposObrigatorios.home.rules.serialException = "Numero de serie e obrigatorio, com excecao contextual.";
-    pt.camposObrigatorios.home.rules.stateBrazil = "Estado so Brasil.";
-    pt.camposObrigatorios.home.rules.provinceArgentina = "Provincia so Argentina.";
-    pt.camposObrigatorios.home.rules.assistanceDistributor = "Nome da assistencia/distribuidor so quando aplicavel.";
-    pt.camposObrigatorios.home.rules.priorityCalculated = "Prioridade e obrigatoria e calculada pela matriz.";
-    pt.camposObrigatorios.home.rules.zeroHourImpact = "Zero hora / Out of the box e desejavel, mas impacta prioridade.";
+    pt.camposObrigatorios.home.rules.title = "Regras críticas";
+    pt.camposObrigatorios.home.rules.serialException = "Número de série é obrigatório, com exceção contextual.";
+    pt.camposObrigatorios.home.rules.stateBrazil = "Estado apenas para Brasil.";
+    pt.camposObrigatorios.home.rules.provinceArgentina = "Província apenas para Argentina.";
+    pt.camposObrigatorios.home.rules.assistanceDistributor = "Nome da assistência/distribuidor apenas quando aplicável.";
+    pt.camposObrigatorios.home.rules.priorityCalculated = "Prioridade obrigatória e calculada pela matriz.";
+    pt.camposObrigatorios.home.rules.zeroHourImpact = "Zero hora / Out of the box é desejável, mas impacta a prioridade.";
 
     pt.camposObrigatorios.home.usage = pt.camposObrigatorios.home.usage || {};
-    pt.camposObrigatorios.home.usage.title = "Como usar este modulo";
+    pt.camposObrigatorios.home.usage.title = "Como usar este módulo";
     pt.camposObrigatorios.home.usage.homeRule = "Use a home para entender a regra.";
     pt.camposObrigatorios.home.usage.matrixDetails = "Use a Matriz Consolidada para consultar o detalhe completo.";
     pt.camposObrigatorios.home.usage.coordinators = "Coordenadores devem usar a matriz para cobrar completude.";
-    pt.camposObrigatorios.home.usage.agents = "Agentes devem usar como referencia para preenchimento correto.";
+    pt.camposObrigatorios.home.usage.agents = "Agentes devem usar como referência para preenchimento correto.";
+
+    pt.kanban = pt.kanban || {};
+    pt.kanban.main = pt.kanban.main || {};
+
+    pt.kanban.main.header = pt.kanban.main.header || {};
+    pt.kanban.main.header.title = "02 - Kanban Global";
+    pt.kanban.main.header.subtitle = "Leitura visual rápida dos tickets por status oficial";
+    pt.kanban.main.footer = "Playbook Global - Módulo 02 Kanban";
+
+    pt.kanban.main.opening = pt.kanban.main.opening || {};
+    pt.kanban.main.opening.pageTitle = "Playbook Global - Kanban Global";
+    pt.kanban.main.opening.breadcrumb = "Início > Global Service > Kanban Global";
+    pt.kanban.main.opening.moduleLabel = "Módulo: Kanban Global";
+    pt.kanban.main.opening.title = "Kanban Global";
+    pt.kanban.main.opening.description = "Página única para leitura visual do fluxo: status oficiais, transições essenciais, gargalos operacionais e erros que distorcem backlog e aging.";
+    pt.kanban.main.opening.operationalContext = "Contexto operacional: leitura rápida para posicionar tickets no status correto e enxergar fila real.";
+
+    pt.kanban.main.nav = pt.kanban.main.nav || {};
+    pt.kanban.main.nav.label = "Navegação interna do módulo";
+    pt.kanban.main.nav.board = "Quadro Kanban";
+    pt.kanban.main.nav.transitions = "Transições";
+    pt.kanban.main.nav.operations = "Leitura Operacional";
+    pt.kanban.main.nav.mistakes = "Erros Comuns";
+
+    pt.kanban.main.board = pt.kanban.main.board || {};
+    pt.kanban.main.board.kicker = "Quadro operacional oficial";
+    pt.kanban.main.board.title = "Quadro Kanban com os 7 status oficiais";
+    pt.kanban.main.board.description = "Cada coluna mostra somente o que importa para decidir rapidamente onde o ticket deve estar.";
+    pt.kanban.main.board.goalLabel = "Objetivo";
+    pt.kanban.main.board.whenLabel = "Quando usar";
+
+    pt.kanban.main.statuses = pt.kanban.main.statuses || {};
+    pt.kanban.main.statuses.open = {
+        name: "Aberto",
+        purpose: "Registrar e qualificar o ticket para iniciar a tratativa.",
+        when: "Quando o ticket acabou de entrar e ainda não iniciou ação técnica."
+    };
+    pt.kanban.main.statuses.inProgress = {
+        name: "Em atendimento",
+        purpose: "Conduzir análise e execução técnica ativa.",
+        when: "Quando existe atuação direta do time no ticket."
+    };
+    pt.kanban.main.statuses.waitingCustomer = {
+        name: "Aguardando Cliente",
+        purpose: "Aguardar retorno ou ação do cliente para avançar.",
+        when: "Quando o próximo passo depende objetivamente do cliente."
+    };
+    pt.kanban.main.statuses.waitingParts = {
+        name: "Aguardando Peça",
+        purpose: "Aguardar peça, material ou logística para continuidade.",
+        when: "Quando a execução depende de item físico para seguir."
+    };
+    pt.kanban.main.statuses.waitingThirdParty = {
+        name: "Aguardando Terceiro / Visita Técnica",
+        purpose: "Aguardar atuação de terceiro ou visita técnica responsável.",
+        when: "Quando o ticket depende de assistência técnica/terceiro, interno ou externo."
+    };
+    pt.kanban.main.statuses.resolved = {
+        name: "Resolvido",
+        purpose: "Registrar solução aplicada antes do encerramento definitivo.",
+        when: "Quando a tratativa terminou, mas ainda está em validação de fechamento."
+    };
+    pt.kanban.main.statuses.closed = {
+        name: "Fechado",
+        purpose: "Formalizar o encerramento final do ticket.",
+        when: "Quando o ticket já passou por Resolvido e não possui ação pendente."
+    };
+
+    pt.kanban.main.transitions = pt.kanban.main.transitions || {};
+    pt.kanban.main.transitions.title = "Transições";
+    pt.kanban.main.transitions.description = "Lógica base de movimentação do ticket no Kanban.";
+    pt.kanban.main.transitions.entryFlow = "Entrada -> Aberto -> Em atendimento";
+    pt.kanban.main.transitions.branchLabel = "A partir de Em atendimento, o ticket pode ir para:";
+    pt.kanban.main.transitions.branchCustomer = "Aguardando Cliente";
+    pt.kanban.main.transitions.branchParts = "Aguardando Peça";
+    pt.kanban.main.transitions.branchThirdParty = "Aguardando Terceiro / Visita Técnica";
+    pt.kanban.main.transitions.branchResolved = "Resolvido";
+    pt.kanban.main.transitions.finalFlow = "Resolvido -> Fechado";
+    pt.kanban.main.transitions.notes = pt.kanban.main.transitions.notes || {};
+    pt.kanban.main.transitions.notes.resolveNotClose = "Resolver não é fechar.";
+    pt.kanban.main.transitions.notes.waitingMustBeReal = "Ticket parado deve ficar no status de espera correto.";
+    pt.kanban.main.transitions.notes.waitingReflectsDependency = "Status de espera existem para refletir dependência real.";
+
+    pt.kanban.main.operations = pt.kanban.main.operations || {};
+    pt.kanban.main.operations.title = "Leitura Operacional";
+    pt.kanban.main.operations.backlog = "Backlog não é só volume: inclui ticket parado ou mal classificado.";
+    pt.kanban.main.operations.aging = "Aging piora quando o ticket permanece no status incorreto.";
+    pt.kanban.main.operations.bottlenecks = "O quadro Kanban revela Gargalos e dependências do atendimento.";
+    pt.kanban.main.operations.flowAndSla = "Status correto melhora fluxo, SLA e leitura operacional.";
+
+    pt.kanban.main.mistakes = pt.kanban.main.mistakes || {};
+    pt.kanban.main.mistakes.title = "Erros Comuns";
+    pt.kanban.main.mistakes.waitingCustomer = "Não deixar ticket em Em atendimento quando está aguardando cliente.";
+    pt.kanban.main.mistakes.waitingParts = "Não deixar ticket em Em atendimento quando está aguardando peça.";
+    pt.kanban.main.mistakes.maskQueue = "Não usar status errado para mascarar fila.";
+    pt.kanban.main.mistakes.skipResolved = "Não fechar ticket diretamente sem passar por Resolvido.";
+    pt.kanban.main.mistakes.realStatus = "O status deve refletir a situação real do ticket.";
+})();
+
+(function () {
+    const pt = window.PLAYBOOK_I18N_LOCALES["pt-BR"];
+    if (!pt) return;
+
+    pt.kpi = pt.kpi || {};
+    pt.kpi.main = pt.kpi.main || {};
+    pt.kpi.main.meta = pt.kpi.main.meta || {};
+    pt.kpi.main.header = pt.kpi.main.header || {};
+    pt.kpi.main.opening = pt.kpi.main.opening || {};
+    pt.kpi.main.nav = pt.kpi.main.nav || {};
+    pt.kpi.main.dashboard = pt.kpi.main.dashboard || {};
+    pt.kpi.main.pages = pt.kpi.main.pages || {};
+    pt.kpi.main.usage = pt.kpi.main.usage || {};
+    pt.kpi.main.readingAccess = pt.kpi.main.readingAccess || {};
+    pt.kpi.main.footer = pt.kpi.main.footer || {};
+    pt.kpi.reading = pt.kpi.reading || {};
+    pt.kpi.reading.opening = pt.kpi.reading.opening || {};
+    pt.kpi.reading.nav = pt.kpi.reading.nav || {};
+    pt.kpi.reading.labels = pt.kpi.reading.labels || {};
+    pt.kpi.reading.pages = pt.kpi.reading.pages || {};
+    pt.kpi.reading.pages.executive = pt.kpi.reading.pages.executive || {};
+    pt.kpi.reading.pages.executive.watch = pt.kpi.reading.pages.executive.watch || {};
+    pt.kpi.reading.pages.executive.when = pt.kpi.reading.pages.executive.when || {};
+    pt.kpi.reading.pages.dataGovernance = pt.kpi.reading.pages.dataGovernance || {};
+    pt.kpi.reading.pages.dataGovernance.watch = pt.kpi.reading.pages.dataGovernance.watch || {};
+    pt.kpi.reading.pages.dataGovernance.when = pt.kpi.reading.pages.dataGovernance.when || {};
+    pt.kpi.reading.pages.agentManagement = pt.kpi.reading.pages.agentManagement || {};
+    pt.kpi.reading.pages.agentManagement.watch = pt.kpi.reading.pages.agentManagement.watch || {};
+    pt.kpi.reading.pages.agentManagement.when = pt.kpi.reading.pages.agentManagement.when || {};
+    pt.kpi.reading.usage = pt.kpi.reading.usage || {};
+    pt.kpi.reading.roles = pt.kpi.reading.roles || {};
+    pt.kpi.reading.roles.manager = pt.kpi.reading.roles.manager || {};
+    pt.kpi.reading.roles.coordinator = pt.kpi.reading.roles.coordinator || {};
+    pt.kpi.reading.roles.operations = pt.kpi.reading.roles.operations || {};
+    pt.kpi.reading.stage = pt.kpi.reading.stage || {};
+    pt.kpi.reading.next = pt.kpi.reading.next || {};
+    pt.kpi.reading.cta = pt.kpi.reading.cta || {};
+    pt.kpi.legacy = pt.kpi.legacy || {};
+    pt.kpi.legacy.meta = pt.kpi.legacy.meta || {};
+    pt.kpi.legacy.notice = pt.kpi.legacy.notice || {};
+
+    pt.kpi.main.meta.pageTitleDashboard = "Playbook Global - KPI Dashboard";
+    pt.kpi.main.meta.pageTitleReading = "Playbook Global - Leitura KPI’s";
+    pt.kpi.main.header.brand = "KPI Dashboard";
+    pt.kpi.main.header.meta = "Global Service | Módulo KPI";
+    pt.kpi.main.header.contextLabel = "Contexto:";
+    pt.kpi.main.header.contextValue = "Global Service";
+    pt.kpi.main.header.mainNavAria = "Navegação principal do módulo KPI";
+    pt.kpi.main.opening.breadcrumb = "Início > Global Service > KPI Dashboard";
+    pt.kpi.main.opening.eyebrow = "Global Service Governance";
+    pt.kpi.main.opening.moduleLabel = "Módulo: KPI Dashboard";
+    pt.kpi.main.opening.title = "KPI Dashboard";
+    pt.kpi.main.opening.description = "Acompanhe o dashboard oficial do módulo KPI e use a leitura guiada para interpretar as três páginas da visão executiva.";
+    pt.kpi.main.opening.operationalContext = "Contexto operacional: porta oficial para leitura executiva e operacional dos indicadores globais.";
+    pt.kpi.main.nav.label = "Navegação interna do módulo";
+    pt.kpi.main.nav.dashboard = "KPI Dashboard";
+    pt.kpi.main.nav.reading = "Leitura KPI’s";
+    pt.kpi.main.dashboard.sectionTitle = "Dashboard oficial em 3 páginas";
+    pt.kpi.main.dashboard.sectionDescription = "Use esta sequência para leitura rápida do cenário global e aprofundamento operacional.";
+    pt.kpi.main.dashboard.embedAria = "Power BI incorporado do KPI Dashboard";
+    pt.kpi.main.dashboard.embedTitle = "Power BI - KPI Dashboard";
+    pt.kpi.main.pages.executive = pt.kpi.main.pages.executive || {};
+    pt.kpi.main.pages.executive.title = "Visão Executiva Global";
+    pt.kpi.main.pages.executive.description = "Leitura macro da saúde da operação com Volume, cumprimento de SLA, MTTS, MTFC, CSAT e comparação regional.";
+    pt.kpi.main.pages.governance = pt.kpi.main.pages.governance || {};
+    pt.kpi.main.pages.governance.title = "Governança de Dados";
+    pt.kpi.main.pages.governance.description = "Acompanhe qualidade e completude da base, preenchimento de campos obrigatórios, tickets com falhas e risco operacional.";
+    pt.kpi.main.pages.agents = pt.kpi.main.pages.agents || {};
+    pt.kpi.main.pages.agents.title = "Gestão de Agentes";
+    pt.kpi.main.pages.agents.description = "Leitura da operação da equipe com tickets abertos/fechados, fila de pendências, produtividade, SLA/desempenho e envelhecimento.";
+    pt.kpi.main.usage.title = "Como usar o dashboard";
+    pt.kpi.main.usage.executive = "Use a página executiva para leitura global da operação.";
+    pt.kpi.main.usage.governance = "Use governança de dados para acompanhar completude e falhas.";
+    pt.kpi.main.usage.agents = "Use gestão de agentes para leitura operacional da equipe.";
+    pt.kpi.main.readingAccess.title = "Acesso à leitura detalhada";
+    pt.kpi.main.readingAccess.description = "Abra o submódulo de Leitura KPI’s para seguir o guia de interpretação das páginas do dashboard.";
+    pt.kpi.main.readingAccess.cta = "Abrir Leitura KPI’s";
+    pt.kpi.main.footer.dashboard = "Playbook Global - KPI Dashboard";
+    pt.kpi.main.footer.reading = "Playbook Global - Leitura KPI’s";
+
+    pt.kpi.reading.opening.breadcrumb = "Início > Global Service > Leitura KPI’s";
+    pt.kpi.reading.opening.eyebrow = "Global Service Governance";
+    pt.kpi.reading.opening.moduleLabel = "Módulo: Leitura KPI’s";
+    pt.kpi.reading.opening.title = "Leitura KPI’s";
+    pt.kpi.reading.opening.description = "Guia curto para entender o que cada página do BI mostra, quais métricas observar e quando usar.";
+    pt.kpi.reading.opening.operationalContext = "Contexto operacional: interpretação rápida das 3 páginas oficiais do dashboard.";
+
+    pt.kpi.reading.nav.label = "Navegação interna do módulo";
+    pt.kpi.reading.nav.dashboard = "KPI Dashboard";
+    pt.kpi.reading.nav.reading = "Leitura KPI’s";
+
+    pt.kpi.reading.labels.forWhat = "Para que serve";
+    pt.kpi.reading.labels.watch = "O que olhar";
+    pt.kpi.reading.labels.whenToUse = "Quando usar";
+
+    pt.kpi.reading.pages.title = "Leitura das 3 páginas oficiais do BI";
+    pt.kpi.reading.pages.description = "Siga esta sequência para leitura rápida: visão global, qualidade de dados e gestão da equipe.";
+
+    pt.kpi.reading.pages.executive.order = "Página 1";
+    pt.kpi.reading.pages.executive.title = "Visão Executiva Global";
+    pt.kpi.reading.pages.executive.forWhat = "Leitura macro da saúde da operação.";
+    pt.kpi.reading.pages.executive.watch.totalTickets = "Total de tickets";
+    pt.kpi.reading.pages.executive.watch.slaCompliance = "Cumprimento de SLA";
+    pt.kpi.reading.pages.executive.watch.mtts = "MTTS";
+    pt.kpi.reading.pages.executive.watch.mtfc = "MTFC";
+    pt.kpi.reading.pages.executive.watch.csat = "CSAT";
+    pt.kpi.reading.pages.executive.watch.regionalComparison = "Comparação regional";
+    pt.kpi.reading.pages.executive.when.executiveReading = "Leitura executiva";
+    pt.kpi.reading.pages.executive.when.regionalComparison = "Comparação entre regiões";
+    pt.kpi.reading.pages.executive.when.globalTracking = "Acompanhamento global da operação";
+
+    pt.kpi.reading.pages.dataGovernance.order = "Página 2";
+    pt.kpi.reading.pages.dataGovernance.title = "Governança de Dados";
+    pt.kpi.reading.pages.dataGovernance.forWhat = "Acompanhar qualidade e completude da base.";
+    pt.kpi.reading.pages.dataGovernance.watch.requiredCompletion = "Completude dos campos obrigatórios";
+    pt.kpi.reading.pages.dataGovernance.watch.failedTickets = "Tickets com falhas";
+    pt.kpi.reading.pages.dataGovernance.watch.operationalRisk = "Tickets com risco operacional";
+    pt.kpi.reading.pages.dataGovernance.watch.fieldQuality = "Qualidade por campo";
+    pt.kpi.reading.pages.dataGovernance.watch.regionQuality = "Qualidade por região";
+    pt.kpi.reading.pages.dataGovernance.when.qualityReview = "Revisão de qualidade de dados";
+    pt.kpi.reading.pages.dataGovernance.when.audit = "Auditoria de preenchimento";
+    pt.kpi.reading.pages.dataGovernance.when.processCorrection = "Correção de processo";
+
+    pt.kpi.reading.pages.agentManagement.order = "Página 3";
+    pt.kpi.reading.pages.agentManagement.title = "Gestão de Agentes";
+    pt.kpi.reading.pages.agentManagement.forWhat = "Acompanhar produtividade e operação da equipe.";
+    pt.kpi.reading.pages.agentManagement.watch.openClosed = "Tickets abertos/fechados";
+    pt.kpi.reading.pages.agentManagement.watch.currentBacklog = "Fila de pendências atual";
+    pt.kpi.reading.pages.agentManagement.watch.statusBacklog = "Fila de pendências por status";
+    pt.kpi.reading.pages.agentManagement.watch.productivity = "Produtividade";
+    pt.kpi.reading.pages.agentManagement.watch.slaPerformance = "SLA/desempenho";
+    pt.kpi.reading.pages.agentManagement.watch.agingRisk = "Envelhecimento/risco";
+    pt.kpi.reading.pages.agentManagement.watch.detailTable = "Tabela detalhada";
+    pt.kpi.reading.pages.agentManagement.when.operationRoutine = "Rotina operacional";
+    pt.kpi.reading.pages.agentManagement.when.teamFollowUp = "Acompanhamento da equipe";
+    pt.kpi.reading.pages.agentManagement.when.queueManagement = "Gestão da fila";
+
+    pt.kpi.reading.usage.title = "Como usar o BI";
+    pt.kpi.reading.usage.page1 = "Página 1 = visão global da operação.";
+    pt.kpi.reading.usage.page2 = "Página 2 = qualidade de dados e completude da base.";
+    pt.kpi.reading.usage.page3 = "Página 3 = gestão operacional da equipe.";
+
+    pt.kpi.reading.roles.title = "Leitura rápida por perfil";
+    pt.kpi.reading.roles.manager.label = "Gestor";
+    pt.kpi.reading.roles.manager.description = "Visão executiva global.";
+    pt.kpi.reading.roles.coordinator.label = "Coordenador";
+    pt.kpi.reading.roles.coordinator.description = "Governança de dados + gestão de agentes.";
+    pt.kpi.reading.roles.operations.label = "Operação/liderança local";
+    pt.kpi.reading.roles.operations.description = "Gestão de agentes + fila de pendências/status.";
+
+    pt.kpi.reading.stage.title = "Leitura KPI’s";
+    pt.kpi.reading.stage.description = "A página oficial de leitura está ativa com foco prático nas 3 páginas do BI.";
+    pt.kpi.reading.next.title = "Sequência oficial do dashboard";
+    pt.kpi.reading.next.executive = "Visão Executiva Global: leitura macro com total de tickets, cumprimento de SLA, MTTS, MTFC e CSAT.";
+    pt.kpi.reading.next.governance = "Governança de Dados: completude dos campos, falhas e risco operacional.";
+    pt.kpi.reading.next.agents = "Gestão de Agentes: produtividade, fila de pendências, SLA/desempenho e envelhecimento.";
+    pt.kpi.reading.cta.dashboard = "Ir para KPI Dashboard";
+
+    pt.kpi.legacy.meta.pageTitle = "Playbook Global - KPI Dashboard (URL Legada)";
+    pt.kpi.legacy.notice.tag = "URL de compatibilidade";
+    pt.kpi.legacy.notice.title = "Esta página foi consolidada no KPI Dashboard oficial";
+    pt.kpi.legacy.notice.description = "Use a home oficial para acessar o Power BI embutido e use Leitura KPI’s para orientação de interpretação.";
+    pt.kpi.legacy.notice.ctaDashboard = "Ir para KPI Dashboard";
+    pt.kpi.legacy.notice.ctaReading = "Ir para Leitura KPI’s";
+    pt.kpi.legacy.footer = "Playbook Global - KPI Dashboard (URL Legada)";
 })();

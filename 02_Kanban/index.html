@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="kanban.title">Playbook Global - Kanban Operacional</title>
+    <title data-i18n="kanban.main.opening.pageTitle">Playbook Global - Kanban Global</title>
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="./css/kanban.css">
 </head>
-<body class="module-page">
+<body class="module-page" data-kanban-page="main" data-disable-wayfinder="true">
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1 data-i18n="kanban.index.header.title">02 - Kanban Global</h1>
-                    <p data-i18n="kanban.index.header.subtitle">Leitura operacional do fluxo de tickets por status oficial</p>
+                    <h1 data-i18n="kanban.main.header.title">02 - Kanban Global</h1>
+                    <p data-i18n="kanban.main.header.subtitle">Leitura visual rápida dos tickets por status oficial</p>
                 </div>
                 <nav class="nav">
                     <ul>
@@ -33,94 +33,206 @@
         </div>
     </section>
 
-    <section class="kanban-highlight">
+    <section class="module-hero kanban-main-opening">
         <div class="container">
-                <div class="kanban-highlight-card module-context-card">
-                <p data-i18n="kanban.landing.highlight">
-                    O Kanban existe para tornar o status do ticket claro, orientar movimentacao correta e melhorar leitura de backlog, aging e SLA.
-                </p>
+            <div class="kanban-opening-shell">
+                <div class="kanban-opening-head">
+                    <p class="page-breadcrumb kanban-breadcrumb" data-i18n="kanban.main.opening.breadcrumb">Início &gt; Global Service &gt; Kanban Global</p>
+                    <div class="kanban-opening-context">
+                        <span class="inline-context-label" data-i18n="common.labels.epicGlobalService">Épico Global Service</span>
+                        <p class="kanban-opening-module" data-i18n="kanban.main.opening.moduleLabel">Módulo: Kanban Global</p>
+                        <p class="kanban-opening-operational" data-i18n="kanban.main.opening.operationalContext">Contexto operacional: leitura rápida para posicionar tickets no status correto e enxergar fila real.</p>
+                    </div>
+                </div>
+                <div class="kanban-opening-main">
+                    <h2 data-i18n="kanban.main.opening.title">Kanban Global</h2>
+                    <p data-i18n="kanban.main.opening.description">Página única para leitura visual do fluxo: status oficiais, transições essenciais, gargalos operacionais e erros que distorcem backlog e aging.</p>
+                </div>
+                <nav class="kanban-main-nav" data-kanban-anchor-nav data-i18n-aria-label="kanban.main.nav.label">
+                    <p class="kanban-main-nav-label" data-i18n="kanban.main.nav.label">Navegação interna do módulo</p>
+                    <div class="kanban-main-nav-links">
+                        <a href="#quadro-kanban" class="kanban-main-nav-link" data-i18n="kanban.main.nav.board">Quadro Kanban</a>
+                        <a href="#transicoes" class="kanban-main-nav-link" data-i18n="kanban.main.nav.transitions">Transições</a>
+                        <a href="#leitura-operacional" class="kanban-main-nav-link" data-i18n="kanban.main.nav.operations">Leitura Operacional</a>
+                        <a href="#erros-comuns" class="kanban-main-nav-link" data-i18n="kanban.main.nav.mistakes">Erros Comuns</a>
+                    </div>
+                </nav>
             </div>
         </div>
     </section>
 
-    <section class="module-nav">
-        <div class="container" data-kanban-nav></div>
-    </section>
-
-    <main>
-        <section class="about">
+    <main class="kanban-main-layout">
+        <section class="modules kanban-main-board" id="quadro-kanban">
             <div class="container">
-                <h2 data-i18n="kanban.landing.overview.title">Visao geral do quadro Kanban</h2>
-                <p class="section-lead" data-i18n="kanban.landing.overview.description">
-                    O quadro oficial organiza a jornada do ticket em seis status padronizados. Cada movimento deve refletir o estado real do atendimento, sem atalhos e sem uso de status generico.
-                </p>
-                <div class="executive-card short-rule-card">
-                    <p class="flow-note" data-i18n="kanban.landing.overview.rule">
-                        Regra central: movimentacao formal entre status e exclusiva dos agentes de suporte tecnico interno.
-                    </p>
-                </div>
+                <article class="kanban-board-shell">
+                    <header class="kanban-board-header">
+                        <p class="kanban-board-kicker" data-i18n="kanban.main.board.kicker">Quadro operacional oficial</p>
+                        <h3 data-i18n="kanban.main.board.title">Quadro Kanban com os 7 status oficiais</h3>
+                        <p data-i18n="kanban.main.board.description">Cada coluna mostra somente o que importa para decidir rapidamente onde o ticket deve estar.</p>
+                    </header>
+
+                    <div class="kanban-board-scroll" role="region" data-i18n-aria-label="kanban.main.board.title">
+                        <div class="kanban-board-track">
+                            <article class="kb-status-card is-open">
+                                <h4 data-i18n="kanban.main.statuses.open.name">Aberto</h4>
+                                <dl>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.goalLabel">Objetivo</dt>
+                                        <dd data-i18n="kanban.main.statuses.open.purpose">Registrar e qualificar o ticket para iniciar a tratativa.</dd>
+                                    </div>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.whenLabel">Quando usar</dt>
+                                        <dd data-i18n="kanban.main.statuses.open.when">Quando o ticket acabou de entrar e ainda não iniciou ação técnica.</dd>
+                                    </div>
+                                </dl>
+                            </article>
+
+                            <article class="kb-status-card is-in-progress">
+                                <h4 data-i18n="kanban.main.statuses.inProgress.name">Em atendimento</h4>
+                                <dl>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.goalLabel">Objetivo</dt>
+                                        <dd data-i18n="kanban.main.statuses.inProgress.purpose">Conduzir análise e execução técnica ativa.</dd>
+                                    </div>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.whenLabel">Quando usar</dt>
+                                        <dd data-i18n="kanban.main.statuses.inProgress.when">Quando existe atuação direta do time no ticket.</dd>
+                                    </div>
+                                </dl>
+                            </article>
+
+                            <article class="kb-status-card is-waiting-customer">
+                                <h4 data-i18n="kanban.main.statuses.waitingCustomer.name">Aguardando Cliente</h4>
+                                <dl>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.goalLabel">Objetivo</dt>
+                                        <dd data-i18n="kanban.main.statuses.waitingCustomer.purpose">Aguardar retorno ou ação do cliente para avançar.</dd>
+                                    </div>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.whenLabel">Quando usar</dt>
+                                        <dd data-i18n="kanban.main.statuses.waitingCustomer.when">Quando o próximo passo depende objetivamente do cliente.</dd>
+                                    </div>
+                                </dl>
+                            </article>
+
+                            <article class="kb-status-card is-waiting-parts">
+                                <h4 data-i18n="kanban.main.statuses.waitingParts.name">Aguardando Peça</h4>
+                                <dl>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.goalLabel">Objetivo</dt>
+                                        <dd data-i18n="kanban.main.statuses.waitingParts.purpose">Aguardar peça, material ou logística para continuidade.</dd>
+                                    </div>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.whenLabel">Quando usar</dt>
+                                        <dd data-i18n="kanban.main.statuses.waitingParts.when">Quando a execução depende de item físico para seguir.</dd>
+                                    </div>
+                                </dl>
+                            </article>
+
+                            <article class="kb-status-card is-waiting-third-party">
+                                <h4 data-i18n="kanban.main.statuses.waitingThirdParty.name">Aguardando Terceiro / Visita Técnica</h4>
+                                <dl>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.goalLabel">Objetivo</dt>
+                                        <dd data-i18n="kanban.main.statuses.waitingThirdParty.purpose">Aguardar atuação de terceiro ou visita técnica responsável.</dd>
+                                    </div>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.whenLabel">Quando usar</dt>
+                                        <dd data-i18n="kanban.main.statuses.waitingThirdParty.when">Quando o ticket depende de assistência técnica/terceiro, interno ou externo.</dd>
+                                    </div>
+                                </dl>
+                            </article>
+
+                            <article class="kb-status-card is-resolved">
+                                <h4 data-i18n="kanban.main.statuses.resolved.name">Resolvido</h4>
+                                <dl>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.goalLabel">Objetivo</dt>
+                                        <dd data-i18n="kanban.main.statuses.resolved.purpose">Registrar solução aplicada antes do encerramento definitivo.</dd>
+                                    </div>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.whenLabel">Quando usar</dt>
+                                        <dd data-i18n="kanban.main.statuses.resolved.when">Quando a tratativa terminou, mas ainda está em validação de fechamento.</dd>
+                                    </div>
+                                </dl>
+                            </article>
+
+                            <article class="kb-status-card is-closed">
+                                <h4 data-i18n="kanban.main.statuses.closed.name">Fechado</h4>
+                                <dl>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.goalLabel">Objetivo</dt>
+                                        <dd data-i18n="kanban.main.statuses.closed.purpose">Formalizar o encerramento final do ticket.</dd>
+                                    </div>
+                                    <div>
+                                        <dt data-i18n="kanban.main.board.whenLabel">Quando usar</dt>
+                                        <dd data-i18n="kanban.main.statuses.closed.when">Quando o ticket já passou por Resolvido e não possui ação pendente.</dd>
+                                    </div>
+                                </dl>
+                            </article>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <section class="modules">
+        <section class="kanban-assist-area">
             <div class="container">
-                <h2 data-i18n="kanban.landing.statusStructure.title">Estrutura oficial dos status</h2>
-                <div class="status-sequence-grid" data-kanban-status-order></div>
-            </div>
-        </section>
+                <div class="kanban-assist-stack">
+                    <article id="transicoes" class="kanban-transitions-shell kanban-assist-card">
+                        <h3 data-i18n="kanban.main.transitions.title">Transições</h3>
+                        <p data-i18n="kanban.main.transitions.description">Lógica base de movimentação do ticket no Kanban.</p>
+                        <p data-i18n="kanban.main.transitions.entryFlow">Entrada -> Aberto -> Em atendimento</p>
 
-        <section class="modules lane-section">
-            <div class="container">
-                <h2 data-i18n="kanban.landing.visualReading.title">Leitura visual: trabalho ativo x espera</h2>
-                <div class="lane-grid">
-                    <article class="lane-card lane-active">
-                        <h3 data-i18n="kanban.landing.visualReading.active.title">Trabalho ativo</h3>
-                        <p data-i18n="kanban.landing.visualReading.active.description">Status em que o time esta executando acao direta no ticket.</p>
-                        <ul data-kanban-active-statuses></ul>
-                    </article>
-                    <article class="lane-card lane-waiting">
-                        <h3 data-i18n="kanban.landing.visualReading.waiting.title">Em espera</h3>
-                        <p data-i18n="kanban.landing.visualReading.waiting.description">Status em que o proximo passo depende de terceiros ou de condicao externa.</p>
-                        <ul data-kanban-waiting-statuses></ul>
-                    </article>
-                </div>
-            </div>
-        </section>
+                        <div class="kb-transition-rail">
+                            <span class="kb-transition-node is-open" data-i18n="kanban.main.statuses.open.name">Aberto</span>
+                            <span class="kb-flow-arrow" aria-hidden="true">&rarr;</span>
+                            <span class="kb-transition-node is-in-progress" data-i18n="kanban.main.statuses.inProgress.name">Em atendimento</span>
+                            <span class="kb-flow-arrow" aria-hidden="true">&rarr;</span>
+                            <span class="kb-transition-node is-resolved" data-i18n="kanban.main.statuses.resolved.name">Resolvido</span>
+                            <span class="kb-flow-arrow" aria-hidden="true">&rarr;</span>
+                            <span class="kb-transition-node is-closed" data-i18n="kanban.main.statuses.closed.name">Fechado</span>
+                        </div>
 
-        <section class="modules">
-            <div class="container">
-                <h2 data-i18n="kanban.landing.flowReading.title">Leitura operacional do fluxo</h2>
-                <div class="flow-row">
-                    <span data-i18n="kanban.landing.flowReading.sequence.open">Aberto</span>
-                    <span class="arrow">></span>
-                    <span data-i18n="kanban.landing.flowReading.sequence.inProgress1">Em Atendimento</span>
-                    <span class="arrow">></span>
-                    <span data-i18n="kanban.landing.flowReading.sequence.waiting">Aguardando</span>
-                    <span class="arrow">></span>
-                    <span data-i18n="kanban.landing.flowReading.sequence.inProgress2">Em Atendimento</span>
-                    <span class="arrow">></span>
-                    <span data-i18n="kanban.landing.flowReading.sequence.closed">Fechado</span>
-                </div>
-                <p class="flow-caption" data-i18n="kanban.landing.flowReading.caption">
-                    A leitura acima mostra o ciclo base: ativa o atendimento, registra esperas reais e retorna para execucao ate o fechamento formal.
-                </p>
-            </div>
-        </section>
+                        <div class="kb-transition-branches">
+                            <p data-i18n="kanban.main.transitions.branchLabel">A partir de Em atendimento, o ticket pode ir para:</p>
+                            <div class="kb-transition-branch-list">
+                                <span class="kb-transition-node is-waiting-customer" data-i18n="kanban.main.transitions.branchCustomer">Aguardando Cliente</span>
+                                <span class="kb-transition-node is-waiting-parts" data-i18n="kanban.main.transitions.branchParts">Aguardando Peça</span>
+                                <span class="kb-transition-node is-waiting-third-party" data-i18n="kanban.main.transitions.branchThirdParty">Aguardando Terceiro / Visita Técnica</span>
+                                <span class="kb-transition-node is-resolved" data-i18n="kanban.main.transitions.branchResolved">Resolvido</span>
+                            </div>
+                        </div>
 
-        <section class="modules">
-            <div class="container">
-                <h2 data-i18n="kanban.landing.navigation.title">Navegacao essencial do módulo</h2>
-                <div class="modules-grid compact-modules-grid">
-                    <article class="module-card">
-                        <h3 data-i18n="kanban.landing.navigation.statusObjectives.title">Status e Objetivos</h3>
-                        <p data-i18n="kanban.landing.navigation.statusObjectives.description">Objetivo, permanencia correta e risco de uso incorreto de cada coluna.</p>
-                        <a class="btn-module" href="estrutura.html" data-i18n="common.buttons.open">Abrir</a>
+                        <ul class="kb-transition-notes">
+                            <li data-i18n="kanban.main.transitions.notes.resolveNotClose">Resolver não é fechar.</li>
+                            <li data-i18n="kanban.main.transitions.notes.waitingMustBeReal">Ticket parado deve ficar no status de espera correto.</li>
+                            <li data-i18n="kanban.main.transitions.notes.waitingReflectsDependency">Status de espera existem para refletir dependência real.</li>
+                        </ul>
                     </article>
-                    <article class="module-card">
-                        <h3 data-i18n="kanban.landing.navigation.rulesManagement.title">Regras e Gestao</h3>
-                        <p data-i18n="kanban.landing.navigation.rulesManagement.description">Passagens esperadas, movimentos a evitar e leitura gerencial do quadro.</p>
-                        <a class="btn-module" href="regras.html" data-i18n="common.buttons.open">Abrir</a>
-                    </article>
+
+                    <div class="kanban-support-grid">
+                        <article id="leitura-operacional" class="kanban-support-shell kanban-support-operations kanban-assist-card">
+                            <h3 data-i18n="kanban.main.operations.title">Leitura Operacional</h3>
+                            <ul>
+                                <li data-i18n="kanban.main.operations.backlog">Backlog não é só volume: inclui ticket parado ou mal classificado.</li>
+                                <li data-i18n="kanban.main.operations.aging">Aging piora quando o ticket permanece no status incorreto.</li>
+                                <li data-i18n="kanban.main.operations.bottlenecks">O quadro Kanban revela Gargalos e dependências do atendimento.</li>
+                                <li data-i18n="kanban.main.operations.flowAndSla">Status correto melhora fluxo, SLA e leitura operacional.</li>
+                            </ul>
+                        </article>
+
+                        <article id="erros-comuns" class="kanban-support-shell kanban-support-mistakes kanban-assist-card">
+                            <h3 data-i18n="kanban.main.mistakes.title">Erros Comuns</h3>
+                            <ul>
+                                <li data-i18n="kanban.main.mistakes.waitingCustomer">Não deixar ticket em Em atendimento quando está aguardando cliente.</li>
+                                <li data-i18n="kanban.main.mistakes.waitingParts">Não deixar ticket em Em atendimento quando está aguardando peça.</li>
+                                <li data-i18n="kanban.main.mistakes.maskQueue">Não usar status errado para mascarar fila.</li>
+                                <li data-i18n="kanban.main.mistakes.skipResolved">Não fechar ticket diretamente sem passar por Resolvido.</li>
+                                <li data-i18n="kanban.main.mistakes.realStatus">O status deve refletir a situação real do ticket.</li>
+                            </ul>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -128,7 +240,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p data-i18n="kanban.index.footer">Playbook Global - Módulo 02 Kanban</p>
+            <p data-i18n="kanban.main.footer">Playbook Global - Módulo 02 Kanban</p>
         </div>
     </footer>
 
@@ -142,6 +254,3 @@
     <script src="./js/kanban.js"></script>
 </body>
 </html>
-
-
-

@@ -1,5 +1,5 @@
 (function () {
-    const FALLBACK_KANBAN_DATA = {
+    const OFFICIAL_KANBAN_DATA = {
         nav: [
             { label: "Visao Geral", href: "index.html" },
             { label: "Status e Objetivos", href: "estrutura.html" },
@@ -34,15 +34,6 @@
                 risk: "Espera sem contexto reduz controle de aging e SLA."
             },
             {
-                key: "aguardando_assistencia_tecnica",
-                title: "Aguardando Assistencia Tecnica",
-                lane: "espera",
-                objective: "Aguardar acao da assistencia tecnica.",
-                when: "Quando a resolucao depende de atuacao tecnica externa/interna dedicada.",
-                correctStay: "Com solicitacao registrada e acompanhamento da previsao.",
-                risk: "Sem registro claro, o ticket some da leitura de gargalo."
-            },
-            {
                 key: "aguardando_peca",
                 title: "Aguardando Peca",
                 lane: "espera",
@@ -52,11 +43,29 @@
                 risk: "Sem controle, aumenta aging sem visibilidade de causa."
             },
             {
+                key: "aguardando_terceiro",
+                title: "Aguardando Terceiro / Visita Tecnica",
+                lane: "espera",
+                objective: "Aguardar atuacao de terceiro ou visita tecnica responsavel.",
+                when: "Quando o ticket depende de assistencia tecnica/terceiro, interno ou externo.",
+                correctStay: "Com dependencia registrada e previsao de retorno acompanhada.",
+                risk: "Sem controle de dependencia, o gargalo fica invisivel."
+            },
+            {
+                key: "resolvido",
+                title: "Resolvido",
+                lane: "final",
+                objective: "Registrar solucao aplicada antes do encerramento definitivo.",
+                when: "Quando a tratativa terminou, mas ainda esta em validacao de fechamento.",
+                correctStay: "Com resumo claro da solucao e evidencias da conclusao.",
+                risk: "Pular esta etapa distorce leitura de retrabalho e qualidade."
+            },
+            {
                 key: "fechado",
                 title: "Fechado",
                 lane: "final",
                 objective: "Formalizar encerramento com registro minimo de resolucao.",
-                when: "Apos concluir atendimento e validar condicoes de fechamento.",
+                when: "Apos passar por Resolvido e validar condicoes de fechamento.",
                 correctStay: "Ticket concluido, com trilha de encerramento consistente.",
                 risk: "Fechar cedo distorce SLA e gera retrabalho por reabertura."
             }
@@ -65,25 +74,27 @@
             { pt: "Aberto", en: "Open", es: "Abierto" },
             { pt: "Em Atendimento", en: "In Service", es: "En Atencion" },
             { pt: "Aguardando Cliente", en: "Waiting for Customer", es: "En Espera del Cliente" },
-            { pt: "Aguardando Assistencia Tecnica", en: "Waiting for Technical Assistance", es: "En Espera de Asistencia Tecnica" },
             { pt: "Aguardando Peca", en: "Waiting for Parts", es: "En Espera de Repuestos" },
+            { pt: "Aguardando Terceiro / Visita Tecnica", en: "Waiting for Third Party / Technical Visit", es: "En Espera de Tercero / Visita Tecnica" },
+            { pt: "Resolvido", en: "Resolved", es: "Resuelto" },
             { pt: "Fechado", en: "Closed", es: "Cerrado" }
         ],
         validTransitions: [
-            "Aberto -> Em Atendimento",
+            "Entrada -> Aberto -> Em Atendimento",
             "Em Atendimento -> Aguardando Cliente",
-            "Em Atendimento -> Aguardando Assistencia Tecnica",
             "Em Atendimento -> Aguardando Peca",
+            "Em Atendimento -> Aguardando Terceiro / Visita Tecnica",
+            "Em Atendimento -> Resolvido",
             "Aguardando Cliente -> Em Atendimento",
-            "Aguardando Assistencia Tecnica -> Em Atendimento",
             "Aguardando Peca -> Em Atendimento",
-            "Em Atendimento -> Fechado"
+            "Aguardando Terceiro / Visita Tecnica -> Em Atendimento",
+            "Resolvido -> Fechado"
         ],
         avoidMoves: [
             "Aberto -> Fechado sem tratamento real",
             "Usar Em Atendimento sem acao efetiva",
             "Mover para espera sem contexto minimo",
-            "Fechar ticket sem resumo de resolucao",
+            "Fechar ticket sem passar por Resolvido",
             "Movimentacao por perfis fora do suporte tecnico interno"
         ],
         managementSignals: [
@@ -94,7 +105,7 @@
             },
             {
                 topic: "Gargalo de espera",
-                reading: "Concentracao em Aguardando Cliente, AT ou Peca.",
+                reading: "Concentracao em Aguardando Cliente, Terceiro/Visita Tecnica ou Peca.",
                 action: "Atuar no bloqueio dominante e monitorar tempo de espera."
             },
             {
@@ -116,7 +127,7 @@
         }
     };
 
-    const KANBAN_DATA = i18n.t("kanban.data", FALLBACK_KANBAN_DATA);
+    const KANBAN_DATA = i18n.t("kanban.data", OFFICIAL_KANBAN_DATA);
 
     function getCurrentPage() {
         const parts = window.location.pathname.split("/");
@@ -255,7 +266,105 @@
             .join("");
     }
 
+    function setupMainAnchorNav() {
+        const body = document.body;
+        if (!body || body.getAttribute("data-kanban-page") !== "main") {
+            return;
+        }
+
+        const nav = document.querySelector("[data-kanban-anchor-nav]");
+        if (!nav) {
+            return;
+        }
+
+        const links = Array.from(nav.querySelectorAll("a[href^='#']"));
+        if (!links.length) {
+            return;
+        }
+
+        const targetMap = links
+            .map((link) => {
+                const hash = link.getAttribute("href");
+                if (!hash) {
+                    return null;
+                }
+
+                const section = document.querySelector(hash);
+                if (!section) {
+                    return null;
+                }
+
+                return { hash: hash.toLowerCase(), link: link, section: section };
+            })
+            .filter(Boolean);
+
+        if (!targetMap.length) {
+            return;
+        }
+
+        function activate(hash) {
+            const normalized = (hash || "").toLowerCase();
+            targetMap.forEach((item) => {
+                const isActive = item.hash === normalized;
+                item.link.classList.toggle("is-active", isActive);
+                if (isActive) {
+                    item.link.setAttribute("aria-current", "location");
+                } else {
+                    item.link.removeAttribute("aria-current");
+                }
+            });
+        }
+
+        targetMap.forEach((item) => {
+            item.link.addEventListener("click", function (event) {
+                event.preventDefault();
+                item.section.scrollIntoView({ behavior: "smooth", block: "start" });
+                if (window.history && window.history.replaceState) {
+                    window.history.replaceState(null, "", item.hash);
+                } else {
+                    window.location.hash = item.hash;
+                }
+                activate(item.hash);
+            });
+        });
+
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver(
+                function (entries) {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            activate("#" + entry.target.id);
+                        }
+                    });
+                },
+                {
+                    root: null,
+                    rootMargin: "-30% 0px -50% 0px",
+                    threshold: 0.01
+                }
+            );
+
+            targetMap.forEach((item) => observer.observe(item.section));
+        }
+
+        const initialHash = window.location.hash ? window.location.hash.toLowerCase() : targetMap[0].hash;
+        activate(initialHash);
+    }
+
+    function isMainPageRuntime() {
+        const body = document.body;
+        return !!body && body.getAttribute("data-kanban-page") === "main";
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
+        setupMainAnchorNav();
+
+        // Main page runs only the official single-page experience.
+        if (isMainPageRuntime()) {
+            return;
+        }
+
+        // Legacy/support pages keep isolated rendering with the official 7-status model.
         renderModuleNav();
         renderStatusOrder("[data-kanban-status-order]");
         renderStatusByLane("[data-kanban-active-statuses]", "ativo");

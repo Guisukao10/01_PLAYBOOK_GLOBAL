@@ -1,23 +1,11 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
-    addHoverEffects();
-    setupButtonInteractions();
+const POWER_BI_URL =
+    "https://app.powerbi.com/view?r=eyJrIjoiMGVmMTQwYjMtZDI5OS00NWRhLTk2M2QtZTgwNzY3NWM2YmZiIiwidCI6ImE2NzRhMDgxLTBjNTMtNGQyZC1hZWQ2LWRiZjgwNmY5NWExYiJ9";
+
+document.addEventListener("DOMContentLoaded", function () {
+    const frame = document.getElementById("dashboardBiFrame");
+    if (!frame) return;
+
+    if (frame.src !== POWER_BI_URL) {
+        frame.src = POWER_BI_URL;
+    }
 });
-
-function addHoverEffects() {
-    const cards = document.querySelectorAll(".pilar, .dimensao-card, .navegacao-card");
-    cards.forEach(function (card) {
-        card.addEventListener("mouseenter", function () {
-            this.style.transition = "all 0.3s ease";
-        });
-    });
-}
-
-function setupButtonInteractions() {
-    const buttons = document.querySelectorAll(".btn");
-    buttons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            // Mantém interação para eventuais métricas de clique do módulo KPI.
-        });
-    });
-}
-

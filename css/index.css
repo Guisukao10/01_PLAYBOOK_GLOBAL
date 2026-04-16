@@ -353,6 +353,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(226px, 1fr));
     gap: 0.8rem;
+    grid-auto-rows: 1fr;
 }
 
 .module-card {
@@ -365,6 +366,7 @@
     background: #ffffff;
     box-shadow: var(--shadow-xs);
     transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    height: 100%;
 }
 
 .module-card:hover {
