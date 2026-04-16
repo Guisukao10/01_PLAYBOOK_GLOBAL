@@ -235,7 +235,10 @@ function normalizeHeaderNavigation() {
 }
 
 function getEpicContextMeta(context, i18n) {
-    const isZohoDesk = context && context.folder === "/09_operacao_zoho_desk";
+    const isZohoDesk = context && (
+        context.folder === "/09_operacao_zoho_desk" ||
+        context.folder === "/09_zoho_desk"
+    );
 
     return {
         sectionClass: isZohoDesk ? "is-zoho-desk" : "is-global-service",
@@ -508,6 +511,7 @@ function getModuleContext(pathname) {
         { folder: "/05_campos_obrigatorios" },
         { folder: "/06_governanca" },
         { folder: "/07_canais_de_entrada" },
+        { folder: "/09_zoho_desk" },
         { folder: "/09_operacao_zoho_desk" }
     ];
 

@@ -244,6 +244,35 @@
     color: #34597f;
 }
 
+.quick-card.is-zoho-desk {
+    border-color: rgba(150, 204, 168, 0.92);
+    background: linear-gradient(162deg, #ffffff, #eef9f2);
+}
+
+.quick-card.is-zoho-desk:hover {
+    border-color: rgba(78, 150, 104, 0.74);
+    box-shadow: 0 13px 24px rgba(22, 88, 57, 0.18);
+}
+
+.quick-card.is-zoho-desk:focus-visible {
+    border-color: rgba(67, 132, 89, 0.82);
+    box-shadow: 0 0 0 3px rgba(63, 129, 87, 0.2), 0 10px 20px rgba(22, 88, 57, 0.18);
+}
+
+.quick-card.is-zoho-desk h3 {
+    color: #20553a;
+}
+
+.quick-card.is-zoho-desk p {
+    color: #2d6246;
+}
+
+.quick-card.is-zoho-desk .quick-pill {
+    border-color: rgba(135, 193, 155, 0.75);
+    background: rgba(230, 245, 236, 0.95);
+    color: #215b3d;
+}
+
 .quick-card.is-bi {
     background: linear-gradient(162deg, #f6f9ff, #e8f0fc);
     border-color: rgba(139, 171, 206, 0.85);
@@ -274,6 +303,14 @@
     border-color: rgba(150, 186, 228, 0.62);
     background: rgba(216, 231, 248, 0.9);
     color: #2a5889;
+}
+
+.home-nav a#navZohoDesk.active,
+.home-nav a#navZohoDesk[aria-current='page'] {
+    background: #eaf7ef;
+    color: #1f5b3d;
+    border-color: #b9dcc6;
+    box-shadow: 0 0 0 1px rgba(47, 138, 88, 0.16) inset;
 }
 
 .quick-card.is-coming-soon {
@@ -481,15 +518,124 @@
     color: #2f6849;
 }
 
+.macro-panel.is-zoho-desk .macro-entry-btn {
+    color: #21583a;
+    border-color: #b9dcc6;
+    background: #f1faf5;
+    box-shadow: 0 6px 14px rgba(25, 91, 58, 0.12);
+}
+
+.macro-panel.is-zoho-desk .macro-entry-btn:hover {
+    border-color: #95c8a8;
+    background: #e8f6ee;
+    box-shadow: 0 10px 20px rgba(24, 86, 56, 0.16);
+}
+
+.macro-panel.is-zoho-desk .macro-entry-btn:focus-visible {
+    outline: none;
+    border-color: #86be9a;
+    box-shadow: 0 0 0 3px rgba(47, 138, 88, 0.19), 0 10px 20px rgba(24, 86, 56, 0.16);
+}
+
+.zoho-main-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 0.14rem;
+}
+
+.zoho-main-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    border-radius: 16px;
+    border: 1px solid rgba(128, 185, 145, 0.66);
+    background: linear-gradient(160deg, #ffffff, #f2fbf5);
+    padding: 1.2rem 1.15rem;
+    min-height: 252px;
+    box-shadow: var(--shadow-xs);
+    text-decoration: none;
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.zoho-main-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(24, 88, 56, 0.18);
+    border-color: rgba(85, 155, 109, 0.72);
+}
+
+.zoho-main-card:focus-visible {
+    outline: none;
+    border-color: rgba(66, 131, 88, 0.86);
+    box-shadow: 0 0 0 3px rgba(65, 134, 92, 0.18), 0 12px 24px rgba(24, 88, 56, 0.16);
+}
+
+.zoho-main-card h4 {
+    margin: 0;
+    font-size: clamp(1.06rem, 1.3vw, 1.2rem);
+    line-height: 1.34;
+    color: #21583b;
+    text-wrap: balance;
+}
+
+.zoho-main-card p {
+    margin: 0;
+    font-size: 0.93rem;
+    line-height: 1.56;
+    color: #2f6348;
+}
+
+.zoho-tutorial-explainer {
+    border-top: 1px solid rgba(174, 211, 186, 0.78);
+    padding-top: 0.95rem;
+    display: grid;
+    gap: 0.46rem;
+}
+
+.zoho-tutorial-explainer h4 {
+    margin: 0;
+    font-size: 0.92rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.035em;
+    color: #225b3d;
+}
+
+.zoho-tutorial-explainer p {
+    margin: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(173, 214, 186, 0.7);
+    background: rgba(243, 251, 246, 0.95);
+    padding: 0.9rem 0.92rem;
+    color: #2d5f46;
+    font-size: 0.9rem;
+    line-height: 1.58;
+    max-width: 72ch;
+}
+
 .macro-panel.is-zoho-desk .module-card.is-available {
     border-color: rgba(86, 154, 109, 0.47);
     background: linear-gradient(160deg, #ffffff, #f0f9f4);
+}
+
+.macro-panel.is-zoho-desk .module-card.is-available:focus-within {
+    border-color: rgba(72, 140, 96, 0.6);
+    box-shadow: 0 0 0 3px rgba(69, 135, 92, 0.18), 0 12px 22px rgba(19, 79, 50, 0.13);
 }
 
 .macro-panel.is-zoho-desk .module-card.is-available .btn-module {
     background: linear-gradient(136deg, #2f8a58, #246d44);
     border-color: rgba(30, 94, 59, 0.72);
     box-shadow: 0 7px 14px rgba(27, 90, 57, 0.2);
+}
+
+.macro-panel.is-zoho-desk .module-card.is-available .btn-module:hover {
+    box-shadow: 0 11px 21px rgba(22, 77, 48, 0.27);
+}
+
+.macro-panel.is-zoho-desk .module-card.is-available .btn-module:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(47, 138, 88, 0.22), 0 11px 21px rgba(22, 77, 48, 0.24);
 }
 
 .platform-value .container {
@@ -658,6 +804,10 @@
 
     .modules-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .zoho-main-cards {
+        grid-template-columns: 1fr;
     }
 }
 

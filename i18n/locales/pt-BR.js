@@ -2225,12 +2225,6 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
     pt.home.quickAccess.items.globalService.title = "Global Service";
     pt.home.quickAccess.items.globalService.desc = "Entenda o padrão global de atendimento, as regras operacionais, a governança e a estrutura base do service.";
 
-    pt.home.quickAccess.items.newZoho = pt.home.quickAccess.items.newZoho || {};
-    pt.home.quickAccess.items.newZoho.pill = "Onboarding";
-    pt.home.quickAccess.items.newZoho.title = "Novo no Zoho?";
-    pt.home.quickAccess.items.newZoho.desc = "Trilha de tutorial guiado para novos usuários. Conteúdo em manutenção e disponível em breve.";
-    pt.home.quickAccess.items.newZoho.status = "Disponível em breve";
-
     pt.home.quickAccess.items.zohoHelp = pt.home.quickAccess.items.zohoHelp || {};
     pt.home.quickAccess.items.zohoHelp.pill = "Orientação prática";
     pt.home.quickAccess.items.zohoHelp.title = "Dúvidas sobre Zoho?";
@@ -2242,15 +2236,54 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
     pt.home.quickAccess.items.bi.desc = "Acompanhe indicadores, desempenho e riscos operacionais após alinhar padrão e operação.";
 
     pt.home.quickAccess.items.tutorial = pt.home.quickAccess.items.tutorial || {};
-    pt.home.quickAccess.items.tutorial.pill = pt.home.quickAccess.items.newZoho.pill;
-    pt.home.quickAccess.items.tutorial.title = pt.home.quickAccess.items.newZoho.title;
-    pt.home.quickAccess.items.tutorial.desc = pt.home.quickAccess.items.newZoho.desc;
-    pt.home.quickAccess.items.tutorial.status = pt.home.quickAccess.items.newZoho.status;
+    pt.home.quickAccess.items.tutorial.pill = "Tutorial";
+    pt.home.quickAccess.items.tutorial.title = "Tutorial Zoho Desk";
+    pt.home.quickAccess.items.tutorial.desc = "Aprenda o uso operacional do Zoho Desk com guia prático para a rotina.";
+    pt.home.quickAccess.items.tutorial.status = "";
 
     pt.home.quickAccess.items.zohoDesk = pt.home.quickAccess.items.zohoDesk || {};
     pt.home.quickAccess.items.zohoDesk.pill = pt.home.quickAccess.items.zohoHelp.pill;
     pt.home.quickAccess.items.zohoDesk.title = pt.home.quickAccess.items.zohoHelp.title;
     pt.home.quickAccess.items.zohoDesk.desc = pt.home.quickAccess.items.zohoHelp.desc;
+
+    pt.home.axes = pt.home.axes || {};
+    pt.home.axes.zohoDesk = pt.home.axes.zohoDesk || {};
+    pt.home.axes.zohoDesk.badge = "ZOHO DESK";
+    pt.home.axes.zohoDesk.title = "Zoho Desk | Operação e Administração";
+    pt.home.axes.zohoDesk.desc = "Guias práticos para usar, registrar, responder clientes e administrar o Zoho Desk com consistência no modelo global.";
+    pt.home.axes.zohoDesk.cta = "Entrar no Zoho Desk";
+
+    pt.home.axes.zohoDesk.mainCards = pt.home.axes.zohoDesk.mainCards || {};
+    pt.home.axes.zohoDesk.mainCards.tutorial = pt.home.axes.zohoDesk.mainCards.tutorial || {};
+    pt.home.axes.zohoDesk.mainCards.tutorial.title = "Tutorial Zoho Desk";
+    pt.home.axes.zohoDesk.mainCards.tutorial.desc = "Aprenda a usar o Zoho Desk no dia a dia: tratar tickets, responder clientes, registrar informações, anexar evidências e aplicar corretamente status, prioridade e fechamento.";
+    pt.home.axes.zohoDesk.mainCards.tutorial.cta = "Acessar tutorial";
+    pt.home.axes.zohoDesk.mainCards.admin = pt.home.axes.zohoDesk.mainCards.admin || {};
+    pt.home.axes.zohoDesk.mainCards.admin.title = "Edição e Administração";
+    pt.home.axes.zohoDesk.mainCards.admin.desc = "Aprenda a editar e manter a estrutura do sistema: layouts, campos, regras, automações, distribuição e ajustes operacionais do Zoho Desk.";
+    pt.home.axes.zohoDesk.mainCards.admin.cta = "Acessar administração";
+
+    pt.home.axes.zohoDesk.summary = pt.home.axes.zohoDesk.summary || {};
+    pt.home.axes.zohoDesk.summary.tutorial = pt.home.axes.zohoDesk.summary.tutorial || {};
+    pt.home.axes.zohoDesk.summary.tutorial.title = "No Tutorial Zoho Desk";
+    pt.home.axes.zohoDesk.summary.tutorial.items = pt.home.axes.zohoDesk.summary.tutorial.items || {};
+    pt.home.axes.zohoDesk.summary.tutorial.items.gettingStarted = "Primeiros passos";
+    pt.home.axes.zohoDesk.summary.tutorial.items.handleTicket = "Como tratar um ticket";
+    pt.home.axes.zohoDesk.summary.tutorial.items.replyCustomer = "Como responder o cliente";
+    pt.home.axes.zohoDesk.summary.tutorial.items.documentEvidence = "Como registrar informações e evidências";
+    pt.home.axes.zohoDesk.summary.tutorial.items.statusPriorityClosure = "Status, prioridade e fechamento";
+    pt.home.axes.zohoDesk.summary.admin = pt.home.axes.zohoDesk.summary.admin || {};
+    pt.home.axes.zohoDesk.summary.admin.title = "Em Edição e Administração";
+    pt.home.axes.zohoDesk.summary.admin.items = pt.home.axes.zohoDesk.summary.admin.items || {};
+    pt.home.axes.zohoDesk.summary.admin.items.layoutsFields = "Layouts e campos";
+    pt.home.axes.zohoDesk.summary.admin.items.rulesAutomations = "Regras e automações";
+    pt.home.axes.zohoDesk.summary.admin.items.roundRobinDistribution = "Round Robin e distribuição";
+    pt.home.axes.zohoDesk.summary.admin.items.structuralAdjustments = "Ajustes estruturais";
+    pt.home.axes.zohoDesk.summary.admin.items.functionalEvolution = "Evolucao funcional";
+
+    pt.home.axes.zohoDesk.tutorialInfo = pt.home.axes.zohoDesk.tutorialInfo || {};
+    pt.home.axes.zohoDesk.tutorialInfo.title = "Como funciona o tutorial";
+    pt.home.axes.zohoDesk.tutorialInfo.text = "O tutorial Zoho Desk foi organizado para apoiar o uso pr\u00E1tico da ferramenta no dia a dia. O conte\u00FAdo parte dos primeiros passos na plataforma e avan\u00E7a para o tratamento de tickets, resposta ao cliente, registro de informa\u00E7\u00F5es, evid\u00EAncias, status, prioridade e fechamento. A ideia \u00E9 permitir uma navega\u00E7\u00E3o simples, por tema, para apoiar tanto o aprendizado inicial quanto a consulta r\u00E1pida durante a opera\u00E7\u00E3o.";
 })();
 
 (function () {
@@ -2419,3 +2452,4 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
     pt.kpi.legacy.notice.ctaReading = "Ir para Leitura KPI’s";
     pt.kpi.legacy.footer = "Playbook Global - KPI Dashboard (URL Legada)";
 })();
+

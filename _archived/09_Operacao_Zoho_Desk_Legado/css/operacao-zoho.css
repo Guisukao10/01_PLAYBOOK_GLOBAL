@@ -88,7 +88,7 @@
 }
 
 .zd-grid.cols-2 {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .zd-grid.cols-3 {
@@ -125,6 +125,29 @@
 .zd-card h3,
 .zd-card h4 {
     margin: 0;
+}
+
+.zd-main-card {
+    min-height: 280px;
+    justify-content: space-between;
+    padding: 1.45rem;
+    border-color: rgba(39, 96, 168, 0.28);
+    background: linear-gradient(165deg, #ffffff 0%, #eef5ff 100%);
+}
+
+.zd-main-card h3 {
+    font-size: 1.34rem;
+}
+
+.zd-main-card p {
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.zd-main-card .btn-module {
+    width: auto;
+    align-self: flex-start;
+    margin-top: 0.35rem;
 }
 
 .zd-card p {
@@ -277,6 +300,13 @@
 .zd-scope-card ul {
     padding-left: 1.1rem;
     margin-top: 0.35rem;
+}
+
+.zd-list-clean {
+    margin: 0.2rem 0 0;
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.32rem;
 }
 
 .zd-scope-operacao {
@@ -616,6 +646,14 @@
     }
 
     .zd-step-card .btn-module {
+        width: 100%;
+    }
+
+    .zd-main-card {
+        min-height: 0;
+    }
+
+    .zd-main-card .btn-module {
         width: 100%;
     }
 }

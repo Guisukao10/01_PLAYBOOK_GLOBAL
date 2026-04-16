@@ -13,10 +13,8 @@ const epicModules = {
   zoho_desk: {
     id: "zoho_desk",
     modules: [
-      { id: "automacoes", status: "coming_soon" },
-      { id: "round_robin", status: "coming_soon" },
-      { id: "regras_layout", status: "coming_soon" },
-      { id: "evolucao_zoho", status: "coming_soon" }
+      { id: "tutorial_zoho_desk", link: "./09_Zoho_Desk/01_Tutorial_Zoho_Desk/index.html", status: "available" },
+      { id: "edicao_administracao_zoho_desk", link: "./09_Zoho_Desk/02_Edicao_Administracao/index.html", status: "available" }
     ]
   }
 };

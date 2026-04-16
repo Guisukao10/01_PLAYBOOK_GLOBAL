@@ -1,0 +1,13 @@
+.admin-scope-list {
+    margin: 0;
+    padding: 1.1rem 1.3rem;
+    border: 1px solid var(--zoho-green-border);
+    border-radius: 14px;
+    background: linear-gradient(180deg, #ffffff, #f3faf6);
+    box-shadow: 0 8px 18px rgba(20, 79, 50, 0.08);
+    color: #2c6145;
+}
+
+.admin-scope-list li + li {
+    margin-top: 0.5rem;
+}

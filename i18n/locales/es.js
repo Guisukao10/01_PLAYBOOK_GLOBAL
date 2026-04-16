@@ -1439,12 +1439,6 @@ window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
     es.home.quickAccess.items.globalService.title = "Global Service";
     es.home.quickAccess.items.globalService.desc = "Comprende el estándar global de atención, las reglas operativas, la gobernanza y la estructura base del service.";
 
-    es.home.quickAccess.items.newZoho = es.home.quickAccess.items.newZoho || {};
-    es.home.quickAccess.items.newZoho.pill = "Onboarding";
-    es.home.quickAccess.items.newZoho.title = "¿Nuevo en Zoho?";
-    es.home.quickAccess.items.newZoho.desc = "Ruta de tutorial guiado para nuevos usuarios. El contenido está en mantenimiento y estará disponible pronto.";
-    es.home.quickAccess.items.newZoho.status = "Disponible pronto";
-
     es.home.quickAccess.items.zohoHelp = es.home.quickAccess.items.zohoHelp || {};
     es.home.quickAccess.items.zohoHelp.pill = "Guía práctica";
     es.home.quickAccess.items.zohoHelp.title = "¿Dudas sobre Zoho?";
@@ -1456,15 +1450,54 @@ window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
     es.home.quickAccess.items.bi.desc = "Monitorea indicadores, desempeño y riesgos operativos después de alinear estándar y operación.";
 
     es.home.quickAccess.items.tutorial = es.home.quickAccess.items.tutorial || {};
-    es.home.quickAccess.items.tutorial.pill = es.home.quickAccess.items.newZoho.pill;
-    es.home.quickAccess.items.tutorial.title = es.home.quickAccess.items.newZoho.title;
-    es.home.quickAccess.items.tutorial.desc = es.home.quickAccess.items.newZoho.desc;
-    es.home.quickAccess.items.tutorial.status = es.home.quickAccess.items.newZoho.status;
+    es.home.quickAccess.items.tutorial.pill = "Tutorial";
+    es.home.quickAccess.items.tutorial.title = "Tutorial Zoho Desk";
+    es.home.quickAccess.items.tutorial.desc = "Aprende el uso operativo de Zoho Desk con una guía práctica para la rutina.";
+    es.home.quickAccess.items.tutorial.status = "";
 
     es.home.quickAccess.items.zohoDesk = es.home.quickAccess.items.zohoDesk || {};
     es.home.quickAccess.items.zohoDesk.pill = es.home.quickAccess.items.zohoHelp.pill;
     es.home.quickAccess.items.zohoDesk.title = es.home.quickAccess.items.zohoHelp.title;
     es.home.quickAccess.items.zohoDesk.desc = es.home.quickAccess.items.zohoHelp.desc;
+
+    es.home.axes = es.home.axes || {};
+    es.home.axes.zohoDesk = es.home.axes.zohoDesk || {};
+    es.home.axes.zohoDesk.badge = "ZOHO DESK";
+    es.home.axes.zohoDesk.title = "Zoho Desk | Operación y Administración";
+    es.home.axes.zohoDesk.desc = "Guías prácticas para usar, registrar, responder a clientes y administrar Zoho Desk con consistencia dentro del modelo global.";
+    es.home.axes.zohoDesk.cta = "Entrar a Zoho Desk";
+
+    es.home.axes.zohoDesk.mainCards = es.home.axes.zohoDesk.mainCards || {};
+    es.home.axes.zohoDesk.mainCards.tutorial = es.home.axes.zohoDesk.mainCards.tutorial || {};
+    es.home.axes.zohoDesk.mainCards.tutorial.title = "Tutorial Zoho Desk";
+    es.home.axes.zohoDesk.mainCards.tutorial.desc = "Aprende a usar Zoho Desk en la operación diaria: tratar tickets, responder a clientes, registrar información, adjuntar evidencias y aplicar correctamente estados, prioridad y cierre.";
+    es.home.axes.zohoDesk.mainCards.tutorial.cta = "Abrir tutorial";
+    es.home.axes.zohoDesk.mainCards.admin = es.home.axes.zohoDesk.mainCards.admin || {};
+    es.home.axes.zohoDesk.mainCards.admin.title = "Edición y Administración";
+    es.home.axes.zohoDesk.mainCards.admin.desc = "Aprende a editar y mantener la estructura del sistema: layouts, campos, reglas, automatizaciones, distribución y ajustes operativos en Zoho Desk.";
+    es.home.axes.zohoDesk.mainCards.admin.cta = "Abrir administración";
+
+    es.home.axes.zohoDesk.summary = es.home.axes.zohoDesk.summary || {};
+    es.home.axes.zohoDesk.summary.tutorial = es.home.axes.zohoDesk.summary.tutorial || {};
+    es.home.axes.zohoDesk.summary.tutorial.title = "En el Tutorial Zoho Desk";
+    es.home.axes.zohoDesk.summary.tutorial.items = es.home.axes.zohoDesk.summary.tutorial.items || {};
+    es.home.axes.zohoDesk.summary.tutorial.items.gettingStarted = "Primeros pasos";
+    es.home.axes.zohoDesk.summary.tutorial.items.handleTicket = "Cómo tratar un ticket";
+    es.home.axes.zohoDesk.summary.tutorial.items.replyCustomer = "Cómo responder al cliente";
+    es.home.axes.zohoDesk.summary.tutorial.items.documentEvidence = "Cómo registrar información y evidencias";
+    es.home.axes.zohoDesk.summary.tutorial.items.statusPriorityClosure = "Estado, prioridad y cierre";
+    es.home.axes.zohoDesk.summary.admin = es.home.axes.zohoDesk.summary.admin || {};
+    es.home.axes.zohoDesk.summary.admin.title = "En Edición y Administración";
+    es.home.axes.zohoDesk.summary.admin.items = es.home.axes.zohoDesk.summary.admin.items || {};
+    es.home.axes.zohoDesk.summary.admin.items.layoutsFields = "Layouts y campos";
+    es.home.axes.zohoDesk.summary.admin.items.rulesAutomations = "Reglas y automatizaciones";
+    es.home.axes.zohoDesk.summary.admin.items.roundRobinDistribution = "Round robin y distribución";
+    es.home.axes.zohoDesk.summary.admin.items.structuralAdjustments = "Ajustes estructurales";
+    es.home.axes.zohoDesk.summary.admin.items.functionalEvolution = "Evolucion funcional";
+
+    es.home.axes.zohoDesk.tutorialInfo = es.home.axes.zohoDesk.tutorialInfo || {};
+    es.home.axes.zohoDesk.tutorialInfo.title = "C\u00F3mo funciona el tutorial";
+    es.home.axes.zohoDesk.tutorialInfo.text = "El tutorial de Zoho Desk fue organizado para apoyar el uso pr\u00E1ctico de la herramienta en la operaci\u00F3n diaria. El contenido comienza con los primeros pasos en la plataforma y avanza hacia el tratamiento de tickets, respuesta al cliente, registro de informaci\u00F3n, evidencias, estado, prioridad y cierre. La idea es permitir una navegaci\u00F3n simple por tema, \u00FAtil tanto para el aprendizaje inicial como para la consulta r\u00E1pida durante la operaci\u00F3n.";
 })();
 
 (function () {
@@ -1847,3 +1880,4 @@ window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
     es.kanban.main.mistakes.skipResolved = "No cerrar tickets directamente sin pasar por Resuelto.";
     es.kanban.main.mistakes.realStatus = "El estado debe reflejar la situacion real del ticket.";
 })();
+

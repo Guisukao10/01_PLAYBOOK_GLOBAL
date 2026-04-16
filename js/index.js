@@ -157,21 +157,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const i18n = getI18n();
 
     setLink("navGlobalService", routes.globalServiceHome);
-    setLink("navZohoDesk", routes.zohoDeskHome);
+    setLink("navZohoDesk", routes.zohoDeskEpicAnchor || routes.zohoDeskHome);
     setLink("navExecutiveBi", POWER_BI_URL, true);
 
     setLink("headerBiCta", POWER_BI_URL, true);
     setLink("heroBiCta", routes.kpiHome);
 
     setLink("quickGlobalService", routes.globalServiceHome);
+    setLink("quickTutorialZoho", routes.zohoDeskTutorialHome);
     setLink("quickZohoHelp", routes.zohoDeskHome);
     setLink("quickBi", routes.kpiHome);
 
     setLink("macroGlobalService", routes.globalServiceHome);
     setLink("macroZohoDesk", routes.zohoDeskHome);
+    setLink("zohoDeskTutorialCta", routes.zohoDeskTutorialHome);
+    setLink("zohoDeskAdminCta", routes.zohoDeskAdminHome);
 
     renderEpicModules("globalServiceModules", "global_service", i18n);
-    renderEpicModules("zohoDeskModules", "zoho_desk", i18n);
 
     setupMobileNavigation();
 });

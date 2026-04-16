@@ -1,0 +1,46 @@
+.zoho-axis-grid {
+    gap: 1.5rem;
+}
+
+.zoho-axis-grid .module-card {
+    border-color: var(--zoho-green-border);
+    background: linear-gradient(160deg, #ffffff, #f1faf5);
+}
+
+.zoho-axis-grid .module-card:hover {
+    box-shadow: 0 12px 22px rgba(20, 79, 50, 0.15);
+}
+
+.zoho-axis-grid .module-card:focus-within {
+    border-color: rgba(75, 144, 99, 0.62);
+    box-shadow: 0 0 0 3px rgba(75, 144, 99, 0.18), 0 12px 22px rgba(20, 79, 50, 0.14);
+}
+
+.zoho-scope-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.zoho-scope-card {
+    background: linear-gradient(180deg, #ffffff, #f3faf6);
+    border: 1px solid var(--zoho-green-border);
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: 0 8px 18px rgba(20, 79, 50, 0.08);
+}
+
+.zoho-scope-card h3 {
+    margin-top: 0;
+    color: var(--zoho-green-text);
+}
+
+.zoho-scope-list {
+    margin: 0;
+    padding-left: 1.25rem;
+    color: #2c6145;
+}
+
+.zoho-scope-list li + li {
+    margin-top: 0.35rem;
+}

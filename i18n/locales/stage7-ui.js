@@ -448,21 +448,58 @@ window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
                 }
             },
             tutorialZoho: {
+                title: "Playbook Global - Zoho Desk | Operacao e Administracao",
+                index: {
+                    header: {
+                        title: "Zoho Desk | Operacao e Administracao",
+                        subtitle: "Tutorial e administracao da plataforma em dois caminhos principais"
+                    },
+                    footer: "Playbook Global - Zoho Desk | Operacao e Administracao"
+                },
                 landing: {
                     hero: {
-                        title: "Operacao Zoho Desk por contexto de uso",
-                        description: "A estrutura em tres frentes separa rotina de tickets, gestao cadastral e boas praticas para reduzir sobreposicao e aumentar consistencia.",
-                        openTickets: "Abrir operacao de tickets",
-                        openContacts: "Abrir gestao de contatos e clientes",
-                        openBestPractices: "Abrir boas praticas operacionais"
+                        eyebrow: "Zoho Desk",
+                        title: "Zoho Desk | Operacao e Administracao",
+                        description: "Guias praticos para usar, registrar, responder clientes e administrar o Zoho Desk com consistencia no modelo global.",
+                        openZohoDesk: "Entrar no Zoho Desk"
                     },
                     entries: {
-                        title: "Entradas oficiais do modulo",
-                        description: "Escolha a trilha pelo tipo de necessidade operacional."
+                        title: "Escolha seu caminho principal",
+                        description: "A home foi simplificada em dois submodulos para facilitar a navegacao.",
+                        cards: {
+                            tutorial: {
+                                title: "Tutorial Zoho Desk",
+                                description: "Aprenda a usar o Zoho Desk no dia a dia: tratar tickets, responder clientes, registrar informacoes, anexar evidencias e aplicar corretamente status, prioridade e fechamento.",
+                                cta: "Acessar tutorial"
+                            },
+                            admin: {
+                                title: "Edicao e Administracao",
+                                description: "Aprenda a editar e manter a estrutura do sistema: layouts, campos, regras, automacoes, distribuicao e ajustes operacionais do Zoho Desk.",
+                                cta: "Acessar administracao"
+                            }
+                        }
                     },
-                    directAccess: {
-                        description: "<strong>Acesso direto:</strong> para seguir a trilha sequencial anterior, inicie em Visao Geral da Interface.",
-                        cta: "Iniciar na etapa 1"
+                    scope: {
+                        tutorial: {
+                            title: "No Tutorial Zoho Desk",
+                            items: {
+                                gettingStarted: "Primeiros passos",
+                                handleTicket: "Como tratar um ticket",
+                                replyCustomer: "Como responder o cliente",
+                                documentEvidence: "Como registrar informacoes e evidencias",
+                                statusPriorityClosure: "Status, prioridade e fechamento"
+                            }
+                        },
+                        admin: {
+                            title: "Em Edicao e Administracao",
+                            items: {
+                                layoutsFields: "Layouts e campos",
+                                rulesAutomations: "Regras e automacoes",
+                                roundRobinDistribution: "Round Robin e distribuicao",
+                                structuralAdjustments: "Ajustes estruturais",
+                                functionalEvolution: "Evolucao funcional"
+                            }
+                        }
                     }
                 }
             }
@@ -852,21 +889,58 @@ window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
                 }
             },
             tutorialZoho: {
+                title: "Playbook Global - Zoho Desk | Operacion y Administracion",
+                index: {
+                    header: {
+                        title: "Zoho Desk | Operacion y Administracion",
+                        subtitle: "Tutorial y administracion de la plataforma en dos caminos principales"
+                    },
+                    footer: "Playbook Global - Zoho Desk | Operacion y Administracion"
+                },
                 landing: {
                     hero: {
-                        title: "Operacion de Zoho Desk por contexto de uso",
-                        description: "La estructura en tres frentes separa rutina de tickets, gestion de datos y buenas practicas para reducir superposicion y aumentar consistencia.",
-                        openTickets: "Abrir operacion de tickets",
-                        openContacts: "Abrir gestion de contactos y clientes",
-                        openBestPractices: "Abrir buenas practicas operativas"
+                        eyebrow: "Zoho Desk",
+                        title: "Zoho Desk | Operacion y Administracion",
+                        description: "Guias practicas para usar, registrar, responder a clientes y administrar Zoho Desk con consistencia dentro del modelo global.",
+                        openZohoDesk: "Entrar a Zoho Desk"
                     },
                     entries: {
-                        title: "Entradas oficiales del modulo",
-                        description: "Elija la ruta segun el tipo de necesidad operativa."
+                        title: "Elige tu camino principal",
+                        description: "La home fue simplificada en dos submodulos para facilitar la navegacion.",
+                        cards: {
+                            tutorial: {
+                                title: "Tutorial Zoho Desk",
+                                description: "Aprende a usar Zoho Desk en la operacion diaria: tratar tickets, responder a clientes, registrar informacion, adjuntar evidencias y aplicar correctamente estados, prioridad y cierre.",
+                                cta: "Abrir tutorial"
+                            },
+                            admin: {
+                                title: "Edicion y Administracion",
+                                description: "Aprende a editar y mantener la estructura del sistema: layouts, campos, reglas, automatizaciones, distribucion y ajustes operativos en Zoho Desk.",
+                                cta: "Abrir administracion"
+                            }
+                        }
                     },
-                    directAccess: {
-                        description: "<strong>Acceso directo:</strong> para seguir la ruta secuencial anterior, comience en Vision General de la Interfaz.",
-                        cta: "Iniciar en la etapa 1"
+                    scope: {
+                        tutorial: {
+                            title: "En el Tutorial Zoho Desk",
+                            items: {
+                                gettingStarted: "Primeros pasos",
+                                handleTicket: "Como tratar un ticket",
+                                replyCustomer: "Como responder al cliente",
+                                documentEvidence: "Como registrar informacion y evidencias",
+                                statusPriorityClosure: "Estado, prioridad y cierre"
+                            }
+                        },
+                        admin: {
+                            title: "En Edicion y Administracion",
+                            items: {
+                                layoutsFields: "Layouts y campos",
+                                rulesAutomations: "Reglas y automatizaciones",
+                                roundRobinDistribution: "Round robin y distribucion",
+                                structuralAdjustments: "Ajustes estructurales",
+                                functionalEvolution: "Evolucion funcional"
+                            }
+                        }
                     }
                 }
             }
@@ -1255,21 +1329,58 @@ window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
                 }
             },
             tutorialZoho: {
+                title: "Playbook Global - Zoho Desk | Operation and Administration",
+                index: {
+                    header: {
+                        title: "Zoho Desk | Operation and Administration",
+                        subtitle: "Tutorial and platform administration through two main paths"
+                    },
+                    footer: "Playbook Global - Zoho Desk | Operation and Administration"
+                },
                 landing: {
                     hero: {
-                        title: "Zoho Desk operations by usage context",
-                        description: "The three-front structure separates ticket routine, data management, and best practices to reduce overlap and increase consistency.",
-                        openTickets: "Open ticket operations",
-                        openContacts: "Open contacts and customers management",
-                        openBestPractices: "Open operational best practices"
+                        eyebrow: "Zoho Desk",
+                        title: "Zoho Desk | Operation and Administration",
+                        description: "Practical guides to use, document, reply to customers and manage Zoho Desk consistently within the global model.",
+                        openZohoDesk: "Open Zoho Desk"
                     },
                     entries: {
-                        title: "Official module entries",
-                        description: "Choose the track based on the operational need."
+                        title: "Choose your main path",
+                        description: "The home was simplified into two submodules for easier navigation.",
+                        cards: {
+                            tutorial: {
+                                title: "Zoho Desk Tutorial",
+                                description: "Learn how to use Zoho Desk in daily operations: handle tickets, reply to customers, document information, attach evidence, and correctly apply status, priority and closure rules.",
+                                cta: "Open tutorial"
+                            },
+                            admin: {
+                                title: "Editing and Administration",
+                                description: "Learn how to edit and maintain the system structure: layouts, fields, rules, automations, distribution and operational adjustments in Zoho Desk.",
+                                cta: "Open administration"
+                            }
+                        }
                     },
-                    directAccess: {
-                        description: "<strong>Direct access:</strong> to follow the previous sequential track, start from Interface Overview.",
-                        cta: "Start at step 1"
+                    scope: {
+                        tutorial: {
+                            title: "In the Zoho Desk Tutorial",
+                            items: {
+                                gettingStarted: "Getting started",
+                                handleTicket: "How to handle a ticket",
+                                replyCustomer: "How to reply to the customer",
+                                documentEvidence: "How to document information and evidence",
+                                statusPriorityClosure: "Status, priority and closure"
+                            }
+                        },
+                        admin: {
+                            title: "In Editing and Administration",
+                            items: {
+                                layoutsFields: "Layouts and fields",
+                                rulesAutomations: "Rules and automations",
+                                roundRobinDistribution: "Round robin and distribution",
+                                structuralAdjustments: "Structural adjustments",
+                                functionalEvolution: "Functional evolution"
+                            }
+                        }
                     }
                 }
             }

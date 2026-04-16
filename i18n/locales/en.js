@@ -1438,12 +1438,6 @@ window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
     en.home.quickAccess.items.globalService.title = "Global Service";
     en.home.quickAccess.items.globalService.desc = "Understand the global service standard, operating rules, governance, and core service structure.";
 
-    en.home.quickAccess.items.newZoho = en.home.quickAccess.items.newZoho || {};
-    en.home.quickAccess.items.newZoho.pill = "Onboarding";
-    en.home.quickAccess.items.newZoho.title = "New to Zoho?";
-    en.home.quickAccess.items.newZoho.desc = "Guided tutorial track for new users. Content is under maintenance and will be available soon.";
-    en.home.quickAccess.items.newZoho.status = "Available soon";
-
     en.home.quickAccess.items.zohoHelp = en.home.quickAccess.items.zohoHelp || {};
     en.home.quickAccess.items.zohoHelp.pill = "Practical guidance";
     en.home.quickAccess.items.zohoHelp.title = "Questions about Zoho?";
@@ -1455,15 +1449,54 @@ window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
     en.home.quickAccess.items.bi.desc = "Track indicators, performance, and operational risks after aligning standards and operations.";
 
     en.home.quickAccess.items.tutorial = en.home.quickAccess.items.tutorial || {};
-    en.home.quickAccess.items.tutorial.pill = en.home.quickAccess.items.newZoho.pill;
-    en.home.quickAccess.items.tutorial.title = en.home.quickAccess.items.newZoho.title;
-    en.home.quickAccess.items.tutorial.desc = en.home.quickAccess.items.newZoho.desc;
-    en.home.quickAccess.items.tutorial.status = en.home.quickAccess.items.newZoho.status;
+    en.home.quickAccess.items.tutorial.pill = "Tutorial";
+    en.home.quickAccess.items.tutorial.title = "Zoho Desk Tutorial";
+    en.home.quickAccess.items.tutorial.desc = "Learn Zoho Desk operational usage with a practical daily guide.";
+    en.home.quickAccess.items.tutorial.status = "";
 
     en.home.quickAccess.items.zohoDesk = en.home.quickAccess.items.zohoDesk || {};
     en.home.quickAccess.items.zohoDesk.pill = en.home.quickAccess.items.zohoHelp.pill;
     en.home.quickAccess.items.zohoDesk.title = en.home.quickAccess.items.zohoHelp.title;
     en.home.quickAccess.items.zohoDesk.desc = en.home.quickAccess.items.zohoHelp.desc;
+
+    en.home.axes = en.home.axes || {};
+    en.home.axes.zohoDesk = en.home.axes.zohoDesk || {};
+    en.home.axes.zohoDesk.badge = "ZOHO DESK";
+    en.home.axes.zohoDesk.title = "Zoho Desk | Operation and Administration";
+    en.home.axes.zohoDesk.desc = "Practical guides to use, document, reply to customers and manage Zoho Desk consistently within the global model.";
+    en.home.axes.zohoDesk.cta = "Open Zoho Desk";
+
+    en.home.axes.zohoDesk.mainCards = en.home.axes.zohoDesk.mainCards || {};
+    en.home.axes.zohoDesk.mainCards.tutorial = en.home.axes.zohoDesk.mainCards.tutorial || {};
+    en.home.axes.zohoDesk.mainCards.tutorial.title = "Zoho Desk Tutorial";
+    en.home.axes.zohoDesk.mainCards.tutorial.desc = "Learn how to use Zoho Desk in daily operations: handle tickets, reply to customers, document information, attach evidence, and correctly apply status, priority and closure rules.";
+    en.home.axes.zohoDesk.mainCards.tutorial.cta = "Open tutorial";
+    en.home.axes.zohoDesk.mainCards.admin = en.home.axes.zohoDesk.mainCards.admin || {};
+    en.home.axes.zohoDesk.mainCards.admin.title = "Editing and Administration";
+    en.home.axes.zohoDesk.mainCards.admin.desc = "Learn how to edit and maintain the system structure: layouts, fields, rules, automations, distribution and operational adjustments in Zoho Desk.";
+    en.home.axes.zohoDesk.mainCards.admin.cta = "Open administration";
+
+    en.home.axes.zohoDesk.summary = en.home.axes.zohoDesk.summary || {};
+    en.home.axes.zohoDesk.summary.tutorial = en.home.axes.zohoDesk.summary.tutorial || {};
+    en.home.axes.zohoDesk.summary.tutorial.title = "In the Zoho Desk Tutorial";
+    en.home.axes.zohoDesk.summary.tutorial.items = en.home.axes.zohoDesk.summary.tutorial.items || {};
+    en.home.axes.zohoDesk.summary.tutorial.items.gettingStarted = "Getting started";
+    en.home.axes.zohoDesk.summary.tutorial.items.handleTicket = "How to handle a ticket";
+    en.home.axes.zohoDesk.summary.tutorial.items.replyCustomer = "How to reply to the customer";
+    en.home.axes.zohoDesk.summary.tutorial.items.documentEvidence = "How to document information and evidence";
+    en.home.axes.zohoDesk.summary.tutorial.items.statusPriorityClosure = "Status, priority and closure";
+    en.home.axes.zohoDesk.summary.admin = en.home.axes.zohoDesk.summary.admin || {};
+    en.home.axes.zohoDesk.summary.admin.title = "In Editing and Administration";
+    en.home.axes.zohoDesk.summary.admin.items = en.home.axes.zohoDesk.summary.admin.items || {};
+    en.home.axes.zohoDesk.summary.admin.items.layoutsFields = "Layouts and fields";
+    en.home.axes.zohoDesk.summary.admin.items.rulesAutomations = "Rules and automations";
+    en.home.axes.zohoDesk.summary.admin.items.roundRobinDistribution = "Round robin and distribution";
+    en.home.axes.zohoDesk.summary.admin.items.structuralAdjustments = "Structural adjustments";
+    en.home.axes.zohoDesk.summary.admin.items.functionalEvolution = "Functional evolution";
+
+    en.home.axes.zohoDesk.tutorialInfo = en.home.axes.zohoDesk.tutorialInfo || {};
+    en.home.axes.zohoDesk.tutorialInfo.title = "How the tutorial works";
+    en.home.axes.zohoDesk.tutorialInfo.text = "The Zoho Desk tutorial was structured to support the practical use of the platform in daily operations. The content starts with the first steps in the system and progresses through ticket handling, customer replies, information logging, evidence, status, priority and closure. The goal is to provide simple topic-based navigation for both initial learning and quick consultation during operations.";
 })();
 
 (function () {
@@ -1847,3 +1880,4 @@ window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
     en.kanban.main.mistakes.skipResolved = "Do not close tickets directly without passing through Resolved.";
     en.kanban.main.mistakes.realStatus = "The status must reflect the real ticket situation.";
 })();
+

@@ -76,14 +76,13 @@
                         <p data-i18n="home.quickAccess.items.globalService.desc">Entenda o padrão global de atendimento, as regras operacionais, a governança e a estrutura base do service.</p>
                     </a>
 
-                    <article id="quickOnboardingZoho" class="quick-card is-coming-soon" aria-disabled="true">
-                        <span class="quick-pill is-coming-soon-pill" data-i18n="home.quickAccess.items.newZoho.pill">Onboarding</span>
-                        <h3 data-i18n="home.quickAccess.items.newZoho.title">Novo no Zoho?</h3>
-                        <p data-i18n="home.quickAccess.items.newZoho.desc">Trilha de tutorial guiado para novos usuários. Conteúdo em manutenção e disponível em breve.</p>
-                        <span class="quick-status" data-i18n="home.quickAccess.items.newZoho.status">Disponível em breve</span>
-                    </article>
+                    <a id="quickTutorialZoho" class="quick-card is-zoho-desk" href="#">
+                        <span class="quick-pill" data-i18n="home.quickAccess.items.tutorial.pill">Tutorial</span>
+                        <h3 data-i18n="home.quickAccess.items.tutorial.title">Tutorial Zoho Desk</h3>
+                        <p data-i18n="home.quickAccess.items.tutorial.desc">Aprenda o uso operacional do Zoho Desk com guia prático para a rotina.</p>
+                    </a>
 
-                    <a id="quickZohoHelp" class="quick-card" href="#">
+                    <a id="quickZohoHelp" class="quick-card is-zoho-desk" href="#">
                         <span class="quick-pill" data-i18n="home.quickAccess.items.zohoHelp.pill">Orientação prática</span>
                         <h3 data-i18n="home.quickAccess.items.zohoHelp.title">Dúvidas sobre Zoho?</h3>
                         <p data-i18n="home.quickAccess.items.zohoHelp.desc">Vá direto para o eixo Zoho Desk e encontre as orientações operacionais disponíveis agora.</p>
@@ -120,8 +119,6 @@
                             <li data-i18n="home.axes.globalService.items.kpis">KPIs, desempenho e leitura operacional</li>
                         </ul>
 
-                        <a id="macroGlobalService" href="#" class="btn-primary macro-entry-btn" data-i18n="home.axes.globalService.cta">Entrar no Global Service</a>
-
                         <div class="macro-modules">
                             <p class="macro-modules-title" data-i18n="home.axes.modulesTitle">Módulos do eixo</p>
                             <div class="modules-grid" id="globalServiceModules"></div>
@@ -130,23 +127,27 @@
 
                     <article id="epic-zoho-desk" class="macro-panel is-zoho-desk">
                         <div class="macro-panel-head">
-                            <span class="module-badge-home" data-i18n="home.axes.zohoDesk.badge">Zoho Desk</span>
-                            <h3 data-i18n="home.axes.zohoDesk.title">Zoho Desk | Operação da Plataforma</h3>
-                            <p data-i18n="home.axes.zohoDesk.desc">Orientações práticas para usar, configurar e operar o Zoho Desk com consistência.</p>
+                            <span class="module-badge-home" data-i18n="home.axes.zohoDesk.badge">ZOHO DESK</span>
+                            <h3 data-i18n="home.axes.zohoDesk.title">Zoho Desk | Operação e Administração</h3>
+                            <p data-i18n="home.axes.zohoDesk.desc">Guias práticos para usar, registrar, responder clientes e administrar o Zoho Desk com consistência no modelo global.</p>
                         </div>
 
-                        <ul class="macro-list">
-                            <li data-i18n="home.axes.zohoDesk.items.tutorial">Fluxos operacionais e boas práticas</li>
-                            <li data-i18n="home.axes.zohoDesk.items.config">Configuração funcional e layouts</li>
-                            <li data-i18n="home.axes.zohoDesk.items.rules">Regras operacionais e automações</li>
-                            <li data-i18n="home.axes.zohoDesk.items.operation">Execução diária na ferramenta</li>
-                        </ul>
+                        <div class="zoho-main-cards" id="zohoDeskMainCards">
+                            <a id="zohoDeskTutorialCta" href="#" class="zoho-main-card">
+                                <h4 data-i18n="home.axes.zohoDesk.mainCards.tutorial.title">Tutorial Zoho Desk</h4>
+                                <p data-i18n="home.axes.zohoDesk.mainCards.tutorial.desc">Aprenda a usar o Zoho Desk no dia a dia: tratar tickets, responder clientes, registrar informações, anexar evidências e aplicar corretamente status, prioridade e fechamento.</p>
+                            </a>
+                            <a id="zohoDeskAdminCta" href="#" class="zoho-main-card">
+                                <h4 data-i18n="home.axes.zohoDesk.mainCards.admin.title">Edição e Administração</h4>
+                                <p data-i18n="home.axes.zohoDesk.mainCards.admin.desc">Aprenda a editar e manter a estrutura do sistema: layouts, campos, regras, automações, distribuição e ajustes operacionais do Zoho Desk.</p>
+                            </a>
+                        </div>
 
                         <a id="macroZohoDesk" href="#" class="btn-secondary macro-entry-btn" data-i18n="home.axes.zohoDesk.cta">Entrar no Zoho Desk</a>
 
-                        <div class="macro-modules">
-                            <p class="macro-modules-title" data-i18n="home.axes.modulesTitle">Módulos do eixo</p>
-                            <div class="modules-grid" id="zohoDeskModules"></div>
+                        <div class="zoho-tutorial-explainer">
+                            <h4 data-i18n="home.axes.zohoDesk.tutorialInfo.title">Como funciona o tutorial</h4>
+                            <p data-i18n="home.axes.zohoDesk.tutorialInfo.text">O tutorial Zoho Desk foi organizado para apoiar o uso prático da ferramenta no dia a dia. O conteúdo parte dos primeiros passos na plataforma e avança para o tratamento de tickets, resposta ao cliente, registro de informações, evidências, status, prioridade e fechamento. A ideia é permitir uma navegação simples, por tema, para apoiar tanto o aprendizado inicial quanto a consulta rápida durante a operação.</p>
                         </div>
                     </article>
                 </div>
