@@ -245,14 +245,14 @@
 }
 
 .quick-card.is-bi {
-    background: linear-gradient(147deg, #0f3e75, #154f95);
-    border-color: rgba(86, 136, 197, 0.55);
-    box-shadow: 0 16px 28px rgba(13, 52, 96, 0.36);
+    background: linear-gradient(162deg, #f6f9ff, #e8f0fc);
+    border-color: rgba(139, 171, 206, 0.85);
+    box-shadow: var(--shadow-xs);
 }
 
 .quick-card.is-bi h3,
 .quick-card.is-bi p {
-    color: #edf5ff;
+    color: #2d557f;
 }
 
 .quick-pill {
@@ -271,9 +271,43 @@
 }
 
 .quick-card.is-bi .quick-pill {
-    border-color: rgba(176, 210, 248, 0.45);
-    background: rgba(228, 240, 255, 0.16);
-    color: #e6f1ff;
+    border-color: rgba(150, 186, 228, 0.62);
+    background: rgba(216, 231, 248, 0.9);
+    color: #2a5889;
+}
+
+.quick-card.is-coming-soon {
+    border-style: dashed;
+    border-color: rgba(146, 166, 189, 0.85);
+    background: linear-gradient(162deg, #fdfefe, #f2f6fb);
+    box-shadow: none;
+    cursor: default;
+}
+
+.quick-card.is-coming-soon:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(146, 166, 189, 0.85);
+}
+
+.quick-pill.is-coming-soon-pill {
+    border-color: rgba(168, 146, 88, 0.55);
+    background: rgba(255, 242, 210, 0.9);
+    color: #7f5b11;
+}
+
+.quick-status {
+    margin-top: auto;
+    display: inline-flex;
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px solid rgba(187, 164, 111, 0.55);
+    background: rgba(255, 245, 220, 0.92);
+    color: #76530f;
+    font-size: 0.76rem;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 0.25rem 0.52rem;
 }
 
 .macro-eixos .container {

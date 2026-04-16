@@ -1,4 +1,4 @@
-﻿window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
+window.PLAYBOOK_I18N_LOCALES = window.PLAYBOOK_I18N_LOCALES || {};
 
 (function () {
     const base = window.PLAYBOOK_I18N_LOCALES["pt-BR"] || {};
@@ -1404,6 +1404,66 @@
     };
 
     window.PLAYBOOK_I18N_LOCALES["en"] = en;
+})();
+
+(function () {
+    const en = window.PLAYBOOK_I18N_LOCALES["en"];
+    if (!en) return;
+
+    en.home = en.home || {};
+    en.home.header = en.home.header || {};
+    en.home.hero = en.home.hero || {};
+    en.home.quickAccess = en.home.quickAccess || {};
+    en.home.quickAccess.items = en.home.quickAccess.items || {};
+
+    en.home.title = "Playbook Global - Home";
+    en.home.logo = "PLAYBOOK GLOBAL";
+
+    en.home.header.subtitle = "Global Service Governance Operations Portal";
+    en.home.header.menuAria = "Open main menu";
+    en.home.header.primaryNavAria = "Portal main navigation";
+    en.home.header.ctaBi = "Access BI";
+
+    en.home.hero.kicker = "Global Operations Hub";
+    en.home.hero.mainTitle = "Standardize global service and run Zoho Desk with one operating direction";
+    en.home.hero.mainSubtitle = "Access Executive BI, choose your work axis, and follow clear paths.";
+    en.home.hero.ctaModules = "Onboarding (Learn)";
+    en.home.hero.ctaBi = "Access BI (Analyze)";
+
+    en.home.quickAccess.title = "Quick access";
+    en.home.quickAccess.subtitle = "Start with global standards, continue with practical Zoho Desk guidance, and use BI to track operations.";
+
+    en.home.quickAccess.items.globalService = en.home.quickAccess.items.globalService || {};
+    en.home.quickAccess.items.globalService.pill = "First step";
+    en.home.quickAccess.items.globalService.title = "Global Service";
+    en.home.quickAccess.items.globalService.desc = "Understand the global service standard, operating rules, governance, and core service structure.";
+
+    en.home.quickAccess.items.newZoho = en.home.quickAccess.items.newZoho || {};
+    en.home.quickAccess.items.newZoho.pill = "Onboarding";
+    en.home.quickAccess.items.newZoho.title = "New to Zoho?";
+    en.home.quickAccess.items.newZoho.desc = "Guided tutorial track for new users. Content is under maintenance and will be available soon.";
+    en.home.quickAccess.items.newZoho.status = "Available soon";
+
+    en.home.quickAccess.items.zohoHelp = en.home.quickAccess.items.zohoHelp || {};
+    en.home.quickAccess.items.zohoHelp.pill = "Practical guidance";
+    en.home.quickAccess.items.zohoHelp.title = "Questions about Zoho?";
+    en.home.quickAccess.items.zohoHelp.desc = "Go straight to the Zoho Desk axis and find operational guidance available now.";
+
+    en.home.quickAccess.items.bi = en.home.quickAccess.items.bi || {};
+    en.home.quickAccess.items.bi.pill = "Tracking";
+    en.home.quickAccess.items.bi.title = "Executive BI";
+    en.home.quickAccess.items.bi.desc = "Track indicators, performance, and operational risks after aligning standards and operations.";
+
+    en.home.quickAccess.items.tutorial = en.home.quickAccess.items.tutorial || {};
+    en.home.quickAccess.items.tutorial.pill = en.home.quickAccess.items.newZoho.pill;
+    en.home.quickAccess.items.tutorial.title = en.home.quickAccess.items.newZoho.title;
+    en.home.quickAccess.items.tutorial.desc = en.home.quickAccess.items.newZoho.desc;
+    en.home.quickAccess.items.tutorial.status = en.home.quickAccess.items.newZoho.status;
+
+    en.home.quickAccess.items.zohoDesk = en.home.quickAccess.items.zohoDesk || {};
+    en.home.quickAccess.items.zohoDesk.pill = en.home.quickAccess.items.zohoHelp.pill;
+    en.home.quickAccess.items.zohoDesk.title = en.home.quickAccess.items.zohoHelp.title;
+    en.home.quickAccess.items.zohoDesk.desc = en.home.quickAccess.items.zohoHelp.desc;
 })();
 
 (function () {

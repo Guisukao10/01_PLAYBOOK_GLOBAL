@@ -720,7 +720,7 @@
     padding: 0.86rem 0.9rem;
     box-shadow: 0 3px 8px rgba(15, 47, 80, 0.08);
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto;
     gap: 0.62rem;
     align-content: start;
 }
@@ -1152,114 +1152,153 @@
     border-color: #c9dbee;
     border-radius: 16px;
     box-shadow: 0 8px 18px rgba(10, 34, 60, 0.1);
-    padding: clamp(0.9rem, 2vw, 1.18rem);
-    gap: 0.82rem;
+    padding: clamp(0.82rem, 1.75vw, 1.02rem);
+    gap: 0.66rem;
 }
 
 .module-page[data-campos-page="home"] .co-fields-map-header {
-    gap: 0.2rem;
+    gap: 0.14rem;
 }
 
 .module-page[data-campos-page="home"] .co-fields-map-header h3 {
-    margin: 0.1rem 0 0.2rem;
+    margin: 0.06rem 0 0.14rem;
     font-size: clamp(1.13rem, 1.62vw, 1.32rem);
 }
 
 .module-page[data-campos-page="home"] .co-fields-map-header p {
-    font-size: 0.89rem;
-    line-height: 1.42;
+    font-size: 0.87rem;
+    line-height: 1.38;
 }
 
 .module-page[data-campos-page="home"] .co-group-label {
-    min-height: 1.56rem;
-    font-size: 0.75rem;
+    min-height: 1.42rem;
+    font-size: 0.73rem;
     letter-spacing: 0.045em;
-    padding: 0.2rem 0.64rem;
+    padding: 0.16rem 0.58rem;
 }
 
 .module-page[data-campos-page="home"] .co-map-grid {
-    padding: 0.66rem;
+    padding: 0.52rem;
     border: 1px solid #d6e5f5;
     border-radius: 14px;
     background: linear-gradient(180deg, rgba(244, 249, 255, 0.76) 0%, rgba(239, 246, 255, 0.52) 100%);
-    gap: 0.72rem;
+    gap: 0.58rem;
 }
 
 .module-page[data-campos-page="home"] .co-map-group {
     border-color: #c9dbef;
     border-radius: 12px;
-    padding: 0.76rem 0.8rem;
+    padding: 0.62rem 0.68rem;
     box-shadow: 0 1px 5px rgba(14, 42, 72, 0.07);
-    gap: 0.54rem;
+    gap: 0.4rem;
 }
 
 .module-page[data-campos-page="home"] .co-map-group h4 {
-    margin: 0 0 0.12rem;
-    font-size: 1.02rem;
+    margin: 0 0 0.08rem;
+    font-size: 0.99rem;
 }
 
 .module-page[data-campos-page="home"] .co-map-group-head p {
-    font-size: 0.83rem;
-    line-height: 1.4;
+    font-size: 0.81rem;
+    line-height: 1.34;
 }
 
 .module-page[data-campos-page="home"] .co-map-group-body {
-    gap: 0.5rem;
+    gap: 0.38rem;
 }
 
 .module-page[data-campos-page="home"] .co-map-group-subtitle {
-    font-size: 0.79rem;
+    font-size: 0.76rem;
     letter-spacing: 0.045em;
 }
 
 .module-page[data-campos-page="home"] .co-mandatory-columns {
-    gap: 0.5rem;
+    gap: 0.42rem;
 }
 
 .module-page[data-campos-page="home"] .co-map-cluster {
-    gap: 0.34rem;
-    padding: 0.4rem 0.46rem;
+    gap: 0.26rem;
+    padding: 0.34rem 0.4rem;
     border-color: #d9e6f4;
     background: rgba(255, 255, 255, 0.88);
 }
 
-.module-page[data-campos-page="home"] .co-map-list {
+.module-page[data-campos-page="home"] .co-map-group-mandatory .co-map-group-head {
+    gap: 0.12rem;
+}
+
+.module-page[data-campos-page="home"] .co-map-group-mandatory .co-map-group-body--mandatory {
     gap: 0.22rem;
-    font-size: 0.82rem;
-    line-height: 1.38;
+    padding-bottom: 0.28rem;
+}
+
+.module-page[data-campos-page="home"] .co-map-group-mandatory .co-mandatory-columns {
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.9fr);
+    gap: 0.28rem;
+    align-items: stretch;
+}
+
+.module-page[data-campos-page="home"] .co-map-group-mandatory .co-map-cluster {
+    gap: 0.18rem;
+    padding: 0.3rem 0.38rem;
+}
+
+.module-page[data-campos-page="home"] .co-map-group-mandatory .co-mandatory-columns > .co-map-cluster:last-child {
+    align-content: start;
+    gap: 0.08rem;
+}
+
+.module-page[data-campos-page="home"] .co-map-group-mandatory .co-map-group-subtitle {
+    margin-bottom: 0.02rem;
+}
+
+.module-page[data-campos-page="home"] .co-map-group-mandatory .co-map-list--mandatory {
+    gap: 0.1rem;
+    line-height: 1.24;
+}
+
+.module-page[data-campos-page="home"] .co-map-group-mandatory .co-map-list--mandatory li {
+    padding-left: 0.6rem;
+}
+
+.module-page[data-campos-page="home"] .co-map-list {
+    gap: 0.16rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
 }
 
 .module-page[data-campos-page="home"] .co-map-list li {
+    padding-left: 0.66rem;
     overflow-wrap: anywhere;
 }
 
 .module-page[data-campos-page="home"] .co-map-list--rule-blocks {
-    gap: 0.34rem;
+    gap: 0.28rem;
 }
 
 .module-page[data-campos-page="home"] .co-map-list--rule-blocks li {
-    padding: 0.42rem 0.5rem 0.42rem 1rem;
+    padding: 0.34rem 0.44rem 0.34rem 0.94rem;
     border-color: #edd7b1;
     background: rgba(255, 255, 255, 0.86);
 }
 
 .module-page[data-campos-page="home"] .co-map-list--rule-blocks li::before {
-    top: 0.8rem;
+    top: 0.66rem;
 }
 
 .module-page[data-campos-page="home"] .co-map-list--functional li {
-    padding: 0 0 0.19rem 0.74rem;
+    padding: 0 0 0.14rem 0.66rem;
     border-bottom-color: rgba(112, 139, 169, 0.38);
 }
 
 .module-page[data-campos-page="home"] .co-map-primary-block,
 .module-page[data-campos-page="home"] .co-map-secondary-note {
-    padding: 0.44rem 0.5rem;
+    padding: 0.36rem 0.42rem;
 }
 
 .module-page[data-campos-page="home"] .co-subtle-note {
-    font-size: 0.75rem;
-    line-height: 1.36;
+    font-size: 0.73rem;
+    line-height: 1.3;
 }
 
 .module-page[data-campos-page="home"] .co-impact-strip {
@@ -1333,33 +1372,43 @@
     }
 
     .module-page[data-campos-page="home"] .co-fields-map {
-        padding: 0.76rem;
-        gap: 0.72rem;
+        padding: 0.68rem;
+        gap: 0.62rem;
     }
 
     .module-page[data-campos-page="home"] .co-map-grid {
-        padding: 0.5rem;
-        gap: 0.56rem;
-    }
-
-    .module-page[data-campos-page="home"] .co-map-group {
-        padding: 0.68rem 0.72rem;
+        padding: 0.44rem;
         gap: 0.48rem;
     }
 
+    .module-page[data-campos-page="home"] .co-map-group {
+        padding: 0.58rem 0.62rem;
+        gap: 0.4rem;
+    }
+
     .module-page[data-campos-page="home"] .co-group-label {
-        min-height: 1.48rem;
-        font-size: 0.73rem;
-        padding: 0.18rem 0.56rem;
+        min-height: 1.36rem;
+        font-size: 0.71rem;
+        padding: 0.16rem 0.5rem;
     }
 
     .module-page[data-campos-page="home"] .co-map-group h4 {
-        font-size: 0.97rem;
+        font-size: 0.94rem;
     }
 
     .module-page[data-campos-page="home"] .co-map-group-head p,
     .module-page[data-campos-page="home"] .co-map-list {
-        font-size: 0.8rem;
+        font-size: 0.78rem;
+    }
+
+    .module-page[data-campos-page="home"] .co-map-group-mandatory .co-map-group-body--mandatory {
+        gap: 0.24rem;
+        padding-bottom: 0.24rem;
+    }
+
+    .module-page[data-campos-page="home"] .co-map-group-mandatory .co-map-cluster {
+        gap: 0.16rem;
+        padding: 0.28rem 0.34rem;
     }
 
     .module-page[data-campos-page="home"] .co-impact-strip {

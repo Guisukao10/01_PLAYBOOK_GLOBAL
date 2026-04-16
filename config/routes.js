@@ -4,7 +4,7 @@ const routes = {
   zohoDeskHome: "./index.html#epic-zoho-desk",
   kpiHome: "./01_KPI/KPI_V2/index.html",
   kanbanHome: "./02_Kanban/index.html",
-  fluxoHome: "./03_Fluxo_Global/index.html",
+  fluxoHome: "./03_Fluxo_Global/etapas-do-fluxo.html",
   prioridadeHome: "./04_Prioridade/index.html",
   camposHome: "./05_Campos_Obrigatorios/index.html",
   operacaoZohoHome: "./09_Operacao_Zoho_Desk/index.html",

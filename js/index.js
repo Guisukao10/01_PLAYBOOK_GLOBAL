@@ -29,6 +29,27 @@ function buildModuleActionLabel(moduleMeta, i18n) {
     return i18n.t("home.moduleCtas.fallbackGeneric", "Abrir módulo");
 }
 
+function resolveModuleLink(moduleMeta) {
+    const rawLink = String(moduleMeta && moduleMeta.link ? moduleMeta.link : "");
+    if (!rawLink) return rawLink;
+
+    const normalizedLink = rawLink.replace(/\\/g, "/").toLowerCase();
+    const isLegacyFluxoEntry =
+        moduleMeta &&
+        moduleMeta.id === "fluxo" &&
+        (
+            normalizedLink === "03_fluxo_global/index.html" ||
+            normalizedLink === "./03_fluxo_global/index.html" ||
+            normalizedLink.endsWith("/03_fluxo_global/index.html")
+        );
+
+    if (isLegacyFluxoEntry) {
+        return routes.fluxoHome;
+    }
+
+    return rawLink;
+}
+
 function createModuleCard(moduleMeta, i18n) {
     const card = document.createElement("article");
     card.className = "module-card";
@@ -62,7 +83,7 @@ function createModuleCard(moduleMeta, i18n) {
 
     const action = document.createElement("a");
     action.className = "btn-module";
-    action.href = moduleMeta.link;
+    action.href = resolveModuleLink(moduleMeta);
     action.textContent = buildModuleActionLabel(moduleMeta, i18n);
     card.appendChild(action);
 
@@ -140,12 +161,11 @@ document.addEventListener("DOMContentLoaded", function () {
     setLink("navExecutiveBi", POWER_BI_URL, true);
 
     setLink("headerBiCta", POWER_BI_URL, true);
-    setLink("heroBiCta", "https://globalplaybook.netlify.app/01_kpi/kpi_v2/dashboard", true);
+    setLink("heroBiCta", routes.kpiHome);
 
-    setLink("quickBi", "https://globalplaybook.netlify.app/01_kpi/kpi_v2/dashboard", true);
-    setLink("quickTutorialZoho", routes.operacaoZohoHome);
     setLink("quickGlobalService", routes.globalServiceHome);
-    setLink("quickZohoDesk", routes.zohoDeskHome);
+    setLink("quickZohoHelp", routes.zohoDeskHome);
+    setLink("quickBi", routes.kpiHome);
 
     setLink("macroGlobalService", routes.globalServiceHome);
     setLink("macroZohoDesk", routes.zohoDeskHome);

@@ -30,7 +30,12 @@
                     <span></span>
                 </button>
 
-                <nav id="homePrimaryNav" class="nav home-nav" aria-label="Navegação principal do portal">
+                <nav
+                    id="homePrimaryNav"
+                    class="nav home-nav"
+                    data-i18n-aria-label="home.header.primaryNavAria"
+                    aria-label="Navegação principal do portal"
+                >
                     <ul>
                         <li><a id="navGlobalService" href="#epic-global-service" data-i18n="navigation.main.globalService">Global Service</a></li>
                         <li><a id="navZohoDesk" href="#epic-zoho-desk" data-i18n="navigation.main.zohoDesk">Zoho Desk</a></li>
@@ -51,8 +56,8 @@
                     <h1 data-i18n="home.hero.mainTitle">Padronize o atendimento global e opere o Zoho Desk com direção única</h1>
                     <p class="hero-subtitle" data-i18n="home.hero.mainSubtitle">Acesse o BI Executivo, escolha seu eixo de trabalho e siga por trilhas claras.</p>
                     <div class="hero-actions">
-                        <a id="heroBiCta" class="btn-primary" href="#" data-i18n="home.hero.ctaBi">Acessar BI</a>
-                        <a id="heroModulesCta" class="btn-secondary" href="#macro-eixos" data-i18n="home.hero.ctaModules">Ver eixos e módulos</a>
+                        <a id="heroModulesCta" class="btn-primary" href="#macro-eixos" data-i18n="home.hero.ctaModules">Onboarding (Aprenda)</a>
+                        <a id="heroBiCta" class="btn-secondary" href="#" data-i18n="home.hero.ctaBi">Acesse o BI (Analise)</a>
                     </div>
                 </div>
             </div>
@@ -61,29 +66,33 @@
         <section class="quick-access" id="quick-access">
             <div class="container">
                 <div class="section-header compact-header">
-                    <h2 data-i18n="home.quickAccess.title">Comece por aqui</h2>
-                    <p class="section-lead" data-i18n="home.quickAccess.subtitle">Novo por aqui? Inicie no Tutorial Zoho. Gestão e acompanhamento? Vá direto ao BI Executivo.</p>
+                    <h2 data-i18n="home.quickAccess.title">Acesso rápido</h2>
+                    <p class="section-lead" data-i18n="home.quickAccess.subtitle">Comece pelos padrões globais, avance com a orientação prática no Zoho Desk e use o BI para acompanhamento da operação.</p>
                 </div>
                 <div class="quick-access-grid">
-                    <a id="quickBi" class="quick-card is-bi" href="#">
-                        <span class="quick-pill" data-i18n="home.quickAccess.items.bi.pill">Prioridade</span>
-                        <h3 data-i18n="home.quickAccess.items.bi.title">BI Executivo</h3>
-                        <p data-i18n="home.quickAccess.items.bi.desc">Acompanhe indicadores, desempenho e riscos operacionais.</p>
-                    </a>
-                    <a id="quickTutorialZoho" class="quick-card" href="#">
-                        <span class="quick-pill" data-i18n="home.quickAccess.items.tutorial.pill">Onboarding</span>
-                        <h3 data-i18n="home.quickAccess.items.tutorial.title">Novo por aqui? Tutorial Zoho</h3>
-                        <p data-i18n="home.quickAccess.items.tutorial.desc">Entenda o uso do sistema e a rotina operacional passo a passo.</p>
-                    </a>
                     <a id="quickGlobalService" class="quick-card" href="#">
-                        <span class="quick-pill" data-i18n="home.quickAccess.items.globalService.pill">Governança</span>
-                        <h3 data-i18n="home.quickAccess.items.globalService.title">Global Service</h3>
-                        <p data-i18n="home.quickAccess.items.globalService.desc">Consulte padrões globais, regras operacionais e governança.</p>
+                        <span class="quick-pill" data-i18n="home.quickAccess.items.globalService.pill">Primeiro passo</span>
+                        <h3 data-i18n="home.quickAccess.items.globalService.title">Padrões Globais de Atendimento (Global Service)</h3>
+                        <p data-i18n="home.quickAccess.items.globalService.desc">Entenda o padrão global de atendimento, as regras operacionais, a governança e a estrutura base do service.</p>
                     </a>
-                    <a id="quickZohoDesk" class="quick-card" href="#">
-                        <span class="quick-pill" data-i18n="home.quickAccess.items.zohoDesk.pill">Plataforma</span>
-                        <h3 data-i18n="home.quickAccess.items.zohoDesk.title">Zoho Desk</h3>
-                        <p data-i18n="home.quickAccess.items.zohoDesk.desc">Acesse orientações de uso, configuração e operação da ferramenta.</p>
+
+                    <article id="quickOnboardingZoho" class="quick-card is-coming-soon" aria-disabled="true">
+                        <span class="quick-pill is-coming-soon-pill" data-i18n="home.quickAccess.items.newZoho.pill">Onboarding</span>
+                        <h3 data-i18n="home.quickAccess.items.newZoho.title">Novo no Zoho?</h3>
+                        <p data-i18n="home.quickAccess.items.newZoho.desc">Trilha de tutorial guiado para novos usuários. Conteúdo em manutenção e disponível em breve.</p>
+                        <span class="quick-status" data-i18n="home.quickAccess.items.newZoho.status">Disponível em breve</span>
+                    </article>
+
+                    <a id="quickZohoHelp" class="quick-card" href="#">
+                        <span class="quick-pill" data-i18n="home.quickAccess.items.zohoHelp.pill">Orientação prática</span>
+                        <h3 data-i18n="home.quickAccess.items.zohoHelp.title">Dúvidas sobre Zoho?</h3>
+                        <p data-i18n="home.quickAccess.items.zohoHelp.desc">Vá direto para o eixo Zoho Desk e encontre as orientações operacionais disponíveis agora.</p>
+                    </a>
+
+                    <a id="quickBi" class="quick-card is-bi" href="#">
+                        <span class="quick-pill" data-i18n="home.quickAccess.items.bi.pill">Acompanhamento</span>
+                        <h3 data-i18n="home.quickAccess.items.bi.title">BI Executivo</h3>
+                        <p data-i18n="home.quickAccess.items.bi.desc">Acompanhe indicadores, desempenho e riscos operacionais após alinhar padrão e operação.</p>
                     </a>
                 </div>
             </div>
@@ -127,7 +136,7 @@
                         </div>
 
                         <ul class="macro-list">
-                            <li data-i18n="home.axes.zohoDesk.items.tutorial">Tutorial e onboarding</li>
+                            <li data-i18n="home.axes.zohoDesk.items.tutorial">Fluxos operacionais e boas práticas</li>
                             <li data-i18n="home.axes.zohoDesk.items.config">Configuração funcional e layouts</li>
                             <li data-i18n="home.axes.zohoDesk.items.rules">Regras operacionais e automações</li>
                             <li data-i18n="home.axes.zohoDesk.items.operation">Execução diária na ferramenta</li>
