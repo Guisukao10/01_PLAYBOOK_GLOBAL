@@ -2284,6 +2284,79 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
     pt.home.axes.zohoDesk.tutorialInfo = pt.home.axes.zohoDesk.tutorialInfo || {};
     pt.home.axes.zohoDesk.tutorialInfo.title = "Como funciona o tutorial";
     pt.home.axes.zohoDesk.tutorialInfo.text = "O tutorial Zoho Desk foi organizado para apoiar o uso pr\u00E1tico da ferramenta no dia a dia. O conte\u00FAdo parte dos primeiros passos na plataforma e avan\u00E7a para o tratamento de tickets, resposta ao cliente, registro de informa\u00E7\u00F5es, evid\u00EAncias, status, prioridade e fechamento. A ideia \u00E9 permitir uma navega\u00E7\u00E3o simples, por tema, para apoiar tanto o aprendizado inicial quanto a consulta r\u00E1pida durante a opera\u00E7\u00E3o.";
+
+    pt.home.axes.zohoDesk.tutorialHome = pt.home.axes.zohoDesk.tutorialHome || {};
+    pt.home.axes.zohoDesk.tutorialHome.hero = pt.home.axes.zohoDesk.tutorialHome.hero || {};
+    pt.home.axes.zohoDesk.tutorialHome.hero.tag = "TUTORIAL ZOHO DESK";
+    pt.home.axes.zohoDesk.tutorialHome.hero.title = "Tutorial Zoho Desk";
+    pt.home.axes.zohoDesk.tutorialHome.hero.description = "Aprenda a usar o Zoho Desk no padr\u00E3o operacional Alliage, com orienta\u00E7\u00E3o pr\u00E1tica para tratar tickets, responder clientes, registrar informa\u00E7\u00F5es, anexar evid\u00EAncias e aplicar corretamente status, prioridade e fechamento.";
+    pt.home.axes.zohoDesk.tutorialHome.hero.primaryCta = "Come\u00E7ar pelo tutorial";
+    pt.home.axes.zohoDesk.tutorialHome.hero.secondaryCta = "Ver Zoho Desk";
+
+    pt.home.axes.zohoDesk.tutorialHome.howToUse = pt.home.axes.zohoDesk.tutorialHome.howToUse || {};
+    pt.home.axes.zohoDesk.tutorialHome.howToUse.title = "Como usar este tutorial";
+    pt.home.axes.zohoDesk.tutorialHome.howToUse.kicker = "Guia de navegacao";
+    pt.home.axes.zohoDesk.tutorialHome.howToUse.text = "Use esta home como guia de navegacao: comece pela trilha recomendada oficial de 5 passos e, depois, consulte a biblioteca com 9 modulos conforme a necessidade da operacao.";
+    pt.home.axes.zohoDesk.tutorialHome.howToUse.points = pt.home.axes.zohoDesk.tutorialHome.howToUse.points || {};
+    pt.home.axes.zohoDesk.tutorialHome.howToUse.points.organizedByTheme = "Organizado por tema para acelerar a navegacao.";
+    pt.home.axes.zohoDesk.tutorialHome.howToUse.points.initialTraining = "Pode ser usado como treinamento inicial da operacao.";
+    pt.home.axes.zohoDesk.tutorialHome.howToUse.points.quickConsultation = "Tambem funciona como consulta rapida durante a rotina.";
+    pt.home.axes.zohoDesk.tutorialHome.howToUse.points.followPathThenLibrary = "Siga primeiro a trilha oficial de 5 passos e depois use os 9 modulos conforme necessidade.";
+
+    pt.home.axes.zohoDesk.tutorialHome.recommendedPath = pt.home.axes.zohoDesk.tutorialHome.recommendedPath || {};
+    pt.home.axes.zohoDesk.tutorialHome.recommendedPath.kicker = "Jornada oficial em 5 passos";
+    pt.home.axes.zohoDesk.tutorialHome.recommendedPath.title = "Trilha recomendada";
+    pt.home.axes.zohoDesk.tutorialHome.recommendedPath.description = "A jornada oficial do tutorial tem sempre 5 passos. Conclua essa trilha antes de navegar pela biblioteca completa.";
+    pt.home.axes.zohoDesk.tutorialHome.recommendedPath.steps = pt.home.axes.zohoDesk.tutorialHome.recommendedPath.steps || {};
+    pt.home.axes.zohoDesk.tutorialHome.recommendedPath.steps.gettingStarted = "Primeiros passos";
+    pt.home.axes.zohoDesk.tutorialHome.recommendedPath.steps.handleTicket = "Tratar ticket";
+    pt.home.axes.zohoDesk.tutorialHome.recommendedPath.steps.replyCustomer = "Responder cliente";
+    pt.home.axes.zohoDesk.tutorialHome.recommendedPath.steps.logEvidence = "Registrar evid\u00EAncias";
+    pt.home.axes.zohoDesk.tutorialHome.recommendedPath.steps.closeProperly = "Fechar corretamente";
+
+    pt.home.axes.zohoDesk.tutorialHome.modules = pt.home.axes.zohoDesk.tutorialHome.modules || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.kicker = "Biblioteca completa com 9 modulos";
+    pt.home.axes.zohoDesk.tutorialHome.modules.title = "M\u00F3dulos do tutorial";
+    pt.home.axes.zohoDesk.tutorialHome.modules.description = "Biblioteca completa com 9 modulos para consulta por tema. Use a trilha recomendada como caminho principal de aprendizado.";
+    pt.home.axes.zohoDesk.tutorialHome.modules.badgeComingSoon = "Em breve";
+    pt.home.axes.zohoDesk.tutorialHome.modules.ctaComingSoon = "Conteudo em preparacao";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards = pt.home.axes.zohoDesk.tutorialHome.modules.cards || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.gettingStarted = pt.home.axes.zohoDesk.tutorialHome.modules.cards.gettingStarted || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.gettingStarted.title = "Primeiros passos";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.gettingStarted.description = "Conhe\u00E7a a estrutura b\u00E1sica da plataforma, a leitura da tela e os elementos principais do atendimento.";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.handleTicket = pt.home.axes.zohoDesk.tutorialHome.modules.cards.handleTicket || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.handleTicket.title = "Como tratar um ticket";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.handleTicket.description = "Entenda a l\u00F3gica de atendimento do in\u00EDcio ao fim, com foco em atualiza\u00E7\u00E3o, acompanhamento e condu\u00E7\u00E3o correta do ticket.";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.replyCustomer = pt.home.axes.zohoDesk.tutorialHome.modules.cards.replyCustomer || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.replyCustomer.title = "Como responder o cliente";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.replyCustomer.description = "Aprenda a responder com clareza, alinhamento e registro adequado da comunica\u00E7\u00E3o no ticket.";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.logInformation = pt.home.axes.zohoDesk.tutorialHome.modules.cards.logInformation || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.logInformation.title = "Como registrar informa\u00E7\u00F5es e evid\u00EAncias";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.logInformation.description = "Veja como documentar corretamente a tratativa, anexar evid\u00EAncias e preservar o hist\u00F3rico do atendimento.";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.serviceStatus = pt.home.axes.zohoDesk.tutorialHome.modules.cards.serviceStatus || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.serviceStatus.title = "Status do atendimento";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.serviceStatus.description = "Entenda quando usar cada status e como manter o fluxo do ticket coerente com a opera\u00E7\u00E3o.";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.prioritySla = pt.home.axes.zohoDesk.tutorialHome.modules.cards.prioritySla || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.prioritySla.title = "Prioridade e SLA";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.prioritySla.description = "Entenda como a prioridade orienta o atendimento e como os tempos esperados devem ser interpretados na rotina.";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.properClosure = pt.home.axes.zohoDesk.tutorialHome.modules.cards.properClosure || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.properClosure.title = "Fechamento correto";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.properClosure.description = "Veja como concluir tickets com consist\u00EAncia, registro completo e encerramento adequado.";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.practicalScenarios = pt.home.axes.zohoDesk.tutorialHome.modules.cards.practicalScenarios || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.practicalScenarios.title = "Cen\u00E1rios pr\u00E1ticos";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.practicalScenarios.description = "Consulte situa\u00E7\u00F5es comuns da opera\u00E7\u00E3o e veja como tratar cada caso no sistema.";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.faq = pt.home.axes.zohoDesk.tutorialHome.modules.cards.faq || {};
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.faq.title = "FAQ";
+    pt.home.axes.zohoDesk.tutorialHome.modules.cards.faq.description = "Respostas r\u00E1pidas para d\u00FAvidas recorrentes sobre o uso do Zoho Desk na opera\u00E7\u00E3o.";
+
+    pt.home.axes.zohoDesk.tutorialHome.bestPractices = pt.home.axes.zohoDesk.tutorialHome.bestPractices || {};
+    pt.home.axes.zohoDesk.tutorialHome.bestPractices.title = "Boas pr\u00E1ticas do atendimento";
+    pt.home.axes.zohoDesk.tutorialHome.bestPractices.items = pt.home.axes.zohoDesk.tutorialHome.bestPractices.items || {};
+    pt.home.axes.zohoDesk.tutorialHome.bestPractices.items.item1 = "Responda com clareza e objetividade";
+    pt.home.axes.zohoDesk.tutorialHome.bestPractices.items.item2 = "Registre informa\u00E7\u00F5es importantes no ticket";
+    pt.home.axes.zohoDesk.tutorialHome.bestPractices.items.item3 = "Anexe evid\u00EAncias quando necess\u00E1rio";
+    pt.home.axes.zohoDesk.tutorialHome.bestPractices.items.item4 = "Use o status correto para cada etapa";
+    pt.home.axes.zohoDesk.tutorialHome.bestPractices.items.item5 = "Feche tickets com hist\u00F3rico consistente";
 })();
 
 (function () {

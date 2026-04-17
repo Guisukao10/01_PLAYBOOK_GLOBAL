@@ -1,46 +1,157 @@
-.zoho-axis-grid {
-    gap: 1.5rem;
+body.zoho-desk-axis-home {
+    background:
+        radial-gradient(circle at 12% 5%, rgba(70, 154, 101, 0.11), transparent 32%),
+        radial-gradient(circle at 90% 8%, rgba(45, 118, 76, 0.1), transparent 34%),
+        #edf7f1;
 }
 
-.zoho-axis-grid .module-card {
-    border-color: var(--zoho-green-border);
-    background: linear-gradient(160deg, #ffffff, #f1faf5);
+body.zoho-desk-axis-home .header {
+    background: linear-gradient(125deg, #11442d 0%, #1b6943 52%, #145536 100%);
+    border-bottom-color: rgba(180, 220, 195, 0.32);
 }
 
-.zoho-axis-grid .module-card:hover {
-    box-shadow: 0 12px 22px rgba(20, 79, 50, 0.15);
+body.zoho-desk-axis-home .logo h1 {
+    text-transform: none;
+    letter-spacing: 0.01em;
 }
 
-.zoho-axis-grid .module-card:focus-within {
-    border-color: rgba(75, 144, 99, 0.62);
-    box-shadow: 0 0 0 3px rgba(75, 144, 99, 0.18), 0 12px 22px rgba(20, 79, 50, 0.14);
+body.zoho-desk-axis-home .logo p {
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 0.84rem;
+    color: rgba(230, 248, 237, 0.95);
 }
 
-.zoho-scope-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
+body.zoho-desk-axis-home .module-hero {
+    padding-top: clamp(1.4rem, 2.9vw, 2.1rem);
 }
 
-.zoho-scope-card {
-    background: linear-gradient(180deg, #ffffff, #f3faf6);
-    border: 1px solid var(--zoho-green-border);
-    border-radius: 14px;
-    padding: 1.25rem;
-    box-shadow: 0 8px 18px rgba(20, 79, 50, 0.08);
+body.zoho-desk-axis-home .module-hero-content {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    border: 1px solid rgba(154, 205, 172, 0.75);
+    border-radius: 18px;
+    background: linear-gradient(170deg, #ffffff, #f2fbf5);
+    box-shadow: 0 14px 28px rgba(22, 78, 50, 0.12);
 }
 
-.zoho-scope-card h3 {
-    margin-top: 0;
-    color: var(--zoho-green-text);
+body.zoho-desk-axis-home .module-hero-content h1 {
+    font-size: clamp(1.72rem, 2.8vw, 2.24rem);
 }
 
-.zoho-scope-list {
-    margin: 0;
-    padding-left: 1.25rem;
-    color: #2c6145;
+body.zoho-desk-axis-home .module-hero-content h2 {
+    margin-bottom: 0.32rem;
+    color: #2c6748;
 }
 
-.zoho-scope-list li + li {
-    margin-top: 0.35rem;
+body.zoho-desk-axis-home .module-hero-content p {
+    color: #2f5f47;
+}
+
+.zoho-training-head {
+    margin-bottom: 0.8rem;
+}
+
+.zoho-training-head h2 {
+    margin-bottom: 0.2rem;
+    color: #1f5539;
+}
+
+.zoho-training-head .section-lead {
+    margin-bottom: 0;
+    color: #2f6348;
+}
+
+.zoho-training-grid {
+    gap: 0.92rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.zoho-training-card {
+    border-color: rgba(151, 206, 171, 0.82);
+    background: linear-gradient(160deg, #ffffff, #f2fbf5);
+}
+
+.zoho-training-card:hover {
+    border-color: rgba(95, 162, 119, 0.72);
+    box-shadow: 0 13px 25px rgba(22, 81, 52, 0.15);
+}
+
+.zoho-training-card .module-badge-home {
+    border-color: rgba(140, 193, 158, 0.86);
+    background: #e7f7ee;
+    color: #236245;
+}
+
+.zoho-training-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.zoho-training-type {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid rgba(142, 192, 159, 0.72);
+    background: rgba(237, 249, 242, 0.92);
+    color: #296246;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.16rem 0.5rem;
+}
+
+.zoho-training-card h3 {
+    color: #1d5138;
+    font-size: 1.04rem;
+}
+
+.zoho-training-card p {
+    color: #2f6248;
+    min-height: 4.8em;
+}
+
+.zoho-training-card .btn-module {
+    min-height: 42px;
+}
+
+.zoho-training-card.is-featured {
+    border-color: rgba(98, 168, 123, 0.74);
+    background: linear-gradient(160deg, #ffffff, #e9f8ef);
+    box-shadow: 0 15px 28px rgba(24, 86, 56, 0.15);
+}
+
+.zoho-training-card.is-featured .btn-module {
+    background: linear-gradient(135deg, #2c8655, #1f6a42);
+    border-color: rgba(26, 89, 55, 0.75);
+}
+
+.zoho-training-card.is-locked {
+    border-style: dashed;
+    background: linear-gradient(160deg, #ffffff, #f6fbf8);
+    box-shadow: none;
+}
+
+.zoho-training-card.is-locked:hover {
+    transform: none;
+    border-color: rgba(151, 206, 171, 0.82);
+    box-shadow: none;
+}
+
+.zoho-training-card.is-locked .module-plan-tag {
+    border-color: rgba(164, 197, 177, 0.84);
+    background: #edf7f1;
+    color: #3f6d55;
+}
+
+@media (max-width: 760px) {
+    body.zoho-desk-axis-home .module-hero-content {
+        border-radius: 14px;
+    }
+
+    .zoho-training-grid {
+        grid-template-columns: 1fr;
+    }
 }

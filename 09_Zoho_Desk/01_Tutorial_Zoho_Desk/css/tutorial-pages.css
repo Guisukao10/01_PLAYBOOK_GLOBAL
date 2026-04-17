@@ -1,0 +1,217 @@
+body.zoho-desk-tutorial-step {
+    background:
+        radial-gradient(circle at 10% 4%, rgba(60, 137, 89, 0.14), transparent 30%),
+        radial-gradient(circle at 92% 8%, rgba(30, 102, 64, 0.1), transparent 34%),
+        #edf8f2;
+}
+
+.tutorial-step-hero {
+    padding-top: clamp(1.1rem, 2.6vw, 1.8rem);
+}
+
+.tutorial-step-hero-content {
+    border-radius: 18px;
+    border: 1px solid rgba(145, 200, 166, 0.78);
+    background: linear-gradient(166deg, #ffffff, #f3fbf6);
+    box-shadow: 0 14px 28px rgba(21, 76, 49, 0.12);
+}
+
+.tutorial-step-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.tutorial-step-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    border-radius: 999px;
+    border: 1px solid rgba(107, 172, 132, 0.82);
+    background: #e8f7ee;
+    color: #1f5c3f;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 0.1rem 0.6rem;
+}
+
+.tutorial-step-status-pill {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    border-radius: 999px;
+    border: 1px solid rgba(159, 171, 181, 0.72);
+    background: #f3f6f8;
+    color: #425868;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.1rem 0.56rem;
+}
+
+.tutorial-step-status-pill.is-complete {
+    border-color: rgba(88, 157, 112, 0.78);
+    background: #e8f6ee;
+    color: #1f5d40;
+}
+
+.tutorial-step-hero-actions {
+    margin-top: 0.76rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.54rem;
+}
+
+.tutorial-step-feedback {
+    margin: 0.76rem 0 0;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-size: 0.84rem;
+    font-weight: 600;
+    padding: 0.46rem 0.62rem;
+}
+
+.tutorial-step-feedback.is-success {
+    border-color: rgba(114, 183, 139, 0.84);
+    background: #e9f8ef;
+    color: #1f5c3f;
+}
+
+.tutorial-step-feedback.is-info {
+    border-color: rgba(155, 188, 207, 0.8);
+    background: #edf6fb;
+    color: #2c5f7a;
+}
+
+.tutorial-step-main {
+    display: grid;
+    gap: 0.74rem;
+    margin-bottom: 1.6rem;
+}
+
+.tutorial-page-card {
+    border: 1px solid rgba(150, 205, 171, 0.76);
+    border-radius: 16px;
+    background: linear-gradient(170deg, #ffffff, #f4fbf7);
+    box-shadow: 0 10px 22px rgba(22, 78, 50, 0.1);
+    padding: clamp(0.9rem, 1.8vw, 1.18rem);
+}
+
+.tutorial-page-card h2 {
+    margin: 0 0 0.32rem;
+    color: #1f5439;
+}
+
+.tutorial-page-card p {
+    margin: 0;
+    max-width: none;
+    color: #2f6248;
+}
+
+.tutorial-representation-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.62rem;
+    margin-top: 0.72rem;
+}
+
+.tutorial-representation-item {
+    border: 1px solid rgba(158, 207, 176, 0.82);
+    border-radius: 12px;
+    background: #f0f9f4;
+    padding: 0.64rem 0.66rem;
+}
+
+.tutorial-representation-item h3 {
+    margin: 0 0 0.2rem;
+    color: #1f583d;
+    font-size: 0.95rem;
+}
+
+.tutorial-representation-item p {
+    color: #2f6349;
+    font-size: 0.84rem;
+    line-height: 1.45;
+}
+
+.tutorial-comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.62rem;
+    margin-top: 0.72rem;
+}
+
+.tutorial-comparison-column {
+    border: 1px solid rgba(158, 207, 176, 0.82);
+    border-radius: 12px;
+    background: #f0f9f4;
+    padding: 0.66rem;
+}
+
+.tutorial-comparison-column h3 {
+    margin: 0 0 0.2rem;
+    font-size: 0.94rem;
+    color: #1f583d;
+}
+
+.tutorial-comparison-column ul {
+    margin: 0;
+    padding-left: 1.12rem;
+}
+
+.tutorial-comparison-column li {
+    color: #2f6248;
+    margin: 0.12rem 0;
+}
+
+.tutorial-highlight {
+    margin-top: 0.6rem;
+    border-radius: 11px;
+    border: 1px solid rgba(130, 189, 153, 0.82);
+    background: linear-gradient(135deg, #e4f5eb, #eefaf3);
+    color: #1f563b;
+    font-weight: 700;
+    padding: 0.56rem 0.66rem;
+}
+
+.tutorial-checklist {
+    margin: 0.66rem 0 0;
+    padding-left: 1.08rem;
+}
+
+.tutorial-checklist li {
+    color: #2f6248;
+    margin: 0.18rem 0;
+}
+
+.tutorial-end-actions {
+    margin-top: 0.72rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.52rem;
+}
+
+.tutorial-end-actions .btn-secondary[disabled] {
+    cursor: not-allowed;
+    opacity: 0.68;
+}
+
+@media (max-width: 840px) {
+    .tutorial-representation-grid,
+    .tutorial-comparison-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .tutorial-step-hero-actions .btn-secondary,
+    .tutorial-step-hero-actions .btn-primary,
+    .tutorial-end-actions .btn-secondary,
+    .tutorial-end-actions .btn-primary {
+        width: 100%;
+    }
+}

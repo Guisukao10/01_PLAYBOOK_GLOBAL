@@ -13,8 +13,11 @@ const epicModules = {
   zoho_desk: {
     id: "zoho_desk",
     modules: [
-      { id: "tutorial_zoho_desk", link: "./09_Zoho_Desk/01_Tutorial_Zoho_Desk/index.html", status: "available" },
-      { id: "edicao_administracao_zoho_desk", link: "./09_Zoho_Desk/02_Edicao_Administracao/index.html", status: "available" }
+      { id: "primeiros_passos_zoho_desk", link: "./09_Zoho_Desk/01_Tutorial_Zoho_Desk/index.html", status: "available" },
+      { id: "atendimento_atualizacao_tickets", status: "coming_soon" },
+      { id: "boas_praticas_operacionais_zoho", status: "coming_soon" },
+      { id: "filtros_visualizacoes_zoho", status: "coming_soon" },
+      { id: "regras_globais_atendimento_zoho", status: "coming_soon" }
     ]
   }
 };

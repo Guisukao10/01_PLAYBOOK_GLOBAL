@@ -171,7 +171,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setLink("macroGlobalService", routes.globalServiceHome);
     setLink("macroZohoDesk", routes.zohoDeskHome);
     setLink("zohoDeskTutorialCta", routes.zohoDeskTutorialHome);
-    setLink("zohoDeskAdminCta", routes.zohoDeskAdminHome);
 
     renderEpicModules("globalServiceModules", "global_service", i18n);
 

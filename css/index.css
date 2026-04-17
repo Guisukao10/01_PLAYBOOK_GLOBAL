@@ -539,9 +539,10 @@
 
 .zoho-main-cards {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 0.14rem;
+    max-width: 780px;
 }
 
 .zoho-main-card {
@@ -568,6 +569,21 @@
     outline: none;
     border-color: rgba(66, 131, 88, 0.86);
     box-shadow: 0 0 0 3px rgba(65, 134, 92, 0.18), 0 12px 24px rgba(24, 88, 56, 0.16);
+}
+
+.zoho-main-tag {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    border-radius: 999px;
+    border: 1px solid rgba(134, 192, 152, 0.78);
+    background: #e8f6ee;
+    color: #1e5d3f;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.14rem 0.5rem;
 }
 
 .zoho-main-card h4 {
@@ -808,6 +824,7 @@
 
     .zoho-main-cards {
         grid-template-columns: 1fr;
+        max-width: none;
     }
 }
 

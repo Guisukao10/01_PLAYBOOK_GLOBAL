@@ -3,60 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-i18n="home.axes.zohoDesk.mainCards.tutorial.title">Playbook Global - Tutorial Zoho Desk</title>
+    <title>Playbook Global - Primeiros Passos no Zoho Desk</title>
     <link rel="stylesheet" href="../../css/global.css">
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="./css/tutorial-zoho-desk.css">
 </head>
-<body class="module-page">
+<body class="module-page zoho-desk-tutorial-home" data-disable-wayfinder="true">
     <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <h1 data-i18n="home.axes.zohoDesk.mainCards.tutorial.title">Tutorial Zoho Desk</h1>
-                    <p data-i18n="home.axes.zohoDesk.mainCards.tutorial.desc">Aprenda a usar o Zoho Desk no dia a dia.</p>
+                    <h1>Primeiros Passos no Zoho Desk</h1>
+                    <p>Trilha básica para uso diário do sistema</p>
                 </div>
-                <nav class="nav">
+                <nav class="nav" aria-label="Navegação principal da trilha">
                     <ul>
                         <li><a href="../../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToPlaybook">Voltar para Playbook</a></li>
-                        <li><a href="../index.html" class="btn btn-secondary" data-i18n="common.buttons.backToModuleHome">Voltar para home do modulo</a></li>
+                        <li><a href="../index.html" class="btn btn-secondary">Voltar para Zoho Desk</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <section class="epic-context-strip is-zoho-desk">
-        <div class="container">
-            <span class="module-badge-home" data-i18n="common.labels.epicZohoDesk">Epico Zoho Desk</span>
-            <p data-i18n="common.contexts.zohoDeskModule">Este modulo pertence ao epico Zoho Desk.</p>
-        </div>
-    </section>
-
     <main>
-        <section class="hero module-hero">
+        <section class="hero module-hero tutorial-track-hero">
             <div class="container">
-                <div class="hero-content module-hero-content">
-                    <h2 data-i18n="home.axes.zohoDesk.mainCards.tutorial.title">Tutorial Zoho Desk</h2>
-                    <p data-i18n="home.axes.zohoDesk.mainCards.tutorial.desc">Aprenda a usar o Zoho Desk no dia a dia.</p>
-                    <div class="module-cta-row">
-                        <a href="../index.html" class="btn-primary" data-i18n="common.buttons.backToModuleHome">Voltar para home do modulo</a>
-                        <a href="../../index.html#epic-zoho-desk" class="btn-secondary" data-i18n="common.buttons.viewZohoDeskEpic">Ver epico Zoho Desk</a>
+                <div class="hero-content module-hero-content tutorial-track-hero-content">
+                    <p class="page-breadcrumb">Home &gt; Zoho Desk &gt; Primeiros Passos</p>
+                    <h1>Primeiros Passos no Zoho Desk</h1>
+                    <h2>Aprenda os fundamentos para utilizar o Zoho Desk no dia a dia do atendimento.</h2>
+
+                    <div class="tutorial-progress-panel">
+                        <div class="tutorial-progress-head">
+                            <span class="tutorial-progress-label">Progresso da trilha</span>
+                            <strong id="tutorialProgressValue">0%</strong>
+                        </div>
+                        <div
+                            id="tutorialProgressBar"
+                            class="tutorial-progress-bar"
+                            role="progressbar"
+                            aria-valuemin="0"
+                            aria-valuemax="100"
+                            aria-valuenow="0"
+                            aria-label="Progresso da trilha Primeiros Passos no Zoho Desk"
+                        >
+                            <span id="tutorialProgressFill" class="tutorial-progress-fill"></span>
+                        </div>
+                        <p id="tutorialProgressMessage" class="tutorial-progress-message">Nenhuma etapa concluída ainda.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="modules">
+        <section class="about tutorial-context-section">
             <div class="container">
-                <h2 data-i18n="home.axes.modulesTitle">Modulos do eixo</h2>
-                <ul class="tutorial-scope-list">
-                    <li data-i18n="home.axes.zohoDesk.summary.tutorial.items.gettingStarted">Primeiros passos</li>
-                    <li data-i18n="home.axes.zohoDesk.summary.tutorial.items.handleTicket">Como tratar um ticket</li>
-                    <li data-i18n="home.axes.zohoDesk.summary.tutorial.items.replyCustomer">Como responder o cliente</li>
-                    <li data-i18n="home.axes.zohoDesk.summary.tutorial.items.documentEvidence">Como registrar informacoes e evidencias</li>
-                    <li data-i18n="home.axes.zohoDesk.summary.tutorial.items.statusPriorityClosure">Status, prioridade e fechamento</li>
-                </ul>
+                <article class="tutorial-context-card">
+                    <h2>Contexto da trilha</h2>
+                    <p>
+                        O Zoho Desk é a plataforma utilizada para registrar, acompanhar e gerenciar atendimentos por
+                        meio de tickets. Nesta trilha, você aprenderá a acessar o sistema, entender onde ficam os
+                        tickets, usar visualizações básicas e realizar ações essenciais no atendimento.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="modules tutorial-steps-section" id="etapas-trilha">
+            <div class="container">
+                <div class="tutorial-steps-head">
+                    <h2>Etapas da trilha</h2>
+                    <p class="section-lead">
+                        Conclua cada etapa para avançar no progresso até 100%.
+                    </p>
+                </div>
+                <div id="tutorialStepsList" class="tutorial-steps-list"></div>
+            </div>
+        </section>
+
+        <section class="connection tutorial-completion-section" id="tutorialCompletionSection" hidden>
+            <div class="container">
+                <article class="tutorial-completion-card">
+                    <span class="module-badge-home">100% concluído</span>
+                    <h2>Trilha concluída</h2>
+                    <p class="tutorial-completion-success">Trilha concluída com sucesso.</p>
+                    <p>
+                        Você concluiu os primeiros passos no Zoho Desk. Agora você já conhece os fundamentos para
+                        navegar no sistema, localizar tickets e executar ações básicas de atendimento.
+                    </p>
+                    <div class="module-cta-row tutorial-completion-actions">
+                        <a href="../index.html" class="btn-primary">Voltar para a tela inicial do Zoho Desk</a>
+                        <button type="button" id="reviewStepsButton" class="btn-secondary">Revisar etapas</button>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -74,6 +113,7 @@
     <script src="../../i18n/i18n.js"></script>
     <script src="../../i18n/init.js"></script>
     <script src="../../js/global.js"></script>
+    <script src="./js/tutorial-progress.js"></script>
     <script src="./js/tutorial-zoho-desk.js"></script>
 </body>
 </html>
