@@ -13,6 +13,47 @@
     var completionSectionEl = null;
     var reviewStepsButtonEl = null;
 
+    function sanitizeHref(rawHref, fallback) {
+        if (window.PlaybookLinkSecurity && typeof window.PlaybookLinkSecurity.sanitizeHref === "function") {
+            return window.PlaybookLinkSecurity.sanitizeHref(rawHref, fallback);
+        }
+
+        var safeFallback = fallback === undefined ? "#" : fallback;
+        var fallbackText = safeFallback === null ? null : String(safeFallback).trim();
+        var href = String(rawHref === undefined || rawHref === null ? "" : rawHref).trim();
+
+        if (!href) return fallbackText;
+        if (href === "#" || href.charAt(0) === "#") return href;
+        if (href.indexOf("//") === 0) return fallbackText;
+
+        var compact = href.replace(/[\u0000-\u001F\u007F\s]+/g, "");
+        var schemeMatch = compact.match(/^([a-z][a-z0-9+.-]*):/i);
+        if (!schemeMatch) return href;
+
+        var scheme = schemeMatch[1].toLowerCase();
+        if (scheme === "http" || scheme === "https" || scheme === "mailto" || scheme === "tel") {
+            return href;
+        }
+
+        return fallbackText;
+    }
+
+    function setSafeHref(element, rawHref, fallback) {
+        if (window.PlaybookLinkSecurity && typeof window.PlaybookLinkSecurity.setHref === "function") {
+            return window.PlaybookLinkSecurity.setHref(element, rawHref, fallback);
+        }
+
+        var safeHref = sanitizeHref(rawHref, fallback);
+        if (!element) return safeHref;
+        if (safeHref === null) {
+            element.removeAttribute("href");
+            return null;
+        }
+
+        element.href = safeHref;
+        return safeHref;
+    }
+
     function loadProgress() {
         completedStepIds = progressApi.loadCompletedStepIds();
     }
@@ -65,7 +106,7 @@
             viewButton = document.createElement("a");
             viewButton.className = "btn-secondary tutorial-step-view-btn";
             viewButton.textContent = "Ver etapa";
-            viewButton.href = step.contentPath;
+            setSafeHref(viewButton, step.contentPath, "#");
         } else {
             viewButton = document.createElement("button");
             viewButton.type = "button";
@@ -105,7 +146,7 @@
 
     function renderSteps() {
         if (!stepsListEl) return;
-        stepsListEl.innerHTML = "";
+        stepsListEl.replaceChildren();
 
         STEPS.forEach(function (step, index) {
             stepsListEl.appendChild(createStepCard(step, index));

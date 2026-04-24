@@ -75,7 +75,9 @@
                 const key = node.getAttribute("data-i18n-html");
                 const value = t(key);
                 if (value !== undefined && value !== null) {
-                    node.innerHTML = String(value);
+                    // Mantemos este seletor por compatibilidade, mas aplicamos texto puro para evitar injeção DOM.
+                    // Se no futuro houver necessidade real de HTML aqui, aplicar sanitização explícita antes do bind.
+                    node.textContent = String(value);
                 }
             });
 

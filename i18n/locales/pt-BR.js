@@ -63,8 +63,8 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
         },
         hero: {
             kicker: "Hub Operacional Global",
-            mainTitle: "Padronize o atendimento global e opere o Zoho Desk com direção única",
-            mainSubtitle: "Acesse o BI Executivo, escolha seu eixo de trabalho e siga por trilhas claras.",
+            mainTitle: "Padronize o atendimento global e faça do nosso cliente herói",
+            mainSubtitle: "Escolha seu eixo de trabalho e siga trilhas claras para operar com consistência global.",
             ctaBi: "Acessar BI",
             ctaModules: "Ver eixos e módulos",
             title: "Playbook Global de Service Governance",
@@ -331,28 +331,25 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                 }
             },
             classification: {
-                title: "Classificação oficial P1-P5 e MTFC",
-                description: "A classificação abaixo representa a distribuição operacional base e o foco de SLA nesta página: MTFC (Primeira resposta).",
-                scoreCalculationNote: "O score individual do ticket é calculado pela multiplicação dos pesos dos critérios. A matriz P1–P5 mostra a distribuição estimada das combinações possíveis por faixa de prioridade.",
+                title: "Classificação oficial por Score, Prioridade e MTFC/SLA",
+                description: "A classificação oficial é definida a partir do score calculado, com prioridade P1-P5 e MTFC/SLA correspondente.",
+                scoreCalculationNote: "A prioridade é calculada diretamente pelo score: Score = Solicitante x Tipo de atendimento x Categoria x Produto.",
                 scaleLegend: "Escala operacional: do mais urgente para o menos urgente.",
                 highestUrgency: "Maior urgência",
                 lowestUrgency: "Menor urgência",
                 columns: {
                     priority: "Prioridade",
-                    combinations: "Combinações",
-                    estimatedCombinations: "Combinações estimadas",
-                    share: "Classificação aproximada",
-                    mtfc: "MTFC"
+                    scoreRange: "Faixa de Score",
+                    mtfcSla: "MTFC/SLA"
                 },
                 levels: {
-                    p1: { name: "Urgente", share: "1%", mtfc: "1h", interpretation: "Atendimento imediato e priorização máxima na fila." },
-                    p2: { name: "Alta", share: "3%", mtfc: "2h", interpretation: "Alta criticidade com janela curta para primeira resposta." },
-                    p3: { name: "Média", share: "8%", mtfc: "3h", interpretation: "Fluxo padrão com monitoramento contínuo de SLA." },
-                    p4: { name: "Baixa", share: "27%", mtfc: "5h", interpretation: "Priorização de rotina com foco em estabilidade da fila." },
-                    p5: { name: "Muito baixa", share: "61%", mtfc: "6h", interpretation: "Baixa criticidade, mantendo controle de volume e aging." }
+                    p1: { name: "Urgente", scoreRange: "50 a 90", mtfc: "1h", interpretation: "Atendimento imediato e priorização máxima na fila." },
+                    p2: { name: "Alta", scoreRange: "31 a 49", mtfc: "2h", interpretation: "Alta criticidade com janela curta para primeira resposta." },
+                    p3: { name: "Média", scoreRange: "21 a 30", mtfc: "3h", interpretation: "Fluxo padrão com monitoramento contínuo de SLA." },
+                    p4: { name: "Baixa", scoreRange: "11 a 20", mtfc: "5h", interpretation: "Priorização de rotina com foco em estabilidade da fila." },
+                    p5: { name: "Muito Baixa", scoreRange: "1 a 10", mtfc: "6h", interpretation: "Baixa criticidade, mantendo controle de volume e aging." }
                 },
-                totalBase: "Total base estimada: 900 combinações.",
-                firstResponseNote: "Nesta leitura, o SLA está orientado para MTFC e Primeira resposta.",
+                firstResponseNote: "Nesta leitura, o SLA está orientado para MTFC/SLA da primeira resposta.",
                 resolutionNote: "A regra de Resolução pode ser tratada separadamente da diferenciação de primeira resposta.",
                 exceptionTitle: "Exceção oficial",
                 exceptionText: "Out of the box / Zero hora deve virar prioridade Urgente."
@@ -403,7 +400,7 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                 readyState: "Resultado calculado com a regra oficial de prioridade.",
                 finalPriority: "Prioridade final",
                 scoreCalculated: "Score calculado",
-                mtfc: "MTFC",
+                mtfc: "MTFC/SLA",
                 scoreFormula: "Composição do score",
                 operationalInterpretation: "Interpretação operacional",
                 pendingInterpretation: "Ao calcular, você verá a leitura operacional do nível de prioridade.",
@@ -413,7 +410,7 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                     p2: { name: "Alta", mtfc: "2h", interpretation: "Caso crítico com janela curta para primeira resposta." },
                     p3: { name: "Média", mtfc: "3h", interpretation: "Atendimento em fluxo padrão com monitoramento contínuo." },
                     p4: { name: "Baixa", mtfc: "5h", interpretation: "Rotina operacional com menor pressão imediata de fila." },
-                    p5: { name: "Muito baixa", mtfc: "6h", interpretation: "Baixa urgência, mantendo controle de volume e aging." },
+                    p5: { name: "Muito Baixa", mtfc: "6h", interpretation: "Baixa urgência, mantendo controle de volume e aging." },
                     nc: { name: "Não classificada", mtfc: "-", interpretation: "Resultado sem classificação de prioridade." }
                 }
             },
@@ -441,7 +438,7 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                         opcoes: {
                             assistencia_distribuidor: { codigo: "S1", label: "Assistencia / Distribuidor", peso: 1 },
                             cliente: { codigo: "S2", label: "Cliente", peso: 2 },
-                            cliente_locacao: { codigo: "S3", label: "Cliente de Locacao", peso: 3 }
+                            cliente_locacao: { codigo: "S3", label: "Cliente de Locacao", peso: 1 }
                         }
                     },
                     tipo_atendimento: {
@@ -461,7 +458,7 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                             locacao_suporte_tecnico: {
                                 codigo: "A4",
                                 label: "Sou cliente de locacao de produto e preciso de suporte tecnico",
-                                peso: 4
+                                peso: 1
                             }
                         }
                     },
@@ -502,25 +499,24 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
                             raio_x_portatil: { codigo: "P10", label: "Raio-X Portatil", peso: 2 },
                             sensor_intraoral: { codigo: "P11", label: "Sensor Intraoral", peso: 3 },
                             consultorios: { codigo: "P12", label: "Consultorios", peso: 3 },
-                            scanner_ios: { codigo: "P13", label: "Scanner IOS", peso: 3 },
-                            eagle_scan: { codigo: "P14", label: "Eagle Scan", peso: 3 },
-                            tomografo_panoramico: { codigo: "P15", label: "Tomografo / Panoramico", peso: 3 }
+                            eagle_scan: { codigo: "P13", label: "Eagle Scan", peso: 3 },
+                            tomografo_panoramico: { codigo: "P14", label: "Tomografo / Panoramico", peso: 3 }
                         }
                     }
                 },
                 faixas: [
-                    { codigo: "P1", nome: "P1", min: 144, max: 180 },
-                    { codigo: "P2", nome: "P2", min: 108, max: 143 },
-                    { codigo: "P3", nome: "P3", min: 64, max: 107 },
-                    { codigo: "P4", nome: "P4", min: 27, max: 63 },
-                    { codigo: "P5", nome: "P5", min: 0, max: 26 }
+                    { codigo: "P1", nome: "P1", min: 50, max: 90 },
+                    { codigo: "P2", nome: "P2", min: 31, max: 49 },
+                    { codigo: "P3", nome: "P3", min: 21, max: 30 },
+                    { codigo: "P4", nome: "P4", min: 11, max: 20 },
+                    { codigo: "P5", nome: "P5", min: 1, max: 10 }
                 ],
                 metadadosPrioridade: {
-                    P1: { icone: "\u{1F534}", badgeClass: "badge-p1", descricao: "Critica" },
+                    P1: { icone: "\u{1F534}", badgeClass: "badge-p1", descricao: "Urgente" },
                     P2: { icone: "\u{1F536}", badgeClass: "badge-p2", descricao: "Alta" },
-                    P3: { icone: "\u{1F7E1}", badgeClass: "badge-p3", descricao: "Moderada" },
+                    P3: { icone: "\u{1F7E1}", badgeClass: "badge-p3", descricao: "Média" },
                     P4: { icone: "\u{1F7E2}", badgeClass: "badge-p4", descricao: "Baixa" },
-                    P5: { icone: "\u{1F535}", badgeClass: "badge-p5", descricao: "Planejada" },
+                    P5: { icone: "\u{1F535}", badgeClass: "badge-p5", descricao: "Muito Baixa" },
                     NC: { icone: "\u{26AA}", badgeClass: "badge-low", descricao: "Nao classificada" }
                 }
             }
@@ -2212,8 +2208,8 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
     pt.home.header.ctaBi = "Acessar BI";
 
     pt.home.hero.kicker = "Hub Operacional Global";
-    pt.home.hero.mainTitle = "Padronize o atendimento global e opere o Zoho Desk com direção única";
-    pt.home.hero.mainSubtitle = "Acesse o BI Executivo, escolha seu eixo de trabalho e siga por trilhas claras.";
+    pt.home.hero.mainTitle = "Padronize o atendimento global e faça do nosso cliente herói";
+    pt.home.hero.mainSubtitle = "Escolha seu eixo de trabalho e siga trilhas claras para operar com consistência global.";
     pt.home.hero.ctaModules = "Onboarding (Aprenda)";
     pt.home.hero.ctaBi = "Acesse o BI (Analise)";
 
@@ -2245,6 +2241,13 @@ window.PLAYBOOK_I18N_LOCALES["pt-BR"] = {
     pt.home.quickAccess.items.zohoDesk.pill = pt.home.quickAccess.items.zohoHelp.pill;
     pt.home.quickAccess.items.zohoDesk.title = pt.home.quickAccess.items.zohoHelp.title;
     pt.home.quickAccess.items.zohoDesk.desc = pt.home.quickAccess.items.zohoHelp.desc;
+
+    pt.home.training = pt.home.training || {};
+    pt.home.training.badge_initial = "Trilha inicial";
+    pt.home.training.badge_basic = "Trilha básica disponível";
+    pt.home.training.title = "Primeiros Passos no Zoho Desk";
+    pt.home.training.description = "Treinamento básico para quem está começando: tickets, visualizações e ações essenciais no dia a dia.";
+    pt.home.training.description_full = "Aprenda a acessar o sistema, entender tickets, navegar por visualizações e executar atualizações essenciais no atendimento.";
 
     pt.home.axes = pt.home.axes || {};
     pt.home.axes.zohoDesk = pt.home.axes.zohoDesk || {};

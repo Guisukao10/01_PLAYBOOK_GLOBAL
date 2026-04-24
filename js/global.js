@@ -1,3 +1,77 @@
+function createPlaybookLinkSecurity() {
+    // Allowlist explícita para links dinâmicos.
+    const ALLOWED_SCHEMES = {
+        http: true,
+        https: true,
+        mailto: true,
+        tel: true
+    };
+
+    function toStringValue(value) {
+        return String(value === undefined || value === null ? "" : value).trim();
+    }
+
+    function getScheme(value) {
+        const compact = value.replace(/[\u0000-\u001F\u007F\s]+/g, "");
+        const match = compact.match(/^([a-z][a-z0-9+.-]*):/i);
+        return match ? match[1].toLowerCase() : "";
+    }
+
+    function sanitizeHref(rawHref, fallback) {
+        const safeFallback = fallback === undefined ? "#" : fallback;
+        const fallbackText = safeFallback === null ? null : toStringValue(safeFallback);
+        const href = toStringValue(rawHref);
+
+        if (!href) return fallbackText;
+        if (href === "#" || href.charAt(0) === "#") return href;
+        if (href.indexOf("//") === 0) return fallbackText;
+
+        const scheme = getScheme(href);
+        if (!scheme) return href;
+
+        return ALLOWED_SCHEMES[scheme] ? href : fallbackText;
+    }
+
+    function setHref(element, rawHref, fallback) {
+        const safeHref = sanitizeHref(rawHref, fallback);
+        if (!element) return safeHref;
+
+        if (safeHref === null) {
+            element.removeAttribute("href");
+            return null;
+        }
+
+        element.href = safeHref;
+        return safeHref;
+    }
+
+    function navigate(rawHref) {
+        const safeHref = sanitizeHref(rawHref, null);
+        if (!safeHref) return false;
+
+        window.location.assign(safeHref);
+        return true;
+    }
+
+    return {
+        sanitizeHref: sanitizeHref,
+        setHref: setHref,
+        navigate: navigate
+    };
+}
+
+if (!window.PlaybookLinkSecurity || typeof window.PlaybookLinkSecurity.sanitizeHref !== "function") {
+    window.PlaybookLinkSecurity = createPlaybookLinkSecurity();
+}
+
+function sanitizeLinkHref(href, fallback) {
+    return window.PlaybookLinkSecurity.sanitizeHref(href, fallback);
+}
+
+function setSanitizedHref(element, href, fallback) {
+    return window.PlaybookLinkSecurity.setHref(element, href, fallback);
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     initializeLanguageSelector();
     applyModuleStandardization();
@@ -85,11 +159,13 @@ function findScriptSourceBySuffix(pathSuffix) {
 function injectStylesheetOnce(id, href) {
     if (!href) return;
     if (document.getElementById(id)) return;
+    const safeHref = sanitizeLinkHref(href, null);
+    if (!safeHref) return;
 
     const link = document.createElement("link");
     link.id = id;
     link.rel = "stylesheet";
-    link.href = href;
+    link.href = safeHref;
 
     const target = document.head || document.body;
     if (!target) return;
@@ -197,8 +273,12 @@ function normalizePath(path) {
 }
 
 function toAbsolutePath(href) {
+    const safeHref = sanitizeLinkHref(href, null);
+    if (!safeHref || safeHref.charAt(0) === "#") return "";
+    if (/^(?:https?:|mailto:|tel:)/i.test(safeHref)) return "";
+
     try {
-        return normalizePath(new URL(href, window.location.href).pathname);
+        return normalizePath(new URL(safeHref, window.location.href).pathname);
     } catch (_error) {
         return "";
     }
@@ -352,12 +432,12 @@ function ensureModuleTopActions(wrapper, context) {
     actionRow.className = "module-cta-row hero-buttons auto-hero-actions";
 
     const moduleHome = document.createElement("a");
-    moduleHome.href = "index.html";
+    setSanitizedHref(moduleHome, "index.html", "#");
     moduleHome.className = "btn-primary";
     moduleHome.textContent = i18n.t("common.buttons.backToModuleHome", "Voltar para home do modulo");
 
     const epicLink = document.createElement("a");
-    epicLink.href = meta.epicHref;
+    setSanitizedHref(epicLink, meta.epicHref, "#");
     epicLink.className = "btn-secondary";
     epicLink.textContent = meta.epicCta;
 
@@ -390,7 +470,7 @@ function injectCompactLocalNav() {
 
     links.forEach(function (item) {
         const link = document.createElement("a");
-        link.href = item.href;
+        setSanitizedHref(link, item.href, "#");
         link.className = "internal-local-nav-link";
         link.textContent = item.label;
         if (item.absPath === normalizePath(window.location.pathname)) {
@@ -622,15 +702,18 @@ function renderWayfinder(context, i18n) {
 
     const nextCard = document.createElement("article");
     nextCard.className = "ux-wayfinder-card is-next";
-    nextCard.innerHTML = "<h3>" +
-        i18n.t("common.ux.nextAction.title", "Próxima ação") +
-        "</h3><p>" +
-        i18n.t("common.ux.nextAction.description", "Continue com a próxima etapa recomendada.") +
-        "</p>";
+
+    const nextTitle = document.createElement("h3");
+    nextTitle.textContent = i18n.t("common.ux.nextAction.title", "Próxima ação");
+    nextCard.appendChild(nextTitle);
+
+    const nextDescription = document.createElement("p");
+    nextDescription.textContent = i18n.t("common.ux.nextAction.description", "Continue com a próxima etapa recomendada.");
+    nextCard.appendChild(nextDescription);
 
     const nextLink = document.createElement("a");
     nextLink.className = "btn-module";
-    nextLink.href = next.href;
+    setSanitizedHref(nextLink, next.href, "#");
     nextLink.textContent = next.label;
     nextCard.appendChild(nextLink);
 
@@ -639,14 +722,16 @@ function renderWayfinder(context, i18n) {
     if (related.length) {
         const relatedCard = document.createElement("article");
         relatedCard.className = "ux-wayfinder-card";
-        relatedCard.innerHTML = "<h3>" + i18n.t("common.ux.related.title", "Páginas relacionadas") + "</h3>";
+        const relatedTitle = document.createElement("h3");
+        relatedTitle.textContent = i18n.t("common.ux.related.title", "Páginas relacionadas");
+        relatedCard.appendChild(relatedTitle);
 
         const list = document.createElement("ul");
         list.className = "ux-related-list";
         related.forEach(function (item) {
             const li = document.createElement("li");
             const anchor = document.createElement("a");
-            anchor.href = item.href;
+            setSanitizedHref(anchor, item.href, "#");
             anchor.textContent = item.label;
             li.appendChild(anchor);
             list.appendChild(li);

@@ -54,102 +54,111 @@
             <div class="container">
                 <article class="reading-journey" aria-labelledby="readingJourneyTitle">
                     <header class="reading-journey-head">
-                        <h3 id="readingJourneyTitle" data-i18n="kpi.reading.pages.title">Leitura das 3 páginas oficiais do BI</h3>
-                        <p data-i18n="kpi.reading.pages.description">Siga esta sequência para uma interpretação rápida: macro da operação, qualidade dos dados e gestão da equipe.</p>
+                        <h3 id="readingJourneyTitle" data-i18n="kpiMap.journey.title"></h3>
+                        <p data-i18n="kpiMap.journey.description"></p>
                     </header>
 
+                    <section class="kpi-map-reading-guide" aria-labelledby="kpiMapReadGuideTitle">
+                        <h4 id="kpiMapReadGuideTitle" data-i18n="kpiMap.readGuide.title"></h4>
+                        <div class="kpi-map-read-guide-grid">
+                            <article class="kpi-map-read-guide-item">
+                                <p class="kpi-map-level" data-i18n="kpiMap.readGuide.level1.label"></p>
+                                <p data-i18n="kpiMap.readGuide.level1.text"></p>
+                            </article>
+                            <article class="kpi-map-read-guide-item">
+                                <p class="kpi-map-level" data-i18n="kpiMap.readGuide.level2.label"></p>
+                                <p data-i18n="kpiMap.readGuide.level2.text"></p>
+                            </article>
+                            <article class="kpi-map-read-guide-item">
+                                <p class="kpi-map-level" data-i18n="kpiMap.readGuide.level3.label"></p>
+                                <p data-i18n="kpiMap.readGuide.level3.text"></p>
+                            </article>
+                        </div>
+                    </section>
+
                     <div class="reading-page-flow">
-                        <section class="reading-page-block" aria-labelledby="readingPageExecutive">
+                        <section class="reading-page-block" aria-labelledby="kpiMapTopKpiTitle">
                             <div class="reading-page-header">
-                                <p class="reading-page-order" data-i18n="kpi.reading.pages.executive.order">Página 1</p>
-                                <h4 id="readingPageExecutive" data-i18n="kpi.reading.pages.executive.title">Visão Executiva Global</h4>
+                                <p class="reading-page-order" data-i18n="kpiMap.levels.top.order"></p>
+                                <h4 id="kpiMapTopKpiTitle" data-i18n="kpiMap.levels.top.title"></h4>
                             </div>
                             <div class="reading-page-columns">
                                 <div class="reading-topic">
-                                    <h5 data-i18n="kpi.reading.labels.forWhat">Para que serve</h5>
-                                    <p data-i18n="kpi.reading.pages.executive.forWhat">Leitura macro da saúde da operação.</p>
+                                    <h5 data-i18n="kpiMap.labels.whatHappens"></h5>
+                                    <p data-i18n="kpiMap.levels.top.forWhat"></p>
                                 </div>
                                 <div class="reading-topic">
-                                    <h5 data-i18n="kpi.reading.labels.watch">O que olhar</h5>
+                                    <h5 data-i18n="kpiMap.labels.whereProblem"></h5>
                                     <ul class="reading-topic-list">
-                                        <li data-i18n="kpi.reading.pages.executive.watch.totalTickets">Tickets Total</li>
-                                        <li data-i18n="kpi.reading.pages.executive.watch.slaCompliance">SLA Compliance</li>
-                                        <li data-i18n="kpi.reading.pages.executive.watch.mtts">MTTS</li>
-                                        <li data-i18n="kpi.reading.pages.executive.watch.mtfc">MTFC</li>
-                                        <li data-i18n="kpi.reading.pages.executive.watch.csat">CSAT</li>
-                                        <li data-i18n="kpi.reading.pages.executive.watch.regionalComparison">Comparação regional</li>
+                                        <li data-i18n="kpiMap.levels.top.watch.kpiVariation"></li>
+                                        <li data-i18n="kpiMap.levels.top.watch.statusColor"></li>
+                                        <li data-i18n="kpiMap.levels.top.watch.weekTrend"></li>
                                     </ul>
                                 </div>
                                 <div class="reading-topic">
-                                    <h5 data-i18n="kpi.reading.labels.whenToUse">Quando usar</h5>
+                                    <h5 data-i18n="kpiMap.labels.whatToDo"></h5>
                                     <ul class="reading-topic-list">
-                                        <li data-i18n="kpi.reading.pages.executive.when.executiveReading">Leitura executiva</li>
-                                        <li data-i18n="kpi.reading.pages.executive.when.regionalComparison">Comparação entre regiões</li>
-                                        <li data-i18n="kpi.reading.pages.executive.when.globalTracking">Acompanhamento global da operação</li>
+                                        <li data-i18n="kpiMap.levels.top.action.slaFocus"></li>
+                                        <li data-i18n="kpiMap.levels.top.action.mtfcFocus"></li>
+                                        <li data-i18n="kpiMap.levels.top.action.mttsFocus"></li>
                                     </ul>
                                 </div>
                             </div>
                         </section>
 
-                        <section class="reading-page-block" aria-labelledby="readingPageDataGovernance">
+                        <section class="reading-page-block" aria-labelledby="kpiMapGlobalMapTitle">
                             <div class="reading-page-header">
-                                <p class="reading-page-order" data-i18n="kpi.reading.pages.dataGovernance.order">Página 2</p>
-                                <h4 id="readingPageDataGovernance" data-i18n="kpi.reading.pages.dataGovernance.title">Governança de Dados</h4>
+                                <p class="reading-page-order" data-i18n="kpiMap.levels.map.order"></p>
+                                <h4 id="kpiMapGlobalMapTitle" data-i18n="kpiMap.levels.map.title"></h4>
                             </div>
                             <div class="reading-page-columns">
                                 <div class="reading-topic">
-                                    <h5 data-i18n="kpi.reading.labels.forWhat">Para que serve</h5>
-                                    <p data-i18n="kpi.reading.pages.dataGovernance.forWhat">Acompanhar qualidade e completude da base.</p>
+                                    <h5 data-i18n="kpiMap.labels.whatHappens"></h5>
+                                    <p data-i18n="kpiMap.levels.map.forWhat"></p>
                                 </div>
                                 <div class="reading-topic">
-                                    <h5 data-i18n="kpi.reading.labels.watch">O que olhar</h5>
+                                    <h5 data-i18n="kpiMap.labels.whereProblem"></h5>
                                     <ul class="reading-topic-list">
-                                        <li data-i18n="kpi.reading.pages.dataGovernance.watch.requiredCompletion">Completude dos campos obrigatórios</li>
-                                        <li data-i18n="kpi.reading.pages.dataGovernance.watch.failedTickets">Tickets com falhas</li>
-                                        <li data-i18n="kpi.reading.pages.dataGovernance.watch.operationalRisk">Tickets com risco operacional</li>
-                                        <li data-i18n="kpi.reading.pages.dataGovernance.watch.fieldQuality">Qualidade por campo</li>
-                                        <li data-i18n="kpi.reading.pages.dataGovernance.watch.regionQuality">Qualidade por região</li>
+                                        <li data-i18n="kpiMap.levels.map.watch.redRegions"></li>
+                                        <li data-i18n="kpiMap.levels.map.watch.yellowRegions"></li>
+                                        <li data-i18n="kpiMap.levels.map.watch.riskConcentration"></li>
                                     </ul>
                                 </div>
                                 <div class="reading-topic">
-                                    <h5 data-i18n="kpi.reading.labels.whenToUse">Quando usar</h5>
+                                    <h5 data-i18n="kpiMap.labels.whatToDo"></h5>
                                     <ul class="reading-topic-list">
-                                        <li data-i18n="kpi.reading.pages.dataGovernance.when.qualityReview">Revisão de qualidade de dados</li>
-                                        <li data-i18n="kpi.reading.pages.dataGovernance.when.audit">Auditoria de preenchimento</li>
-                                        <li data-i18n="kpi.reading.pages.dataGovernance.when.processCorrection">Correção de processo</li>
+                                        <li data-i18n="kpiMap.levels.map.action.byVolume"></li>
+                                        <li data-i18n="kpiMap.levels.map.action.byPriority"></li>
+                                        <li data-i18n="kpiMap.levels.map.action.byServiceType"></li>
                                     </ul>
                                 </div>
                             </div>
                         </section>
 
-                        <section class="reading-page-block" aria-labelledby="readingPageAgentManagement">
+                        <section class="reading-page-block" aria-labelledby="kpiMapTicketTableTitle">
                             <div class="reading-page-header">
-                                <p class="reading-page-order" data-i18n="kpi.reading.pages.agentManagement.order">Página 3</p>
-                                <h4 id="readingPageAgentManagement" data-i18n="kpi.reading.pages.agentManagement.title">Gestão de Agentes</h4>
+                                <p class="reading-page-order" data-i18n="kpiMap.levels.table.order"></p>
+                                <h4 id="kpiMapTicketTableTitle" data-i18n="kpiMap.levels.table.title"></h4>
                             </div>
                             <div class="reading-page-columns">
                                 <div class="reading-topic">
-                                    <h5 data-i18n="kpi.reading.labels.forWhat">Para que serve</h5>
-                                    <p data-i18n="kpi.reading.pages.agentManagement.forWhat">Acompanhar produtividade e operação da equipe.</p>
+                                    <h5 data-i18n="kpiMap.labels.whatHappens"></h5>
+                                    <p data-i18n="kpiMap.levels.table.forWhat"></p>
                                 </div>
                                 <div class="reading-topic">
-                                    <h5 data-i18n="kpi.reading.labels.watch">O que olhar</h5>
+                                    <h5 data-i18n="kpiMap.labels.whereProblem"></h5>
                                     <ul class="reading-topic-list">
-                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.openClosed">Tickets abertos/fechados</li>
-                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.currentBacklog">Fila de pendências atual</li>
-                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.statusBacklog">Fila de pendências por status</li>
-                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.productivity">Produtividade</li>
-                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.slaPerformance">SLA/performance</li>
-                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.agingRisk">Envelhecimento/risco</li>
-                                        <li data-i18n="kpi.reading.pages.agentManagement.watch.detailTable">Tabela detalhada</li>
+                                        <li data-i18n="kpiMap.levels.table.watch.totalBacklog"></li>
+                                        <li data-i18n="kpiMap.levels.table.watch.ticketAging"></li>
+                                        <li data-i18n="kpiMap.levels.table.watch.criticalPriorities"></li>
                                     </ul>
                                 </div>
                                 <div class="reading-topic">
-                                    <h5 data-i18n="kpi.reading.labels.whenToUse">Quando usar</h5>
+                                    <h5 data-i18n="kpiMap.labels.whatToDo"></h5>
                                     <ul class="reading-topic-list">
-                                        <li data-i18n="kpi.reading.pages.agentManagement.when.operationRoutine">Rotina operacional</li>
-                                        <li data-i18n="kpi.reading.pages.agentManagement.when.teamFollowUp">Acompanhamento da equipe</li>
-                                        <li data-i18n="kpi.reading.pages.agentManagement.when.queueManagement">Gestão da fila</li>
+                                        <li data-i18n="kpiMap.levels.table.action.oldestFirst"></li>
+                                        <li data-i18n="kpiMap.levels.table.action.rebalanceCapacity"></li>
+                                        <li data-i18n="kpiMap.levels.table.action.dailyMonitoring"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -163,30 +172,124 @@
             <div class="container">
                 <div class="kpi-reading-support-grid">
                     <article class="kpi-reading-support-card">
-                        <h3 data-i18n="kpi.reading.usage.title">Como usar o BI</h3>
-                        <ul class="reading-topic-list">
-                            <li data-i18n="kpi.reading.usage.page1">Página 1 = visão global da operação.</li>
-                            <li data-i18n="kpi.reading.usage.page2">Página 2 = qualidade de dados e consistência da base.</li>
-                            <li data-i18n="kpi.reading.usage.page3">Página 3 = gestão operacional da equipe.</li>
-                        </ul>
+                        <h3 data-i18n="kpiMap.metrics.title"></h3>
+                        <div class="kpi-metric-list">
+                            <article class="kpi-metric-item kpi-metric-item-highlight">
+                                <div class="kpi-metric-head">
+                                    <h4 data-i18n="kpiMap.metrics.sla.name"></h4>
+                                    <span class="kpi-inline-tooltip" data-i18n="kpiMap.metrics.tooltipHint" data-i18n-title="kpiMap.metrics.sla.tooltip" data-i18n-aria-label="kpiMap.metrics.sla.tooltip"></span>
+                                </div>
+                                <p><strong data-i18n="kpiMap.common.whatIsLabel"></strong> <span data-i18n="kpiMap.metrics.sla.whatIs"></span></p>
+                                <p class="kpi-focus-line"><strong data-i18n="kpiMap.common.readingLabel"></strong></p>
+                                <div class="status-legend-row">
+                                    <span class="status-chip is-green" data-i18n="kpiMap.metrics.sla.reading.green"></span>
+                                    <span class="status-chip is-yellow" data-i18n="kpiMap.metrics.sla.reading.yellow"></span>
+                                    <span class="status-chip is-red" data-i18n="kpiMap.metrics.sla.reading.red"></span>
+                                </div>
+                                <p><strong data-i18n="kpiMap.common.insightLabel"></strong> <span data-i18n="kpiMap.metrics.sla.insight"></span></p>
+                            </article>
+
+                            <article class="kpi-metric-item">
+                                <div class="kpi-metric-head">
+                                    <h4 data-i18n="kpiMap.metrics.mtfc.name"></h4>
+                                    <span class="kpi-inline-tooltip" data-i18n="kpiMap.metrics.tooltipHint" data-i18n-title="kpiMap.metrics.mtfc.tooltip" data-i18n-aria-label="kpiMap.metrics.mtfc.tooltip"></span>
+                                </div>
+                                <p><strong data-i18n="kpiMap.common.whatIsLabel"></strong> <span data-i18n="kpiMap.metrics.mtfc.whatIs"></span></p>
+                                <p><strong data-i18n="kpiMap.common.insightLabel"></strong> <span data-i18n="kpiMap.metrics.mtfc.insight"></span></p>
+                            </article>
+
+                            <article class="kpi-metric-item">
+                                <div class="kpi-metric-head">
+                                    <h4 data-i18n="kpiMap.metrics.mtts.name"></h4>
+                                    <span class="kpi-inline-tooltip" data-i18n="kpiMap.metrics.tooltipHint" data-i18n-title="kpiMap.metrics.mtts.tooltip" data-i18n-aria-label="kpiMap.metrics.mtts.tooltip"></span>
+                                </div>
+                                <p><strong data-i18n="kpiMap.common.whatIsLabel"></strong> <span data-i18n="kpiMap.metrics.mtts.whatIs"></span></p>
+                                <p><strong data-i18n="kpiMap.common.insightLabel"></strong> <span data-i18n="kpiMap.metrics.mtts.insight"></span></p>
+                            </article>
+
+                            <article class="kpi-metric-item">
+                                <div class="kpi-metric-head">
+                                    <h4 data-i18n="kpiMap.metrics.csat.name"></h4>
+                                    <span class="kpi-inline-tooltip" data-i18n="kpiMap.metrics.tooltipHint" data-i18n-title="kpiMap.metrics.csat.tooltip" data-i18n-aria-label="kpiMap.metrics.csat.tooltip"></span>
+                                </div>
+                                <p><strong data-i18n="kpiMap.common.whatIsLabel"></strong> <span data-i18n="kpiMap.metrics.csat.whatIs"></span></p>
+                                <p><strong data-i18n="kpiMap.common.insightLabel"></strong> <span data-i18n="kpiMap.metrics.csat.insight"></span></p>
+                            </article>
+                        </div>
                     </article>
 
                     <article class="kpi-reading-support-card">
-                        <h3 data-i18n="kpi.reading.roles.title">Leitura rápida por perfil</h3>
-                        <ul class="reading-role-list">
-                            <li>
-                                <strong data-i18n="kpi.reading.roles.manager.label">Gestor</strong>
-                                <span data-i18n="kpi.reading.roles.manager.description">Visão executiva global.</span>
-                            </li>
-                            <li>
-                                <strong data-i18n="kpi.reading.roles.coordinator.label">Coordenador</strong>
-                                <span data-i18n="kpi.reading.roles.coordinator.description">Governança de dados + gestão de agentes.</span>
-                            </li>
-                            <li>
-                                <strong data-i18n="kpi.reading.roles.operations.label">Operação/liderança local</strong>
-                                <span data-i18n="kpi.reading.roles.operations.description">Gestão de agentes + fila de pendências/status.</span>
-                            </li>
+                        <h3 data-i18n="kpiMap.colors.title"></h3>
+                        <p data-i18n="kpiMap.colors.description"></p>
+                        <div class="status-legend-grid">
+                            <div class="status-legend-item is-green">
+                                <span class="status-dot" aria-hidden="true"></span>
+                                <div>
+                                    <p class="status-legend-label" data-i18n="kpiMap.colors.green.label"></p>
+                                    <p data-i18n="kpiMap.colors.green.text"></p>
+                                </div>
+                            </div>
+                            <div class="status-legend-item is-yellow">
+                                <span class="status-dot" aria-hidden="true"></span>
+                                <div>
+                                    <p class="status-legend-label" data-i18n="kpiMap.colors.yellow.label"></p>
+                                    <p data-i18n="kpiMap.colors.yellow.text"></p>
+                                </div>
+                            </div>
+                            <div class="status-legend-item is-red">
+                                <span class="status-dot" aria-hidden="true"></span>
+                                <div>
+                                    <p class="status-legend-label" data-i18n="kpiMap.colors.red.label"></p>
+                                    <p data-i18n="kpiMap.colors.red.text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="kpi-reading-support-card">
+                        <h3 data-i18n="kpiMap.map.title"></h3>
+                        <p data-i18n="kpiMap.map.description"></p>
+                        <ul class="reading-topic-list">
+                            <li data-i18n="kpiMap.map.rules.green"></li>
+                            <li data-i18n="kpiMap.map.rules.yellow"></li>
+                            <li data-i18n="kpiMap.map.rules.red"></li>
                         </ul>
+                        <p class="kpi-focus-line" data-i18n="kpiMap.map.action"></p>
+                    </article>
+
+                    <article class="kpi-reading-support-card">
+                        <h3 data-i18n="kpiMap.backlog.title"></h3>
+                        <p class="kpi-support-subtitle" data-i18n="kpiMap.backlog.whatIs.title"></p>
+                        <p data-i18n="kpiMap.backlog.whatIs.text"></p>
+                        <p class="kpi-support-subtitle" data-i18n="kpiMap.backlog.observe.title"></p>
+                        <ul class="reading-topic-list">
+                            <li data-i18n="kpiMap.backlog.observe.volume"></li>
+                            <li data-i18n="kpiMap.backlog.observe.aging"></li>
+                        </ul>
+                        <ul class="reading-topic-list">
+                            <li data-i18n="kpiMap.backlog.rules.critical"></li>
+                            <li data-i18n="kpiMap.backlog.rules.controlled"></li>
+                            <li data-i18n="kpiMap.backlog.rules.capacity"></li>
+                        </ul>
+                        <p class="kpi-focus-line" data-i18n="kpiMap.backlog.action"></p>
+                    </article>
+
+                    <article class="kpi-reading-support-card">
+                        <h3 data-i18n="kpiMap.goals.title"></h3>
+                        <div class="kpi-goals-stack">
+                            <p><strong data-i18n="kpiMap.goals.sla.label"></strong> <span data-i18n="kpiMap.goals.sla.target"></span></p>
+                            <div>
+                                <p class="kpi-support-subtitle" data-i18n="kpiMap.goals.mtfc.title"></p>
+                                <ul class="reading-topic-list">
+                                    <li data-i18n="kpiMap.goals.mtfc.p1"></li>
+                                    <li data-i18n="kpiMap.goals.mtfc.p2"></li>
+                                    <li data-i18n="kpiMap.goals.mtfc.p3"></li>
+                                    <li data-i18n="kpiMap.goals.mtfc.p4"></li>
+                                    <li data-i18n="kpiMap.goals.mtfc.p5"></li>
+                                </ul>
+                            </div>
+                            <p><strong data-i18n="kpiMap.goals.mtts.label"></strong> <span data-i18n="kpiMap.goals.mtts.target"></span></p>
+                        </div>
                     </article>
                 </div>
             </div>

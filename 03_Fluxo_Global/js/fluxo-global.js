@@ -92,6 +92,47 @@
         };
     }
 
+    function sanitizeHref(rawHref, fallback) {
+        if (window.PlaybookLinkSecurity && typeof window.PlaybookLinkSecurity.sanitizeHref === "function") {
+            return window.PlaybookLinkSecurity.sanitizeHref(rawHref, fallback);
+        }
+
+        const safeFallback = fallback === undefined ? "#" : fallback;
+        const fallbackText = safeFallback === null ? null : String(safeFallback).trim();
+        const href = String(rawHref === undefined || rawHref === null ? "" : rawHref).trim();
+
+        if (!href) return fallbackText;
+        if (href === "#" || href.charAt(0) === "#") return href;
+        if (href.indexOf("//") === 0) return fallbackText;
+
+        const compact = href.replace(/[\u0000-\u001F\u007F\s]+/g, "");
+        const schemeMatch = compact.match(/^([a-z][a-z0-9+.-]*):/i);
+        if (!schemeMatch) return href;
+
+        const scheme = schemeMatch[1].toLowerCase();
+        if (scheme === "http" || scheme === "https" || scheme === "mailto" || scheme === "tel") {
+            return href;
+        }
+
+        return fallbackText;
+    }
+
+    function setSafeHref(element, rawHref, fallback) {
+        if (window.PlaybookLinkSecurity && typeof window.PlaybookLinkSecurity.setHref === "function") {
+            return window.PlaybookLinkSecurity.setHref(element, rawHref, fallback);
+        }
+
+        const safeHref = sanitizeHref(rawHref, fallback);
+        if (!element) return safeHref;
+        if (safeHref === null) {
+            element.removeAttribute("href");
+            return null;
+        }
+
+        element.href = safeHref;
+        return safeHref;
+    }
+
     function buildData(i18n) {
         const stagesPage = i18n.t("fluxoGlobal.stagesPage", {}) || {};
         const moduleData = i18n.t("fluxoGlobal.data", {}) || {};
@@ -184,7 +225,7 @@
         links.forEach(function (item) {
             const anchor = document.createElement("a");
             anchor.className = "fluxo-nav-link fluxo-nav-link-core";
-            anchor.href = item.href;
+            setSafeHref(anchor, item.href, "#");
             anchor.textContent = item.label;
             if (item.title) {
                 anchor.title = item.title;
@@ -199,18 +240,18 @@
         });
 
         shell.appendChild(linksWrap);
-        target.innerHTML = "";
+        target.replaceChildren();
         target.appendChild(shell);
     }
 
     function renderOverview(target, data, stageEntries) {
         if (!target) return;
-        target.innerHTML = "";
+        target.replaceChildren();
 
         stageEntries.forEach(function (stage, index) {
             const anchor = document.createElement("a");
             anchor.className = "stg-overview-chip stg-overview-link";
-            anchor.href = "#" + stage.id;
+            setSafeHref(anchor, "#" + stage.id, "#");
             anchor.textContent = stage.title;
             if (index === 0) {
                 anchor.setAttribute("aria-current", "location");
@@ -245,7 +286,7 @@
 
     function renderStageDetails(target, data) {
         if (!target) return;
-        target.innerHTML = "";
+        target.replaceChildren();
 
         const stages = asArray(data.details.stages);
         const stageEntries = [];
@@ -383,7 +424,7 @@
 
     function renderFinalNotes(target, data) {
         if (!target) return;
-        target.innerHTML = "";
+        target.replaceChildren();
 
         const title = document.createElement("h3");
         title.textContent = data.finalNotes.title || "Regras e observaÃ§Ãµes importantes";
@@ -405,16 +446,19 @@
 
     function createPagerLink(href, text) {
         if (!href || !text) return null;
+        const safeHref = sanitizeHref(href, null);
+        if (!safeHref) return null;
+
         const link = document.createElement("a");
         link.className = "fluxo-pager-link";
-        link.href = href;
+        link.href = safeHref;
         link.textContent = text;
         return link;
     }
 
     function renderPager(target, data) {
         if (!target) return;
-        target.innerHTML = "";
+        target.replaceChildren();
 
         const pages = asArray(data.pages);
         if (!pages.length) return;

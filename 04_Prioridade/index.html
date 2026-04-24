@@ -139,7 +139,7 @@
                                                 <tr>
                                                     <td>S3</td>
                                                     <td data-i18n="prioridade.data.matrixConfig.campos.solicitante.opcoes.cliente_locacao.label">Cliente de Locacao</td>
-                                                    <td>3</td>
+                                                    <td>1</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -176,7 +176,7 @@
                                                 <tr>
                                                     <td>A4</td>
                                                     <td data-i18n="prioridade.data.matrixConfig.campos.tipo_atendimento.opcoes.locacao_suporte_tecnico.label">Sou cliente de locacao de produto e preciso de suporte tecnico</td>
-                                                    <td>4</td>
+                                                    <td>1</td>
                                                 </tr>
                                             </tbody>
                                         </table>
@@ -249,9 +249,8 @@
                                                 <tr><td>P10</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.raio_x_portatil.label">Raio-X Portatil</td><td>2</td></tr>
                                                 <tr><td>P11</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.sensor_intraoral.label">Sensor Intraoral</td><td>3</td></tr>
                                                 <tr><td>P12</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.consultorios.label">Consultorios</td><td>3</td></tr>
-                                                <tr><td>P13</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.scanner_ios.label">Scanner IOS</td><td>3</td></tr>
-                                                <tr><td>P14</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.eagle_scan.label">Eagle Scan</td><td>3</td></tr>
-                                                <tr><td>P15</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.tomografo_panoramico.label">Tomografo / Panoramico</td><td>3</td></tr>
+                                                <tr><td>P13</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.eagle_scan.label">Eagle Scan</td><td>3</td></tr>
+                                                <tr><td>P14</td><td data-i18n="prioridade.data.matrixConfig.campos.produto.opcoes.tomografo_panoramico.label">Tomografo / Panoramico</td><td>3</td></tr>
                                             </tbody>
                                         </table>
                                     </div>
@@ -260,9 +259,9 @@
                         </section>
 
                         <aside class="prioridade-classification-panel">
-                            <h4 data-i18n="prioridade.main.classification.title">Classificação oficial P1-P5 e MTFC</h4>
-                            <p data-i18n="prioridade.main.classification.description">A classificação abaixo representa a distribuição operacional base e o foco de SLA nesta página: MTFC (primeira resposta).</p>
-                            <p class="prioridade-classification-note" data-i18n="prioridade.main.classification.scoreCalculationNote">O score individual do ticket é calculado pela multiplicação dos pesos dos critérios. A matriz P1–P5 mostra a distribuição estimada das combinações possíveis por faixa de prioridade.</p>
+                            <h4 data-i18n="prioridade.main.classification.title">Classificação oficial por Score, Prioridade e MTFC/SLA</h4>
+                            <p data-i18n="prioridade.main.classification.description">A classificação oficial é definida a partir do score calculado, com prioridade P1-P5 e MTFC/SLA correspondente.</p>
+                            <p class="prioridade-classification-note" data-i18n="prioridade.main.classification.scoreCalculationNote">A prioridade é calculada diretamente pelo score: Score = Solicitante x Tipo de atendimento x Categoria x Produto.</p>
                             <p class="prioridade-scale-legend" data-i18n="prioridade.main.classification.scaleLegend">Escala operacional: do mais urgente para o menos urgente.</p>
                             <div class="prioridade-scale" role="list" data-i18n-aria-label="prioridade.main.classification.scaleLegend">
                                 <article class="prioridade-scale-item prioridade-scale-item-p1" role="listitem">
@@ -271,9 +270,8 @@
                                         <span class="prioridade-scale-rank" data-i18n="prioridade.main.classification.highestUrgency">Maior urgência</span>
                                     </div>
                                     <div class="prioridade-scale-metrics">
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.estimatedCombinations">Combinações estimadas</span> <strong>10</strong></p>
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.share">Classificação aproximada</span> <strong data-i18n="prioridade.main.classification.levels.p1.share">1%</strong></p>
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfc">MTFC</span> <strong data-i18n="prioridade.main.classification.levels.p1.mtfc">1h</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.scoreRange">Faixa de Score</span> <strong data-i18n="prioridade.main.classification.levels.p1.scoreRange">50 a 90</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfcSla">MTFC/SLA</span> <strong data-i18n="prioridade.main.classification.levels.p1.mtfc">1h</strong></p>
                                     </div>
                                     <p class="prioridade-scale-interpretation" data-i18n="prioridade.main.classification.levels.p1.interpretation">Atendimento imediato e priorização máxima na fila.</p>
                                 </article>
@@ -283,9 +281,8 @@
                                         <p class="prioridade-scale-priority"><strong class="prioridade-scale-code">P2</strong> <span data-i18n="prioridade.main.classification.levels.p2.name">Alta</span></p>
                                     </div>
                                     <div class="prioridade-scale-metrics">
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.estimatedCombinations">Combinações estimadas</span> <strong>25</strong></p>
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.share">Classificação aproximada</span> <strong data-i18n="prioridade.main.classification.levels.p2.share">3%</strong></p>
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfc">MTFC</span> <strong data-i18n="prioridade.main.classification.levels.p2.mtfc">2h</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.scoreRange">Faixa de Score</span> <strong data-i18n="prioridade.main.classification.levels.p2.scoreRange">31 a 49</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfcSla">MTFC/SLA</span> <strong data-i18n="prioridade.main.classification.levels.p2.mtfc">2h</strong></p>
                                     </div>
                                     <p class="prioridade-scale-interpretation" data-i18n="prioridade.main.classification.levels.p2.interpretation">Alta criticidade com janela curta para primeira resposta.</p>
                                 </article>
@@ -295,9 +292,8 @@
                                         <p class="prioridade-scale-priority"><strong class="prioridade-scale-code">P3</strong> <span data-i18n="prioridade.main.classification.levels.p3.name">Média</span></p>
                                     </div>
                                     <div class="prioridade-scale-metrics">
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.estimatedCombinations">Combinações estimadas</span> <strong>70</strong></p>
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.share">Classificação aproximada</span> <strong data-i18n="prioridade.main.classification.levels.p3.share">8%</strong></p>
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfc">MTFC</span> <strong data-i18n="prioridade.main.classification.levels.p3.mtfc">3h</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.scoreRange">Faixa de Score</span> <strong data-i18n="prioridade.main.classification.levels.p3.scoreRange">21 a 30</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfcSla">MTFC/SLA</span> <strong data-i18n="prioridade.main.classification.levels.p3.mtfc">3h</strong></p>
                                     </div>
                                     <p class="prioridade-scale-interpretation" data-i18n="prioridade.main.classification.levels.p3.interpretation">Fluxo padrão com monitoramento contínuo de SLA.</p>
                                 </article>
@@ -307,28 +303,25 @@
                                         <p class="prioridade-scale-priority"><strong class="prioridade-scale-code">P4</strong> <span data-i18n="prioridade.main.classification.levels.p4.name">Baixa</span></p>
                                     </div>
                                     <div class="prioridade-scale-metrics">
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.estimatedCombinations">Combinações estimadas</span> <strong>245</strong></p>
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.share">Classificação aproximada</span> <strong data-i18n="prioridade.main.classification.levels.p4.share">27%</strong></p>
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfc">MTFC</span> <strong data-i18n="prioridade.main.classification.levels.p4.mtfc">5h</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.scoreRange">Faixa de Score</span> <strong data-i18n="prioridade.main.classification.levels.p4.scoreRange">11 a 20</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfcSla">MTFC/SLA</span> <strong data-i18n="prioridade.main.classification.levels.p4.mtfc">5h</strong></p>
                                     </div>
                                     <p class="prioridade-scale-interpretation" data-i18n="prioridade.main.classification.levels.p4.interpretation">Priorização de rotina com foco em estabilidade da fila.</p>
                                 </article>
 
                                 <article class="prioridade-scale-item prioridade-scale-item-p5" role="listitem">
                                     <div class="prioridade-scale-head">
-                                        <p class="prioridade-scale-priority"><strong class="prioridade-scale-code">P5</strong> <span data-i18n="prioridade.main.classification.levels.p5.name">Muito baixa</span></p>
+                                        <p class="prioridade-scale-priority"><strong class="prioridade-scale-code">P5</strong> <span data-i18n="prioridade.main.classification.levels.p5.name">Muito Baixa</span></p>
                                         <span class="prioridade-scale-rank prioridade-scale-rank-low" data-i18n="prioridade.main.classification.lowestUrgency">Menor urgência</span>
                                     </div>
                                     <div class="prioridade-scale-metrics">
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.estimatedCombinations">Combinações estimadas</span> <strong>550</strong></p>
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.share">Classificação aproximada</span> <strong data-i18n="prioridade.main.classification.levels.p5.share">61%</strong></p>
-                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfc">MTFC</span> <strong data-i18n="prioridade.main.classification.levels.p5.mtfc">6h</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.scoreRange">Faixa de Score</span> <strong data-i18n="prioridade.main.classification.levels.p5.scoreRange">1 a 10</strong></p>
+                                        <p class="prioridade-scale-metric"><span data-i18n="prioridade.main.classification.columns.mtfcSla">MTFC/SLA</span> <strong data-i18n="prioridade.main.classification.levels.p5.mtfc">6h</strong></p>
                                     </div>
                                     <p class="prioridade-scale-interpretation" data-i18n="prioridade.main.classification.levels.p5.interpretation">Baixa criticidade, mantendo controle de volume e aging.</p>
                                 </article>
                             </div>
-                            <p class="prioridade-classification-note" data-i18n="prioridade.main.classification.totalBase">Total base estimada: 900 combinações.</p>
-                            <p class="prioridade-classification-note" data-i18n="prioridade.main.classification.firstResponseNote">Nesta leitura, o SLA está orientado para MTFC e primeira resposta.</p>
+                            <p class="prioridade-classification-note" data-i18n="prioridade.main.classification.firstResponseNote">Nesta leitura, o SLA está orientado para MTFC/SLA da primeira resposta.</p>
                             <p class="prioridade-classification-note" data-i18n="prioridade.main.classification.resolutionNote">A regra de resolução pode ser tratada separadamente da diferenciação de primeira resposta.</p>
                             <div class="prioridade-exception-inline">
                                 <h5 data-i18n="prioridade.main.classification.exceptionTitle">Exceção oficial</h5>

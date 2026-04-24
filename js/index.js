@@ -14,6 +14,52 @@ function getI18n() {
     );
 }
 
+function getLinkSecurityApi() {
+    if (window.PlaybookLinkSecurity && typeof window.PlaybookLinkSecurity.sanitizeHref === "function") {
+        return window.PlaybookLinkSecurity;
+    }
+
+    return {
+        sanitizeHref: function (rawHref, fallback) {
+            const safeFallback = fallback === undefined ? "#" : fallback;
+            const fallbackText = safeFallback === null ? null : String(safeFallback).trim();
+            const href = String(rawHref === undefined || rawHref === null ? "" : rawHref).trim();
+
+            if (!href) return fallbackText;
+            if (href === "#" || href.charAt(0) === "#") return href;
+            if (href.indexOf("//") === 0) return fallbackText;
+
+            const compact = href.replace(/[\u0000-\u001F\u007F\s]+/g, "");
+            const schemeMatch = compact.match(/^([a-z][a-z0-9+.-]*):/i);
+            if (!schemeMatch) return href;
+
+            const scheme = schemeMatch[1].toLowerCase();
+            if (scheme === "http" || scheme === "https" || scheme === "mailto" || scheme === "tel") {
+                return href;
+            }
+
+            return fallbackText;
+        },
+        setHref: function (element, rawHref, fallback) {
+            const safeHref = this.sanitizeHref(rawHref, fallback);
+            if (!element) return safeHref;
+            if (safeHref === null) {
+                element.removeAttribute("href");
+                return null;
+            }
+
+            element.href = safeHref;
+            return safeHref;
+        }
+    };
+}
+
+const linkSecurity = getLinkSecurityApi();
+
+function hasExternalAllowedScheme(href) {
+    return /^(?:https?:|mailto:|tel:)/i.test(String(href || ""));
+}
+
 function buildModuleActionLabel(moduleMeta, i18n) {
     const configured = i18n.t("home.moduleCtas." + moduleMeta.id, "");
     if (configured) return configured;
@@ -83,7 +129,7 @@ function createModuleCard(moduleMeta, i18n) {
 
     const action = document.createElement("a");
     action.className = "btn-module";
-    action.href = resolveModuleLink(moduleMeta);
+    linkSecurity.setHref(action, resolveModuleLink(moduleMeta), "#");
     action.textContent = buildModuleActionLabel(moduleMeta, i18n);
     card.appendChild(action);
 
@@ -97,7 +143,7 @@ function renderEpicModules(containerId, epicId, i18n) {
     const epicMeta = epicModules[epicId];
     if (!epicMeta || !Array.isArray(epicMeta.modules)) return;
 
-    container.innerHTML = "";
+    container.replaceChildren();
     epicMeta.modules.forEach(function (moduleMeta) {
         container.appendChild(createModuleCard(moduleMeta, i18n));
     });
@@ -107,12 +153,16 @@ function setLink(id, href, isExternal) {
     const el = document.getElementById(id);
     if (!el) return;
 
-    el.href = href;
+    const safeHref = linkSecurity.setHref(el, href, "#");
 
-    if (isExternal) {
+    if (isExternal && hasExternalAllowedScheme(safeHref)) {
         el.target = "_blank";
         el.rel = "noopener noreferrer";
+        return;
     }
+
+    el.removeAttribute("target");
+    el.removeAttribute("rel");
 }
 
 function setupMobileNavigation() {

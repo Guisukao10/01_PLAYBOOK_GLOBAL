@@ -307,6 +307,38 @@
         };
     }
 
+    function getLinkSecurityApi() {
+        // Usa o validador central quando disponível.
+        if (window.PlaybookLinkSecurity && typeof window.PlaybookLinkSecurity.sanitizeHref === "function") {
+            return window.PlaybookLinkSecurity;
+        }
+
+        return {
+            sanitizeHref: function (rawHref, fallback) {
+                var safeFallback = fallback === undefined ? "#" : fallback;
+                var fallbackText = safeFallback === null ? null : String(safeFallback).trim();
+                var href = String(rawHref === undefined || rawHref === null ? "" : rawHref).trim();
+
+                if (!href) return fallbackText;
+                if (href === "#" || href.charAt(0) === "#") return href;
+                if (href.indexOf("//") === 0) return fallbackText;
+
+                var compact = href.replace(/[\u0000-\u001F\u007F\s]+/g, "");
+                var schemeMatch = compact.match(/^([a-z][a-z0-9+.-]*):/i);
+                if (!schemeMatch) return href;
+
+                var scheme = schemeMatch[1].toLowerCase();
+                if (scheme === "http" || scheme === "https" || scheme === "mailto" || scheme === "tel") {
+                    return href;
+                }
+
+                return fallbackText;
+            }
+        };
+    }
+
+    var linkSecurity = getLinkSecurityApi();
+
     function getAssistantBasePath() {
         if (typeof window.PlaybookAssistantBasePath === "string" && window.PlaybookAssistantBasePath) {
             return window.PlaybookAssistantBasePath;
@@ -332,13 +364,15 @@
     }
 
     function resolveHref(href) {
-        if (!href) return "#";
-        if (/^(?:https?:|mailto:|tel:|#)/i.test(href)) return href;
+        var safeHref = linkSecurity.sanitizeHref(href, "#");
+        if (!safeHref) return "#";
+        if (safeHref === "#" || safeHref.charAt(0) === "#") return safeHref;
+        if (/^(?:https?:|mailto:|tel:)/i.test(safeHref)) return safeHref;
 
         try {
-            return new URL(href, getAssistantBasePath()).href;
+            return new URL(safeHref, getAssistantBasePath()).href;
         } catch (_error) {
-            return href;
+            return safeHref;
         }
     }
 
@@ -459,7 +493,7 @@
         }
 
         function renderSuggestions(currentQueryNorm) {
-            suggestionsList.innerHTML = "";
+            suggestionsList.replaceChildren();
             suggestionsSection.hidden = currentQueryNorm.length > 0;
             if (suggestionsSection.hidden) return;
 
@@ -535,7 +569,7 @@
 
             if (!data.items.length) {
                 resultsMeta.textContent = "";
-                resultsList.innerHTML = "";
+                resultsList.replaceChildren();
                 var unavailable = createElement("p", "playbook-assistant-empty", ui.localDataUnavailable);
                 resultsList.appendChild(unavailable);
                 return;
@@ -547,7 +581,7 @@
                 response = getDefaultResults(data.items);
             }
 
-            resultsList.innerHTML = "";
+            resultsList.replaceChildren();
 
             if (!response.results.length) {
                 resultsMeta.textContent = "";

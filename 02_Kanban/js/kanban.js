@@ -127,6 +127,47 @@
         }
     };
 
+    function sanitizeHref(rawHref, fallback) {
+        if (window.PlaybookLinkSecurity && typeof window.PlaybookLinkSecurity.sanitizeHref === "function") {
+            return window.PlaybookLinkSecurity.sanitizeHref(rawHref, fallback);
+        }
+
+        const safeFallback = fallback === undefined ? "#" : fallback;
+        const fallbackText = safeFallback === null ? null : String(safeFallback).trim();
+        const href = String(rawHref === undefined || rawHref === null ? "" : rawHref).trim();
+
+        if (!href) return fallbackText;
+        if (href === "#" || href.charAt(0) === "#") return href;
+        if (href.indexOf("//") === 0) return fallbackText;
+
+        const compact = href.replace(/[\u0000-\u001F\u007F\s]+/g, "");
+        const schemeMatch = compact.match(/^([a-z][a-z0-9+.-]*):/i);
+        if (!schemeMatch) return href;
+
+        const scheme = schemeMatch[1].toLowerCase();
+        if (scheme === "http" || scheme === "https" || scheme === "mailto" || scheme === "tel") {
+            return href;
+        }
+
+        return fallbackText;
+    }
+
+    function setSafeHref(element, rawHref, fallback) {
+        if (window.PlaybookLinkSecurity && typeof window.PlaybookLinkSecurity.setHref === "function") {
+            return window.PlaybookLinkSecurity.setHref(element, rawHref, fallback);
+        }
+
+        const safeHref = sanitizeHref(rawHref, fallback);
+        if (!element) return safeHref;
+        if (safeHref === null) {
+            element.removeAttribute("href");
+            return null;
+        }
+
+        element.href = safeHref;
+        return safeHref;
+    }
+
     const KANBAN_DATA = i18n.t("kanban.data", OFFICIAL_KANBAN_DATA);
 
     function getCurrentPage() {
@@ -141,12 +182,18 @@
         }
 
         const current = getCurrentPage();
-        target.innerHTML = KANBAN_DATA.nav
-            .map((item) => {
-                const isActive = item.href === current ? " active" : "";
-                return `<a class="module-nav-link${isActive}" href="${item.href}">${item.label}</a>`;
-            })
-            .join("");
+        target.replaceChildren();
+
+        KANBAN_DATA.nav.forEach((item) => {
+            const link = document.createElement("a");
+            link.className = "module-nav-link";
+            if (item.href === current) {
+                link.classList.add("active");
+            }
+            setSafeHref(link, item.href, "#");
+            link.textContent = item.label;
+            target.appendChild(link);
+        });
     }
 
     function renderStatusOrder(targetSelector) {
@@ -155,16 +202,23 @@
             return;
         }
 
-        target.innerHTML = KANBAN_DATA.statuses
-            .map(
-                (status) => `
-                    <article class="status-sequence-card stage-panel-${status.key}">
-                        <span class="badge-stage stage-${status.key}">${status.title}</span>
-                        <p>${status.objective}</p>
-                    </article>
-                `
-            )
-            .join("");
+        target.replaceChildren();
+
+        KANBAN_DATA.statuses.forEach((status) => {
+            const card = document.createElement("article");
+            card.className = "status-sequence-card stage-panel-" + status.key;
+
+            const badge = document.createElement("span");
+            badge.className = "badge-stage stage-" + status.key;
+            badge.textContent = status.title;
+            card.appendChild(badge);
+
+            const paragraph = document.createElement("p");
+            paragraph.textContent = status.objective;
+            card.appendChild(paragraph);
+
+            target.appendChild(card);
+        });
     }
 
     function renderStatusByLane(targetSelector, lane) {
@@ -173,10 +227,18 @@
             return;
         }
 
-        target.innerHTML = KANBAN_DATA.statuses
+        target.replaceChildren();
+
+        KANBAN_DATA.statuses
             .filter((status) => status.lane === lane)
-            .map((status) => `<li><span class="badge-stage stage-${status.key}">${status.title}</span></li>`)
-            .join("");
+            .forEach((status) => {
+                const item = document.createElement("li");
+                const badge = document.createElement("span");
+                badge.className = "badge-stage stage-" + status.key;
+                badge.textContent = status.title;
+                item.appendChild(badge);
+                target.appendChild(item);
+            });
     }
 
     function renderStatusObjectiveCards() {
@@ -185,20 +247,52 @@
             return;
         }
 
-        target.innerHTML = KANBAN_DATA.statuses
-            .map(
-                (status) => `
-                    <article id="${status.key}" class="status-objective-card stage-panel-${status.key}">
-                        <span class="badge-stage stage-${status.key}">${status.title}</span>
-                        <h3>${status.title}</h3>
-                        <p><strong>${i18n.t("kanban.data.labels.objective", "Objetivo:")}</strong> ${status.objective}</p>
-                        <p><strong>${i18n.t("kanban.data.labels.when", "Quando o ticket deve estar aqui:")}</strong> ${status.when}</p>
-                        <p><strong>${i18n.t("kanban.data.labels.correctStay", "Permanencia correta:")}</strong> ${status.correctStay}</p>
-                        <p><strong>${i18n.t("kanban.data.labels.risk", "Risco de uso incorreto:")}</strong> ${status.risk}</p>
-                    </article>
-                `
-            )
-            .join("");
+        target.replaceChildren();
+
+        KANBAN_DATA.statuses.forEach((status) => {
+            const card = document.createElement("article");
+            card.id = status.key;
+            card.className = "status-objective-card stage-panel-" + status.key;
+
+            const badge = document.createElement("span");
+            badge.className = "badge-stage stage-" + status.key;
+            badge.textContent = status.title;
+            card.appendChild(badge);
+
+            const title = document.createElement("h3");
+            title.textContent = status.title;
+            card.appendChild(title);
+
+            const objective = document.createElement("p");
+            const objectiveLabel = document.createElement("strong");
+            objectiveLabel.textContent = i18n.t("kanban.data.labels.objective", "Objetivo:");
+            objective.appendChild(objectiveLabel);
+            objective.appendChild(document.createTextNode(" " + status.objective));
+            card.appendChild(objective);
+
+            const when = document.createElement("p");
+            const whenLabel = document.createElement("strong");
+            whenLabel.textContent = i18n.t("kanban.data.labels.when", "Quando o ticket deve estar aqui:");
+            when.appendChild(whenLabel);
+            when.appendChild(document.createTextNode(" " + status.when));
+            card.appendChild(when);
+
+            const correctStay = document.createElement("p");
+            const correctStayLabel = document.createElement("strong");
+            correctStayLabel.textContent = i18n.t("kanban.data.labels.correctStay", "Permanencia correta:");
+            correctStay.appendChild(correctStayLabel);
+            correctStay.appendChild(document.createTextNode(" " + status.correctStay));
+            card.appendChild(correctStay);
+
+            const risk = document.createElement("p");
+            const riskLabel = document.createElement("strong");
+            riskLabel.textContent = i18n.t("kanban.data.labels.risk", "Risco de uso incorreto:");
+            risk.appendChild(riskLabel);
+            risk.appendChild(document.createTextNode(" " + status.risk));
+            card.appendChild(risk);
+
+            target.appendChild(card);
+        });
     }
 
     function renderLanguageTable() {
@@ -207,26 +301,42 @@
             return;
         }
 
-        const rows = KANBAN_DATA.languageRows
-            .map((row) => `<tr><td>${row.pt}</td><td>${row.en}</td><td>${row.es}</td></tr>`)
-            .join("");
+        target.replaceChildren();
 
-        target.innerHTML = `
-            <div class="table-wrap">
-                <table class="lang-table">
-                    <thead>
-                        <tr>
-                            <th>${i18n.t("kanban.data.labels.tablePt", "Portugues")}</th>
-                            <th>${i18n.t("kanban.data.labels.tableEn", "English")}</th>
-                            <th>${i18n.t("kanban.data.labels.tableEs", "Espanol")}</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        ${rows}
-                    </tbody>
-                </table>
-            </div>
-        `;
+        const wrap = document.createElement("div");
+        wrap.className = "table-wrap";
+
+        const table = document.createElement("table");
+        table.className = "lang-table";
+
+        const thead = document.createElement("thead");
+        const headRow = document.createElement("tr");
+        [
+            i18n.t("kanban.data.labels.tablePt", "Portugues"),
+            i18n.t("kanban.data.labels.tableEn", "English"),
+            i18n.t("kanban.data.labels.tableEs", "Espanol")
+        ].forEach((title) => {
+            const th = document.createElement("th");
+            th.textContent = title;
+            headRow.appendChild(th);
+        });
+        thead.appendChild(headRow);
+
+        const tbody = document.createElement("tbody");
+        KANBAN_DATA.languageRows.forEach((row) => {
+            const tr = document.createElement("tr");
+            [row.pt, row.en, row.es].forEach((value) => {
+                const td = document.createElement("td");
+                td.textContent = value;
+                tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+        });
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        wrap.appendChild(table);
+        target.appendChild(wrap);
     }
 
     function renderExpectedTransitions() {
@@ -235,7 +345,12 @@
             return;
         }
 
-        target.innerHTML = KANBAN_DATA.validTransitions.map((item) => `<li>${item}</li>`).join("");
+        target.replaceChildren();
+        KANBAN_DATA.validTransitions.forEach((item) => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            target.appendChild(li);
+        });
     }
 
     function renderAvoidMoves() {
@@ -244,7 +359,12 @@
             return;
         }
 
-        target.innerHTML = KANBAN_DATA.avoidMoves.map((item) => `<li>${item}</li>`).join("");
+        target.replaceChildren();
+        KANBAN_DATA.avoidMoves.forEach((item) => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            target.appendChild(li);
+        });
     }
 
     function renderManagementCards() {
@@ -253,17 +373,32 @@
             return;
         }
 
-        target.innerHTML = KANBAN_DATA.managementSignals
-            .map(
-                (item) => `
-                    <article class="executive-card management-card">
-                        <h3>${item.topic}</h3>
-                        <p><strong>${i18n.t("kanban.data.labels.reading", "Como ler:")}</strong> ${item.reading}</p>
-                        <p><strong>${i18n.t("kanban.data.labels.action", "Acao de gestao:")}</strong> ${item.action}</p>
-                    </article>
-                `
-            )
-            .join("");
+        target.replaceChildren();
+
+        KANBAN_DATA.managementSignals.forEach((item) => {
+            const card = document.createElement("article");
+            card.className = "executive-card management-card";
+
+            const title = document.createElement("h3");
+            title.textContent = item.topic;
+            card.appendChild(title);
+
+            const reading = document.createElement("p");
+            const readingLabel = document.createElement("strong");
+            readingLabel.textContent = i18n.t("kanban.data.labels.reading", "Como ler:");
+            reading.appendChild(readingLabel);
+            reading.appendChild(document.createTextNode(" " + item.reading));
+            card.appendChild(reading);
+
+            const action = document.createElement("p");
+            const actionLabel = document.createElement("strong");
+            actionLabel.textContent = i18n.t("kanban.data.labels.action", "Acao de gestao:");
+            action.appendChild(actionLabel);
+            action.appendChild(document.createTextNode(" " + item.action));
+            card.appendChild(action);
+
+            target.appendChild(card);
+        });
     }
 
     function setupMainAnchorNav() {

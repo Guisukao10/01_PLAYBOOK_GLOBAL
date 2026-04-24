@@ -19,7 +19,7 @@ const FALLBACK_PRIORIDADE_CONFIG = {
             opcoes: {
                 assistencia_distribuidor: { codigo: "S1", label: "Assistencia / Distribuidor", peso: 1 },
                 cliente: { codigo: "S2", label: "Cliente", peso: 2 },
-                cliente_locacao: { codigo: "S3", label: "Cliente de Locacao", peso: 3 }
+                cliente_locacao: { codigo: "S3", label: "Cliente de Locacao", peso: 1 }
             }
         },
         tipo_atendimento: {
@@ -39,7 +39,7 @@ const FALLBACK_PRIORIDADE_CONFIG = {
                 locacao_suporte_tecnico: {
                     codigo: "A4",
                     label: "Sou cliente de locacao de produto e preciso de suporte tecnico",
-                    peso: 4
+                    peso: 1
                 }
             }
         },
@@ -80,25 +80,24 @@ const FALLBACK_PRIORIDADE_CONFIG = {
                 raio_x_portatil: { codigo: "P10", label: "Raio-X Portatil", peso: 2 },
                 sensor_intraoral: { codigo: "P11", label: "Sensor Intraoral", peso: 3 },
                 consultorios: { codigo: "P12", label: "Consultorios", peso: 3 },
-                scanner_ios: { codigo: "P13", label: "Scanner IOS", peso: 3 },
-                eagle_scan: { codigo: "P14", label: "Eagle Scan", peso: 3 },
-                tomografo_panoramico: { codigo: "P15", label: "Tomografo / Panoramico", peso: 3 }
+                eagle_scan: { codigo: "P13", label: "Eagle Scan", peso: 3 },
+                tomografo_panoramico: { codigo: "P14", label: "Tomografo / Panoramico", peso: 3 }
             }
         }
     },
     faixas: [
-        { codigo: "P1", nome: "P1", min: 144, max: 180 },
-        { codigo: "P2", nome: "P2", min: 108, max: 143 },
-        { codigo: "P3", nome: "P3", min: 64, max: 107 },
-        { codigo: "P4", nome: "P4", min: 27, max: 63 },
-        { codigo: "P5", nome: "P5", min: 0, max: 26 }
+        { codigo: "P1", nome: "P1", min: 50, max: 90 },
+        { codigo: "P2", nome: "P2", min: 31, max: 49 },
+        { codigo: "P3", nome: "P3", min: 21, max: 30 },
+        { codigo: "P4", nome: "P4", min: 11, max: 20 },
+        { codigo: "P5", nome: "P5", min: 1, max: 10 }
     ],
     metadadosPrioridade: {
         P1: { badgeClass: "badge-p1", descricao: "Urgente" },
         P2: { badgeClass: "badge-p2", descricao: "Alta" },
         P3: { badgeClass: "badge-p3", descricao: "Media" },
         P4: { badgeClass: "badge-p4", descricao: "Baixa" },
-        P5: { badgeClass: "badge-p5", descricao: "Muito baixa" },
+        P5: { badgeClass: "badge-p5", descricao: "Muito Baixa" },
         NC: { badgeClass: "badge-low", descricao: "Nao classificada" }
     }
 };
@@ -195,6 +194,18 @@ function classificarPrioridade(pontuacaoTotal, configuracao) {
     return { codigo: "NC", nome: "NC", min: 0, max: 0 };
 }
 
+function obterFaixaPorCodigo(codigo, configuracao) {
+    const faixa = (configuracao.faixas || []).find(function (item) {
+        return item.codigo === codigo;
+    });
+
+    if (faixa) {
+        return faixa;
+    }
+
+    return { codigo: codigo, nome: codigo, min: 0, max: 0 };
+}
+
 function forcarUrgenciaPorExcecao(selecoes) {
     return selecoes.out_of_box_zero_hora === "yes";
 }
@@ -243,7 +254,7 @@ function popularSelectCampos(form, configuracao) {
         }
 
         const primeiraOpcao = select.querySelector("option[value='']");
-        select.innerHTML = "";
+        select.replaceChildren();
 
         const optionPlaceholder = document.createElement("option");
         optionPlaceholder.value = "";
@@ -362,7 +373,7 @@ function setupSimulationPage() {
         const resultado = calcularPontuacao(selecoes, configuracao);
         const excecaoAtiva = forcarUrgenciaPorExcecao(selecoes);
         const classificacao = excecaoAtiva
-            ? { codigo: "P1", nome: "P1", min: 144, max: 180 }
+            ? obterFaixaPorCodigo("P1", configuracao)
             : classificarPrioridade(resultado.total, configuracao);
 
         renderizarResultado(resultado, classificacao, refs, configuracao, excecaoAtiva);

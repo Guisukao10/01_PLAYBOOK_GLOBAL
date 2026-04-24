@@ -183,7 +183,7 @@
     if (!select) return;
 
     const currentValue = select.value;
-    select.innerHTML = "";
+    select.replaceChildren();
 
     const allOption = document.createElement("option");
     allOption.value = "";
@@ -204,7 +204,7 @@
     const tbody = document.getElementById("consolidated-matrix-body");
     if (!tbody) return;
 
-    tbody.innerHTML = "";
+    tbody.replaceChildren();
 
     if (!rows.length) {
       const empty = document.createElement("tr");

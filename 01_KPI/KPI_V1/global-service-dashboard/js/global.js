@@ -55,19 +55,102 @@
   target.appendChild(wrapper);
 }
 
+function createPlaybookLinkSecurity() {
+  // Allowlist explícita para links dinâmicos.
+  const ALLOWED_SCHEMES = {
+    http: true,
+    https: true,
+    mailto: true,
+    tel: true
+  };
+
+  function toStringValue(value) {
+    return String(value === undefined || value === null ? "" : value).trim();
+  }
+
+  function getScheme(value) {
+    const compact = value.replace(/[\u0000-\u001F\u007F\s]+/g, "");
+    const match = compact.match(/^([a-z][a-z0-9+.-]*):/i);
+    return match ? match[1].toLowerCase() : "";
+  }
+
+  function sanitizeHref(rawHref, fallback) {
+    const safeFallback = fallback === undefined ? "#" : fallback;
+    const fallbackText = safeFallback === null ? null : toStringValue(safeFallback);
+    const href = toStringValue(rawHref);
+
+    if (!href) return fallbackText;
+    if (href === "#" || href.charAt(0) === "#") return href;
+    if (href.indexOf("//") === 0) return fallbackText;
+
+    const scheme = getScheme(href);
+    if (!scheme) return href;
+
+    return ALLOWED_SCHEMES[scheme] ? href : fallbackText;
+  }
+
+  function setHref(element, rawHref, fallback) {
+    const safeHref = sanitizeHref(rawHref, fallback);
+    if (!element) return safeHref;
+
+    if (safeHref === null) {
+      element.removeAttribute("href");
+      return null;
+    }
+
+    element.href = safeHref;
+    return safeHref;
+  }
+
+  function navigate(rawHref) {
+    const safeHref = sanitizeHref(rawHref, null);
+    if (!safeHref) return false;
+
+    window.location.assign(safeHref);
+    return true;
+  }
+
+  return {
+    sanitizeHref: sanitizeHref,
+    setHref: setHref,
+    navigate: navigate
+  };
+}
+
+if (!window.PlaybookLinkSecurity || typeof window.PlaybookLinkSecurity.sanitizeHref !== "function") {
+  window.PlaybookLinkSecurity = createPlaybookLinkSecurity();
+}
+
+function setSanitizedHref(element, href, fallback) {
+  return window.PlaybookLinkSecurity.setHref(element, href, fallback);
+}
+
 function renderGlobalHeader() {
   const i18n = window.PlaybookI18n || { t: function (_key, fallback) { return fallback; } };
   const headerContainer = document.querySelector('.global-header');
   if (!headerContainer) return;
 
-  headerContainer.innerHTML = `
-    <div class="brand">${i18n.t("kpi.v1.header.brand", "GLOBAL SERVICE GOVERNANCE")}</div>
-    <nav>
-      <a href="index.html" data-page="index">${i18n.t("kpi.v1.header.architecture", "Arquitetura")}</a>
-      <a href="dashboard.html" data-page="dashboard">${i18n.t("kpi.v1.header.dashboard", "Dashboard")}</a>
-      <a href="kpi-map.html" data-page="kpi-map">${i18n.t("kpi.v1.header.expandedMap", "Mapa Expandido")}</a>
-    </nav>
-  `;
+  headerContainer.replaceChildren();
+
+  const brand = document.createElement('div');
+  brand.className = 'brand';
+  brand.textContent = i18n.t("kpi.v1.header.brand", "GLOBAL SERVICE GOVERNANCE");
+  headerContainer.appendChild(brand);
+
+  const nav = document.createElement('nav');
+  [
+    { href: 'index.html', page: 'index', label: i18n.t("kpi.v1.header.architecture", "Arquitetura") },
+    { href: 'dashboard.html', page: 'dashboard', label: i18n.t("kpi.v1.header.dashboard", "Dashboard") },
+    { href: 'kpi-map.html', page: 'kpi-map', label: i18n.t("kpi.v1.header.expandedMap", "Mapa Expandido") }
+  ].forEach(function (item) {
+    const link = document.createElement('a');
+    setSanitizedHref(link, item.href, "#");
+    link.setAttribute('data-page', item.page);
+    link.textContent = item.label;
+    nav.appendChild(link);
+  });
+
+  headerContainer.appendChild(nav);
 
   const links = headerContainer.querySelectorAll('nav a');
   const current = location.pathname.split('/').pop();

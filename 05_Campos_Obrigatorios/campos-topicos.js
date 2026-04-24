@@ -39,13 +39,13 @@
 
   function clearTarget(tbodyId) {
     const tbody = document.getElementById(tbodyId);
-    if (tbody) tbody.innerHTML = "";
+    if (tbody) tbody.replaceChildren();
   }
 
   function renderTopicRows(rows, tbodyId) {
     const tbody = document.getElementById(tbodyId);
     if (!tbody) return;
-    tbody.innerHTML = "";
+    tbody.replaceChildren();
 
     const fragment = document.createDocumentFragment();
 
@@ -82,7 +82,7 @@
   function renderSimpleList(items, targetId, badgeLabel, badgeClass) {
     const target = document.getElementById(targetId);
     if (!target) return;
-    target.innerHTML = "";
+    target.replaceChildren();
 
     const fragment = document.createDocumentFragment();
     items.forEach(function (text) {
