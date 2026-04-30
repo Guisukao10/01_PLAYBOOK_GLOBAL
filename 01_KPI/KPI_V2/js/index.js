@@ -1,5 +1,5 @@
 const POWER_BI_URL =
-    "https://app.powerbi.com/view?r=eyJrIjoiMGVmMTQwYjMtZDI5OS00NWRhLTk2M2QtZTgwNzY3NWM2YmZiIiwidCI6ImE2NzRhMDgxLTBjNTMtNGQyZC1hZWQ2LWRiZjgwNmY5NWExYiJ9";
+    "https://app.powerbi.com/view?r=eyJrIjoiNTk3MDk4MmUtMWI0OC00MWI1LTg1OTYtMTFjZGE3ZGRkODIzIiwidCI6ImE2NzRhMDgxLTBjNTMtNGQyZC1hZWQ2LWRiZjgwNmY5NWExYiJ9";
 
 document.addEventListener("DOMContentLoaded", function () {
     const frame = document.getElementById("dashboardBiFrame");
